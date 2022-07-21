@@ -1,47 +1,47 @@
 
 
-'''bash
+```bash
 python -m django help
-'''
-'''bash
+```
+```bash
 python -m django --version
-'''
-'''bash
+```
+```bash
 python manage.py createsuperuser
-'''
-'''bash
+```
+```bash
 pip install Django
-'''
-'''bash
+```
+```bash
 django-admin startproject <pj_name>
-'''
-'''bash
+```
+```bash
 python manage.py startapp <app_name>
-'''
+```
 
-'''bash
+```bash
 python3 manage.py makemigrations
-'''
-'''bash
+```
+```bash
 python3 manage.py migrate
-'''
-'''bash
+```
+```bash
 python manage.py runserver 8000
-'''
-'''bash
+```
+```bash
 python manage.py sqlmigrate <app_label> <migration_name 0001>
 https://docs.djangoproject.com/en/4.0/ref/django-admin/#sqlmigrate
-'''
+```
 
-'''bash
+```bash
 python manage.py migrate --settings=Demo.settings.settings_local
-'''
-'''bash
+```
+```bash
 export DJANGO_SETTINGS_MODULE=Demo.settings.settings_local
-'''
-'''bash
+```
+```bash
 python3 manage.py check
-'''
-'''bash
+```
+```bash
 python3 manage.py check --deploy --settings=Demo.settings.settings_prod
-'''
+```
