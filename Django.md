@@ -40,8 +40,8 @@ python manage.py migrate --settings=Demo.settings.settings_local
 export DJANGO_SETTINGS_MODULE=Demo.settings.settings_local
 ```
 ```bash
-python3 manage.py check
+python manage.py check
 ```
 ```bash
-python3 manage.py check --deploy --settings=Demo.settings.settings_prod
+python manage.py check --deploy --settings=Demo.settings.settings_prod
 ```
