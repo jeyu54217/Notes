@@ -1,5 +1,5 @@
 ```bash
-python -m venv <path>
+python3 -m venv <path>
 ```
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
