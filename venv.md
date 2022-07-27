@@ -1,5 +1,7 @@
+## VENV
+### windows
 ```bash
-python3 -m venv <path>
+python -m venv <path>
 ```
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
@@ -7,18 +9,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```bash
 deactivate
 ```
-```bash
-pip help    
-```
-```bash
-pip list```
-```bash
-pip freeze > requirements.txt
-```
-```bash
-pip install -r requirements.txt
-```
 
+### ubuntu
 ```bash
 sudo apt-get update
 ```
@@ -34,3 +26,19 @@ python3 -m venv <path>
 ```bash
 source <path/to/activate>
 ```
+
+## pip 
+```bash
+pip help    
+```
+```bash
+pip list
+```
+```bash
+pip freeze > requirements.txt
+```
+```bash
+pip install -r requirements.txt
+```
+
+
