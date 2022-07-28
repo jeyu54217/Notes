@@ -16,12 +16,12 @@ print(
 ```python
 import logging
 
-logging.debug('debug message')       # No output 
-logging.info('info message')         # No output
+logging.debug('<msg>')       # No output 
+logging.info(('<msg>')       # No output
 
-logging.warning('warning message')   # WARNING:root:warning message
-logging.error('error message')       # ERROR:root:error message
-logging.critical('critical message') # CRITICAL:root:critical message
+logging.warning(('<msg>')   # WARNING:root:warning message
+logging.error(('<msg>')     # ERROR:root:error message
+logging.critical(('<msg>')  # CRITICAL:root:critical message
 ```
  ## Changing Output basicConfig
  ```python
@@ -30,11 +30,12 @@ logging.basicConfig(level = logging.DEBUG, )  # Changing default output from 'de
 
  ## Output formation
   ```python
-  import logging
+import logging
 # Default : WARNING:root:msg
 
 FORMAT = '%(asctime)s %(levelname)s: %(message)s'
-logging.basicConfig(level = logging.<DEBUG>, format = FORMAT)
+DATE_FORMAT = '%Y%m%d %H:%M:%S'  # refer to "time.strftime()"
+logging.basicConfig(level = logging.<DEBUG>, format = FORMAT, datefmt = DATE_FORMAT)
 
 %(levelname)s	# Rank name
 %(name)s	    # logger name
@@ -46,8 +47,8 @@ logging.basicConfig(level = logging.<DEBUG>, format = FORMAT)
 %(module)s	    # module name
 %(pathname)s	# file's path
 
-%(levelno)s	# Rank Non
-%(lineno)d	# call logger line nonmer
+%(levelno)s	    # Rank Non
+%(lineno)d	    # call logger line nonmer
 
 %(process)d 	# process ID 
 %(thread)d	    # thread ID
