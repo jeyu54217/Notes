@@ -1,4 +1,4 @@
-## Ranking
+## Logging Rank 
 ```python
 import logging
 print(
@@ -25,7 +25,8 @@ logging.critical(('<msg>')  # CRITICAL:root:critical message
 ```
  ## Changing Output basicConfig
  ```python
-logging.basicConfig(level = logging.DEBUG, )  # Changing default output from 'debug'
+# Changing default output from 'debug'
+logging.basicConfig(level = logging.DEBUG, )  
  ```
 
  ## Output formation
