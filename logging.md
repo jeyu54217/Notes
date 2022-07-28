@@ -32,14 +32,14 @@ logging.basicConfig(level = logging.DEBUG, )  # Changing default output from 'de
   ```python
 # Default : WARNING:root:msg
 %(levelname)s	# Rank name
-%(name)s	# logger name
-%(message)s	# msg
+%(name)s	    # logger name
+%(message)s	    # msg
 
-%(asctime)s	# date time : YYYY-MM-DD HH:mm:SS,ms
+%(asctime)s	    # date time : YYYY-MM-DD HH:mm:SS,ms
 %(filename)s	# file name
 %(funcName)s	
-%(module)s	# module name
-%(pathname)s	file's path
+%(module)s	    # module name
+%(pathname)s	# file's path
 
 %(levelno)s	# Rank Non
 %(lineno)d	# call logger line nonmer
