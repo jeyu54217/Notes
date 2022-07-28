@@ -44,7 +44,7 @@ logging.basicConfig(level = logging.DEBUG, )  # Changing default output from 'de
 %(levelno)s	# Rank Non
 %(lineno)d	# call logger line nonmer
 
-%(process)d	process ID 
-%(thread)d	thread ID
-%(threradName)s	threradName
+%(process)d 	# process ID 
+%(thread)d	    # thread ID
+%(threradName)s	# threradName
  ```
