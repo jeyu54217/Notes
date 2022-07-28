@@ -30,7 +30,12 @@ logging.basicConfig(level = logging.DEBUG, )  # Changing default output from 'de
 
  ## Output formation
   ```python
+  import logging
 # Default : WARNING:root:msg
+
+FORMAT = '%(asctime)s %(levelname)s: %(message)s'
+logging.basicConfig(level = logging.<DEBUG>, format = FORMAT)
+
 %(levelname)s	# Rank name
 %(name)s	    # logger name
 %(message)s	    # msg
