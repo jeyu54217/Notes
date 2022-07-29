@@ -6,7 +6,7 @@ print(
     logging.DEBUG,    # 10
     logging.INFO,     # 20
     
-    logging.WARNING,  # 30  -- default rank, only output msg below from here.
+    logging.WARNING,  # 30  -- default rank, only output msg below here.
     logging.ERROR,    # 40
     logging.CRITICAL, # 50
     )
