@@ -10,6 +10,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 deactivate
 ```
 
+
 ### ubuntu
 ```bash
 sudo apt-get update
