@@ -11,6 +11,7 @@ export DJANGO_SETTINGS_MODULE=<proj_name>.settings
 ```
 
 
+
 ### Start
 ```bash
 pip install Django
