@@ -1,3 +1,9 @@
+
+
+## Python enviroment
+```bash
+python3 --version
+```
 ## VENV
 ### windows
 ```bash
@@ -9,9 +15,19 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```bash
 deactivate
 ```
+### macOS
+```bash
+python3 -m pip install virtualenv
+```
+```bash
+python3 -m venv <path>
+```
+```bash
+source <path/to/activate>
+```
 
 
-### ubuntu
+### Linux
 ```bash
 sudo apt-get update
 ```
@@ -19,7 +35,7 @@ sudo apt-get update
 sudo apt-get install python3-virtualenv
 ```
 ```bash
-python -m ensurepip
+python3 -m ensurepip
 ```
 ```bash
 python3 -m venv <path>
