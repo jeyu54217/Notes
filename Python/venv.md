@@ -1,6 +1,4 @@
 
-
-## Python enviroment
 ```bash
 python3 --version
 ```
@@ -25,8 +23,6 @@ python3 -m venv <path>
 ```bash
 source <path/to/activate>
 ```
-
-
 ### Linux
 ```bash
 sudo apt-get update
@@ -48,16 +44,16 @@ source <path/to/activate>
 
 ## pip 
 ```bash
-pip help    
+pip3 help    
 ```
 ```bash
-pip list
+pip3 list
 ```
 ```bash
-pip freeze > requirements.txt
+pip3 freeze > requirements.txt
 ```
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 
