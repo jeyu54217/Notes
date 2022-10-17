@@ -41,5 +41,5 @@ python3 manage.py check --deploy --settings = <proj_name>.settings
 python manage.py runserver 8000
 ```
 ```bash
-python manage.py createsuperuser
+python3 manage.py createsuperuser --email <email> --username <name>
 ```
