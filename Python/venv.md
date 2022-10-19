@@ -44,16 +44,16 @@ source <path/to/activate>
 
 ## pip 
 ```bash
-pip3 help    
+pip help    
 ```
 ```bash
-pip3 list
+pip list
 ```
 ```bash
-pip3 freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 
