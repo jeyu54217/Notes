@@ -5,7 +5,7 @@ python3 --version
 ## VENV
 ### windows
 ```bash
-python -m venv <path>
+python -m venv <path/venv>
 ```
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
@@ -18,7 +18,7 @@ deactivate
 python3 -m pip install virtualenv
 ```
 ```bash
-python3 -m venv <path>
+python3 -m venv <path/venv>
 ```
 ```bash
 source <path/to/activate>
@@ -34,7 +34,7 @@ sudo apt-get install python3-virtualenv
 python3 -m ensurepip
 ```
 ```bash
-python3 -m venv <path>
+python3 -m venv <path/venv>
 ```
 ```bash
 source <path/to/activate>
