@@ -17,7 +17,7 @@ export DJANGO_SETTINGS_MODULE=<proj_name>.settings
 pip install Django
 ```
 ```bash
-django-admin startproject <proj_name>
+django-admin startproject <proj_name_core>
 ```
 ```bash
 python3 manage.py startapp <app_name>
@@ -26,15 +26,15 @@ python3 manage.py startapp <app_name>
 python3 manage.py sqlmigrate <app_label> <migration_name 0001>
 ```
 https://docs.djangoproject.com/en/4.0/ref/django-admin/#sqlmigrate
-### Merge
+### Migrate
 ```bash
 python3 manage.py makemigrations
 ```
 ```bash
-python3 manage.py migrate --settings=<proj_name>.settings
+python3 manage.py migrate
 ```
 ```bash
-python3 manage.py check --deploy --settings = <proj_name>.settings
+python3 manage.py check --deploy --settings=<proj_name>.settings
 ```
 ### Test
 ```bash
