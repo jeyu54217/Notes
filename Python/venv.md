@@ -3,16 +3,6 @@
 python3 --version
 ```
 ## VENV
-### windows
-```bash
-python -m venv <path/venv>
-```
-```bash
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-```
-```bash
-deactivate
-```
 ### macOS
 ```bash
 python3 -m pip install virtualenv
@@ -22,6 +12,16 @@ python3 -m venv <path/venv>
 ```
 ```bash
 source <path/to/activate>
+```
+### windows
+```bash
+python -m venv <path/venv>
+```
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+```bash
+deactivate
 ```
 ### Linux
 ```bash
