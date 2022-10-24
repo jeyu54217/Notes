@@ -1,16 +1,17 @@
 # TXT
-
-## Close File
+## open()
+### Close File
+- "with" statement will close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
 - Always .close() files - it frees up system resources!
-- "with" statement will close file automatically.
 
-## Read txt
+### Read txt
 - "r" mode by default
 - Cursor Movement : Python reads files by using a cursor
 - seek() : To move the cursor.
 - readlines() : To get a list of all lines.
 - To read only part of a file, pass a number of characters into read("abc"), or use readline()
+#### Bad
 ```python
 file = open("<file.txt>")
 file.read()
@@ -18,8 +19,14 @@ file.close()
 
 file.closed # True
 ```
+#### Good
+```python
+with open("<file.txt>",) as file:
+    file.read()
 
-## Write txt
+file.closed # True
+```
+### Write txt
 - "w" mode - Write to a file (previous contents removed)
 - "a" mode - Append to a file (previous contents not removed)
 - Write or create : You can also write to files that don't yet exist 
@@ -27,9 +34,41 @@ file.closed # True
 with open("<file.txt>", "w") as file:
     file.write("test test n")
     file.write("test" * 10000)
-
-file.closed # True
 ```
+## pandas
+
+
+
 
 # CSV
 
+# BAD!!!!!!
+with open("fighters.csv") as file:
+    data = file.read()
+
+# Using reader
+from csv import reader
+with open("fighters.csv") as file:
+    csv_reader = reader(file)
+    next(csv_reader) #To skip the headers
+    for fighter in csv_reader:
+    	# Each row is a list
+    	# Use index to access data
+    	print(f"{fighter[0]} is from {fighter[1]}") 
+
+# Example where data is cast into a list
+from csv import reader
+with open("fighters.csv") as file:
+    csv_reader = reader(file)
+    data = list(csv_reader)
+    print(data)
+
+# Reading/Parsing CSV Using a DictReader:
+from csv import DictReader
+with open("fighters.csv") as file:
+    csv_reader = DictReader(file)
+    for row in csv_reader:
+        # Each row is an OrderedDict!
+        print(row['Name']) #Use keys to access data
+# EXCEL
+# SQL
