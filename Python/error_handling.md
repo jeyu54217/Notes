@@ -14,7 +14,7 @@ def colorize(text, color):
 ```python
 def divide(a,b):
  	try:
- 		result = a / b
+ 	    result = a / b
 	# catch all exceptions.	
 	except: 
 	    print("Something went wrong!")
