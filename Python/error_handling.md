@@ -1,4 +1,4 @@
-## Error Raising
+## Raise Error
 
 ```
 def colorize(text, color):
@@ -10,12 +10,12 @@ def colorize(text, color):
 	print(f"Printed {text} in {color}")
 ```
 
-## Error Catching
+## Catch Error (Try_except_elss_finally)
 ```
 def divide(a,b):
  	try:
  		result = a / b
-	# catch all exceptions.
+	# catch all exceptions.	
 	except: 
 	    print("Something went wrong!")
 	# catch the specified exception.
