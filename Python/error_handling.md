@@ -1,6 +1,6 @@
 ## Raise Error
 
-```
+```python
 def colorize(text, color):
 	colors = ("yellow", "blue", "green", "magenta")
 	if type(text) is not str:
@@ -11,7 +11,7 @@ def colorize(text, color):
 ```
 
 ## Catch Error (Try_except_elss_finally)
-```
+```python
 def divide(a,b):
  	try:
  		result = a / b

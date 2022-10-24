@@ -38,20 +38,20 @@ FORMAT = '%(asctime)s %(levelname)s: %(message)s'
 DATE_FORMAT = '%Y%m%d %H:%M:%S'  # refer to "time.strftime()"
 logging.basicConfig(level = logging.<DEBUG>, format = FORMAT, datefmt = DATE_FORMAT)
 
-%(levelname)s	# Rank name
-%(name)s	    # logger name
-%(message)s	    # msg
+%(levelname)s	  # Rank level name
+%(name)s	      # logger name
+%(message)s	   
 
 %(asctime)s	    # date time : YYYY-MM-DD HH:mm:SS,ms
-%(filename)s	# file name
+%(filename)s	  
 %(funcName)s	
 %(module)s	    # module name
-%(pathname)s	# file's path
+%(pathname)s	  
 
 %(levelno)s	    # Rank Non
 %(lineno)d	    # call logger line nonmer
 
-%(process)d 	# process ID 
+%(process)d 	  # process ID 
 %(thread)d	    # thread ID
-%(threradName)s	# threradName
+%(threradName)s	
  ```
