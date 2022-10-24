@@ -12,7 +12,7 @@ print(
     )
 
 ```
-## Output methods
+## Logging Output methods
 ```python
 import logging
 
@@ -22,21 +22,23 @@ logging.info(('<msg>')       # No output
 logging.warning(('<msg>')   # WARNING:root:warning message
 logging.error(('<msg>')     # ERROR:root:error message
 logging.critical(('<msg>')  # CRITICAL:root:critical message
-```
- ## Changing Output basicConfig
- ```python
-# Changing default output from 'debug'
-logging.basicConfig(level = logging.DEBUG, )  
- ```
 
- ## Output formation
+```
+## Basic Output Config & Formation
   ```python
 import logging
-# Default : WARNING:root:msg
 
+# Setting basic output method config
+logging.basicConfig(level = logging.DEBUG)  # Default : WARNING:root:msg
+
+# Changing basic Output FORMAT
 FORMAT = '%(asctime)s %(levelname)s: %(message)s'
 DATE_FORMAT = '%Y%m%d %H:%M:%S'  # refer to "time.strftime()"
 logging.basicConfig(level = logging.<DEBUG>, format = FORMAT, datefmt = DATE_FORMAT)
+ ```
+ 
+ ### Output Formation
+  ```python
 
 %(levelname)s	  # Rank level name
 %(name)s	      # logger name
