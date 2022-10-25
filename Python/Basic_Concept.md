@@ -1,10 +1,10 @@
 # Variables
 
 ## Naming Conventions
-  1.
-  2.
-  3.
-  4.
+1. 
+2. 
+3. 
+4. 
 
 ## Dynamic Typing
 
@@ -24,7 +24,6 @@ Valid keys in a dictionary ex .items()
 
 # Set
 
-Sets do not have duplicate values
-Elements in sets aren't ordered.
-You cannot access items in a set by index.
-Sets can be useful if you need to keep track of a collection of elements, but don't care about ordering, keys or values and duplicates
+1. Sets do not have duplicate values
+2. Elements in sets aren't ordered.
+3. You cannot access items in a set by index.
