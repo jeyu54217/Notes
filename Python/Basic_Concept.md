@@ -20,7 +20,7 @@ x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
 1. ligh-weight lists : faster and safer than lists
 2. Valid keys in a dictionary ex .items() 
 3. Only 2 Methods : 
-   1).  .count(), 
+3-1. a..count(), 
 # Set
 
 1. Sets do not have duplicate values
