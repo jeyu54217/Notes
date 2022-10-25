@@ -16,7 +16,7 @@ x = (1,2,3)
 3 in x # True
 x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
 ```
-# Tuple
+# Tuple (1,2,3)
 1. light-weight lists (ordered) : faster than lists
 2. Immutable : safer than list
 3. Valid keys in a dictionary ex .items() 
@@ -34,12 +34,13 @@ tupl.index(5) # ValueError: tuple.index(x): x not in tuple
 tupl.index(3) # 2 - only the first matching index is returned
 ```
 
-# Set
+# Set {1,2,3}
 
 1. Sets do not have duplicate values
-2. Elements in sets aren't ordered.
+2. Unordered
 3. You cannot access items in a set by index.
 ## Set Comprehension
+-  useful when converting other data types to a set
 ```python
 {x**2 for x in range(10)}
 
