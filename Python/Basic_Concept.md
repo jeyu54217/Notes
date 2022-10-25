@@ -1,6 +1,6 @@
 # Variables
 
-## Naming Conventions
+## Naming
 1. 
 2. 
 3. 
@@ -9,6 +9,7 @@
 ## Dynamic Typing
 
 # Mutable & Immutable
+## Mutable
 ## Immutable
 ```python
 x = (1,2,3)
@@ -16,12 +17,10 @@ x = (1,2,3)
 x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
 ```
 # Tuple
-faster than lists
-safer
-Valid keys in a dictionary ex .items() 
-2 methods
-.count() Returns the number of times a value appears in a tuple
-
+1. ligh-weight lists : faster and safer than lists
+2. Valid keys in a dictionary ex .items() 
+3. Only 2 Methods : 
+   1).  .count(), 
 # Set
 
 1. Sets do not have duplicate values
