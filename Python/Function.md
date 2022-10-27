@@ -14,7 +14,7 @@
 - [Documenting](#documenting)
 
 # Arguments
-  - the arguments are the data you pass into the method's parameters.
+  - Arguments are the data you pass into the method's parameters.
   - Argument is the actual value of this variable that gets passed to function.
   - Argument Unpacking : Using ```*``` , ```**``` as an Argument / Keyword Arguments
 ```python
