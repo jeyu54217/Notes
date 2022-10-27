@@ -1,4 +1,4 @@
-## Parameters
+# Parameters
   - A parameter is a variable in a method definition.
   - Parameter is variable in the declaration of function.
 ###  1. Default Parameters
