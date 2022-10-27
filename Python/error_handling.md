@@ -6,13 +6,13 @@
 ## Error Raising
 
 ```python
-def colorize(text, color):
-	colors = ("yellow", "blue", "green", "magenta")
-	if type(text) is not str:
-		raise TypeError("text must be instance of str")
-	elif color not in colors:
-		raise ValueError("color is invalid color")
-	print(f"Printed {text} in {color}")
+def func_raise(p1, p2):
+	p2 = ("yellow", "blue", "green", "magenta")
+	if type(p1) is not str:
+		raise TypeError("that must be instance of str")
+	elif p1 not in p2:
+		raise ValueError("p1 not in p2")
+	print(f"Printed {p1} in {p2}")
 ```
 
 ## Error Handling (Try,except,elss,finally)
