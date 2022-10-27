@@ -1,3 +1,17 @@
+**CONTENTS**
+- [Arguments](#arguments)
+    - [Keyword Arguments](#keyword-arguments)
+- [Parameters](#parameters)
+  - [1. Default Parameters](#1-default-parameters)
+  - [2. *args](#2-args)
+  - [3. *kwargs](#3-kwargs)
+- [Scope](#scope)
+    - [local](#local)
+    - [global](#global)
+    - [nonlocal](#nonlocal)
+  - [Lambda function](#lambda-function)
+  - [Documenting](#documenting)
+
 # Arguments
   - the arguments are the data you pass into the method's parameters.
   - Argument is the actual value of this variable that gets passed to function.
