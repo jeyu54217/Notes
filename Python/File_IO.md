@@ -1,3 +1,18 @@
+**CONTENTS**
+- [TXT](#txt)
+  - [A. open()](#a-open)
+    - [1. Close File](#1-close-file)
+    - [2. Read txt](#2-read-txt)
+      - [・Bad code](#bad-code)
+      - [・Good code](#good-code)
+    - [3. Write txt](#3-write-txt)
+  - [B. pandas](#b-pandas)
+- [CSV](#csv)
+  - [open()](#open)
+  - [csv](#csv-1)
+- [EXCEL](#excel)
+- [SQL DB](#sql-db)
+
 # TXT
 ## A. open()
 ### 1. Close File
@@ -71,4 +86,4 @@ with open("fighters.csv") as file:
         print(row['Name']) #Use keys to access data
 ```
 # EXCEL
-# SQL
+# SQL DB
