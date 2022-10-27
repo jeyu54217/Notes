@@ -1,9 +1,11 @@
 ## Parameters
   - A parameter is a variable in a method definition.
   - Parameter is variable in the declaration of function.
-### Default Parameters
-  - Should be the last parameters or you will get a SyntaxError
+### 1. Default Parameters
+  - Should **follow the non-default parameters**
 ```python
+## Default Parameters
+
 def fun_0(p1, p2, p3, p4=10): print(p1,p2,p3,p4)
 fun_0(1,2,3) # 1 2 3 10
 fun_0(1,2)   # TypeError: fun_1() missing 1 required positional argument: 'p3'
@@ -17,8 +19,8 @@ def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4)
 def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4)
 ```
 
-### *args
-### *kwargs
+### 2. *args
+### 3. *kwargs
 
 ## Arguments
   - the arguments are the data you pass into the method's parameters.
