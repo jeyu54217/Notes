@@ -1,4 +1,4 @@
-
+**CONTENTS**
 - [Error Raising](#error-raising)
 - [Error Handling (Try,except,elss,finally)](#error-handling-tryexceptelssfinally)
 
