@@ -2,7 +2,7 @@
   - A parameter is a variable in a method definition.
   - Parameter is variable in the declaration of function.
 ###  1. Default Parameters
-  - Should follow the ** non-default parameters**
+  - Should follow the **non-default parameters**
 ```python
 ## Default Parameters
 
