@@ -1,3 +1,13 @@
+- [Variables](#variables)
+  - [Naming](#naming)
+  - [Dynamic Typing](#dynamic-typing)
+- [Mutable & Immutable](#mutable--immutable)
+  - [Mutable](#mutable)
+  - [Immutable](#immutable)
+- [Tuple](#tuple)
+- [Set](#set)
+  - [Set Comprehension](#set-comprehension)
+
 # Variables
 
 ## Naming
