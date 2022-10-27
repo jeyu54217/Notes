@@ -1,3 +1,9 @@
+**CONTENTS**
+- [Logging Levels](#logging-levels)
+- [Logging Output methods](#logging-output-methods)
+- [Basic Output Config & Formation](#basic-output-config--formation)
+  - [Output Formation](#output-formation)
+
 ## Logging Levels 
 ```python
 import logging
