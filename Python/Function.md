@@ -25,9 +25,8 @@ def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default a
   - Argument is the actual value of this variable that gets passed to function.
 ### Keyword Arguments
 
-## Scope
-local -> nonlocal -> global -> built-in
-=
+# Scope
+  - local -> nonlocal -> global -> built-in
 ### local
 ```python
 glo_var = 0
