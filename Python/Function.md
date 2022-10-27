@@ -101,7 +101,7 @@ func_kwargs_0(A:'123', B=321) # SyntaxError: invalid syntax
 func_kwargs_0(A='123', "B"=321) # SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
 # ok!
 func_kwargs_0(A='123', B=321) # A 123 B 321
-
+# Keyword Argument Unpacking
 dict_0 = {'A':123,'B':321}
 func_kwargs_0(**dict_0) # A 123 B 321
 ```
