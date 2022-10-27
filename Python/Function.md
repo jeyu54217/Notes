@@ -15,7 +15,7 @@
 
 # Arguments
   - Arguments are the data(actual value) which passed into the func's parameters.
-  - Argument Unpacking : Using ```*``` , ```**``` as an Argument / Keyword Arguments
+  - **Argument Unpacking** : Using ```*``` , ```**``` as an Argument / Keyword Arguments
 ```python
 # *Argument Unpacking
 def func_args_0(*args): print(sum(args))
@@ -49,7 +49,6 @@ func_kwargs_0(**dict_1) # 123 & 321
 def arg_fun_position(a, b=10 ,*args, c=20): 
     print(a, args, b, type(args), c)
 arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 <class 'tuple'> 20
-
 def fun_order(a, b, c=123, *args, d=321, **kwargs):
     print(a, b, c, args, d, kwargs)
 fun_order(1, 2, 3, 4, 5, e=3333, f=999) # 1 2 3 (4, 5) 321 {'e': 3333, 'f': 999}
@@ -92,9 +91,20 @@ arg_fun_1(1, 2, 3) # 6
 
 ##  3. *kwargs
 - Gathers remaining ```keyword arguments``` as a ```dict```
+```python
+# *kwargs
 
+def func_kwargs_0(**kwargs):
+    for k,v in kwargs.items(): print(k,v)
+# error
+func_kwargs_0(A:'123', B=321) # SyntaxError: invalid syntax
+func_kwargs_0(A='123', "B"=321) # SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
+# ok!
+func_kwargs_0(A='123', B=321) # A 123 B 321
 
-
+dict_0 = {'A':123,'B':321}
+func_kwargs_0(**dict_0) # A 123 B 321
+```
 # Scope
   - local -> nonlocal -> global -> built-in
   - You will not find yourself using the global or nonlocal keyword frequently - but it's essential to understand for scope!
