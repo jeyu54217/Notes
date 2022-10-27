@@ -9,9 +9,12 @@
       - [Creating a Class](#creating-a-class)
       - [Class Attributes](#class-attributes)
       - [Class Methods](#class-methods)
+      - [Inheritance](#inheritance)
+      - [Multiple Inheritance](#multiple-inheritance)
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
       - [Instance Attributes and Methods](#instance-attributes-and-methods)
+  - [Polymorphism](#polymorphism)
 
 # OOP (Object oriented programming)
   - programming paradigm
@@ -76,6 +79,71 @@ class Person():
 
 Person.from_csv(my_csv)
 ```
+#### Inheritance
+- A key feature of OOP is the ability to define a class which inherits from another class (a "base" or "parent" class).
+- In Python, inheritance works by passing the parent class as an argument to the definition of a child class
+- The super() keyword allows us to call the __ init__ function of a parent class
+```python
+class Animal:
+    def __init__(self, species):
+        self.species = species
+    def make_sound(self, sound):
+        print(sound)
+
+    cool = True
+#  initialize the child with both its own __init__ method and its parent's __init__ method:
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__("canine")
+        self.name = name
+bro = Dog("Bro")
+COPY
+bro.name  # Bro
+bro.species  # canine
+```
+#### Multiple Inheritance
+- Penguin inherits from both Aquatic and Ambulatory, therefore instances of Penguin can call both the walk and swim methods.
+- What about the greet method for our instance of Penguin? It is calling the Aquatic.greet() instead of Ambulatory.greet().
+```python
+class Aquatic:
+  def __init__(self,name):
+    self.name = name
+
+  def swim(self):
+    return f"{self.name} is swimming"
+
+  def greet(self):
+    return f"I am {self.name} of the sea!"
+
+class Ambulatory:
+  def __init__(self,name):
+    self.name = name
+
+  def walk(self):
+    return f"{self.name} is walking"
+
+  def greet(self):
+    return f"I am {self.name} of the land!"
+
+class Penguin(Aquatic, Ambulatory):
+  def __init__(self,name):
+    super().__init__(name=name)
+jaws = Aquatic("Jaws")
+lassie = Ambulatory("Lassie")
+captain_cook = Penguin("Captain Cook")
+jaws.swim() # 'Jaws is swimming'
+jaws.walk() # AttributeError: 'Aquatic' object has no attribute 'walk'
+jaws.greet() # 'I am Jaws of the sea!'
+
+lassie.swim() # AttributeError: 'Ambulatory' object has no attribute 'swim'
+lassie.walk() # 'Lassie is walking'
+lassie.greet() # 'I am Lassie of the land!'
+
+captain_cook.swim() # 'Captain Cook is swimming'
+captain_cook.walk() # 'Captain Cook is walking'
+captain_cook.greet() # 'I am Captain Cook of the sea!'
+```
+
 ### Instance
 - objects that are constructed from a class blueprint that contain their class's methods and properties.
 #### Instantiating a Class
@@ -107,6 +175,6 @@ class Person():
 
 p = Person("Colt", "Steele")
 ```
-
+## Polymorphism
 properties
 methods
