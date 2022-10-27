@@ -21,7 +21,7 @@
 # Parameters
   - The variables in the declaration of function.
 ## 0. Param Order 
- ```param -> *args-> default_param -> **kwargs```
+- ```param -> *args-> default_param -> **kwargs```
 ```python
 # Param Order
 def arg_fun_position(a, b=10 ,*args, c=20): 
