@@ -1,3 +1,4 @@
+**Contents**
 - [Variables](#variables)
   - [Naming](#naming)
   - [Dynamic Typing](#dynamic-typing)
