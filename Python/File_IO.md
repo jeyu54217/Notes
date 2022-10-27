@@ -1,12 +1,12 @@
 **CONTENTS**
 - [TXT](#txt)
-  - [A. open()](#a-open)
+  - [Build-in Function : open()](#build-in-function--open)
     - [1. Close File](#1-close-file)
     - [2. Read txt](#2-read-txt)
       - [・Bad code](#bad-code)
       - [・Good code](#good-code)
     - [3. Write txt](#3-write-txt)
-  - [B. pandas](#b-pandas)
+  - [Pandas](#pandas)
 - [CSV](#csv)
   - [open()](#open)
   - [csv](#csv-1)
@@ -14,7 +14,7 @@
 - [SQL DB](#sql-db)
 
 # TXT
-## A. open()
+## Build-in Function : open()
 ### 1. Close File
 - "with" statement will close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
@@ -50,7 +50,7 @@ with open("<file.txt>", "w") as file:
     file.write("test test n")
     file.write("test" * 10000)
 ```
-## B. pandas
+## Pandas
 
 
 # CSV
