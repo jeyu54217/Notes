@@ -21,13 +21,18 @@
 # Parameters
   - The variables in the declaration of function.
 ## 0. Param Order 
-- ```param -> *args-> default_param -> **kwargs```
+- ```param -> (*args = default_param) -> **kwargs```
 ```python
 # Param Order
 def arg_fun_position(a, b=10 ,*args, c=20): 
     print(a, args, b, type(args), c)
 arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 <class 'tuple'> 20
 
+def arg_fun_all(a, b, c=123, *args, d=321, **kwargs):
+    print(a, b, c, args, d, kwargs)
+arg_fun_all(1, 2, 3, 4, 5, e=3333, f=999) # 1 2 3 (4, 5) 321 {'e': 3333, 'f': 999}
+
+[1, 2, (3,), 'Colt', {'job': 'Instructor', 'last_name': 'Steele'}]
 ```
 ##  1. Default Parameters
   - Should always follow the **non-default** parameters
