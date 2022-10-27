@@ -22,6 +22,7 @@
   - **Order** : ```
   param -> *args-> default_param -> **kwargs```
 ```python
+# Param Order
 def arg_fun_position(a, b=10 ,*args, c=20): 
     print(a, args, b, f',args return a {type(args)},', c)
 arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 ,args return a <class 'tuple'>, 20
