@@ -9,8 +9,8 @@
     - [local](#local)
     - [global](#global)
     - [nonlocal](#nonlocal)
-  - [Lambda function](#lambda-function)
-  - [Documenting](#documenting)
+- [Lambda](#lambda)
+- [Documenting](#documenting)
 
 # Arguments
   - the arguments are the data you pass into the method's parameters.
@@ -94,9 +94,9 @@ def outer():
 ```
 
 
-## Lambda function
+# Lambda
 
-## Documenting
+# Documenting
 ```python
 def fun_0():
     """The Doc
