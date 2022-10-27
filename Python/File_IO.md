@@ -1,20 +1,22 @@
 **CONTENTS**
 - [TXT](#txt)
-  - [Build-in Function : open()](#build-in-function--open)
+  - [1. open() (build-in func)](#1-open-build-in-func)
     - [1. Close File](#1-close-file)
     - [2. Read txt](#2-read-txt)
       - [・Bad code](#bad-code)
       - [・Good code](#good-code)
     - [3. Write txt](#3-write-txt)
-  - [Pandas](#pandas)
+  - [2. Pandas](#2-pandas)
 - [CSV](#csv)
-  - [open()](#open)
-  - [csv](#csv-1)
+  - [1. open()](#1-open)
+  - [2. csv](#2-csv)
+    - [Pandas](#pandas)
 - [EXCEL](#excel)
+    - [Pandas](#pandas-1)
 - [SQL DB](#sql-db)
 
 # TXT
-## Build-in Function : open()
+## 1. open() (build-in func)
 ### 1. Close File
 - "with" statement will close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
@@ -50,16 +52,16 @@ with open("<file.txt>", "w") as file:
     file.write("test test n")
     file.write("test" * 10000)
 ```
-## Pandas
+## 2. Pandas
 
 
 # CSV
-## open()
+## 1. open()
 ```python
 with open("<file.csv>") as file:
     data = file.read()
 ```
-## csv
+## 2. csv
 ```python
 from csv import reader
 with open("fighters.csv") as file:
@@ -85,5 +87,7 @@ with open("fighters.csv") as file:
         # Each row is an OrderedDict!
         print(row['Name']) #Use keys to access data
 ```
+### Pandas
 # EXCEL
+### Pandas
 # SQL DB
