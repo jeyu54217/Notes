@@ -2,7 +2,7 @@
 - [Arguments](#arguments)
     - [Keyword Arguments](#keyword-arguments)
 - [Parameters](#parameters)
-  - [Order :](#order-)
+  - [0. Order :](#0-order-)
   - [1. Default Parameters](#1-default-parameters)
   - [2. *args](#2-args)
   - [3. *kwargs](#3-kwargs)
@@ -20,7 +20,7 @@
 
 # Parameters
   - The variables in the declaration of function.
-## Order :
+## 0. Order :
  ```param -> *args-> default_param -> **kwargs```
 ```python
 # Param Order
