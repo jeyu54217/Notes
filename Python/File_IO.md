@@ -1,6 +1,6 @@
 **CONTENTS**
 - [TXT](#txt)
-  - [1. open() (build-in func)](#1-open-build-in-func)
+  - [1. open()](#1-open)
     - [Close File](#close-file)
       - [・Bad code](#bad-code)
       - [・Good code](#good-code)
@@ -8,7 +8,7 @@
     - [Write txt](#write-txt)
   - [2. Pandas](#2-pandas)
 - [CSV](#csv)
-  - [1. open()](#1-open)
+  - [1. open()](#1-open-1)
   - [2. csv](#2-csv)
   - [3. Pandas](#3-pandas)
 - [EXCEL](#excel)
@@ -16,7 +16,7 @@
 - [SQL DB](#sql-db)
 
 # TXT
-## 1. open() (build-in func)
+## 1. open()
 ### Close File
 - "with" statement will close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
