@@ -155,9 +155,9 @@ def outer():
 
 # Lambda
 - ```(lambda parameter: expression)(argument)```
-1. Lambda函式不需要定義名稱，而一般函式(Function)需定義名稱。
-2. Lambda函式只能有一行運算式，而一般函式(Function)可以有多行運算式。
-3. Lambda在每一次運算完會自動回傳結果，而一般函式(Function)如果要回傳結果要加上 return 關鍵字。
+1. No need to define function **Name**.
+2. Only one line.
+3. Automatically ```return``` (No need to type the return keyword)
 ```python
 # Map
 
