@@ -8,7 +8,7 @@
 - [Tuple & Set](#tuple--set)
   - [Tuple](#tuple)
   - [Set](#set)
-  - [Set Comprehension](#set-comprehension)
+    - [Set Comprehension](#set-comprehension)
 
 # Variables
 
@@ -52,7 +52,7 @@ tupl.index(3) # 2 - only the first matching index is returned
 1. Sets do not have duplicate values
 2. Unordered
 3. You cannot access items in a set by index.
-## Set Comprehension
+### Set Comprehension
 -  useful when converting other data types to a set
 ```python
 {x**2 for x in range(10)}
