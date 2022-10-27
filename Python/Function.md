@@ -2,10 +2,10 @@
 - [Arguments](#arguments)
     - [Keyword Arguments](#keyword-arguments)
 - [Parameters](#parameters)
-  - [0. Param Order](#0-param-order)
   - [1. Default Parameters](#1-default-parameters)
   - [2. *args](#2-args)
   - [3. *kwargs](#3-kwargs)
+  - [Param Order](#param-order)
 - [Scope](#scope)
     - [local](#local)
     - [global](#global)
@@ -42,17 +42,7 @@ func_kwargs_0(**dict_1) # 123 & 321
 
 # Parameters
   - The variables in the declaration of function.
-## 0. Param Order 
-- ```param -> (*args = default_param) -> **kwargs```
-```python
-# Param Order
-def arg_fun_position(a, b=10 ,*args, c=20): 
-    print(a, args, b, type(args), c)
-arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 <class 'tuple'> 20
-def fun_order(a, b, c=123, *args, d=321, **kwargs):
-    print(a, b, c, args, d, kwargs)
-fun_order(1, 2, 3, 4, 5, e=3333, f=999) # 1 2 3 (4, 5) 321 {'e': 3333, 'f': 999}
-```
+
 ##  1. Default Parameters
   - Should always follow the **non-default** parameters
 ```python
@@ -106,6 +96,17 @@ func_kwargs_0(A='123', B=321)   # A 123 B 321
 # Keyword Argument Unpacking
 dict_0 = {'A':123,'B':321}
 func_kwargs_0(**dict_0)         # A 123 B 321
+```
+## Param Order 
+- ```param -> (*args = default_param) -> **kwargs```
+```python
+# Param Order
+def arg_fun_position(a, b=10 ,*args, c=20): 
+    print(a, args, b, type(args), c)
+arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 <class 'tuple'> 20
+def fun_order(a, b, c=123, *args, d=321, **kwargs):
+    print(a, b, c, args, d, kwargs)
+fun_order(1, 2, 3, 4, 5, e=3333, f=999) # 1 2 3 (4, 5) 321 {'e': 3333, 'f': 999}
 ```
 # Scope
   - local -> nonlocal -> global -> built-in
