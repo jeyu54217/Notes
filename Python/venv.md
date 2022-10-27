@@ -19,6 +19,9 @@ python3 -m venv <path/venv>
 ```bash
 source <path/to/activate>
 ```
+```bash
+deactivate
+```
 ### windows
 ```bash
 python -m venv <path/venv>
@@ -44,6 +47,9 @@ python3 -m venv <path/venv>
 ```
 ```bash
 source <path/to/activate>
+```
+```bash
+deactivate
 ```
 
 
