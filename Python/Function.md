@@ -1,6 +1,13 @@
+# Arguments
+  - the arguments are the data you pass into the method's parameters.
+  - Argument is the actual value of this variable that gets passed to function.
+### Keyword Arguments
+
 # Parameters
   - The variables in the declaration of function.
-###  1. Default Parameters
+  - **Order** : ```
+  param -> *args-> default_param -> **kwargs```
+##  1. Default Parameters
   - Should always follow the **non-default** parameters
 ```python
 ## Default Parameters
@@ -17,16 +24,19 @@ def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4) # SyntaxError: non-default argu
 def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
 ```
 
-###  2. *args
-###  3. *kwargs
+##  2. *args
+- Gathers all remaining "**arguments**" as a "**tuple**"
+- The order of arguments doesn't matter!
 
-## Arguments
-  - the arguments are the data you pass into the method's parameters.
-  - Argument is the actual value of this variable that gets passed to function.
-### Keyword Arguments
+
+##  3. *kwargs
+- Gathers remaining "**keyword arguments**" as a "**dict**"
+
+
 
 # Scope
   - local -> nonlocal -> global -> built-in
+  - You will not find yourself using the global or nonlocal keyword frequently - but it's essential to understand for scope!
 ### local
 ```python
 ## Local Scope
@@ -58,5 +68,33 @@ def fun_glo():
 print(fun_glo(), glo_var)  # 10,10
 ```
 ### nonlocal
+- for nested function
+```python
+def outer():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner()
+```
+
 
 ## Lambda function
+
+## Documenting
+```python
+def fun_0():
+    """The Doc
+    1. This is the doc.
+    2. The Doc The Doc.
+    """
+    return "Hello!"
+
+print(fun_0.__doc__)
+'''
+The Doc
+    1. This is the doc.
+    2. The Doc The Doc.
+'''
+```
