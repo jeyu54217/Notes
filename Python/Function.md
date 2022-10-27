@@ -16,16 +16,19 @@
 # Arguments
   - the arguments are the data you pass into the method's parameters.
   - Argument is the actual value of this variable that gets passed to function.
-  - Using ```*``` as an Argument: Argument Unpacking
+  - Using ```*``` as an Argument - Argument Unpacking
 ```python
 # *Argument Unpacking
-
 def func_args_0(*args): print(sum(args))
+
+array_l = [1, 2, 3, 4]
+array_t = (1, 2, 3, 4)
 # error
-func_args_0([1, 2, 3, 4]) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
-func_args_0((1, 2, 3, 4)) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+func_args_0(array_l) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+func_args_0(array_t) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
 # ok!
-func_args_0(*[1, 2, 3, 4]) # 10
+func_args_0(1, 2, 3, 4) # 10
+func_args_0(*array_l, *array_t) # 20
 ```
 ### Keyword Arguments
 
