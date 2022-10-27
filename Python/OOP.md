@@ -1,3 +1,18 @@
+**CONTENT**
+
+- [OOP (Object oriented programming)](#oop-object-oriented-programming)
+  - [Encapsulation & Abstraction](#encapsulation--abstraction)
+    - [Encapsulation](#encapsulation)
+    - [Abstraction](#abstraction)
+- [Classes & Instances](#classes--instances)
+  - [Class](#class)
+    - [Creating a Class](#creating-a-class)
+    - [Class Attributes](#class-attributes)
+    - [Class Methods](#class-methods)
+  - [Instance](#instance)
+    - [Instantiating a Class](#instantiating-a-class)
+    - [Instance Attributes and Methods](#instance-attributes-and-methods)
+
 # OOP (Object oriented programming)
   - programming paradigm
 
