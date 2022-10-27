@@ -29,7 +29,6 @@ def divide(a,b):
  	except TypeError as err:
  		print("a and b must be ints or floats")
  		print(err)
-	# catch the specified exceptions.
 	except (ZeroDivisionError, TypeError) as err:
 		print("Something went wrong!")
 		print(err)
