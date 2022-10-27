@@ -1,8 +1,19 @@
+CONTENTS
+- [1. Magic Methods](#1-magic-methods)
+- [2. Decorators](#2-decorators)
+- [3. List comprehension](#3-list-comprehension)
+- [4. Dict comprehension](#4-dict-comprehension)
+- [5. Ternary](#5-ternary)
+- [6. Underscores in Numeric Literals](#6-underscores-in-numeric-literals)
+- [7. assign](#7-assign)
+- [8. 1 < x < 10](#8-1--x--10)
+
+
 ## 1. Magic Methods
 - dir() function to see the number of magic methods inherited by a class
-- __ str__()
+- __ str__( )
 ```python
-# override __str__
+# override __str__()
 class Employee:
     def __init__(self):
         self.name='Swati'
