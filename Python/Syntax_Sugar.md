@@ -1,6 +1,6 @@
 ## 1. Magic Methods
 - dir() function to see the number of magic methods inherited by a class
-- '__str__()'
+- __ str__()
 ```python
 # override __str__
 class Employee:
@@ -13,6 +13,8 @@ class Employee:
 https://www.tutorialsteacher.com/python/magic-methods-in-python
 
 ## 2. Decorators
+
+
 
 ## 3. List comprehension
 [x for x in range(10)]
