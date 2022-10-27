@@ -1,4 +1,10 @@
-## Raise Error
+## Content
+- [Content](#content)
+- [Error Raising](#error-raising)
+- [Error Handling (Try,except,elss,finally)](#error-handling-tryexceptelssfinally)
+
+
+## Error Raising
 
 ```python
 def colorize(text, color):
@@ -10,7 +16,7 @@ def colorize(text, color):
 	print(f"Printed {text} in {color}")
 ```
 
-## Catch Error (Try_except_elss_finally)
+## Error Handling (Try,except,elss,finally)
 ```python
 def divide(a,b):
  	try:
