@@ -1,4 +1,4 @@
-CONTENTS
+**CONTENTS**
 - [1. Magic Methods](#1-magic-methods)
 - [2. Decorators](#2-decorators)
 - [3. List comprehension](#3-list-comprehension)
