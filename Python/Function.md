@@ -16,7 +16,7 @@
 # Arguments
   - the arguments are the data you pass into the method's parameters.
   - Argument is the actual value of this variable that gets passed to function.
-  - Using ```*``` , ```**``` as an Argument/Keyword Arguments - Argument Unpacking
+  - Argument Unpacking : Using ```*``` , ```**``` as an Argument / Keyword Arguments
 ```python
 # *Argument Unpacking
 def func_args_0(*args): print(sum(args))
