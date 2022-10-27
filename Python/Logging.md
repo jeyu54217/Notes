@@ -1,10 +1,11 @@
 **CONTENTS**
-- [Logging Levels](#logging-levels)
-- [Logging Output methods](#logging-output-methods)
-- [Basic Output Config & Formation](#basic-output-config--formation)
-  - [Output Formation](#output-formation)
-
-## Logging Levels 
+- [Logging](#logging)
+  - [Levels](#levels)
+  - [Output methods](#output-methods)
+  - [Output Config & Formation](#output-config--formation)
+    - [Formation](#formation)
+# Logging
+## Levels 
 ```python
 import logging
 
@@ -19,7 +20,7 @@ import logging
 
 
 ```
-## Logging Output methods
+## Output methods
 ```python
 import logging
 
@@ -31,7 +32,7 @@ logging.error(('<msg>')     # ERROR:root:error message
 logging.critical(('<msg>')  # CRITICAL:root:critical message
 
 ```
-## Basic Output Config & Formation
+## Output Config & Formation
   ```python
 import logging
 
@@ -44,7 +45,7 @@ DATE_FORMAT = '%Y%m%d %H:%M:%S'  # refer to "time.strftime()"
 logging.basicConfig(level = logging.<DEBUG>, format = FORMAT, datefmt = DATE_FORMAT)
  ```
  
- ### Output Formation
+ ### Formation
   ```python
 
 %(levelname)s	  # Rank level name
