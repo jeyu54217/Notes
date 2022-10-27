@@ -21,6 +21,12 @@
   - The variables in the declaration of function.
   - **Order** : ```
   param -> *args-> default_param -> **kwargs```
+```python
+def arg_fun_position(a, b=10 ,*args, c=20): 
+    print(a, args, b, f',args return a {type(args)},', c)
+arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 ,args return a <class 'tuple'>, 20
+
+```
 ##  1. Default Parameters
   - Should always follow the **non-default** parameters
 ```python
@@ -39,12 +45,25 @@ def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default a
 ```
 
 ##  2. *args
-- Gathers all remaining "**arguments**" as a "**tuple**"
+- Gathers all remaining ```arguments``` as a ```tuple```
 - The order of arguments doesn't matter!
 
+```python
+# *args
+
+def arg_fun_0(*args): print(args,type(args))
+arg_fun_0(1, 2, 3) # (1, 2, 3) <class 'tuple'>
+
+def arg_fun_1(*args):
+    total = 0
+    for val in args:
+        total += val
+    return total
+arg_fun_1(1, 2, 3) # 6
+```
 
 ##  3. *kwargs
-- Gathers remaining "**keyword arguments**" as a "**dict**"
+- Gathers remaining ```keyword arguments``` as a ```dict```
 
 
 
