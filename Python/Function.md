@@ -4,16 +4,15 @@
   - Should always follow the **non-default** parameters
 ```python
 ## Default Parameters
-# ok!
+
 def fun_0(p1, p2, p3, p4=10): print(p1,p2,p3,p4)
 fun_0(1,2,3) # 1 2 3 10
-# error!
 fun_0(1,2)   # TypeError: fun_1() missing 1 required positional argument: 'p3'
-# ok!
+
 def fun_1(p1, p2=10, p3=10, p4=10): print(p1,p2,p3,p4)
 fun_1(1,2,3) # 1 2 3 10
 fun_1(1,2)   # 1 2 10 10
-# error!
+
 # SyntaxError: non-default argument follows default argument
 def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4) 
 def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4)
