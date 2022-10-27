@@ -24,8 +24,8 @@
 ```python
 # Param Order
 def arg_fun_position(a, b=10 ,*args, c=20): 
-    print(a, args, b, f',args return a {type(args)},', c)
-arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 ,args return a <class 'tuple'>, 20
+    print(a, args, b, type(args), c)
+arg_fun_position(1, 2, 3, 4) # 1 (3, 4) 2 <class 'tuple'> 20
 
 ```
 ##  1. Default Parameters
@@ -41,7 +41,9 @@ def fun_1(p1, p2=10, p3=10, p4=10): print(p1,p2,p3,p4)
 fun_1(1,2,3) # 1 2 3 10
 fun_1(1,2)   # 1 2 10 10
 
+# error
 def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
+# error
 def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
 ```
 
