@@ -6,11 +6,11 @@
       - [・Good code](#good-code)
     - [Read txt](#read-txt)
     - [Write txt](#write-txt)
-  - [2. Pandas](#2-pandas)
+  - [2. Pandas (Recommended)](#2-pandas-recommended)
 - [CSV](#csv)
   - [1. open()](#1-open-1)
   - [2. csv](#2-csv)
-  - [3. Pandas](#3-pandas)
+  - [3. Pandas (Recommended)](#3-pandas-recommended)
 - [EXCEL](#excel)
     - [Pandas](#pandas)
 - [SQL DB](#sql-db)
@@ -53,7 +53,7 @@ with open("<file.txt>", "w") as file:
     file.write("test test n")
     file.write("test" * 10000)
 ```
-## 2. Pandas
+## 2. Pandas (Recommended)
 
 
 # CSV
@@ -88,7 +88,7 @@ with open("fighters.csv") as file:
         # Each row is an OrderedDict!
         print(row['Name']) #Use keys to access data
 ```
-## 3. Pandas
+## 3. Pandas (Recommended)
 # EXCEL
 ### Pandas
 # SQL DB
