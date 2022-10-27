@@ -18,7 +18,7 @@
 # TXT
 ## 1. open()
 ### Close File
-- "with" statement will close file automatically. (Recommended)
+- "with" statement close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
 - Always .close() files - it frees up system resources!
 #### ・Bad code
