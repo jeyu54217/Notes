@@ -4,14 +4,14 @@
   - [Encapsulation & Abstraction](#encapsulation--abstraction)
     - [Encapsulation](#encapsulation)
     - [Abstraction](#abstraction)
-- [Classes & Instances](#classes--instances)
-  - [Class](#class)
-    - [Creating a Class](#creating-a-class)
-    - [Class Attributes](#class-attributes)
-    - [Class Methods](#class-methods)
-  - [Instance](#instance)
-    - [Instantiating a Class](#instantiating-a-class)
-    - [Instance Attributes and Methods](#instance-attributes-and-methods)
+  - [Classes & Instances](#classes--instances)
+    - [Class](#class)
+      - [Creating a Class](#creating-a-class)
+      - [Class Attributes](#class-attributes)
+      - [Class Methods](#class-methods)
+    - [Instance](#instance)
+      - [Instantiating a Class](#instantiating-a-class)
+      - [Instance Attributes and Methods](#instance-attributes-and-methods)
 
 # OOP (Object oriented programming)
   - programming paradigm
@@ -23,11 +23,11 @@
   - exposing only "relevant" data in a class interface, hiding private attributes and methods (aka the "inner workings") from users
 
 
-# Classes & Instances
-## Class
+## Classes & Instances
+### Class
 - blueprint for objects
 - Classes can contain methods (functions) and attributes (similar to keys in a dict).
-### Creating a Class
+#### Creating a Class
 - Classes in Python can have a special __init__ method, which gets called every time you create an instance of the class (instantiate).
 - The self keyword refers to the current class instance.
 - self must always be the first parameter to __init__ and any methods and properties on class instances.
@@ -41,7 +41,7 @@ class Vehicle:
         self.year = year
 ```
 
-### Class Attributes
+#### Class Attributes
 - We can also define attributes directly on a class that are shared by all instances of a class and the class itself.
 ```python
 class Pet():
@@ -62,7 +62,7 @@ fluffy.allowed
 Bro = Pet("bear", "Bro")
 ValueError: You can't have a bear as a pet here!
 ```
-### Class Methods
+#### Class Methods
 - Class methods are methods (with the @classmethod decorator) that are not concerned with instances, but the class itself.
 - The first argument is cls (for class) instead of self. Like self, it does not need to be passed in explicitly.
 - Class methods are available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
@@ -76,9 +76,9 @@ class Person():
 
 Person.from_csv(my_csv)
 ```
-## Instance
+### Instance
 - objects that are constructed from a class blueprint that contain their class's methods and properties.
-### Instantiating a Class
+#### Instantiating a Class
 ```python
 v = Vehicle("Honda", "Civic", 2017)
 
@@ -91,7 +91,7 @@ v.model
 v.year
 2017
 ```
-### Instance Attributes and Methods
+#### Instance Attributes and Methods
 ```python
 class Person():
 
