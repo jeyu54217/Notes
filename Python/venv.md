@@ -8,8 +8,8 @@
 ```bash
 python3 --version
 ```
-## VENV
-### macOS
+# VENV
+## macOS
 ```bash
 python3 -m pip install virtualenv
 ```
@@ -22,7 +22,7 @@ source <path/to/activate>
 ```bash
 deactivate
 ```
-### windows
+## windows
 ```bash
 python -m venv <path/venv>
 ```
@@ -32,7 +32,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```bash
 deactivate
 ```
-### Linux
+## Linux
 ```bash
 sudo apt-get update
 ```
@@ -54,7 +54,7 @@ deactivate
 
 
 
-## pip 
+# pip 
 ```bash
 pip help    
 ```
