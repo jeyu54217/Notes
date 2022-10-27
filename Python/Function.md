@@ -29,6 +29,8 @@ def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default a
   - local -> nonlocal -> global -> built-in
 ### local
 ```python
+## Local Scope
+
 glo_var = 0
 
 def fun_loco_0():
@@ -45,6 +47,8 @@ print(fun_loco_1(), glo_var) # (10, 140625991289024, 140625991288704) 0
 ```
 ### global
 ```python
+## Global Scope
+
 glo_var = 0
 
 def fun_glo():
