@@ -1,18 +1,28 @@
+**CONTENTS
+- [JWT (JSON Web Token)](#jwt-json-web-token)
+  - [What it is ?](#what-it-is-)
+    - [Claim](#claim)
+    - [NumericDate](#numericdate)
+    - [2. Token Composition](#2-token-composition)
+      - [Real Structure](#real-structure)
+      - [(1). HEADER parameter](#1-header-parameter)
+      - [(2). PAYLOAD Claims](#2-payload-claims)
+        - [1). Registered claims:](#1-registered-claims)
+        - [2). Public claims](#2-public-claims)
+        - [3). Private claims](#3-private-claims)
+      - [(3). SIGNATURE](#3-signature)
+  - [How to use it ?](#how-to-use-it-)
+    - [Creating](#creating)
+    - [Validating](#validating)
+  - [When should use it?](#when-should-use-it)
+  - [Why use it ? (Pros)](#why-use-it--pros)
+  - [Security Considerations (Cons)](#security-considerations-cons)
+  - [References](#references)
+
 # JWT (JSON Web Token)
 ## What it is ?
-### 1. Definition
-JWTs represent a set of claims as a JSON object that is encoded in a
-   JWS and/or JWE structure.  This JSON object is the JWT Claims Set.
-   As per Section 4 of RFC 7159 [RFC7159], the JSON object consists of
-   zero or more name/value pairs (or members), where the names are
-   strings and the values are arbitrary JSON values.  These members are
-   the claims represented by the JWT.  This JSON object MAY contain
-   whitespace and/or line breaks before or after any JSON values or
-   structural characters, in accordance with Section 2 of RFC 7159
-   [RFC7159].
-
-   The member names within the JWT Claims Set are referred to as Claim
-   Names.  The corresponding values are referred to as Claim Values.
+   - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and each part is separated by period ('.') characters.
+   
 
    The contents of the JOSE Header describe the cryptographic operations
    applied to the JWT Claims Set.  If the JOSE Header is for a JWS, the
@@ -24,35 +34,16 @@ JWTs represent a set of claims as a JSON object that is encoded in a
    create a Nested JWT, enabling nested signing and encryption to be
    performed.
 
-   A JWT is represented as a sequence of URL-safe parts separated by
-   period ('.') characters.  Each part contains a base64url-encoded
-   value.  The number of parts in the JWT is dependent upon the
-   representation of the resulting JWS using the JWS Compact
-   Serialization or JWE using the JWE Compact Serialization.
 
-#### (1). JWT
-     A string representing a set of claims as a JSON object 
-     that is encoded in a JWS or JWE, enabling the claims 
-     to be digitally signed or MACed and/or encrypted.
-#### (2). Claim
-The JWT Claims Set represents a JSON object whose members are the
-   claims conveyed by the JWT.  The Claim Names within a JWT Claims Set
-   MUST be unique; JWT parsers MUST either reject JWTs with duplicate
-   Claim Names or use a JSON parser that returns only the lexically last
-   duplicate member name, as specified in Section 15.12 ("The JSON
-   Object") of ECMAScript 5.1 [ECMAScript].
+### Claim
+   - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
+   - The Claim Names within a JWT Claims Set MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names or use a JSON parser that returns only the lexically last duplicate member name.
+   - 3 classes of JWT Claim Names
+     - Registered Claim 
+     - Public Claim 
+     - Private Claim 
 
-   The set of claims that a JWT must contain to be considered valid is
-   context dependent and is outside the scope of this specification.
-   Specific applications of JWTs will require implementations to
-   understand and process some claims in particular ways.  However, in
-   the absence of such requirements, all claims that are not understood
-   by implementations MUST be ignored.
-
-   There are three classes of JWT Claim Names: Registered Claim Names,
-   Public Claim Names, and Private Claim Names.
-
-#### NumericDate
+### NumericDate
     A JSON numeric value representing the number of seconds from
     1970-01-01T00:00:00Z UTC until the specified UTC date/time,
     ignoring leap seconds.  This is equivalent to the IEEE Std 1003.1,
