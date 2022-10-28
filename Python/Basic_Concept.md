@@ -14,7 +14,7 @@
 
 ## Naming Conventions [(EPE8)](https://peps.python.org/pep-0008/#naming-conventions)
 1. UPPER_CASE
-2. CapitalizedWords
+2. CapitalizedWords : CapWords, for Class names
 3. mixedCase
 4. **_var** : 
    - weak “internal use” indicator.
@@ -24,7 +24,20 @@
 7. var_ : avoid conflicts with Python keyword. e.g. Class -> class_
 
 ## Dynamic Typing
+- variables can change types readily
+```python
+var = True
+print(var) # True
 
+var = "a dog"
+print(var) # a dog
+
+var = None
+print(var) # None
+
+var = 22 / 7
+print(var) # 3.142857142857143
+```
 # Mutable & Immutable
 ## Mutable
 ## Immutable
