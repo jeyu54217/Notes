@@ -43,14 +43,13 @@ list_1 = [n for n in range(10)]
 
 ```
 ## 4. Dict comprehension [(PEP 274)](https://peps.python.org/pep-0274/)
-{key: value for key, value in d.items()}
+```{k: v for key, value in d.items()}```
 ## 5. Ternary
 
-x = something if condition else otherthing
+```x = something if condition else otherthing```
 
 ## 6. Underscores in Numeric Literals
-big_number = 1_000_000_000
- equivalent to big_number = 1000000000
+```big_number = 1_000_000_000``` equivalent to ```big_number = 1000000000```
 
 ## 7. assign
 ```python
