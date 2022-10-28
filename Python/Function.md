@@ -2,8 +2,8 @@
 - [Arguments](#arguments)
   - [1. Positional Arguments](#1-positional-arguments)
   - [2. Keyword Arguments](#2-keyword-arguments)
-  - [Argument/Keyword Argument Unpacking](#argumentkeyword-argument-unpacking)
-    - [Argument Unpacking](#argument-unpacking)
+  - [Argument Unpacking](#argument-unpacking)
+    - [Argument Unpacking](#argument-unpacking-1)
     - [Keyword Argument Unpacking](#keyword-argument-unpacking)
 - [Parameters](#parameters)
   - [1. Default Parameters](#1-default-parameters)
@@ -45,7 +45,7 @@ def func_kw_1(p1, p2, p3=100): print(p1, p2, p3)
 func_kw_1(p2="A", 100) # SyntaxError: positional argument follows keyword argument
 func_kw_1(100, 200) # 100 200 100
 ```
-## Argument/Keyword Argument Unpacking
+## Argument Unpacking
 - Using ```*``` , ```**``` as an Argument / Keyword Arguments
 ### Argument Unpacking
 ```python
