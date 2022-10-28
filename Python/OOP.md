@@ -12,7 +12,7 @@
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
       - [Instance Attributes and Methods](#instance-attributes-and-methods)
-  - [Inheritance & Multiple Inheritance & Polymorphism](#inheritance--multiple-inheritance--polymorphism)
+  - [Inheritance & Polymorphism](#inheritance--polymorphism)
     - [Inheritance](#inheritance)
     - [Multiple Inheritance](#multiple-inheritance)
     - [Polymorphism](#polymorphism)
@@ -112,7 +112,7 @@ class Person():
 
 p = Person("Colt", "Steele")
 ```
-## Inheritance & Multiple Inheritance & Polymorphism
+## Inheritance & Polymorphism
 ### Inheritance
 - A key feature of OOP is the ability to define a class which inherits from another class (a "base" or "parent" class).
 - In Python, inheritance works by passing the parent class as an argument to the definition of a child class
