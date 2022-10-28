@@ -1,16 +1,15 @@
 **CONTENTS**
 - [JWT (JSON Web Token)](#jwt-json-web-token)
-  - [What it is ?](#what-it-is-)
-    - [Token Composition](#token-composition)
-      - [1. HEADER parameter](#1-header-parameter)
-      - [2. PAYLOAD Claims](#2-payload-claims)
-        - [Claim](#claim)
-        - [1. Registered Claim](#1-registered-claim)
-          - [NumericDate](#numericdate)
-        - [2. Public Claim](#2-public-claim)
-        - [3. Private Claim](#3-private-claim)
-      - [3. SIGNATURE](#3-signature)
-  - [How to use it ?](#how-to-use-it-)
+  - [Token Composition](#token-composition)
+    - [1. HEADER parameter](#1-header-parameter)
+    - [2. PAYLOAD Claims](#2-payload-claims)
+      - [Claim](#claim)
+      - [1. Registered Claim](#1-registered-claim)
+        - [NumericDate](#numericdate)
+      - [2. Public Claim](#2-public-claim)
+      - [3. Private Claim](#3-private-claim)
+    - [3. SIGNATURE](#3-signature)
+  - [Creating & Validating](#creating--validating)
     - [Creating](#creating)
     - [Validating](#validating)
   - [When should use it?](#when-should-use-it)
@@ -19,23 +18,22 @@
   - [References](#references)
 
 # JWT (JSON Web Token)
-## What it is ?
    - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and separated by period ```.``` characters.
 
-### Token Composition
+## Token Composition
 - Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
 - **Not Encrypted** : Secret data should not be in ```HEADER``` and ```PAYLOAD```
 ![](https://i.imgur.com/x57MeJO.png)
 
-#### 1. HEADER parameter 
+### 1. HEADER parameter 
 - Typically consists of 2 parts:
      1. "typ" (Token type) : JWT
      2. ["alg" (Signature Encryption Algorithm)](https://pyjwt.readthedocs.io/en/stable/algorithms.html#digital-signature-algorithms) : HS256
-#### 2. PAYLOAD Claims 
-##### Claim
+### 2. PAYLOAD Claims 
+#### Claim
    - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
    - The Claim Names within a JWT Claims Set MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names or use a JSON parser that returns only the lexically last duplicate member name.
-##### 1. Registered Claim
+#### 1. Registered Claim
 1) "sub" (Subject) Claim
    -    The "sub" (subject) claim identifies the principal that is the
    subject of the JWT.  The claims in a JWT are normally statements
@@ -91,10 +89,10 @@
    produced by different issuers as well.  The "jti" claim can be used
    to prevent the JWT from being replayed.  The "jti" value is a case-
    sensitive string.  Use of this claim is OPTIONAL.
-###### NumericDate
+##### NumericDate
   - A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds. 
   - each day is accounted for by exactly 86400 seconds
-##### 2. Public Claim 
+#### 2. Public Claim 
 Claim Names can be defined at will by those using JWTs.  However, in
    order to prevent collisions, any new Claim Name should either be
    registered in the IANA "JSON Web Token Claims" registry established
@@ -103,20 +101,20 @@ Claim Names can be defined at will by those using JWTs.  However, in
    value needs to take reasonable precautions to make sure they are in
    control of the part of the namespace they use to define the Claim
    Name.
-##### 3. Private Claim 
+#### 3. Private Claim 
   A producer and consumer of a JWT MAY agree to use Claim Names that
    are Private Names: names that are not Registered Claim Names
    (Section 4.1) or Public Claim Names (Section 4.2).  Unlike Public
       Claim Names, Private Claim Names are subject to collision and should
    be used with caution.
 
-#### 3. SIGNATURE
+### 3. SIGNATURE
 - Encryption Algorithm
 - HEADER(base64Url encoded) : For integrality, to make sure the HEADER is not changed.
 - PAYLOAD(base64Url encoded) : For integrality, to make sure the PAYLOAD is not changed.
 - server-side Private Key : The decryption key is only stored on the server side.
 - 
-## How to use it ?
+## Creating & Validating
 ### Creating
 1.  Create a JWT Claims Set containing the desired claims.  Note that
        whitespace is explicitly allowed in the representation and no
