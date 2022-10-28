@@ -227,9 +227,7 @@ If any of the listed steps fail, then the JWT MUST be rejected
         RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.
 
 ## When should use it?
-Single Sign On ( SSO ) 因為它的開銷很小，而且
 
-可以很輕鬆的跨 domains
 ## Why use it ? (Pros)
 simplicity Compact
   less verbose
@@ -238,9 +236,8 @@ Self-contained  payload 裡面包含了使用者的資訊，也就是說解析�
 Security
   public/private key supportred
 JSON parsers
+Single Sign On ( SSO ) 因為它的開銷很小，而且可以很輕鬆的跨 domains
 ![](https://i.imgur.com/NkFVYS1.png)
 ## Security Considerations (Cons)
 
 ## References
-ww
-
