@@ -1,4 +1,4 @@
-**CONTENTS
+**CONTENTS**
 - [JWT (JSON Web Token)](#jwt-json-web-token)
   - [What it is ?](#what-it-is-)
     - [Claim](#claim)
