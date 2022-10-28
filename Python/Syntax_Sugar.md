@@ -53,9 +53,10 @@ big_number = 1_000_000_000
  equivalent to big_number = 1000000000
 
 ## 7. assign
+```python
 a += 1
 a = a + 1
-
+```
 ## 8. 1 < x < 10
-1 < x and x < 10
+```1 < x and x < 10```
 
