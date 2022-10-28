@@ -22,7 +22,7 @@
 
 ## Token Composition
 - Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
-- **Not Encrypted** : Secret data should not be in ```HEADER``` and ```PAYLOAD```
+- **Encode** but **Not Encrypted** : Secret data should not be in ```HEADER``` and ```PAYLOAD```
 ![](https://i.imgur.com/x57MeJO.png)
 
 ### 1. HEADER parameter 
