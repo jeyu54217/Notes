@@ -2,6 +2,8 @@
 - [Variables](#variables)
   - [Naming Conventions (EPE8)](#naming-conventions-epe8)
   - [Dynamic Typing](#dynamic-typing)
+  - [Static Typing](#static-typing)
+  - [Inferred Type](#inferred-type)
 - [Mutable & Immutable](#mutable--immutable)
   - [Mutable](#mutable)
   - [Immutable](#immutable)
@@ -25,6 +27,7 @@
 
 ## Dynamic Typing
 - variables can change types readily
+- Ruby, Python, PHP, JavaScript, Erlang
 ```python
 var = True
 print(var) # True
@@ -38,9 +41,18 @@ print(var) # None
 var = 22 / 7
 print(var) # 3.142857142857143
 ```
+## Static Typing
+- Java, C, C++
+## Inferred Type
+- Go 、Kotlin、Swift
+- 
 # Mutable & Immutable
 ## Mutable
+- the **values** of **object** can be changed.
+- List, Set, Dict, User-Defined Classes
 ## Immutable
+- the **values** of  **object** cannot be changed.
+- Numbers, Strings, Tuples, Frozen Sets, User-Defined Classes 
 ```python
 x = (1,2,3)
 3 in x # True
