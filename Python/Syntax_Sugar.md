@@ -9,7 +9,7 @@
 - [8. 1 < x < 10](#8-1--x--10)
 
 
-## 1. Magic Methods
+## 1. [Magic Methods](https://www.tutorialsteacher.com/python/magic-methods-in-python)
 - dir() function to see the number of magic methods inherited by a class
 - __ str__( )
 ```python
@@ -21,7 +21,7 @@ class Employee:
     def __str__(self):
         return 'name='+self.name+' salary=$'+str(self.salary)
 ```
-https://www.tutorialsteacher.com/python/magic-methods-in-python
+
 
 ## 2. Decorators
 
