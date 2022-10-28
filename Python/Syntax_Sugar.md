@@ -24,7 +24,7 @@ class Employee:
 
 
 ## 2. Decorators
-- [-See here-](https://github.com/jeyu54217/Study_Note/blob/main/Python/decorator.md)
+- [See here](https://github.com/jeyu54217/Study_Note/blob/main/Python/decorator.md)
 
 
 ## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
