@@ -1,6 +1,6 @@
 **CONTENTS**
 - [Variables](#variables)
-  - [Naming](#naming)
+  - [Naming Conventions EPE8](#naming-conventions-epe8)
   - [Dynamic Typing](#dynamic-typing)
 - [Mutable & Immutable](#mutable--immutable)
   - [Mutable](#mutable)
@@ -12,11 +12,16 @@
 
 # Variables
 
-## Naming
-1. 
-2. 
-3. 
-4. 
+## Naming Conventions [EPE8](https://peps.python.org/pep-0008/#naming-conventions)
+1. UPPER_CASE
+2. CapitalizedWords
+3. mixedCase
+4. **_var**
+   - weak “internal use” indicator.
+   - ```import *```does not import objects whose names start with an ```_```.
+5. **__var** : This has real meaning. The interpreter replaces this name with _classname__foo as a way to ensure that the name will not overlap with a similar name in another class.
+6. **__ var__** : “magic” objects or attributes that live in user-controlled namespaces.\
+7. var_ : avoid conflicts with Python keyword. e.g. Class -> class_
 
 ## Dynamic Typing
 
