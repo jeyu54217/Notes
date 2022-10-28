@@ -44,7 +44,7 @@ class Vehicle:
         self.model = model
         self.year = year
 ```
-Class Attributes
+
 #### Class Attributes
 - We can also define attributes directly on a class that are shared by all instances of a class and the class itself.
 ```python
