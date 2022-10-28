@@ -2,6 +2,9 @@
 - [JWT (JSON Web Token)](#jwt-json-web-token)
   - [What it is ?](#what-it-is-)
     - [Claim](#claim)
+      - [1. Registered Claim](#1-registered-claim)
+      - [2. Public Claim](#2-public-claim)
+      - [3. Private Claim](#3-private-claim)
     - [NumericDate](#numericdate)
     - [2. Token Composition](#2-token-composition)
       - [Real Structure](#real-structure)
@@ -21,7 +24,7 @@
 
 # JWT (JSON Web Token)
 ## What it is ?
-   - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and each part is separated by period ('.') characters.
+   - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and each part is separated by period ```.``` characters.
    
 
    The contents of the JOSE Header describe the cryptographic operations
@@ -38,10 +41,10 @@
 ### Claim
    - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
    - The Claim Names within a JWT Claims Set MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names or use a JSON parser that returns only the lexically last duplicate member name.
-   - 3 classes of JWT Claim Names
-     - Registered Claim 
-     - Public Claim 
-     - Private Claim 
+   - 3 classes of JWT Claim Names :
+#### 1. Registered Claim 
+#### 2. Public Claim 
+#### 3. Private Claim 
 
 ### NumericDate
     A JSON numeric value representing the number of seconds from
