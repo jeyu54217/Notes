@@ -19,7 +19,7 @@
 4. **_var** : 
    - weak “internal use” indicator.
    - ```import *```does not import objects whose names start with an ```_```.
-5. **__var** : This has real meaning. The interpreter replaces this name with _classname__foo as a way to ensure that the name will not overlap with a similar name in another class.
+5. [**__var**](https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-single-and-double-underscore-before-an-object-name) : This has real meaning. The interpreter replaces this name with _classname__foo as a way to ensure that the name will not overlap with a similar name in another class.
 6. **__ var__** : “magic” objects or attributes that live in user-controlled namespaces.\
 7. var_ : avoid conflicts with Python keyword. e.g. Class -> class_
 
