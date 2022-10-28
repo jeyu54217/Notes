@@ -2,7 +2,7 @@
 - [1. Magic Methods](#1-magic-methods)
 - [2. Decorators](#2-decorators)
 - [3. List comprehension](#3-list-comprehension)
-- [4. Dict comprehension](#4-dict-comprehension)
+- [4. Dict comprehension (PEP 274)](#4-dict-comprehension-pep-274)
 - [5. Ternary](#5-ternary)
 - [6. Underscores in Numeric Literals](#6-underscores-in-numeric-literals)
 - [7. assign](#7-assign)
@@ -27,10 +27,22 @@ https://www.tutorialsteacher.com/python/magic-methods-in-python
 
 
 
-## 3. List comprehension
-[x for x in range(10)]
+## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+
+[_expression_ for x in range(10)]
 nested list comprehension
-## 4. Dict comprehension
+```python
+# List comprehension
+list_0 = []
+for n in range(10):
+    list_0.append(n)
+
+list_1 = [n for n in range(10)]
+
+# Nested list comprehension
+
+```
+## 4. Dict comprehension [(PEP 274)](https://peps.python.org/pep-0274/)
 {key: value for key, value in d.items()}
 ## 5. Ternary
 
