@@ -178,3 +178,53 @@ captain_cook.walk() # 'Captain Cook is walking'
 captain_cook.greet() # 'I am Captain Cook of the sea!'
 ```
 ### Polymorphism
+- Classes can inherit from other classes and use the same methods to do different things (polymorphism)
+- We can enhance our custom classes with special/magic/dunder methods
+- an object can take on many (poly) forms (morph).
+  1. The same class method works in a similar way for different classes
+   ```python
+   Cat.speak()  # meow
+   Dog.speak()  # woof
+   Human.speak()  # yo
+   ```
+    - method overriding
+        - Each subclass will have a different implementation of the method.
+        - If the method is not implemented in the subclass, the version in the parent class is called instead.
+```python
+class Animal():
+    def speak(self):
+        raise NotImplementedError("Subclass needs to implement this method")
+
+class Dog(Animal):
+    def speak(self):
+        return "woof"
+
+class Cat(Animal):
+    def speak(self):
+        return "meow"
+```
+  2.  The same operation works for different kinds of objects (Polymorphism)
+   ```python
+  sample_list = [1,2,3]
+  sample_tuple = (1,2,3)
+  sample_string = "awesome"
+
+  len(sample_list)
+  len(sample_tuple)
+  len(sample_string)
+
+  8 + 2  # 10
+  "8" + "2"  # 82
+  # Python classes have special (also known as "magic") methods, that are dunders (i.e. double underscore-named). 
+  # hese are methods with special names that give instructions to Python for how to deal with objects.
+  # The + operator is shorthand for a special method called __add__() that gets called on the first operand.
+  # If the first (left) operand is an instance of int, __add__() does mathematical addition. If it's a string, it does string concatenation.
+  # Therefore, you can declare special methods on your own classes to mimic the behavior of builtin objects, like so using __len__:
+  class Human:
+    def __init__(self, height):
+        self.height = height  # in inches
+
+    def __len__(self):
+        return self.height
+   ```
+
