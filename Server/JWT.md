@@ -3,9 +3,9 @@
   - [What it is ?](#what-it-is-)
     - [Claim](#claim)
       - [1. Registered Claim](#1-registered-claim)
+        - [NumericDate](#numericdate)
       - [2. Public Claim](#2-public-claim)
       - [3. Private Claim](#3-private-claim)
-    - [NumericDate](#numericdate)
     - [2. Token Composition](#2-token-composition)
       - [Real Structure](#real-structure)
       - [(1). HEADER parameter](#1-header-parameter)
@@ -42,18 +42,14 @@
    - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
    - The Claim Names within a JWT Claims Set MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names or use a JSON parser that returns only the lexically last duplicate member name.
    - 3 classes of JWT Claim Names :
-#### 1. Registered Claim 
+#### 1. Registered Claim
+##### NumericDate
+  - A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds. 
+  - each day is accounted for by exactly 86400 seconds
+  
 #### 2. Public Claim 
 #### 3. Private Claim 
 
-### NumericDate
-    A JSON numeric value representing the number of seconds from
-    1970-01-01T00:00:00Z UTC until the specified UTC date/time,
-    ignoring leap seconds.  This is equivalent to the IEEE Std 1003.1,
-    2013 Edition [POSIX.1] definition "Seconds Since the Epoch", in
-    which each day is accounted for by exactly 86400 seconds, other
-    than that non-integer values can be represented.  See RFC 3339
-    [RFC3339] for details regarding date/times in general and UTC in particular.
 ### 2. Token Composition
 #### Real Structure
 Token consist of 3 parts separated by dots "." and encode with base64Url
