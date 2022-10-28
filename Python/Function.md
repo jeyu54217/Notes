@@ -39,6 +39,7 @@ def func_kw_0(p1, p2): print(p1, p2)
 func_kw_0(p1="A", p2="B") # A B
 func_kw_0(p2="A", p1="B") # B A
 
+
 # come after positional arguments and before default arguments
 def func_kw_1(p1, p2, p3=100): print(p1, p2, p3)
 func_kw_1(p2="A", 100) # SyntaxError: positional argument follows keyword argument
