@@ -52,7 +52,7 @@ print(var) # 3.142857142857143
 - List, Set, Dict, User-Defined Classes
 ## Immutable
 - the **values** of  **object** cannot be changed.
-- - stored by reference
+- stored by reference
 - Numbers, Strings, Tuples, Frozen Sets, User-Defined Classes 
 ```python
 x = (1,2,3)
