@@ -199,7 +199,6 @@ If any of the listed steps fail, then the JWT MUST be rejected
 - Self-contained : payload 裡面包含了使用者的資訊，也就是說解析後就可以看到，不需要再去 query 你的 database。
 - Security : public/private key supportred
 - JSON parsers - cross-platform supported
-- 
 ## Security Considerations (Cons)
 
 ## References
