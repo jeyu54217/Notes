@@ -1,6 +1,10 @@
 **CONTENTS**
 - [Arguments](#arguments)
-    - [Keyword Arguments](#keyword-arguments)
+  - [1. Positional Arguments](#1-positional-arguments)
+  - [2. Keyword Arguments](#2-keyword-arguments)
+  - [Argument/Keyword Argument Unpacking](#argumentkeyword-argument-unpacking)
+    - [Argument Unpacking](#argument-unpacking)
+    - [Keyword Argument Unpacking](#keyword-argument-unpacking)
 - [Parameters](#parameters)
   - [1. Default Parameters](#1-default-parameters)
   - [2. *args](#2-args)
@@ -15,7 +19,34 @@
 
 # Arguments
   - Arguments are the data(actual value) which passed into the func's parameters.
-  - **Argument Unpacking** : Using ```*``` , ```**``` as an Argument / Keyword Arguments
+## 1. Positional Arguments
+- values that are passed into a function based on the order in which the parameters were listed during the function definition.
+```python
+# Positional Arguments
+def func_posi_0(p1, p2): print(p1, p2)
+func_posi_0("A", "B") # A B
+func_posi_0("B", "A") # B A
+
+```
+## 2. Keyword Arguments
+-  values which passed into a function are identifiable by specific parameter names and the assignment operator ```=```
+-  Keyword arguments can be likened to dictionaries in that they map a value to a keyword.
+-  the positions of the arguments do not matter.
+-  have to come after positional arguments and before default arguments in a function call.
+```python
+# Keyword Arguments
+def func_kw_0(p1, p2): print(p1, p2)
+func_kw_0(p1="A", p2="B") # A B
+func_kw_0(p2="A", p1="B") # B A
+
+# come after positional arguments and before default arguments
+def func_kw_1(p1, p2, p3=100): print(p1, p2, p3)
+func_kw_1(p2="A", 100) # SyntaxError: positional argument follows keyword argument
+func_kw_1(100, 200) # 100 200 100
+```
+## Argument/Keyword Argument Unpacking
+- Using ```*``` , ```**``` as an Argument / Keyword Arguments
+### Argument Unpacking
 ```python
 # *Argument Unpacking
 def func_args_0(*args): print(sum(args))
@@ -29,7 +60,9 @@ func_args_0(array_t) # TypeError: unsupported operand type(s) for +: 'int' and '
 func_args_0(1, 2, 3, 4) # 10
 func_args_0(*array_l, *array_t) # 20
 ```
+### Keyword Argument Unpacking
 ```python
+
 # **Keyword Argument Unpacking
 def func_kwargs_0(A, B): print( f"{A} & {B}")
 dict_1 = {"A": 123, "B": 321}
@@ -38,8 +71,6 @@ func_kwargs_0(dict_1) # TypeError: func_kwargs_0() missing 1 required positional
 # ok!
 func_kwargs_0(**dict_1) # 123 & 321
 ```
-### Keyword Arguments
-
 # Parameters
   - The variables in the declaration of function.
 
