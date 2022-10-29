@@ -207,3 +207,10 @@ If any of the listed steps fail, then the JWT MUST be rejected
 - [JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
 - [pyjwt API Reference](https://pyjwt.readthedocs.io/en/stable/api.html)
 - [Token Storage](https://auth0.com/docs/secure/security-guidance/data-security/token-storage)
+- https://medium.com/mr-efacani-teatime/%E6%B7%BA%E8%AB%87jwt%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%88%87%E9%81%A9%E7%94%A8%E6%83%85%E5%A2%83-301b5491b60e
+- https://medium.com/bandai%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E6%89%8B%E6%8A%8A%E6%89%8B%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C%E5%88%86%E4%BA%AB%E7%B3%BB%E5%88%97-jwt-authentication-%E5%92%8C-django-rest-framework%E7%9A%84%E7%B5%90%E5%90%88-d1f811b8c9da
+- https://www.wallarm.com/what/oauth-vs-jwt-detailed-comparison
+- https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-jwt-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-2e64d72594f8
+- https://siddharthac6.medium.com/json-web-token-jwt-the-right-way-of-implementing-with-node-js-65b8915d550e
+- https://www.iana.org/assignments/jwt/jwt.xhtml
+- https://5xruby.tw/posts/what-is-jwt
