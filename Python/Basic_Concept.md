@@ -12,6 +12,7 @@
   - [Set](#set)
     - [Set Comprehension](#set-comprehension)
   - [Memory Management](#memory-management)
+  - [Is Python call by reference or call by value](#is-python-call-by-reference-or-call-by-value)
 
 # Variables
 
@@ -97,3 +98,5 @@ def are_all_vowels_in_string(string):
 
 ## Memory Management
 https://docs.python.org/3.10/c-api/memory.html#memory-management
+
+## Is Python call by reference or call by value
