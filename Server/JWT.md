@@ -206,3 +206,4 @@ If any of the listed steps fail, then the JWT MUST be rejected
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
 - [JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
 - [pyjwt API Reference](https://pyjwt.readthedocs.io/en/stable/api.html)
+- [Token Storage](https://auth0.com/docs/secure/security-guidance/data-security/token-storage)
