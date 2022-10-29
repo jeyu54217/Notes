@@ -61,6 +61,7 @@ x = (1,2,3)
 3 in x # True
 x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
 ```
+- https://ithelp.ithome.com.tw/m/articles/10278722
 # Tuple & Set 
 ## Tuple
 1. light-weight lists (ordered) : faster than lists
