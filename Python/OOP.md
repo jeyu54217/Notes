@@ -13,6 +13,7 @@
       - [Magic Methods](#magic-methods)
       - [Others](#others)
         - [Old style & New style classes](#old-style--new-style-classes)
+        - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
       - [Instance Attributes and Methods](#instance-attributes-and-methods)
@@ -120,6 +121,14 @@ class Array:
 #### Others
 ##### Old style & New style classes
 https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20were%20introduced,typically%20the%20same%20as%20x.
+##### 动态获取和设置对象的属性
+```python
+if hasattr(Parent, 'x'):
+    print(getattr(Parent, 'x'))
+    setattr(Parent, 'x',3)
+print(getattr(Parent,'x'))
+```
+
 ### Instance
 - objects that are constructed from a class blueprint that contain their class's methods and properties.
 #### Instantiating a Class
