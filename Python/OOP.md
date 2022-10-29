@@ -9,6 +9,9 @@
       - [Creating a Class](#creating-a-class)
       - [Class Attributes](#class-attributes)
       - [Class Methods](#class-methods)
+      - [Static Methods](#static-methods)
+      - [Others](#others)
+        - [Old style & New style classes](#old-style--new-style-classes)
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
       - [Instance Attributes and Methods](#instance-attributes-and-methods)
@@ -80,7 +83,10 @@ class Person():
 
 Person.from_csv(my_csv)
 ```
-
+#### Static Methods
+#### Others
+##### Old style & New style classes
+https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20were%20introduced,typically%20the%20same%20as%20x.
 ### Instance
 - objects that are constructed from a class blueprint that contain their class's methods and properties.
 #### Instantiating a Class
