@@ -24,6 +24,11 @@
     - [Client](#client)
   - [P2P](#p2p)
   - [Hybrid](#hybrid)
+- [Processes Communicating](#processes-communicating)
+  - [Process](#process)
+  - [](#)
+  - [Socket](#socket)
+  - [API](#api)
 - [REFERECES](#refereces)
 
 # Network Scope
@@ -128,6 +133,8 @@
 - an application’s architecture is distinctly differ- ent from the network architecture (e.g., the five-layer Internet architecture)
 - The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems.
 ## Client-Server
+ ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
+- Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
 - e.g. Web, FTP, Telnet, e-mail
 - Overwhelmed : single-server host is incapable of keeping up with all the requests from clients
 - Data center : virtual server which is housing a large number of server hosts
@@ -138,16 +145,28 @@
 ### Client
 - clients do not directly communicate with each other
 ## P2P
+ ![image](https://www.researchgate.net/profile/Erkki-Harjula/publication/224305552/figure/fig2/AS:667774380679177@1536221227291/Peer-to-peer-data-management-architecture.png)
+  - P2P Architecture | Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
   - peer : direct communication between pairs of intermittently connected hosts, 
   - Self-scalability : each peer also adds service capacity to the system by distributing files to other peers
   - face challenges of security, performance, and reliability due to their highly decentralized structure.
 ## Hybrid
-- e.g. Instant messaging applications
+- i.e. Instant messaging applications
     - server : used to track the IP addresses of users
     - P2P : user-to-user messages
+    - 
+# Processes Communicating
+## Process
+- a program that is running within an end system
+## 
+## Socket
+- The Interface Between the Process and the Computer Network
+- The interface between the application layer and the transport layer within a host
+## API 
+- Application Programming Interface
 
 
-
+The application developer has con- trol of everything on the application-layer side of the socket but has little control of the transport-layer side of the socket. The only control that the application developer has on the transport-layer side is (1) the choice of transport protocol and (2) perhaps the ability to fix a few transport-layer parameters such as maximum buffer and maxi- mum segment sizes (to be covered in Chapter 3). Once the application developer chooses a transport protocol (if a choice is available), the application is built using the transport-layer services provided by that protocol.
 # REFERECES
 - [Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
 - [Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
