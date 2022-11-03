@@ -142,7 +142,7 @@
   - Self-scalability : each peer also adds service capacity to the system by distributing files to other peers
   - face challenges of security, performance, and reliability due to their highly decentralized structure.
 ## Hybrid
-- i.e. Instant messaging applications
+- e.g. Instant messaging applications
     - server : used to track the IP addresses of users
     - P2P : user-to-user messages
 
