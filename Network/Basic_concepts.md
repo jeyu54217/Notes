@@ -145,8 +145,6 @@
 ### Client
 - clients do not directly communicate with each other
 ## P2P
- ![image](https://www.researchgate.net/profile/Erkki-Harjula/publication/224305552/figure/fig2/AS:667774380679177@1536221227291/Peer-to-peer-data-management-architecture.png)
-  - P2P Architecture | Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
   - peer : direct communication between pairs of intermittently connected hosts, 
   - Self-scalability : each peer also adds service capacity to the system by distributing files to other peers
   - face challenges of security, performance, and reliability due to their highly decentralized structure.
