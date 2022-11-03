@@ -13,22 +13,22 @@
   - [WAN (Wide Area Network)](#wan-wide-area-network)
     - [Pros.](#pros-3)
     - [Cons.](#cons-3)
+- [REFERECES](#refereces)
 
 # Network Scope
 ## PAN (Personal Area Network)
   -  A network formed around a person
-  -  It generally consists of a computer, mobile, or personal digital assistant.
-  -  Appliances use for PAN: cordless mice, keyboards, Bluetooth systems.
+  -  e.g. cordless mice, keyboards, Bluetooth systems.
 ### Pros.
   - secure & safe
-  - It offers only short-range solution up to ten meters
+  - It offers only short-range solution up to 10 meters
 ### Cons.
   - Should be in the same radio bands.
   - Distance limits.
 ## LAN (Local Area Network)
-  -  a group of computer which are connected in a limited area such as school, laboratory, home, and office building or computers and a printer in someone’s home
-  -  It is a widely useful network for sharing resources like files, printers, games, and other application. 
-  -  It is a network which consists of less than **5000** interconnected devices across several buildings.
+  -  a group of computer which are connected in a limited area such as school, laboratory, office building or a printer in someone’s home
+  -  For sharing resources like files, printers, games, and other application. 
+  -  Consists of less than **5000** interconnected devices across several buildings.
 ### Pros.
   - File sharing
       - hard-disks, DVD-ROM, and printers can share local area networks. This significantly reduces the cost of hardware purchases.
@@ -71,3 +71,5 @@
   - It requires more time to resolve issues because of the involvement of multiple wired and wireless technologies.
   - Offers lower security compared to other types of network in computer.
 
+# REFERECES
+[Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
