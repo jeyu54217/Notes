@@ -124,7 +124,7 @@
 	- Most come with firewall management.
 # Network Application Architectures
 ## Client-Server
-- ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
+ ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
 - Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
 ## P2P
 ## Hybrid
