@@ -87,7 +87,7 @@
 # Topology
   - ![image](https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/6230eed9d9792f3709c5ffd6_5f1086baa37c842a30184650_network-topology-types-diagram.png)
   (source: [heavy.ai-network-topology](https://www.heavy.ai/technical-glossary/network-topology))
-  see also : https://en.wikipedia.org/wiki/Network_topology
+  - see also : https://en.wikipedia.org/wiki/Network_topology
   1. Ring
   2. Star  
   3. Bus 
@@ -129,5 +129,5 @@
 
 
 # REFERECES
-[Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
-[Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
+  - [Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
+  - [Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
