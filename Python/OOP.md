@@ -35,27 +35,25 @@
 ## Classes & Instances
 ### Class
 - blueprint for objects
-- Classes can contain methods (functions) and attributes (similar to keys in a dict).
-#### Creating a Class
-- Classes in Python can have a special __init__ method, which gets called every time you create an instance of the class (instantiate).
-- The self keyword refers to the current class instance.
-- self must always be the first parameter to __init__ and any methods and properties on class instances.
-- You never have to pass it directly when calling instance methods, including __init__.
+- Can contain methods (functions) and attributes (similar to keys in a dict).
+#### Initializing a Class
+- __init__ : Classes in Python can have a special __init__ method, which gets called every time when creating an instance of the class (instantiate).
+- self : The self keyword refers to the current class instance.
+    - self must always be the **first parameter** to __init__ and any **methods** and **properties** on class instances.
+    - Don't have to pass it directly when calling instance methods, including __init__.
 ```python
-class Vehicle:
+class class_1:
 
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+    def __init__(self, p1, p2, p3):
+        self.p1 = self.p2 + self.p3
 ```
 
 #### Class Attributes
-- We can also define attributes directly on a class that are shared by all instances of a class and the class itself.
+- **Attributes** shared by **all instances** of a class and the **class itself**
 ```python
 class Pet():
 
-    allowed = ("cat", "dog", "bird", "lizard", "rodent")
+    cls_ttribute_1 = ("cat", "dog", "bird", "lizard", "rodent")
 
     def __init__(self, kind, name):
 
