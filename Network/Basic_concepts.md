@@ -127,8 +127,8 @@
  ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
 - Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
 ## P2P
- ![image](https://www.researchgate.net/publication/224305552/figure/fig2/AS:667774380679177@1536221227291/Peer-to-peer-data-management-architecture.png)
- - P2P Architecture | Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
+ ![image](https://bloggeek.me/wp-content/uploads/2020/11/202011-webrtc-mesh-architecture.png)
+ - P2P Architecture | Source : https://bloggeek.me/wp-content/uploads/2020/11/202011-webrtc-mesh-architecture.png
 ## Hybrid
 
 # REFERECES
