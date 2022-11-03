@@ -18,6 +18,10 @@
       - [Switch](#switch)
     - [Incompatible Networks](#incompatible-networks)
       - [Router](#router)
+- [Network Application Architectures](#network-application-architectures)
+  - [Client-Server](#client-server)
+  - [P2P](#p2p)
+  - [Hybrid](#hybrid)
 - [REFERECES](#refereces)
 
 # Network Scope
@@ -118,7 +122,12 @@
   - Building a network of networks, known as an internet.
 	- 會拆開封包重包裝分送
 	- Most come with firewall management.
-
+# Network Application Architectures
+## Client-Server
+- ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
+- Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
+## P2P
+## Hybrid
 
 # REFERECES
 - [Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
