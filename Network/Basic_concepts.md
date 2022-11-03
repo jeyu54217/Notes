@@ -128,8 +128,7 @@
 - an application’s architecture is distinctly differ- ent from the network architecture (e.g., the five-layer Internet architecture)
 - The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems.
 ## Client-Server
- ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
-- Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
+ ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)Source : https://cio-wiki.org/wiki/Client_Server_Architecture
 - e.g. Web, FTP, Telnet, e-mail
 - Overwhelmed : single-server host is incapable of keeping up with all the requests from clients
 - Data center : virtual server which is housing a large number of server hosts
