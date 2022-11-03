@@ -86,6 +86,7 @@
 
 # Topology
   - ![image](https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/6230eed9d9792f3709c5ffd6_5f1086baa37c842a30184650_network-topology-types-diagram.png)
+  (source: [heavy.ai-network-topology](https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/6230eed9d9792f3709c5ffd6_5f1086baa37c842a30184650_network-topology-types-diagram.png))
   1. Ring
   2. Star  
   3. Bus 
