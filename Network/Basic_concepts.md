@@ -13,6 +13,19 @@
   - [WAN (Wide Area Network)](#wan-wide-area-network)
     - [Pros.](#pros-3)
     - [Cons.](#cons-3)
+- [Topology](#topology)
+- [Physical layer](#physical-layer)
+  - [Protocols](#protocols)
+    - [Token ring](#token-ring)
+    - [CSMA/CD](#csmacd)
+    - [CSMA/CA](#csmaca)
+  - [Connection ways](#connection-ways)
+    - [Compatible Networks](#compatible-networks)
+      - [Repeater](#repeater)
+      - [Bridge](#bridge)
+      - [Switch](#switch)
+    - [Incompatible Networks](#incompatible-networks)
+      - [Router](#router)
 - [REFERECES](#refereces)
 
 # Network Scope
@@ -71,5 +84,47 @@
   - It requires more time to resolve issues because of the involvement of multiple wired and wireless technologies.
   - Offers lower security compared to other types of network in computer.
 
+# Topology
+  1. Ring
+  2. Star  
+  3. Bus 
+  4. Hub 
+# Physical layer 
+## Protocols
+### Token ring
+	- Popular in ring topology.
+	- Token and messages are passed in one direction.
+	- Only the machine that gets the token can transmit its own message.
+### CSMA/CD 
+  - Wired, carrier sense, multiple access with collision detection
+	- Popular in bus topology (wired Ethernet).
+	- Broadcasting.
+	- When collision, both machines wait for a brief random time before trying again.
+### CSMA/CA 
+  - Wireless, carrier sense, multiple access with collision avoidance
+	- Popular in wireless Ethernet.
+	- Broadcasting.
+  - Detect if a channel is idle, if so, wait for a brief random time and then detect again. If the channel is still idle, start to send.
+## Connection ways
+### Compatible Networks
+   - Use the same Protocol
+#### Repeater
+  - Simply passing through messages.（boardcasting to all）
+  - Connecting 2 compatible networks.
+#### Bridge 
+  - Can reduce collision better than repeater
+  - Connecting two compatible networks more efficiently.
+#### Switch  
+  - A bridge with multiple connections (multi bus connection)
+  - Connecting several compatible networks mor e efficiently.
+### Incompatible Networks 
+  - Use different potocols
+#### Router
+  - Building a network of networks, known as an internet.
+	- 會拆開封包重包裝分送
+	- Most come with firewall management.
+
+
 # REFERECES
+[Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
 [Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
