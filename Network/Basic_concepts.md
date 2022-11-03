@@ -118,5 +118,5 @@
 
 
 # REFERECES
-[Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
-[Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
+- [Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
+- [Types of Computer Network: What is LAN, MAN and WAN](https://www.guru99.com/types-of-computer-network.html)
