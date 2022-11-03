@@ -6,7 +6,7 @@
     - [Abstraction](#abstraction)
   - [Classes & Instances](#classes--instances)
     - [Class](#class)
-      - [Creating a Class](#creating-a-class)
+      - [Initializing a Class](#initializing-a-class)
       - [Class Attributes](#class-attributes)
       - [Class Methods](#class-methods)
       - [Static Methods](#static-methods)
