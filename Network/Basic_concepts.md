@@ -127,8 +127,6 @@
 # Network Application Architectures
 - an application’s architecture is distinctly differ- ent from the network architecture (e.g., the five-layer Internet architecture)
 - The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems.
-![image](https://d3i71xaburhd42.cloudfront.net/18f169f38ead204df5c31d183919d9b4f9e83857/16-Figure2-1-1.png)
--  Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
 ## Client-Server
 - e.g. Web, FTP, Telnet, e-mail
 - Overwhelmed : single-server host is incapable of keeping up with all the requests from clients
