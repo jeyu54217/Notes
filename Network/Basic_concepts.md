@@ -87,9 +87,9 @@
 # Physical layer 
 ## Protocols
 ### Token ring
-	- Popular in ring topology.
-	- Token and messages are passed in one direction.
-	- Only the machine that gets the token can transmit its own message.
+  - Popular in ring topology.
+  - Token and messages are passed in one direction.
+  - Only the machine that gets the token can transmit its own message.
 ### CSMA/CD 
   - Wired, carrier sense, multiple access with collision detection
 	- Popular in bus topology (wired Ethernet).
