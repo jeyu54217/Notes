@@ -20,6 +20,8 @@
       - [Router](#router)
 - [Network Application Architectures](#network-application-architectures)
   - [Client-Server](#client-server)
+    - [Server](#server)
+    - [Client](#client)
   - [P2P](#p2p)
   - [Hybrid](#hybrid)
 - [REFERECES](#refereces)
@@ -123,13 +125,32 @@
 	- 會拆開封包重包裝分送
 	- Most come with firewall management.
 # Network Application Architectures
+- an application’s architecture is distinctly differ- ent from the network architecture (e.g., the five-layer Internet architecture)
+- The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems.
 ## Client-Server
  ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png)
 - Client-Server Architecture | Source : https://cio-wiki.org/wiki/Client_Server_Architecture
+- e.g. Web, FTP, Telnet, e-mail
+- Overwhelmed : single-server host is incapable of keeping up with all the requests from clients
+- Data center : virtual server which is housing a large number of server hosts
+### Server
+- an always-on host
+- has a fixed, well-known address -  IP address
+- services requests from many other hosts -> clients
+### Client
+- clients do not directly communicate with each other
 ## P2P
- ![image](https://bloggeek.me/wp-content/uploads/2020/11/202011-webrtc-mesh-architecture.png)
- - P2P Architecture | Source : https://bloggeek.me/wp-content/uploads/2020/11/202011-webrtc-mesh-architecture.png
+ ![image](https://www.researchgate.net/profile/Erkki-Harjula/publication/224305552/figure/fig2/AS:667774380679177@1536221227291/Peer-to-peer-data-management-architecture.png)
+  - P2P Architecture | Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
+  - peer : direct communication between pairs of intermittently connected hosts, 
+  - Self-scalability : each peer also adds service capacity to the system by distributing files to other peers
+  - face challenges of security, performance, and reliability due to their highly decentralized structure.
 ## Hybrid
+- i.e. Instant messaging applications
+    - server : used to track the IP addresses of users
+    - P2P : user-to-user messages
+
+
 
 # REFERECES
 - [Introduction to Computer Science](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210)
