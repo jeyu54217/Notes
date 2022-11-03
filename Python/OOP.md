@@ -37,7 +37,7 @@
 - blueprint for objects
 - Can contain methods (functions) and attributes (similar to keys in a dict).
 #### Initializing a Class
-- __init__ : Classes in Python can have a special __init__ method, which gets called every time when creating an instance of the class (instantiate).
+- __ init__ : Classes in Python can have a special __init__ method, which gets called every time when creating an instance of the class (instantiate).
 - self : The self keyword refers to the current class instance.
     - self must always be the **first parameter** to __init__ and any **methods** and **properties** on class instances.
     - Don't have to pass it directly when calling instance methods, including __init__.
