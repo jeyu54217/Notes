@@ -127,9 +127,9 @@
 # Network Application Architectures
 - an application’s architecture is distinctly differ- ent from the network architecture (e.g., the five-layer Internet architecture)
 - The application architecture, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems.
+- ![image](https://d3i71xaburhd42.cloudfront.net/18f169f38ead204df5c31d183919d9b4f9e83857/16-Figure2-1-1.png) 
+-  Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
 ## Client-Server
- ![image](https://miro.medium.com/max/595/0*8PDbGCkKG0j1Cp4F.png) 
- Source : https://cio-wiki.org/wiki/Client_Server_Architecture
 - e.g. Web, FTP, Telnet, e-mail
 - Overwhelmed : single-server host is incapable of keeping up with all the requests from clients
 - Data center : virtual server which is housing a large number of server hosts
@@ -140,8 +140,6 @@
 ### Client
 - clients do not directly communicate with each other
 ## P2P
- ![image](https://www.researchgate.net/publication/220398426/figure/fig1/AS:617677508861954@1524277202523/peer-to-peer-architecture-Figure-2-Client-Server-architecture.png) 
- Source : https://www.researchgate.net/figure/Peer-to-peer-data-management-architecture_fig2_224305552
   - peer : direct communication between pairs of intermittently connected hosts, 
   - Self-scalability : each peer also adds service capacity to the system by distributing files to other peers
   - face challenges of security, performance, and reliability due to their highly decentralized structure.
