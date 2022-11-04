@@ -11,6 +11,8 @@
       - [Class Methods](#class-methods)
       - [Static Methods](#static-methods)
       - [Magic Methods](#magic-methods)
+      - [__Private Variables](#__private-variables)
+        - [Name mangling](#name-mangling)
       - [Others](#others)
         - [Old style & New style classes](#old-style--new-style-classes)
         - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
