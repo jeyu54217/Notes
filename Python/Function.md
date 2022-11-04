@@ -207,7 +207,13 @@ def scope_test():
 
 scope_test()
 print("In global scope:", spam)
+
+# After local assignment: test spam
+# After nonlocal assignment: nonlocal spam
+# After global assignment: nonlocal spam
+# In global scope: global spam
 ```
+- the local assignment (which is default) didn’t change scope_test's binding of spam. The nonlocal assignment changed scope_test's binding of spam, and the global assignment changed the module-level binding.
 # Lambda
 - ```(lambda parameter: expression)(argument)```
 1. No need to define function **Name**.
