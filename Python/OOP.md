@@ -70,59 +70,61 @@ inst_1.cls_attr # [1, 2, 3, 4]
 
 inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
 ```
-#### Class Methods
-- @classmethod : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
-- cls : The first argument is "cls" . Like "self", it does not need to be passed in explicitly.
-- Available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
-```python
-class Cls():
-    # ...
+#### Class Methods (Factory Method)
+  - @classmethod : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
+  - cls : The first argument is "cls" . Like "self", it does not need to be passed in explicitly.
+  - Available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
+  ```python
+  class Cls():
+      # ...
 
-    @classmethod
-    def from_csv(cls, filename):
-        return cls(*params) # this is the same as calling Person(*params)
+      @classmethod
+      def from_csv(cls, filename):
+          return cls(*params) # this is the same as calling Person(*params)
 
-Person.from_csv(my_csv)
-```
+      Person.from_csv(my_csv)
+   ```
 #### Static Methods
+  - @staticmethod
 #### Magic Methods
-```python
-class Array:
-    __list = []
+  ```python
+  class Array:
+      __list = []
     
-    def __init__(self):
-        print "constructor"
+      def __init__(self):
+          print "constructor"
     
-    def __del__(self):
-        print "destruct"
+      def __del__(self):
+          print "destruct"
     
-    def __str__(self):
-        return "this self-defined array class"
+      def __str__(self):
+          return "this self-defined array class"
 
-    def __getitem__(self,key):
-        return self.__list[key]
+      def __getitem__(self,key):
+          return self.__list[key]
+      
+      def __len__(self):
+          return len(self.__list)
+ 
+      def Add(self,value):
+          self.__list.append(value)
     
-    def __len__(self):
-        return len(self.__list)
-
-    def Add(self,value):
-        self.__list.append(value)
+      def Remove(self,index):
+          del self.__list[index]
     
-    def Remove(self,index):
-        del self.__list[index]
-    
-    def DisplayItems(self):
-        print "show all items---"
-        for item in self.__list:
-            print item
-```
+      def DisplayItems(self):
+          print "show all items---"
+          for item in self.__list:
+              print item
+  ```
+  
 #### __Private Variables
   - “Private” instance variables that cannot be accessed except from inside an object don’t exist in Python.
   - should be treated as a non-public part of the API (whether it is a function, a method or a data member)
   - It should be considered an implementation detail and subject to change without notice.
 ##### Name mangling
--  Any identifier of the form __spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname__spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.
--  Name mangling is helpful for letting subclasses override methods without breaking intraclass method calls
+  -  Any identifier of the form __spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname__spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.
+  -  Name mangling is helpful for letting subclasses override methods without breaking intraclass method calls
   ```python
   class Mapping:
     def __init__(self, iterable):
