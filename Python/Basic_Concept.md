@@ -11,8 +11,8 @@
   - [Tuple](#tuple)
   - [Set](#set)
     - [Set Comprehension](#set-comprehension)
-  - [Memory Management](#memory-management)
-  - [Is Python call by reference or call by value](#is-python-call-by-reference-or-call-by-value)
+- [Python Memory Management](#python-memory-management)
+- [Is Python call by reference or call by value](#is-python-call-by-reference-or-call-by-value)
 
 # Variables
 
@@ -98,7 +98,7 @@ def are_all_vowels_in_string(string):
     return len({char for char in string if char in 'aeiou'}) == 5
 ```
 
-## Memory Management
+# Python Memory Management
 https://docs.python.org/3.10/c-api/memory.html#memory-management
 
-## Is Python call by reference or call by value
+# Is Python call by reference or call by value
