@@ -8,14 +8,11 @@
     - [Class](#class)
       - [Initializing a Class](#initializing-a-class)
       - [Class Attributes](#class-attributes)
-      - [Class Methods](#class-methods)
+      - [Class Methods (Factory Method)](#class-methods-factory-method)
       - [Static Methods](#static-methods)
       - [Magic Methods](#magic-methods)
       - [__Private Variables](#__private-variables)
         - [Name mangling](#name-mangling)
-      - [Others](#others)
-        - [Old style & New style classes](#old-style--new-style-classes)
-        - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
       - [Instance Attributes and Methods](#instance-attributes-and-methods)
@@ -23,6 +20,9 @@
     - [Inheritance](#inheritance)
     - [Multiple Inheritance](#multiple-inheritance)
     - [Polymorphism](#polymorphism)
+  - [Others](#others)
+    - [Old style & New style classes](#old-style--new-style-classes)
+    - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
 
 # OOP (Object oriented programming)
   - programming paradigm
@@ -39,10 +39,10 @@
 - blueprint for objects
 - Can contain methods (functions) and attributes (similar to keys in a dict).
 #### Initializing a Class
-- __ init__ : Classes in Python can have a special __init__ method, which gets called every time when creating an instance of the class (instantiate).
-- self : The self keyword refers to the current class instance.
-    - self must always be the **first parameter** to __init__ and any **methods** and **properties** on class instances.
-    - Don't have to pass it directly when calling instance methods, including __init__.
+- ```__ init__```: Classes in Python can have a special ```__init__``` method, which gets called every time when creating an instance of the class (instantiate).
+- ```self``` : The self keyword refers to the current class instance.
+    - self must always be the **first parameter** to ```__init__``` and any **methods** and **properties** on class instances.
+    - Don't have to pass it directly when calling instance methods, including ```__init__```
 ```python
 class Cls_1:
 
@@ -71,8 +71,8 @@ inst_1.cls_attr # [1, 2, 3, 4]
 inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
 ```
 #### Class Methods (Factory Method)
-  - @classmethod : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
-  - cls : The first argument is "cls" . Like "self", it does not need to be passed in explicitly.
+  - ```@classmethod``` : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
+  - ```cls``` : The first argument is ```cls``` . Like ```self```, it does not need to be passed in explicitly.
   - Available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
   ```python
   class Cls():
@@ -85,7 +85,7 @@ inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
       Person.from_csv(my_csv)
    ```
 #### Static Methods
-  - @staticmethod
+  - ```staticmethod```
 #### Magic Methods
   ```python
   class Array:
@@ -150,16 +150,6 @@ The above example would work even if MappingSubclass were to introduce a __updat
 Note that the mangling rules are designed mostly to avoid accidents; it still is possible to access or modify a variable that is considered private. This can even be useful in special circumstances, such as in the debugger.
 
 Notice that code passed to exec() or eval() does not consider the classname of the invoking class to be the current class; this is similar to the effect of the global statement, the effect of which is likewise restricted to code that is byte-compiled together. The same restriction applies to getattr(), setattr() and delattr(), as well as when referencing __dict__ directly.
-#### Others
-##### Old style & New style classes
-https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20were%20introduced,typically%20the%20same%20as%20x.
-##### 动态获取和设置对象的属性
-```python
-if hasattr(Parent, 'x'):
-    print(getattr(Parent, 'x'))
-    setattr(Parent, 'x',3)
-print(getattr(Parent,'x'))
-```
 
 ### Instance
 - objects that are constructed from a class blueprint that contain their class's methods and properties.
@@ -307,4 +297,14 @@ class Cat(Animal):
     def __len__(self):
         return self.height
    ```
+## Others
+### Old style & New style classes
+https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20were%20introduced,typically%20the%20same%20as%20x.
+### 动态获取和设置对象的属性
+```python
+if hasattr(Parent, 'x'):
+    print(getattr(Parent, 'x'))
+    setattr(Parent, 'x',3)
+print(getattr(Parent,'x'))
+```
 
