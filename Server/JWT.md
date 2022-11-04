@@ -28,11 +28,11 @@
   - **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
     - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
 
-### 1. HEADER parameter 
-- Typically consists of 2 parts:
+### HEADER 
+  - Typically consists of 2 parts:
      1. "typ" (Token type) : JWT
      2. ["alg" (Signature Encryption Algorithm)](https://pyjwt.readthedocs.io/en/stable/algorithms.html#digital-signature-algorithms) : HS256
-### 2. PAYLOAD Claims 
+### PAYLOAD Claims 
 #### Claim
    - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
    - The Claim Names within a JWT Claims Set MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names or use a JSON parser that returns only the lexically last duplicate member name.
@@ -111,7 +111,7 @@ Claim Names can be defined at will by those using JWTs.  However, in
       Claim Names, Private Claim Names are subject to collision and should
    be used with caution.
 
-### 3. SIGNATURE
+### SIGNATURE
 - Encryption Algorithm
 - HEADER(base64Url encoded) : For integrality, to make sure the HEADER is not changed.
 - PAYLOAD(base64Url encoded) : For integrality, to make sure the PAYLOAD is not changed.
