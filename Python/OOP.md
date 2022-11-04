@@ -42,39 +42,38 @@
     - self must always be the **first parameter** to __init__ and any **methods** and **properties** on class instances.
     - Don't have to pass it directly when calling instance methods, including __init__.
 ```python
-class class_1:
+class Cls_1:
 
     def __init__(self, p1, p2, p3):
-        self.p1 = self.p2 + self.p3
+        self.attr_1 = p1
+        self.attr_2 = p1 + p2
+        self.attr_3 = p1 + p2 + p3
 ```
 
 #### Class Attributes
 - **Attributes** shared by **all instances** of a class and the **class itself**
 ```python
-class Pet():
+class Cls_2:
 
-    cls_ttribute_1 = ("cat", "dog", "bird", "lizard", "rodent")
+    cls_attr = [1, 2, 3, 4]
+    
+    def __init__(self, p1, p2):
+        if p1 not in self.cls_attr:  # shared by instances
+            raise ValueError(f"{p1} not in cls_attr")
+        self.attr_1 = p1
+        self.attr_2 = p2
 
-    def __init__(self, kind, name):
+inst_1 = Cls_2(3, 3)
+inst_1.cls_attr # [1, 2, 3, 4]
 
-        if kind not in self.allowed:
-            raise ValueError(f"You can't have a {kind} as a pet here!")
-
-        self.kind = kind
-        self.name = name
-
-fluffy = Pet("cat", "Fluffy")
-fluffy.allowed
-("cat", "dog", "bird", "lizard", "rodent")
-Bro = Pet("bear", "Bro")
-ValueError: You can't have a bear as a pet here!
+inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
 ```
 #### Class Methods
-- Class methods are methods (with the @classmethod decorator) that are not concerned with instances, but the class itself.
-- The first argument is cls (for class) instead of self. Like self, it does not need to be passed in explicitly.
-- Class methods are available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
+- @classmethod : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
+- cls : The first argument is "cls" . Like "self", it does not need to be passed in explicitly.
+- Available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
 ```python
-class Person():
+class Cls():
     # ...
 
     @classmethod
