@@ -62,9 +62,9 @@
       - In the special case when the JWT has one audience, the "aud" value MAY be a ```single case-sensitive string``` containing a StringOrURI value.
   8. ```"jti"``` (JWT ID) Claim
       - A unique identifier for the JWT.
-      - The identifier value MUST be assigned in a manner that ensures that there is a negligible probability that the same value will be accidentally assigned to a different data object; 
-    - if the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well.  
-    - The "jti" claim can be used to prevent the JWT from being replayed.
+      - The identifier value MUST be assigned in a manner that ensures that there is a negligible probability that the same value will be accidentally assigned to a different data object
+      - if the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well.
+      - The "jti" claim can be used to prevent the JWT from being replayed.
 ##### NumericDate
   - A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds. 
   - each day is accounted for by exactly 86400 seconds
