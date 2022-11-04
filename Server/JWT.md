@@ -200,14 +200,14 @@ If any of the listed steps fail, then the JWT MUST be rejected
 ### Information Exchange (securely transmitting)
    - public/private key pairs 
    - signature : It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
-
-## Pros
-- JSON : simplicity Compact, less verbose, smaller size
-- Self-contained : payload 裡面包含了使用者的資訊，也就是說解析後就可以看到，不需要再去 query 你的 database。
-- Security : public/private key supportred
-- JSON parsers - cross-platform supported
-## Cons
-- Security Considerations
+## Pros & Cons
+### Pros
+  - JSON : simplicity Compact, less verbose, smaller size
+  - Self-contained : payload 裡面包含了使用者的資訊，也就是說解析後就可以看到，不需要再去 query 你的 database。
+  - Security : public/private key supportred
+  - JSON parsers - cross-platform supported
+### Cons
+  - Security Considerations
 ## References
 - [Introduction to JSON Web Tokens - JWT](https://jwt.io/introduction)
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
