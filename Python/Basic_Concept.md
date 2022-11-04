@@ -50,18 +50,18 @@ print(var) # 3.142857142857143
 - Go 、Kotlin、Swift
 # Mutable & Immutable
 ## Mutable
-- the **values** of **object** can be changed.
-- stored by value
-- List, Set, Dict, User-Defined Classes
+  - the **values** of **object** can be changed.
+  - stored by value
+   ['list'], {'set'}, {'dict':'dict'}, User-Defined Classes
 ## Immutable
-- the **values** of  **object** cannot be changed.
-- stored by reference
-- Numbers, Strings, Tuples, Frozen Sets, User-Defined Classes 
-```python
-x = (1,2,3)
-3 in x # True
-x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
-```
+  - the **values** of  **object** **cannot** be changed.
+  - stored by reference
+  - Numbers, "Strings", (Tuples), Frozen Sets, User-Defined Classes 
+    ```python
+    x = (1,2,3)
+    3 in x # True
+    x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
+    ```
 - https://ithelp.ithome.com.tw/m/articles/10278722
 # Tuple & Set 
 ## Tuple
