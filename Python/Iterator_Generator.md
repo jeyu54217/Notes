@@ -4,6 +4,8 @@
       - ```StopIteration``` : When there are no more elements, __next__() raises a StopIteration exception which tells the for loop to terminate.
 
 ```python
+# Iterator
+
 s = 'abc'
 it = iter(s)
 
@@ -23,6 +25,8 @@ StopIteration
     1. Define an```__ iter__()``` method which returns an object with a ```__ next__()``` method. 
     2. If the class defines ```__ next__()```, then ```__ iter__()``` can just return self
 ```python
+# Define iterator in class
+
 class Reverse:
     """Iterator for looping over a sequence backwards."""
     def __init__(self, data):
