@@ -15,8 +15,9 @@
   - [When to use ?](#when-to-use-)
     - [Authorization](#authorization)
     - [Information Exchange (securely transmitting)](#information-exchange-securely-transmitting)
-  - [Pros](#pros)
-  - [Cons](#cons)
+  - [Pros & Cons](#pros--cons)
+    - [Pros](#pros)
+    - [Cons](#cons)
   - [References](#references)
 
 # JWT (JSON Web Token)
