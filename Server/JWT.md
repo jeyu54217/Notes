@@ -26,7 +26,7 @@
 ## Token Composition
   - Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
   - **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
-  ![]([https://i.imgur.com/x57MeJO.png](https://devonblog.com/wp-content/uploads/2018/08/jwt1.png))
+  <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
 
 ### 1. HEADER parameter 
 - Typically consists of 2 parts:
