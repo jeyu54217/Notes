@@ -18,98 +18,99 @@
 - [Documenting](#documenting)
 
 # Arguments
-  - Arguments are the data(actual value) which passed into the func's parameters when calling the func.
+  - Arguments are the data(actual value) which passed into the func's parameters when we call the func.
 ## 1. Positional Arguments
-- values that are passed into a function based on the order in which the parameters were listed during the function definition.
-```python
-# Positional Arguments
-def func_posi_0(p1, p2): print(p1, p2)
-func_posi_0("A", "B") # A B
-func_posi_0("B", "A") # B A
+  - values that are passed into a function based on the order in which the parameters were listed during the function definition.
+    ```python
+    # Positional Arguments
+    def func_posi_0(p1, p2): print(p1, p2)
+    func_posi_0("A", "B") # A B
+    func_posi_0("B", "A") # B A
 
-```
+    ```
 ## 2. Keyword Arguments
--  values which passed into a function are identifiable by specific parameter names and the assignment operator ```=```
--  Keyword arguments can be likened to dictionaries in that they map a value to a keyword.
--  the positions of the arguments do not matter.
--  have to come after positional arguments and before default arguments in a function call.
-```python
-# Keyword Arguments
-def func_kw_0(p1, p2): print(p1, p2)
-func_kw_0(p1="A", p2="B") # A B
-func_kw_0(p2="A", p1="B") # B A
+  -  values which passed into a function are identifiable by specific parameter names and the assignment operator ```=```
+  -  Keyword arguments can be likened to dictionaries in that they map a value to a keyword.
+  -  the positions of the arguments do not matter.
+  -  have to come after positional arguments and before default arguments in a function call.
+        ```python
+        # Keyword Arguments
+        def func_kw_0(p1, p2): print(p1, p2)
+        func_kw_0(p1="A", p2="B") # A B
+        func_kw_0(p2="A", p1="B") # B A
 
 
-# Should come after positional arguments and before default arguments
-def func_kw_1(p1, p2, p3=100): print(p1, p2, p3)
-func_kw_1(p2="A", 100) # SyntaxError: positional argument follows keyword argument
-func_kw_1(100, 200) # 100 200 100
-```
+        # Should come after positional arguments and before default arguments
+        def func_kw_1(p1, p2, p3=100): print(p1, p2, p3)
+        func_kw_1(p2="A", 100) # SyntaxError: positional argument follows keyword argument
+        func_kw_1(100, 200) # 100 200 100
+        ```
+    
 ## Argument Unpacking
-- Using ```*``` , ```**``` as an Argument / Keyword Arguments
+  - Using ```*``` , ```**``` as an Argument / Keyword Arguments
 ### Argument Unpacking
-```python
-# *Argument Unpacking
-def func_args_0(*args): print(sum(args))
+  ```python
+    # *Argument Unpacking
+    def func_args_0(*args): print(sum(args))
 
-array_l = [1, 2, 3, 4]
-array_t = (1, 2, 3, 4)
-# error
-func_args_0(array_l) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
-func_args_0(array_t) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
-# ok!
-func_args_0(1, 2, 3, 4) # 10
-func_args_0(*array_l, *array_t) # 20
-```
+    array_l = [1, 2, 3, 4]
+    array_t = (1, 2, 3, 4)
+    # error
+    func_args_0(array_l) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+    func_args_0(array_t) # TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+    # ok!
+    func_args_0(1, 2, 3, 4) # 10
+    func_args_0(*array_l, *array_t) # 20
+  ```
 ### Keyword Argument Unpacking
-```python
+  ```python
 
-# **Keyword Argument Unpacking
-def func_kwargs_0(A, B): print( f"{A} & {B}")
-dict_1 = {"A": 123, "B": 321}
-# error
-func_kwargs_0(dict_1) # TypeError: func_kwargs_0() missing 1 required positional argument: 'B'
-# ok!
-func_kwargs_0(**dict_1) # 123 & 321
-```
+    # **Keyword Argument Unpacking
+    def func_kwargs_0(A, B): print( f"{A} & {B}")
+    dict_1 = {"A": 123, "B": 321}
+    # error
+    func_kwargs_0(dict_1) # TypeError: func_kwargs_0() missing 1 required positional argument: 'B'
+    # ok!
+    func_kwargs_0(**dict_1) # 123 & 321
+  ```
 # Parameters
   - The variables in the declaration of function.
 
 ##  1. Default Parameters
   - Should always follow the **non-default** parameters
-```python
-## Default Parameters
+    ```python
+    ## Default Parameters
 
-def fun_0(p1, p2, p3, p4=10): print(p1,p2,p3,p4)
-fun_0(1,2,3) # 1 2 3 10
-fun_0(1,2)   # TypeError: fun_1() missing 1 required positional argument: 'p3'
+    def fun_0(p1, p2, p3, p4=10): print(p1,p2,p3,p4)
+    fun_0(1,2,3) # 1 2 3 10
+    fun_0(1,2)   # TypeError: fun_1() missing 1 required positional argument: 'p3'
 
-def fun_1(p1, p2=10, p3=10, p4=10): print(p1,p2,p3,p4)
-fun_1(1,2,3) # 1 2 3 10
-fun_1(1,2)   # 1 2 10 10
+    def fun_1(p1, p2=10, p3=10, p4=10): print(p1,p2,p3,p4)
+    fun_1(1,2,3) # 1 2 3 10
+    fun_1(1,2)   # 1 2 10 10
 
-# error
-def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
-# error
-def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
-```
+    # error
+    def fun_2(p1=10, p2, p3, p4): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
+    # error
+    def fun_3(p1, p2=10, p3, p4=10): print(p1,p2,p3,p4) # SyntaxError: non-default argument follows default argument
+    ```
 
 ##  2. *args
-- Gathers all remaining ```arguments``` as a ```tuple```
-- The order of arguments doesn't matter!
-```python
-# *args
+  - Gathers all remaining ```arguments``` as a ```tuple```
+  - The order of arguments doesn't matter!
+    ```python
+    # *args
+    
+    def arg_fun_0(*args): print(args,type(args))
+    arg_fun_0(1, 2, 3) # (1, 2, 3) <class 'tuple'>
 
-def arg_fun_0(*args): print(args,type(args))
-arg_fun_0(1, 2, 3) # (1, 2, 3) <class 'tuple'>
-
-def arg_fun_1(*args):
-    total = 0
-    for val in args:
-        total += val
-    return total
-arg_fun_1(1, 2, 3) # 6
-```
+    def arg_fun_1(*args):
+        total = 0
+        for val in args:
+           total += val
+        return total
+    arg_fun_1(1, 2, 3) # 6
+    ```
 
 ##  3. *kwargs
 - Gathers remaining ```keyword arguments``` as a ```dict```
