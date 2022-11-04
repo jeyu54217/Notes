@@ -24,9 +24,9 @@
    - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and separated by period ```.``` characters.
 
 ## Token Composition
-- Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
-- **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
-![](https://i.imgur.com/x57MeJO.png)
+  - Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
+  - **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
+    ![images]([https://i.imgur.com/x57MeJO.png](https://devonblog.com/wp-content/uploads/2018/08/jwt1.png))
 
 ### 1. HEADER parameter 
 - Typically consists of 2 parts:
