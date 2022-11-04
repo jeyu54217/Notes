@@ -13,6 +13,8 @@
     - [Creating](#creating)
     - [Validating](#validating)
   - [When should use it?](#when-should-use-it)
+    - [Authorization](#authorization)
+    - [Information Exchange (securely transmitting)](#information-exchange-securely-transmitting)
   - [Why use it ? (Pros)](#why-use-it--pros)
   - [Security Considerations (Cons)](#security-considerations-cons)
   - [References](#references)
