@@ -193,7 +193,12 @@ If any of the listed steps fail, then the JWT MUST be rejected
         RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.
 
 ## When should use it?
-- Single Sign On (SSO) : cross-domains
+- Authorization
+    - Single Sign On (SSO) : It's easily used across different domains.
+- Information Exchange (securely transmitting)
+    - public/private key pairs : 
+    - signature :  It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
+
 ## Why use it ? (Pros)
 - JSON : simplicity Compact, less verbose, smaller size
 - Self-contained : payload 裡面包含了使用者的資訊，也就是說解析後就可以看到，不需要再去 query 你的 database。
