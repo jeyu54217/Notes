@@ -1,7 +1,7 @@
 **CONTENTS**
 - [Iterator](#iterator)
 - [Generatoriter](#generatoriter)
-- [References](#references)
+
   
 # Iterator
   - ```iter()``` : the ```for``` statement
@@ -61,4 +61,3 @@
 
 # Generatoriter
 
-# References
