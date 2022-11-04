@@ -18,7 +18,7 @@
 - [Documenting](#documenting)
 
 # Arguments
-  - Arguments are the data(actual value) which passed into the func's parameters.
+  - Arguments are the data(actual value) which passed into the func's parameters when calling the func.
 ## 1. Positional Arguments
 - values that are passed into a function based on the order in which the parameters were listed during the function definition.
 ```python
