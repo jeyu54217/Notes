@@ -194,10 +194,10 @@ If any of the listed steps fail, then the JWT MUST be rejected
 
 ## When should use it?
 ### Authorization
-    - Single Sign On (SSO) : It's easily used across different domains.
+   - Single Sign On (SSO) : It's easily used across different domains.
 ### Information Exchange (securely transmitting)
-    - public/private key pairs : 
-    - signature :  It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
+   - public/private key pairs : 
+   - signature :  It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
 
 ## Why use it ? (Pros)
 - JSON : simplicity Compact, less verbose, smaller size
