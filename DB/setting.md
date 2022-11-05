@@ -5,6 +5,7 @@
   ```bash
   postgres -V
   ```
+  postgres ➜ psql
   - [postgres.app](https://postgresapp.com/)
      - Installing
        1. [Download](https://postgresapp.com/downloads.html) ➜ Move to Applications folder ➜ Double Click
