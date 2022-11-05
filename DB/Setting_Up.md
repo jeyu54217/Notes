@@ -22,9 +22,22 @@
 # Setting Up
 ## Postgresql
 ### macOS
-  ```bash
-  postgres -V
-  ```
+  - Version Check 
+    ```bash
+    postgres -V
+    ```
+    or
+    ```bash
+    brew search postgres
+    ```
+  - Get help
+      ```bash
+      pg_ctl --help
+      ```
+      or
+      ```bash
+      brew services --help
+      ```
   - postgres = pg_ctl > psql
 #### [postgres.app](https://postgresapp.com/)
    - **Installing**
@@ -51,23 +64,22 @@
          ```bash
          defaults delete com.postgresapp.Postgres2
          ```
-         /opt/homebrew/var/postgresql@15
 #### [Homebrew](https://brew.sh/)
    - **Installing**
      1. Setting Up Homebrew
-       ```bash 
-       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-       ```
-       ```bash 
-       echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user_name>/.zprofile
-       ```
-       ```bash 
-       eval "$(/opt/homebrew/bin/brew shellenv)"
-       ```
+         ```bash 
+         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+         ```
+         ```bash 
+         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user_name>/.zprofile
+         ```
+         ```bash 
+         eval "$(/opt/homebrew/bin/brew shellenv)"
+         ```
      2. Starting brew
-       ```bash 
-       brew install postgresql@<version>
-       ```
+         ```bash 
+         brew install postgresql@<version>
+         ```
    - **Unstalling**
        ```bash 
        brew remove postgresql
@@ -91,27 +103,33 @@
   - brew services --help
   - **Check Status**
      - pg_ctl
-      ```bash 
-      pg_ctl status
-      ```
+       ```bash 
+       pg_ctl status
+       ```
      - Homebrew
-      ```bash 
-      brew services info --all
-      ```
-     - or
-      ```bash 
-      sudo lsof -i:5432
-      ```
+       ```bash 
+       brew services 
+       ```
+       or
+       ```bash 
+       brew services info --all
+       ```
+     - OS
+       ```bash 
+       sudo lsof -i:5432
+       ```
       
   - **Start**
       ```bash 
       postgres -D /usr/local/pgsql/data
       ```
-       Homebrew
+      ```bash 
+      brew services start --all 
+      ```
       ```bash 
       pg_ctl start
       ```
-       or (with log writing)
+      or (with log writing)
       ```bash 
       pg_ctl start -l <postgresql.log>
       ```
@@ -121,9 +139,15 @@
       ```bash 
       pg_ctl restart
       ```
+      ```bash 
+      brew services restart --all 
+      ```
   - **Stop**
       ```bash 
       pg_ctl stop 
+      ```
+      ```bash 
+      brew services stop --all 
       ```
       or
       ```bash 
