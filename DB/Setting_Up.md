@@ -26,7 +26,6 @@
     ```bash
     postgres -V
     ```
-    or
     ```bash
     brew search postgres
     ```
@@ -34,7 +33,6 @@
       ```bash
       pg_ctl --help
       ```
-      or
       ```bash
       brew services --help
       ```
@@ -101,22 +99,18 @@
 ## Postgresql
 ### macOS
   - **Check Status**
-     - pg_ctl
-       ```bash 
-       pg_ctl status
-       ```
-     - Homebrew
-       ```bash 
-       brew services 
-       ```
-       or
-       ```bash 
-       brew services info --all
-       ```
-     - OS
-       ```bash 
-       sudo lsof -i:5432
-       ```
+     ```bash 
+     pg_ctl status
+     ```
+     ```bash 
+     brew services 
+     ```
+     ```bash 
+     brew services info --all
+     ```
+     ```bash 
+     sudo lsof -i:5432
+     ```
       
   - **Start**
       ```bash 
@@ -128,11 +122,11 @@
       ```bash 
       pg_ctl start
       ```
-      or (with log writing)
+      with log writing
       ```bash 
       pg_ctl start -l <postgresql.log>
       ```
-       - Check the ```log``` path from GUI settings
+       - ```log``` path in GUI settings
        - <img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126762-d9aed930-8043-4570-a88c-2d25c4b4330e.png">
   - **Restart**
       ```bash 
