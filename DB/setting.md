@@ -2,12 +2,16 @@
 ## Postgresql
 ### macOS
   - [postgres.app](https://postgresapp.com/)
-     - unstalling
+     - Unstalling
        - Quit Postgres.app & drag it to the Trash
        - Delete the data directory (default location: ```~/Library/Application\ Support/Postgres```)
        - Delete preferences for Postgres.app by executing the following command: ```defaults delete com.postgresapp.Postgres2```
   - [Homebrew](https://brew.sh/)
-  - [MacPorts](https://www.macports.org/)
+     - Unstalling
+       ```bash 
+       brew remove postgresql
+       ```
+
 ### Linux (ubuntu)
 ### Windows
 ## Mysql
