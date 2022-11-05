@@ -100,7 +100,6 @@
 # Start/ Restart/ Stop Server
 ## Postgresql
 ### macOS
-  - brew services --help
   - **Check Status**
      - pg_ctl
        ```bash 
