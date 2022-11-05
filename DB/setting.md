@@ -74,36 +74,38 @@
 # Start/ Restart/ Stop Server
 ## Postgresql
 ### macOS
-  - Check Status
-    - from ```pg_ctl```
+  - **Check Status**
       ```bash 
       pg_ctl status
       ```
-    - from OS
+       or
       ```bash 
       sudo lsof -i:5432
       ```
-    - from postgres.app GUI
-  - Start
-    1. ```pg_ctl```
-        ```bash 
-        pg_ctl -D start
-        ```
-      - With log writing
-        ```bash 
-        pg_ctl start -l <postgresql.log>
-        ```
-      - You can also check the ```log``` path from GUI server settings
-      - <img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126762-d9aed930-8043-4570-a88c-2d25c4b4330e.png">
-
-    2. postgres command
-        ```bash 
-        postgres -D /usr/local/pgsql/data
-       ```
-    3. GUI
-  - Restart
-    - ```pg_ctl```
-        ```bash 
-        pg_ctl restart
-        ```
+  - **Start**
+      ```bash 
+      postgres -D /usr/local/pgsql/data
+      ```
+       or
+      ```bash 
+      pg_ctl start
+      ```
+       or (with log writing)
+      ```bash 
+      pg_ctl start -l <postgresql.log>
+      ```
+       - Check the ```log``` path from GUI settings
+       - <img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126762-d9aed930-8043-4570-a88c-2d25c4b4330e.png">
+  - **Restart**
+      ```bash 
+      pg_ctl restart
+      ```
+  - **Stop**
+      ```bash 
+      pg_ctl stop 
+      ```
+      or
+      ```bash 
+      kill -15 -<PID> 
+      ```
 
