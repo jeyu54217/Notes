@@ -4,8 +4,11 @@
   - [postgres.app](https://postgresapp.com/)
      - Unstalling
        1. Quit Postgres.app & drag it to the Trash
-       2. Delete the data directory (default location: ```~/Library/Application\ Support/Postgres```)
-       3. Delete preferences for Postgres.app 
+       2. Delete the data directory
+         ```bash
+          rm -r ~/Library/Application\ Support/Postgres
+         ```
+       4. Delete preferences for Postgres.app 
          ```bash
          defaults delete com.postgresapp.Postgres2
          ```
