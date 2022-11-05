@@ -6,9 +6,9 @@
        1. Quit Postgres.app & drag it to the Trash
        2. Delete the data directory (default location: ```~/Library/Application\ Support/Postgres```)
        3. Delete preferences for Postgres.app 
-       ```bash
-       defaults delete com.postgresapp.Postgres2
-       ```
+         ```bash
+         defaults delete com.postgresapp.Postgres2
+         ```
   - [Homebrew](https://brew.sh/)
      - Unstalling
        ```bash 
