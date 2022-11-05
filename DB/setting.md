@@ -3,7 +3,7 @@
 
 ### macOS
   ```bash
-  psql -version
+  postgres -V
   ```
   - [postgres.app](https://postgresapp.com/)
      - Installing
