@@ -14,7 +14,7 @@
     - [macOS](#macos-2)
     - [Linux (ubuntu)](#linux-ubuntu-2)
     - [Windows](#windows-2)
-- [Start/ Restart/ Stop Server](#start-restart-stop-server)
+- [Server - Start/ Restart/ Stop](#server---start-restart-stop)
   - [Postgresql](#postgresql-1)
     - [macOS](#macos-3)
 
@@ -95,7 +95,7 @@
 ### Windows
 
 
-# Start/ Restart/ Stop Server
+# Server - Start/ Restart/ Stop
 ## Postgresql
 ### macOS
   - **Check Status**
