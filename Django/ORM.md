@@ -9,9 +9,9 @@ from <app.models> import <Table>
 ```bash
 exit()
 ```
-"""
 
-"""bash
+
+```
 >>> print(type(User.objects.filter(user_name = '??')))
 <class 'django.db.models.query.QuerySet'>
 >>> print(bool(User.objects.filter(user_name = '??')))
@@ -46,5 +46,4 @@ Traceback (most recent call last):
 app.models.User.DoesNotExist: User matching query does not exist.
 >>> User.objects.filter(user_name = 'test_user_01', user_password = "321").get()
 <User: User object (6)>
-"""
-"""
+```
