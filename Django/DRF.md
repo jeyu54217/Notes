@@ -1,4 +1,4 @@
-### Start
+# Start
 ```bash
 pip install djangorestframework
 ```
@@ -8,7 +8,16 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 ```
-### Serializers
+
+
+# Serializers
+## Serializer
+## ModelSerializer
+## ListSerializer* (不會直接使用, 底層幫你實作～)
+## HyperlinkedModelSerializer*
+## BaseSerializer*
+
+
 ```bash
 from .models import <Table>
 from rest_framework import serializers
