@@ -1,0 +1,95 @@
+
+# Algorithm 
+# Performance Analysis -- Complexity 
+
+## Space Complexity
+- $S(P)=C+Sp$
+    - Fixed Space $(C)$ : non-major consideration
+		- instruction space
+		- simple variables (int, float...)
+		- fixed-size structured variable (list...)
+		- constants
+
+	- Variable Space $(Sp)$
+		- depend on the instance characteristic $I$
+		- call-by-value parameter
+		- recursive stack space, formal parameters, local variables, return address
+
+## Time Complexity
+- $T(P)=C+T_P(I)$
+	- $T(P)$: The time taken by a program, P, 
+	- $C$: compile time 
+	- $T_P(I)$ : run (or execution) time
+- Fixed time : non-major consideration
+	- Compile time $(C)$, independent of instance characteristics
+- Variable time 
+	- Run (execution) time $T_P(I)$
+
+## Asymptotic notation $(O, Ω, Θ)
+- 擔心 $n$ 很大的情況
+- 會取最重要(最大)的 $n$ 做表示
+- 雖然表示法有不同，但我們平常很懶，所以通常只看Big oh
+- $O$ [Big “oh’’]：$f(n) = O(g(n))$
+	1. Upper bound & Worst Case
+	2. rm constants
+	3. **Different inputs** should have **different O(variables)**
+	4. Drop **non Dominants**
+	- If $f(n) = a_mn_m+…+a_1n+a_0$, then $f(n) = O(n^m)$.
+- $Ω$ [Omega]：$f(n) = \Omega(g(n))$
+	- Lower bound & best case
+	- If $f(n) =  a_mn_m+…+a_1n+a_0$ and $a_m > 0$, then $f(n) = \Omega(n^m)$.
+- $Θ$ [Theta]：$f(n) = \Theta(g(n))$
+	- 相比另外兩者，希望貼近真正的值
+	- If $f(n) = a_mn_m+…+a_1n+a_0$ and $a_m > 0$, then $f(n) = \Theta(n_m)$
+
+
+
+1. by time cost of all statements
+2. by **running times** of single tatement **(mainly use)**
+   - only care about **Worst Case**   if O(n/2) => O(n)
+   - **rm constants** & Drop Non-dominant terms****
+   - **Different inputs** should have **different O(variables)**
+     ```
+	 def func(p1, p2):
+	     for i in p1: 
+		    print(i)    # O(n)
+		 for i in p2:
+		    print(i)    # O(n)   
+			
+	 # Big O = O(a + b)  (loop in different array)
+	 ```
+ 
+![](https://i.imgur.com/LiMB3L4.png)
+**O(1) :** Constant - no loops
+```
+
+def func(input):
+  a = 5        # O(1)
+  b = 10       # O(1)
+  c = 50       # O(1)
+  d = [1,2,3]  # O(1)
+  d[0]         # O(1)
+  d[1]         # O(1)
+  d[2]         # O(1)
+  
+  for i in input:  
+    x = i + 1  # O(n)
+    y = i + 2  # O(n)
+    z = i + 3  # O(n)
+	p = j * 2  # O(n)
+	q = j * 2  # O(n)
+	
+  e = "I don't know"   # O(1)
+
+# time complexity = O(8+5n)
+```
+**O(log n) :**  searching algorithms ,Binary Search
+**O(n) :** Linear - for, while loops through n items
+**O(n log n) :** Log Liniear - sorting
+**O(n^2) :** Quadratic - nested loops (needs to be compared to ever other element)
+**O(2^n) :** Exponential - recursive algorithms
+**O(n!) :** Factorial - a loop for every element
+![](https://i.imgur.com/bp9yiho.png)
+![](https://i.imgur.com/yqneLba.png)
+
+
