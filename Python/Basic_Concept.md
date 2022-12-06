@@ -4,15 +4,16 @@
   - [Dynamic Typing](#dynamic-typing)
   - [Static Typing](#static-typing)
   - [Inferred Type](#inferred-type)
-- [Mutable & Immutable](#mutable--immutable)
+- [Mutable \& Immutable](#mutable--immutable)
   - [Mutable](#mutable)
   - [Immutable](#immutable)
-- [Tuple & Set](#tuple--set)
+- [Tuple \& Set](#tuple--set)
   - [Tuple](#tuple)
   - [Set](#set)
     - [Set Comprehension](#set-comprehension)
 - [Python Memory Management](#python-memory-management)
 - [Is Python call by reference or call by value](#is-python-call-by-reference-or-call-by-value)
+- [Dicts are now ordered](#dicts-are-now-ordered)
 
 # Variables
 
@@ -102,3 +103,6 @@ def are_all_vowels_in_string(string):
 https://docs.python.org/3.10/c-api/memory.html#memory-management
 
 # Is Python call by reference or call by value
+#  Dicts are now ordered
+- Changed in version 3.7: Dictionary order is guaranteed to be insertion order. This behavior was an implementation detail of CPython from 3.6.
+- https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/
