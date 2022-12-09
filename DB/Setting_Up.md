@@ -37,7 +37,7 @@
       brew services --help
       ```
   - postgres = pg_ctl > psql
-#### [postgres.app](https://postgresapp.com/)
+#### by [postgres.app](https://postgresapp.com/)
    - **Installing**
      1. [Download](https://postgresapp.com/downloads.html) ➜ Move to Applications folder ➜ Double Click
      2. Click "Initialize" to create a new server
@@ -62,7 +62,7 @@
          ```bash
          defaults delete com.postgresapp.Postgres2
          ```
-#### [Homebrew](https://brew.sh/)
+#### by [Homebrew](https://brew.sh/)
    - **Installing**
      1. Setting Up Homebrew
          ```bash 
