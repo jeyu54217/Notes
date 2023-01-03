@@ -1,8 +1,5 @@
 
 
-
-
-
 # Images & Container
 # Volumes
 # Networking
