@@ -9,7 +9,6 @@
   - [ConfigMap \& Secret### Volumes](#configmap--secret-volumes)
   - [Deployment \& StatefulSet](#deployment--statefulset)
 
-
 # Setting Up
 ## Minikube
 ## kubectl
