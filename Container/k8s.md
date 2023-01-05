@@ -4,7 +4,7 @@
   - [kubectl (k8s CLI)](#kubectl-k8s-cli)
     - [Commands](#commands)
   - [K8s YAML](#k8s-yaml)
-- [Components](#components)
+  - [Namespaces - Organizing components](#namespaces---organizing-components)
   - [Node \& Pod](#node--pod)
   - [Service \& Ingress](#service--ingress)
     - [Ingress](#ingress)
@@ -26,8 +26,15 @@
 ►  debugging pods
 ►  delete pod/deployment
 ►  CRUD by applying configuration file
-## K8s YAML 
-# Components
+## K8s YAML
+## Namespaces - Organizing components
+►  What is a Namespace?
+►  4 Default Namespaces
+►  Create a Namespace
+►  Why to use Namespaces? 4 Use Cases
+►  Characteristics of Namespaces
+►  Create Components in Namespaces
+►  Change Active Namespace
 ## Node & Pod
 ## Service & Ingress
 ### Ingress

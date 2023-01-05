@@ -1,44 +1,39 @@
 **CONTENT**
-
-- [OOP (Object oriented programming)](#oop-object-oriented-programming)
-  - [Encapsulation \& Abstraction](#encapsulation--abstraction)
-    - [Encapsulation](#encapsulation)
-    - [Abstraction](#abstraction)
-  - [Classes \& Instances](#classes--instances)
-    - [Class](#class)
-      - [Initializing a Class](#initializing-a-class)
-      - [Class Attributes](#class-attributes)
-      - [Class Methods (Factory Method)](#class-methods-factory-method)
-      - [Static Methods](#static-methods)
-      - [Magic Methods](#magic-methods)
-      - [\_\_Private Variables](#__private-variables)
-        - [Name mangling](#name-mangling)
+- [Encapsulation \& Abstraction](#encapsulation--abstraction)
+  - [Encapsulation](#encapsulation)
+  - [Abstraction](#abstraction)
+- [Classes \& Instances](#classes--instances)
+  - [Class](#class)
+    - [Initializing a Class](#initializing-a-class)
+    - [Class Attributes](#class-attributes)
+    - [Class Methods (Factory Method)](#class-methods-factory-method)
+    - [Static Methods](#static-methods)
+    - [Magic Methods](#magic-methods)
+    - [\_\_Private Variables](#__private-variables)
+      - [Name mangling](#name-mangling)
     - [Instance](#instance)
       - [Instantiating a Class](#instantiating-a-class)
-      - [Instance Attributes and Methods](#instance-attributes-and-methods)
-  - [Inheritance \& Polymorphism](#inheritance--polymorphism)
-    - [Inheritance](#inheritance)
-    - [Multiple Inheritance](#multiple-inheritance)
-    - [Polymorphism](#polymorphism)
-  - [Others](#others)
-    - [Old style \& New style classes](#old-style--new-style-classes)
-    - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
+    - [Instance Attributes and Methods](#instance-attributes-and-methods)
+- [Inheritance \& Polymorphism](#inheritance--polymorphism)
+  - [Inheritance](#inheritance)
+  - [Multiple Inheritance](#multiple-inheritance)
+  - [Polymorphism](#polymorphism)
+- [Others](#others)
+  - [Old style \& New style classes](#old-style--new-style-classes)
+  - [动态获取和设置对象的属性](#动态获取和设置对象的属性)
 
-# OOP (Object oriented programming)
-  - programming paradigm
-
-## Encapsulation & Abstraction
-### Encapsulation
+# Encapsulation & Abstraction
+## Encapsulation
   -  the grouping of public and private attributes and methods into a programmatic class, making abstraction possible
-### Abstraction
+## Abstraction
   - exposing only "relevant" data in a class interface, hiding private attributes and methods (aka the "inner workings") from users
 
 
-## Classes & Instances
-### Class
+# Classes & Instances
+## Class
 - blueprint for objects
 - Can contain methods (functions) and attributes (similar to keys in a dict).
-#### Initializing a Class
+### Initializing a Class
 - ```__ init__```: Classes in Python can have a special ```__init__``` method, which gets called every time when creating an instance of the class (instantiate).
 - ```self``` : The self keyword refers to the current class instance.
     - self must always be the **first parameter** to ```__init__``` and any **methods** and **properties** on class instances.
@@ -52,7 +47,7 @@ class Cls_1:
         self.attr_3 = p1 + p2 + p3
 ```
 
-#### Class Attributes
+### Class Attributes
 - **Attributes** shared by **all instances** of a class and the **class itself**
 ```python
 class Cls_2:
@@ -70,7 +65,7 @@ inst_1.cls_attr # [1, 2, 3, 4]
 
 inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
 ```
-#### Class Methods (Factory Method)
+### Class Methods (Factory Method)
   - ```@classmethod``` : Methods (with the @classmethod decorator) that are **not concerned with instances**, but the **class itself**.
   - ```cls``` : The first argument is ```cls``` . Like ```self```, it does not need to be passed in explicitly.
   - Available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
@@ -84,9 +79,9 @@ inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
 
       Person.from_csv(my_csv)
    ```
-#### Static Methods
+### Static Methods
   - ```staticmethod```
-#### Magic Methods
+### Magic Methods
   ```python
   class Array:
       __list = []
@@ -118,11 +113,11 @@ inst_2 = Cls_2(5, 6) # ValueError: 1 not in cls_attr
               print item
   ```
   
-#### __Private Variables
+### __Private Variables
   - “Private” instance variables that cannot be accessed except from inside an object don’t exist in Python.
   - should be treated as a non-public part of the API (whether it is a function, a method or a data member)
   - It should be considered an implementation detail and subject to change without notice.
-##### Name mangling
+#### Name mangling
   -  Any identifier of the form __spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname__spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.
   -  Name mangling is helpful for letting subclasses override methods without breaking intraclass method calls
   ```python
@@ -166,7 +161,7 @@ v.model
 v.year
 2017
 ```
-#### Instance Attributes and Methods
+### Instance Attributes and Methods
 ```python
 class Person():
 
@@ -182,8 +177,8 @@ class Person():
 
 p = Person("Colt", "Steele")
 ```
-## Inheritance & Polymorphism
-### Inheritance
+# Inheritance & Polymorphism
+## Inheritance
 - A key feature of OOP is the ability to define a class which inherits from another class (a "base" or "parent" class).
 - In Python, inheritance works by passing the parent class as an argument to the definition of a child class
 - The super() keyword allows us to call the __ init__ function of a parent class
@@ -205,7 +200,7 @@ COPY
 bro.name  # Bro
 bro.species  # canine
 ```
-### Multiple Inheritance
+## Multiple Inheritance
 - Penguin inherits from both Aquatic and Ambulatory, therefore instances of Penguin can call both the walk and swim methods.
 - What about the greet method for our instance of Penguin? It is calling the Aquatic.greet() instead of Ambulatory.greet().
 ```python
@@ -247,7 +242,7 @@ captain_cook.swim() # 'Captain Cook is swimming'
 captain_cook.walk() # 'Captain Cook is walking'
 captain_cook.greet() # 'I am Captain Cook of the sea!'
 ```
-### Polymorphism
+## Polymorphism
 - Classes can inherit from other classes and use the same methods to do different things (polymorphism)
 - We can enhance our custom classes with special/magic/dunder methods
 - an object can take on many (poly) forms (morph).
@@ -297,10 +292,10 @@ class Cat(Animal):
     def __len__(self):
         return self.height
    ```
-## Others
-### Old style & New style classes
+# Others
+## Old style & New style classes
 https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20were%20introduced,typically%20the%20same%20as%20x.
-### 动态获取和设置对象的属性
+## 动态获取和设置对象的属性
 ```python
 if hasattr(Parent, 'x'):
     print(getattr(Parent, 'x'))
