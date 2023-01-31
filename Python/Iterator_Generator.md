@@ -19,12 +19,13 @@
     next(it) # 'b'
     next(it) # 'c'
     next(it) 
-    """
+    
+    #
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
         next(it)
     StopIteration
-    """
+
     ```
 - Add iterator behavior to classes.
     1. Define an```__ iter__()``` method which returns an object with a ```__ next__()``` method. 
@@ -50,12 +51,13 @@
     rev = Reverse('spam')
     iter(rev)        # <__main__.Reverse object at 0x00A1DB50>
     for char in rev: print(char)
-    """
+    
+    #
     m
     a
     p
     s
-    """
+    
     ```
 
 
