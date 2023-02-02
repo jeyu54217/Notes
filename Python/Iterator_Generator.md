@@ -2,7 +2,6 @@
 - [Iterator](#iterator)
 - [Generatoriter](#generatoriter)
 
-  
 # Iterator
   - ```iter()``` : the ```for``` statement
   - ```next()``` : accesses elements in the container one at a time
