@@ -71,13 +71,6 @@ with open(file_path, "r") as file:
     content = file.read()
     print(content)
 
-
-
-# Reading from the text file again to see the changes
-with open(file_path, "r") as file:
-    content = file.read()
-    print(content)
-
 ```
 ## 2. Pandas (Recommended)
 
