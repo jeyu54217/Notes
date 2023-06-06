@@ -82,7 +82,7 @@ with open(file_path, "r") as file:
 ## 2. Pandas (Recommended)
 
 
-# [(CSV)](https://docs.python.org/3/library/csv.html) 
+# [CSV](https://docs.python.org/3/library/csv.html) 
 ```python
 import csv
 
