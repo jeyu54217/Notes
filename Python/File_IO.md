@@ -64,7 +64,7 @@ with open(file_path, "r") as file:
 
 
 # CSV
-## 1.[Build-in CSV](https://docs.python.org/3/library/csv.html) 
+## 1. open() + [Build-in CSV parser](https://docs.python.org/3/library/csv.html) 
 ```python
 import csv
 
@@ -100,7 +100,7 @@ with open(file_path, "r") as file:
         print(row['Name'])  # Each row is a an OrderedDict
 
 ```
-## 2.Pandas (Recommend)
+## 2. open() + Pandas (Recommend)
 ```python
 import pandas as pd
 
