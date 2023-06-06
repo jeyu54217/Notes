@@ -4,7 +4,7 @@
 - [TXT](#txt)
   - [open()](#open)
 - [CSV](#csv)
-  - [1. open() + Build-in CSV parser](#1-open--build-in-csv-parser)
+  - [1. open() + CSV parser](#1-open--build-in-csv-parser)
   - [2. open() + Pandas (Recommend)](#2-open--pandas-recommend)
 - [XML](#xml)
     - [Pandas](#pandas)
