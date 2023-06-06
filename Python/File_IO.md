@@ -45,48 +45,84 @@ file.closed # True
 - To read only part of a file, pass a number of characters into read("abc"), or use readline()
 
 ### Write txt
-- "w" mode - Write to a file (previous contents removed)
-- "a" mode - Append to a file (previous contents not removed)
+- "w" mode - Write to a file (previous contents will be removed)
+- "a" mode - Append to a file (previous contents will not be removed)
 - Write or create : You can also write to files that don't yet exist 
 ```python
-with open("<file.txt>", "w") as file:
-    file.write("test test n")
-    file.write("test" * 10000)
+
+file_path = "example.txt"
+
+# Writting to a text file
+# Open the file in write mode (previous contents will be removed)
+with open(file_path, "w") as file:
+    file.write("Hello, world!\n")
+    file.write("This is an example file.\n")
+    file.write("Writing some text to demonstrate file I/O.")
+    
+# Appending to a text file 
+# Open the file in append mode (previous contents will not be removed)
+with open(file_path, "a") as file:
+    file.write("\nAppending more text to the file.")
+    
+# Reading from a text file
+# Open the file in read mode
+with open(file_path, "r") as file:
+    # Read the entire file
+    content = file.read()
+    print(content)
+
+
+
+# Reading from the text file again to see the changes
+with open(file_path, "r") as file:
+    content = file.read()
+    print(content)
+
 ```
 ## 2. Pandas (Recommended)
 
 
-# CSV
-## 1. open()
-```python
-with open("<file.csv>") as file:
-    data = file.read()
-```
-## 2. csv
-```python
-from csv import reader
-with open("fighters.csv") as file:
-    csv_reader = reader(file)
-    next(csv_reader) #To skip the headers
-    for fighter in csv_reader:
-    	# Each row is a list
-    	# Use index to access data
-    	print(f"{fighter[0]} is from {fighter[1]}") 
+# CSV [https://docs.python.org/3/library/csv.html]
 
-# Example where data is cast into a list
-from csv import reader
-with open("fighters.csv") as file:
-    csv_reader = reader(file)
-    data = list(csv_reader)
-    print(data)
+```python
+import csv
 
-# Reading/Parsing CSV Using a DictReader:
-from csv import DictReader
-with open("fighters.csv") as file:
-    csv_reader = DictReader(file)
-    for row in csv_reader:
-        # Each row is an OrderedDict!
-        print(row['Name']) #Use keys to access data
+file_path = "example.csv"
+
+# Sample data
+sample_data = [
+    ["Name", "Age", "City"],
+    ["Alice", 25, "New York"],
+    ["Bob", 30, "London"],
+    ["Charlie", 35, "Paris"]
+]
+
+# Writing to a CSV file in write mode
+with open(file_path, "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(sample_data)
+    
+# Writing to a CSV file in append mode
+with open(file_path, "a", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(sample_data)
+
+# Reading from a CSV file in read mode
+# Return List
+with open(file_path, "r") as file:
+    reader = csv.reader(file)
+    next(reader).   # To skip the headers
+    for row in reader:
+        print(row)  # Each row is a list
+        
+# Return Dict
+with open(file_path, "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        # Each row is a an OrderedDict
+        # Use keys to access data
+        print(row['Name'])  # Each row is a an OrderedDict
+
 ```
 ## 3. Pandas (Recommended)
 # EXCEL
