@@ -197,7 +197,7 @@ tree.write(output_file_path, pretty_print=True)
 ### MySQL
 ## SQL I/O
 ### sqlite
-    ```python
+  ```python
 import sqlite3
 
 # Connect to the database
@@ -219,6 +219,6 @@ for row in results:
 # Close the cursor and the connection
 cursor.close()
 conn.close()
-    ```
+  ```
 ### PostgreSQL
 ### MySQL
