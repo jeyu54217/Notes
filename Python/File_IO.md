@@ -14,12 +14,6 @@
     - [MySQL](#mysql)
   - [SQL I/O](#sql-io)
     - [sqlite](#sqlite-1)
-- [Connect to the database](#connect-to-the-database)
-- [Create a cursor object](#create-a-cursor-object)
-- [Execute SQL query](#execute-sql-query)
-- [Fetch the results](#fetch-the-results)
-- [Iterate over the results](#iterate-over-the-results)
-- [Close the cursor and the connection](#close-the-cursor-and-the-connection)
     - [PostgreSQL](#postgresql-1)
     - [MySQL](#mysql-1)
 # General
