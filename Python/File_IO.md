@@ -79,12 +79,7 @@ import csv
 file_path = "example.csv"
 
 # Sample data
-sample_data = [
-    ["Name", "Age", "City"],
-    ["Alice", 25, "New York"],
-    ["Bob", 30, "London"],
-    ["Charlie", 35, "Paris"]
-]
+sample_data = []
 
 # Writing to a CSV file in write mode
 with open(file_path, "w", newline="") as file:
@@ -120,19 +115,15 @@ import pandas as pd
 file_path = "example.csv"
 
 # Sample data (Iterable, dict)
-data = {
-    "Name": ["Alice", "Bob", "Charlie"],
-    "Age": [25, 30, 35],
-    "City": ["New York", "London", "Paris"]
-}
+data = {}
 
 # Read the CSV file into a DataFrame
 df = pd.read_csv(file_path)
 print(df)
 
 # Writtin/Appending the DataFrame to a CSV file
-df = pd.DataFrame(data)             # Init a DataFrame from the targeted data
-df.to_csv(file_path, index=False)   # Write the DataFrame to a CSV file
+df = pd.DataFrame(data)                                   # Init a DataFrame from the targeted data
+df.to_csv(file_path, index=False)                         # Write the DataFrame to a CSV file
 df.to_csv(file_path, mode="a", header=False, index=False) # Appending the DataFrame to a CSV file
 
 ```
