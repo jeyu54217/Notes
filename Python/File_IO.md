@@ -2,11 +2,10 @@
 - [General](#general)
   - [File Closing](#file-closing)
 - [TXT](#txt)
-    - [Read txt](#read-txt)
-    - [Write txt](#write-txt)
-  - [2. Pandas (Recommended)](#2-pandas-recommended)
+  - [open()](#open)
 - [CSV](#csv)
-  - [3. Pandas (Recommended)](#3-pandas-recommended)
+  - [1.Build-in CSV](#1build-in-csv)
+  - [2.Pandas (Recommend)](#2pandas-recommend)
 - [XML](#xml)
     - [Pandas](#pandas)
 - [SQL DB](#sql-db)
@@ -32,16 +31,12 @@ file.closed # True
 
 # TXT
 
-
-
-### Read txt
+## open()
 - "r" mode by default
 - Cursor Movement : Python reads files by using a cursor
 - seek() : To move the cursor.
 - readlines() : To get a list of all lines.
 - To read only part of a file, pass a number of characters into read("abc"), or use readline()
-
-### Write txt
 - "w" mode - Write to a file (previous contents will be removed)
 - "a" mode - Append to a file (previous contents will not be removed)
 - Write or create : You can also write to files that don't yet exist 
@@ -66,10 +61,10 @@ with open(file_path, "r") as file:
     print(content)
 
 ```
-## 2. Pandas (Recommended)
 
 
-# [CSV](https://docs.python.org/3/library/csv.html) 
+# CSV
+## 1.[Build-in CSV](https://docs.python.org/3/library/csv.html) 
 ```python
 import csv
 
@@ -105,7 +100,7 @@ with open(file_path, "r") as file:
         print(row['Name'])  # Each row is a an OrderedDict
 
 ```
-## 3. Pandas (Recommended)
+## 2.Pandas (Recommend)
 ```python
 import pandas as pd
 
