@@ -125,8 +125,65 @@ print(df)
 df = pd.DataFrame(data)                                   # Init a DataFrame from the targeted data
 df.to_csv(file_path, index=False)                         # Write the DataFrame to a CSV file
 df.to_csv(file_path, mode="a", header=False, index=False) # Appending the DataFrame to a CSV file
+```
+# XML
+- Python pandas does not have built-in support for directly reading and writing XML files.
+- parsing libraries
+    1. xml.etree.ElementTree: This library is included in Python's standard library and provides a simple and efficient way to parse and manipulate XML data. It offers a high-level ElementTree API for parsing and traversing XML structures.
+
+    2. lxml (recommended): This is a third-party library that builds upon the libxml2 and libxslt libraries. It provides a fast and feature-rich XML and HTML processing framework. It offers both a tree-based and event-based API for parsing XML data.
+
+    3. xml.dom: This library is also part of the Python standard library and provides an implementation of the W3C's Document Object Model (DOM) for XML documents. It allows you to manipulate XML data in a tree-like structure.
+
+    4. BeautifulSoup: While primarily used for HTML parsing, BeautifulSoup can also handle XML data. It provides a convenient and flexible way to parse and navigate XML or HTML documents. It is often used for web scraping tasks.
+```python
+import pandas as pd
+from lxml import etree
+
+# Reading from an XML file
+file_path = "example.xml"
+
+# Parse the XML file
+tree = etree.parse(file_path)
+root = tree.getroot()
+
+# Extract data from XML and create a list of dictionaries
+data = []
+for element in root:
+    record = {}
+    for sub_element in element:
+        record[sub_element.tag] = sub_element.text
+    data.append(record)
+
+# Create a DataFrame from the data
+df = pd.DataFrame(data)
+
+# Print the DataFrame
+print(df)
+
+# Writing to an XML file
+# Convert DataFrame to a dictionary
+data_dict = df.to_dict(orient="records")
+
+# Create the root element
+root = etree.Element("root")
+
+# Create child elements from the DataFrame data
+for record in data_dict:
+    child = etree.SubElement(root, "record")
+    for key, value in record.items():
+        sub_element = etree.SubElement(child, key)
+        sub_element.text = str(value)
+
+# Create the XML tree
+tree = etree.ElementTree(root)
+
+# Write the XML tree to a file
+output_file_path = "output.xml"
+tree.write(output_file_path, pretty_print=True)
+
 
 ```
-# EXCEL
+
 ### Pandas
 # SQL DB
