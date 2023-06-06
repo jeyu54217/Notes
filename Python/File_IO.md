@@ -52,20 +52,17 @@ file.closed # True
 
 file_path = "example.txt"
 
-# Writting to a text file
-# Open the file in write mode (previous contents will be removed)
+# Writting the text to a text file in write mode (previous contents will be removed)
 with open(file_path, "w") as file:
     file.write("Hello, world!\n")
     file.write("This is an example file.\n")
     file.write("Writing some text to demonstrate file I/O.")
-    
-# Appending to a text file 
-# Open the file in append mode (previous contents will not be removed)
+
+# Appending the text to a text file in append mode (previous contents will not be removed)
 with open(file_path, "a") as file:
     file.write("\nAppending more text to the file.")
-    
-# Reading from a text file
-# Open the file in read mode
+
+# Reading the text to a text file in read mode 
 with open(file_path, "r") as file:
     # Read the entire file
     content = file.read()
