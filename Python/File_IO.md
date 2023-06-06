@@ -7,8 +7,21 @@
   - [1. open() + Build-in CSV parser](#1-open--build-in-csv-parser)
   - [2. open() + Pandas (Recommend)](#2-open--pandas-recommend)
 - [XML](#xml)
-    - [Pandas](#pandas)
 - [SQL DB](#sql-db)
+  - [Django I/O + ORM](#django-io--orm)
+    - [sqlite](#sqlite)
+    - [PostgreSQL](#postgresql)
+    - [MySQL](#mysql)
+  - [SQL I/O](#sql-io)
+    - [sqlite](#sqlite-1)
+- [Connect to the database](#connect-to-the-database)
+- [Create a cursor object](#create-a-cursor-object)
+- [Execute SQL query](#execute-sql-query)
+- [Fetch the results](#fetch-the-results)
+- [Iterate over the results](#iterate-over-the-results)
+- [Close the cursor and the connection](#close-the-cursor-and-the-connection)
+    - [PostgreSQL](#postgresql-1)
+    - [MySQL](#mysql-1)
 # General
 ## File Closing (with)
 - "with" statement close file automatically. (Recommended)
@@ -177,5 +190,35 @@ tree.write(output_file_path, pretty_print=True)
 
 ```
 
-### Pandas
 # SQL DB
+## Django I/O + ORM
+### sqlite
+### PostgreSQL
+### MySQL
+## SQL I/O
+### sqlite
+    ```python
+import sqlite3
+
+# Connect to the database
+conn = sqlite3.connect("example.db")
+
+# Create a cursor object
+cursor = conn.cursor()
+
+# Execute SQL query
+cursor.execute("SELECT * FROM my_table")
+
+# Fetch the results
+results = cursor.fetchall()
+
+# Iterate over the results
+for row in results:
+    print(row)
+
+# Close the cursor and the connection
+cursor.close()
+conn.close()
+    ```
+### PostgreSQL
+### MySQL
