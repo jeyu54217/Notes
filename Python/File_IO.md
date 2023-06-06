@@ -1,41 +1,38 @@
 **CONTENTS**
+- [General](#general)
+  - [File Closing](#file-closing)
 - [TXT](#txt)
-  - [1. open()](#1-open)
-    - [Close File](#close-file)
-      - [・Bad code](#bad-code)
-      - [・Good code](#good-code)
     - [Read txt](#read-txt)
     - [Write txt](#write-txt)
   - [2. Pandas (Recommended)](#2-pandas-recommended)
 - [CSV](#csv)
-  - [1. open()](#1-open-1)
-  - [2. csv](#2-csv)
   - [3. Pandas (Recommended)](#3-pandas-recommended)
-- [EXCEL](#excel)
+- [XML](#xml)
     - [Pandas](#pandas)
 - [SQL DB](#sql-db)
-
-# TXT
-## 1. open()
-### Close File
+# General
+## File Closing
 - "with" statement close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
 - Always .close() files - it frees up system resources!
-#### ・Bad code
 ```python
+# Bad code
 file = open("<file.txt>")
 file.read()
 file.close()
 
 file.closed # True
-```
-#### ・Good code
-```python
+
+# ・Good code
 with open("<file.txt>",) as file:
     data = file.read()
 
 file.closed # True
 ```
+
+# TXT
+
+
 
 ### Read txt
 - "r" mode by default
