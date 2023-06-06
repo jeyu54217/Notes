@@ -1,16 +1,16 @@
 **CONTENTS**
 - [General](#general)
-  - [File Closing](#file-closing)
+  - [File Closing (with)](#file-closing-with)
 - [TXT](#txt)
   - [open()](#open)
 - [CSV](#csv)
-  - [1. open() + CSV parser](#1-open--build-in-csv-parser)
+  - [1. open() + Build-in CSV parser](#1-open--build-in-csv-parser)
   - [2. open() + Pandas (Recommend)](#2-open--pandas-recommend)
 - [XML](#xml)
     - [Pandas](#pandas)
 - [SQL DB](#sql-db)
 # General
-## File Closing
+## File Closing (with)
 - "with" statement close file automatically. (Recommended)
 - Once closed, a file can't be .read() again. (should be reopen)
 - Always .close() files - it frees up system resources!
