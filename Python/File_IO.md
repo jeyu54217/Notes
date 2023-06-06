@@ -117,6 +117,28 @@ with open(file_path, "r") as file:
 
 ```
 ## 3. Pandas (Recommended)
+```python
+import pandas as pd
+
+file_path = "example.csv"
+
+# Sample data (Iterable, dict)
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["New York", "London", "Paris"]
+}
+
+# Read the CSV file into a DataFrame
+df = pd.read_csv(file_path)
+print(df)
+
+# Writtin/Appending the DataFrame to a CSV file
+df = pd.DataFrame(data)             # Init a DataFrame from the targeted data
+df.to_csv(file_path, index=False)   # Write the DataFrame to a CSV file
+df.to_csv(file_path, mode="a", header=False, index=False) # Appending the DataFrame to a CSV file
+
+```
 # EXCEL
 ### Pandas
 # SQL DB
