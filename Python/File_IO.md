@@ -195,8 +195,8 @@ tree.write(output_file_path, pretty_print=True)
   ```python
 import sqlite3
 
-# Connect to the database
-conn = sqlite3.connect("example.db")
+# Connect/Create the database in the current directory
+conn = sqlite3.connect("db.sqlite3")
 
 # Create a cursor object
 cursor = conn.cursor()
@@ -204,12 +204,12 @@ cursor = conn.cursor()
 # Execute SQL query
 cursor.execute("SELECT * FROM my_table")
 
-# Fetch the results
-results = cursor.fetchall()
+# Commit the transaction query (INSERT, UPDATE, DELETE, REPLACE)
+conn.commit()
 
-# Iterate over the results
-for row in results:
-    print(row)
+# Shows the result by fetchall() (return a list of tuples)
+results = cursor.fetchall()
+print(results)
 
 # Close the cursor and the connection
 cursor.close()
