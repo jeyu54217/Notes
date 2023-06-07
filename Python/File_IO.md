@@ -105,6 +105,9 @@ with open(file_path, "r") as file:
 
 ```
 ## 2. Pandas (Recommend)
+```bash
+pip install pandas
+```
 ```python
 import pandas as pd
 
