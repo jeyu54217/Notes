@@ -9,11 +9,10 @@
 - [SQL DB](#sql-db)
   - [Django ORM](#django-orm)
     - [Sqlite](#sqlite)
-    - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
   - [SQL I/O](#sql-io)
     - [Sqlite](#sqlite-1)
-    - [PostgreSQL](#postgresql-1)
+    - [PostgreSQL](#postgresql)
     - [MySQL](#mysql-1)
 # General
 ## File Closing (with)
@@ -187,7 +186,26 @@ tree.write(output_file_path, pretty_print=True)
 # SQL DB
 ## Django ORM
 ### Sqlite
-1. settings.py
+- DBMS as a single file (No adapter)
+- settings.py
+   ```python
+    from pathlib import Path
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    ```
+    ```python
+    DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': BASE_DIR / 'db.sqlite3',
+          }
+    }
+     ```
+### PostgreSQL
+- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
+  ```bash
+  pip install mysqlclient
+  ```
+- settings.py
     ```python
     from pathlib import Path
     BASE_DIR = Path(__file__).resolve().parent.parent
@@ -200,8 +218,6 @@ tree.write(output_file_path, pretty_print=True)
     }
 
      ```
-2. 
-### PostgreSQL
 ### MySQL
 ## SQL I/O
 ### Sqlite
