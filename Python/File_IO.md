@@ -3,8 +3,8 @@
   - [File Closing (with)](#file-closing-with)
 - [TXT - open()](#txt---open)
 - [CSV](#csv)
-  - [1.open() + Build-in CSV parser](#1open--build-in-csv-parser)
-  - [2.open() + Pandas (Recommend)](#2open--pandas-recommend)
+  - [1. Build-in CSV parser](#1-build-in-csv-parser)
+  - [2. Pandas (Recommend)](#2-pandas-recommend)
 - [XML](#xml)
 - [SQL DB](#sql-db)
   - [Django I/O + ORM](#django-io--orm)
@@ -68,7 +68,7 @@ with open(file_path, "r") as file:
 
 
 # CSV
-## 1.open() + Build-in [CSV parser](https://docs.python.org/3/library/csv.html) 
+## 1. Build-in [CSV parser](https://docs.python.org/3/library/csv.html) 
 ```python
 import csv
 
@@ -104,7 +104,7 @@ with open(file_path, "r") as file:
         print(row['Name'])  # Each row is a an OrderedDict
 
 ```
-## 2.open() + Pandas (Recommend)
+## 2. Pandas (Recommend)
 ```python
 import pandas as pd
 
