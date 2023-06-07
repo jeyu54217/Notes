@@ -7,7 +7,7 @@
   - [2. Pandas (Recommend)](#2-pandas-recommend)
 - [XML](#xml)
 - [SQL DB](#sql-db)
-  - [Django I/O + ORM](#django-io--orm)
+  - [Django ORM](#django-orm)
     - [sqlite](#sqlite)
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
@@ -182,7 +182,7 @@ tree.write(output_file_path, pretty_print=True)
 ```
 
 # SQL DB
-## Django I/O + ORM
+## Django ORM
 ### sqlite
 ### PostgreSQL
 ### MySQL
