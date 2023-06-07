@@ -1,8 +1,7 @@
 **CONTENTS**
 - [General](#general)
   - [File Closing (with)](#file-closing-with)
-- [TXT](#txt)
-  - [open()](#open)
+- [TXT - open()](#txt---open)
 - [CSV](#csv)
   - [1. open() + Build-in CSV parser](#1-open--build-in-csv-parser)
   - [2. open() + Pandas (Recommend)](#2-open--pandas-recommend)
@@ -36,9 +35,7 @@ with open("<file.txt>",) as file:
 file.closed # True
 ```
 
-# TXT
-
-## open()
+# TXT - open()
 - "r" mode by default
 - Cursor Movement : Python reads files by using a cursor
 - seek() : To move the cursor.
