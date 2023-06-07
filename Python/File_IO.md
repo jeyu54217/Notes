@@ -187,6 +187,20 @@ tree.write(output_file_path, pretty_print=True)
 # SQL DB
 ## Django ORM
 ### Sqlite
+1. settings.py
+    ```python
+    from pathlib import Path
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+    DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': BASE_DIR / 'db.sqlite3',
+          }
+    }
+
+     ```
+2. 
 ### PostgreSQL
 ### MySQL
 ## SQL I/O
