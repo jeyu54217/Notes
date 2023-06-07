@@ -205,18 +205,24 @@ tree.write(output_file_path, pretty_print=True)
   ```bash
   pip install mysqlclient
   ```
-- settings.py
+  or [psycopg2](https://pypi.org/project/psycopg2/)
+  ```bash
+  pip install psycopg2
+  ```
+- settings.py (Usiing OS environment variable)
     ```python
-    from pathlib import Path
-    BASE_DIR = Path(__file__).resolve().parent.parent
+    import os
 
     DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-          'NAME': BASE_DIR / 'db.sqlite3',
-          }
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DB_NAME', '<default_value>'),
+            'USER': os.environ.get('DB_USER', '<default_value>'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', '<default_value>'),
+            'HOST': os.environ.get('DB_HOST', '<default_value>'),
+            'PORT': os.environ.get('DB_PORT', '<default_value>'),
+        }
     }
-
      ```
 ### MySQL
 ## SQL I/O
