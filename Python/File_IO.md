@@ -199,12 +199,20 @@ conn = sqlite3.connect("db.sqlite3")
 cursor = conn.cursor()
 
 # Execute SQL query
-cursor.execute("SELECT * FROM my_table")
-
+sql_query = "SELECT * FROM my_table"
+cursor.execute(sql_query)
 # Print the executed result directly on the terminal (return a list of tuples)
 results = cursor.fetchall()
 print(results)
 
+# Execute bulk insert query
+data = [
+    ('John', 'Doe'),
+    ('Jane', 'Smith'),
+    ('Alice', 'Johnson')
+]
+sql_query = "INSERT INTO my_table (first_name, last_name) VALUES (?, ?)"
+cursor.executemany(sql, data)
 # Commit the transaction query (INSERT, UPDATE, DELETE, REPLACE)
 conn.commit()
 
