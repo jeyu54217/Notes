@@ -201,12 +201,12 @@ cursor = conn.cursor()
 # Execute SQL query
 cursor.execute("SELECT * FROM my_table")
 
-# Commit the transaction query (INSERT, UPDATE, DELETE, REPLACE)
-conn.commit()
-
-# Shows the result by fetchall() (return a list of tuples)
+# Print the result directly on the terminal (return a list of tuples)
 results = cursor.fetchall()
 print(results)
+
+# Commit the transaction query (INSERT, UPDATE, DELETE, REPLACE)
+conn.commit()
 
 # Close the cursor and the connection
 cursor.close()
