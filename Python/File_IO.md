@@ -192,7 +192,7 @@ tree.write(output_file_path, pretty_print=True)
   ```python
 import sqlite3
 
-# Connect/Create the database in the current directory
+# Connect or Create the database in the current directory
 conn = sqlite3.connect("db.sqlite3")
 
 # Create a cursor object
@@ -201,7 +201,7 @@ cursor = conn.cursor()
 # Execute SQL query
 cursor.execute("SELECT * FROM my_table")
 
-# Print the result directly on the terminal (return a list of tuples)
+# Print the executed result directly on the terminal (return a list of tuples)
 results = cursor.fetchall()
 print(results)
 
