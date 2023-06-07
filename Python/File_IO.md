@@ -228,7 +228,7 @@ tree.write(output_file_path, pretty_print=True)
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
-  ```python
+```python
 import sqlite3
 
 # Connect or Create the database in the current directory
@@ -258,6 +258,6 @@ conn.commit()
 # Close the cursor and the connection
 cursor.close()
 conn.close()
-  ```
+```
 ### PostgreSQL
 ### MySQL
