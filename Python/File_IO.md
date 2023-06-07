@@ -8,11 +8,11 @@
 - [XML](#xml)
 - [SQL DB](#sql-db)
   - [Django ORM](#django-orm)
-    - [sqlite](#sqlite)
+    - [Sqlite](#sqlite)
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
   - [SQL I/O](#sql-io)
-    - [sqlite](#sqlite-1)
+    - [Sqlite](#sqlite-1)
     - [PostgreSQL](#postgresql-1)
     - [MySQL](#mysql-1)
 # General
@@ -186,11 +186,11 @@ tree.write(output_file_path, pretty_print=True)
 
 # SQL DB
 ## Django ORM
-### sqlite
+### Sqlite
 ### PostgreSQL
 ### MySQL
 ## SQL I/O
-### sqlite
+### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
   ```python
 import sqlite3
