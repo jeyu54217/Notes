@@ -437,9 +437,9 @@ tree.write(output_file_path, pretty_print=True)
   ```
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
-  ```bash
+```bash
   pip install mysqlclient
-  ```
+```
 ```python
 import MySQLdb
 import traceback
