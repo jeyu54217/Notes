@@ -385,7 +385,6 @@ tree.write(output_file_path, pretty_print=True)
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
   
-
      # READ operation
       try:
           select_query = "SELECT * FROM your_table"
@@ -437,3 +436,102 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL connection closed.")
   ```
 ### MySQL
+- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
+  ```bash
+  pip install mysqlclient
+  ```
+```python
+import MySQLdb
+import traceback
+import os
+
+try:
+    # Connect to the MySQL database
+    connection = MySQLdb.connect(
+        host = os.environ.get('DB_HOST', 'localhost'),
+        user = os.environ.get('DB_USER', '<default_value>'),
+        password = os.environ.get('DB_PASSWORD', '<default_value>'),
+        database = os.environ.get('DB_NAME', '<default_value>'),
+    )
+    print("Connected to the MySQL database")
+      
+    # Create a cursor object
+    cursor = conn.cursor()
+
+    # CREATE Table
+    try:
+        create_table_query = """
+            CREATE TABLE IF NOT EXISTS my_table (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(255),
+                age INT,
+              )
+           """
+        cursor.execute(create_table_query)
+        print("Table created successfully")
+    except MySQLdb.Error as e:
+        print("MySQL error occurred while CREATING table:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # INSERT operation
+    try:
+        insert_query = "INSERT INTO my_table (name, age) VALUES (%s, %s)"
+        data = ("John Doe", 25)
+        cursor.execute(insert_query, data)
+        print("Data inserted successfully")
+    except MySQLdb.Error as e:
+        print("MySQL error occurred while CREATING table:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+  
+    # READ operation
+    try:
+        select_query = "SELECT * FROM my_table"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+        for record in records:
+            print(record)
+    except MySQLdb.Error as e:
+        print("MySQL error occurred while READING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # UPDATE operation
+    try:
+        update_query = "UPDATE my_table SET age = %s WHERE id = %s"
+        data = (30, 1)
+        cursor.execute(update_query, data)
+        print("Data Updated successfully")
+    except MySQLdb.Error as e:
+        print("MySQL error occurred while UPDATING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # DELETE operation
+    try:
+        delete_query = "DELETE FROM my_table WHERE id = %s"
+        data = (2,)
+        cursor.execute(delete_query, data)
+        print("Data Deleted successfully")
+    except MySQLdb.Error as e:
+        print("MySQL error occurred while DELETING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # Commit the transaction (INSERT, UPDATE, DELETE)
+    conn.commit()
+
+  except MySQLdb.Error:
+    print("MySQL error occurred while connecting to the database:")
+    print(traceback.format_exc()) 
+
+  finally:
+    # Close the cursor and the connection
+    if cursor:
+        cursor.close()
+        print("Cursor closed.")
+    if conn:
+        conn.close()
+        print("MySQL connection closed.")
+```
