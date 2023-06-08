@@ -433,6 +433,6 @@ tree.write(output_file_path, pretty_print=True)
           print("Cursor closed.")
       if conn:
           conn.close()
-          print("SQLite connection closed.")
+          print("PostgreSQL connection closed.")
   ```
 ### MySQL
