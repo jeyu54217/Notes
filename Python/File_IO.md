@@ -231,7 +231,7 @@ tree.write(output_file_path, pretty_print=True)
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.mysql',
             'NAME': os.environ.get('DB_NAME', '<default_value>'),
             'USER': os.environ.get('DB_USER', '<default_value>'),
             'PASSWORD': os.environ.get('DB_PASSWORD', '<default_value>'),
