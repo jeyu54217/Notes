@@ -353,7 +353,8 @@ tree.write(output_file_path, pretty_print=True)
           user = os.environ.get('DB_USER', '<default_value>'),
           password = os.environ.get('DB_PASSWORD', '<default_value>'),
       )
-
+      print("Database connection established.")
+      
       # Create a cursor object
       cursor = conn.cursor()
 
