@@ -243,92 +243,107 @@ tree.write(output_file_path, pretty_print=True)
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
-```python
-import sqlite3
-import traceback
-
-try:
-    # Connect or create the database in the current directory
-    conn = sqlite3.connect("db.sqlite3")
-
-    # Create a cursor object
-    cursor = conn.cursor()
-
-    # Create a table
-    try:
-        create_table_query = """
-            CREATE TABLE IF NOT EXISTS my_table (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT,
-            age INTEGER
-        )
-        """
-        cursor.execute(create_table_query)
-        print("Table created successfully")
-
-    except sqlite3.Error as e:
-        print("SQLite error occurred while CREATING table:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # Insert a record
-    try:
-        insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
-        data = ("John Doe", 25)
-        cursor.execute(insert_query, data)
-        print("Data Inserted successfully")
-
-    except sqlite3.Error as e:
-        print("SQLite error occurred while INSERTING data:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # Update a record
-    try:
-        update_query = "UPDATE my_table SET age = ? WHERE name = ?"
-        data = (30, "John Doe")
-        cursor.execute(update_query, data)
-    except sqlite3.Error as e:
-        print("SQLite error occurred while UPDATING data:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # Delete a record
-    try:
-        delete_query = "DELETE FROM my_table WHERE name = ?"
-        data = ("John Doe",)
-        cursor.execute(delete_query, data)
-    except sqlite3.Error as e:
-        print("SQLite error occurred while DELETING data:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # Read records
-    try:
-        select_query = "SELECT * FROM my_table"
-        cursor.execute(select_query)
-        records = cursor.fetchall()
-        for record in records:
-            print(record)
-    except sqlite3.Error as e:
-        print("SQLite error occurred while READING data:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # Commit the transaction (INSERT, UPDATE, DELETE)
-    conn.commit()
-
-except sqlite3.Error:
-    print("SQLite error occurred while connecting to the database:")
-    print(traceback.format_exc()) 
-
-finally:
-    # Close the cursor and the connection
-    if cursor:
-        cursor.close()
-    if conn:
-        conn.close()
+  ```python
+  import sqlite3
+  import traceback
+  
+  try:
+      # Connect or create the database in the current directory
+      conn = sqlite3.connect("db.sqlite3")
+      print("Database connection established.")
+  
+      # Create a cursor object
+      cursor = conn.cursor()
+  
+      # Create a table
+      try:
+          create_table_query = """
+              CREATE TABLE IF NOT EXISTS my_table (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT,
+              age INTEGER
+          )
+          """
+          cursor.execute(create_table_query)
+          print("Table created successfully")
+      except sqlite3.Error as e:
+          print("SQLite error occurred while CREATING table:")
+          print(traceback.format_exc())
+          print("SQL Query:", e.statement)
+  
+      # Insert a record
+      try:
+          insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
+          data = ("John Doe", 25)
+          cursor.execute(insert_query, data)
+         # Execute the bulk insert
+          cursor.executemany(insert_query, data)
+          print("Data Inserted successfully")
+      except sqlite3.Error as e:
+          print("SQLite error occurred while INSERTING data:")
+          print(traceback.format_exc())
+          print("SQL Query:", e.statement)
+  
+      # Update a record
+      try:
+          update_query = "UPDATE my_table SET age = ? WHERE name = ?"
+          data = (30, "John Doe")
+          cursor.execute(update_query, data)
+          print("Data Updated successfully")
+      except sqlite3.Error as e:
+          print("SQLite error occurred while UPDATING data:")
+          print(traceback.format_exc())
+          print("SQL Query:", e.statement)
+  
+      # Delete a record
+      try:
+          delete_query = "DELETE FROM my_table WHERE name = ?"
+          data = ("John Doe",)
+          cursor.execute(delete_query, data)
+          print("Data Deleted successfully")
+      except sqlite3.Error as e:
+          print("SQLite error occurred while DELETING data:")
+          print(traceback.format_exc())
+          print("SQL Query:", e.statement)
+  
+      # Read records
+      try:
+          select_query = "SELECT * FROM my_table"
+          cursor.execute(select_query)
+          records = cursor.fetchall()
+          for record in records:
+              print(record)
+      except sqlite3.Error as e:
+          print("SQLite error occurred while READING data:")
+          print(traceback.format_exc())
+          print("SQL Query:", e.statement)
+  
+      # Commit the transaction (INSERT, UPDATE, DELETE)
+      conn.commit()
+  
+  except sqlite3.Error:
+      print("SQLite error occurred while connecting to the database:")
+      print(traceback.format_exc()) 
+  
+  finally:
+      # Close the cursor and the connection
+      if cursor:
+          cursor.close()
+          print("Cursor closed.")
+      if conn:
+          conn.close()
+          print("SQLite connection closed.")
 ```
 ### PostgreSQL
-saasas
+- Adapter : [psycopg2](https://pypi.org/project/psycopg2)
+  ```bash
+  pip install psycopg2
+  ```
+  ```python
+  import psycopg2
+  from psycopg2 import Error
+  import os
+
+
+  ```
 ### MySQL
