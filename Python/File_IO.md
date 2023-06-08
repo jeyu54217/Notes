@@ -192,15 +192,14 @@ tree.write(output_file_path, pretty_print=True)
    ```python
     from pathlib import Path
     BASE_DIR = Path(__file__).resolve().parent.parent
-    ```
-    ```python
+
     DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.sqlite3',
           'NAME': BASE_DIR / 'db.sqlite3',
           }
     }
-     ```
+    ```
 ### PostgreSQL
 - Adapter : [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) (optimized for Django usage)
   ```bash
