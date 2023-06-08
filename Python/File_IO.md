@@ -9,11 +9,10 @@
 - [SQL DB](#sql-db)
   - [Django ORM](#django-orm)
     - [Sqlite](#sqlite)
-    - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
   - [SQL I/O](#sql-io)
     - [Sqlite](#sqlite-1)
-    - [PostgreSQL](#postgresql-1)
+    - [PostgreSQL](#postgresql)
     - [MySQL](#mysql-1)
 
 # General
@@ -188,7 +187,7 @@ tree.write(output_file_path, pretty_print=True)
 # SQL DB
 ## Django ORM
 ### Sqlite
-- DBMS as a single file (No adapter)
+- DBMS as a single file (No adapter needed)
 - settings.py
    ```python
     from pathlib import Path
@@ -203,13 +202,9 @@ tree.write(output_file_path, pretty_print=True)
     }
      ```
 ### PostgreSQL
-- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
+- Adapter : [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) (optimized for Django usage)
   ```bash
-  pip install mysqlclient
-  ```
-  or [psycopg2](https://pypi.org/project/psycopg2/)
-  ```bash
-  pip install psycopg2
+  pip install psycopg2-binary
   ```
 - settings.py (Usiing OS environment variable)
     ```python
@@ -221,46 +216,119 @@ tree.write(output_file_path, pretty_print=True)
             'NAME': os.environ.get('DB_NAME', '<default_value>'),
             'USER': os.environ.get('DB_USER', '<default_value>'),
             'PASSWORD': os.environ.get('DB_PASSWORD', '<default_value>'),
-            'HOST': os.environ.get('DB_HOST', '<default_value>'),
-            'PORT': os.environ.get('DB_PORT', '<default_value>'),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '5432'),
         }
     }
      ```
 ### MySQL
+- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
+  ```bash
+  pip install mysqlclient
+  ```
+- settings.py (Usiing OS environment variable)
+    ```python
+    import os
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DB_NAME', '<default_value>'),
+            'USER': os.environ.get('DB_USER', '<default_value>'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', '<default_value>'),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '3306'),
+        }
+    }
+     ```
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
 ```python
 import sqlite3
+import traceback
 
-# Connect or Create the database in the current directory
-conn = sqlite3.connect("db.sqlite3")
+try:
+    # Connect or create the database in the current directory
+    conn = sqlite3.connect("db.sqlite3")
 
-# Create a cursor object
-cursor = conn.cursor()
+    # Create a cursor object
+    cursor = conn.cursor()
 
-# Execute SQL query
-sql_query = "SELECT * FROM my_table"
-cursor.execute(sql_query)
-# Print the executed result directly on the terminal (return a list of tuples)
-results = cursor.fetchall()
-print(results)
+    # Create a table
+    try:
+        create_table_query = """
+            CREATE TABLE IF NOT EXISTS my_table (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            age INTEGER
+        )
+        """
+        cursor.execute(create_table_query)
+        print("Table created successfully")
 
-# Execute bulk insert query
-data = [
-    ('John', 'Doe'),
-    ('Jane', 'Smith'),
-    ('Alice', 'Johnson')
-]
-sql_query = "INSERT INTO my_table (first_name, last_name) VALUES (?, ?)"
-cursor.executemany(sql, data)
-# Commit the transaction query (INSERT, UPDATE, DELETE, REPLACE)
-conn.commit()
+    except sqlite3.Error as e:
+        print("SQLite error occurred while CREATING table:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
 
-# Close the cursor and the connection
-cursor.close()
-conn.close()
+    # Insert a record
+    try:
+        insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
+        data = ("John Doe", 25)
+        cursor.execute(insert_query, data)
+        print("Data Inserted successfully")
+
+    except sqlite3.Error as e:
+        print("SQLite error occurred while INSERTING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # Update a record
+    try:
+        update_query = "UPDATE my_table SET age = ? WHERE name = ?"
+        data = (30, "John Doe")
+        cursor.execute(update_query, data)
+    except sqlite3.Error as e:
+        print("SQLite error occurred while UPDATING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # Delete a record
+    try:
+        delete_query = "DELETE FROM my_table WHERE name = ?"
+        data = ("John Doe",)
+        cursor.execute(delete_query, data)
+    except sqlite3.Error as e:
+        print("SQLite error occurred while DELETING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # Read records
+    try:
+        select_query = "SELECT * FROM my_table"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+        for record in records:
+            print(record)
+    except sqlite3.Error as e:
+        print("SQLite error occurred while READING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+
+    # Commit the transaction (INSERT, UPDATE, DELETE)
+    conn.commit()
+
+except sqlite3.Error:
+    print("SQLite error occurred while connecting to the database:")
+    print(traceback.format_exc()) 
+
+finally:
+    # Close the cursor and the connection
+    if cursor:
+        cursor.close()
+    if conn:
+        conn.close()
 ```
 ### PostgreSQL
 saasas
