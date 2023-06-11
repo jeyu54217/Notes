@@ -15,6 +15,7 @@
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql-1)
 - [Solutions](#solutions)
+  - [Input multiple csv files from zip to sql with buffering.](#input-multiple-csv-files-from-zip-to-sql-with-buffering)
 
 # General
 ## File Closing (with)
