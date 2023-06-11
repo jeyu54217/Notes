@@ -574,8 +574,9 @@ try:
 ```
 
 # Solutions
+## Input multiple csv files from zip to sql with buffering.
 ```python
-# Handling multiple csv files from zip to sql with buffering.
+# Input multiple csv files from zip to sql with buffering.
 import pandas as pd
 from zipfile 
 import sqlite3 
