@@ -575,14 +575,15 @@ try:
 ```
 
 # Solutions
-## - Input multiple csv files from zip to sql with buffering.
+## - Input multiple csv files from zip to sql with buffering
 ```python
-# Input multiple csv files from zip to sql with buffering.
 import pandas as pd
-import zipfile 
+from zipfile 
 import sqlite3 
 import traceback
 import os
+
+# Input multiple csv files from zip to sql with buffering
 
 zip_path = "examples.zip"
 db_path = 'db.sqlite3'
@@ -592,6 +593,7 @@ try:
         # get all csv names in zip
         csv_name_list = [file for file in zip_file.namelist() if file.endswith('_lvr_land_a.csv')]
         print("Open zip file successfully!")
+        
         # converting csv to dataframe with buffering
         try:
             data_frames = [] 
@@ -607,11 +609,12 @@ try:
         except:
             print("Error occurred when converting the csv files")
             print(traceback.format_exc())
+            
         # Insert dataframe to sql
         try:
             sql_conn = sqlite3.connect(db_path)
             combined_df.to_sql(
-                name='real_estate_crawler_real_estate_raw', # Table name
+                name='my_table', # Table name
                 con = sql_conn,
                 if_exists = 'append',
                 index = False,
@@ -622,12 +625,11 @@ try:
             print(traceback.format_exc())
         finally:
             sql_conn.close()
-            print("Close SQL connection successfully! ")
+            print("SQL connection is terminated! ")
 except:
     print("Error occurred when opening zip file")
     print(traceback.format_exc())
 finally:
     os.remove(zip_path)
     print("Cleanup zip file successfully! ")
-
 ```
