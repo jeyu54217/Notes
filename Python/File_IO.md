@@ -14,6 +14,7 @@
     - [Sqlite](#sqlite-1)
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql-1)
+- [Solutions](#solutions)
 
 # General
 ## File Closing (with)
@@ -113,13 +114,10 @@ import pandas as pd
 
 file_path = "example.csv"
 
-# Sample data (Iterable, dict)
-data = {}
-
 # Input CSV file to a DataFrame
 df = pd.read_csv(
   # General
-  file_path,
+  path_or_buf = file_path, # expects file path or text file-like object as input.
   memory_map = False, # Build-in in-memory buffer
   engine = None, # 'c', 'python'
   encoding='utf-8',
@@ -149,9 +147,6 @@ df = pd.read_csv(
   dayfirst=False, 
   cache_dates=True, 
   )
-print(df)
-
-df = pd.DataFrame(data)                                   # Init a DataFrame from the targeted data
 
 # Output DataFrame to CSV file
 df.to_csv(
@@ -576,4 +571,61 @@ try:
     if conn:
         conn.close()
         print("MySQL connection closed.")
+```
+
+# Solutions
+```python
+# Handling multiple csv files from zip to sql with buffering.
+import pandas as pd
+from zipfile 
+import sqlite3 
+import traceback
+import os
+
+zip_path = "examples.zip"
+db_path = 'db.sqlite3'
+
+try:
+    with zipfile.ZipFile(zip_path, 'r') as zip_file: 
+        # get all csv names in zip
+        csv_name_list = [file for file in zip_file.namelist() if file.endswith('_lvr_land_a.csv')]
+        print("Open zip file successfully!")
+        # converting csv to dataframe with buffering
+        try:
+            data_frames = [] 
+            for csv_file in csv_name_list:
+                # open the csv file in binary mode as a binary file-like object on RAM (without extracting it to the disk.)
+                with zip_file.open(csv_file) as buf_file: 
+                    # converting a binary file-like object into a text file-like object
+                    buf_str = io.TextIOWrapper(buf_file) 
+                    df = pd.read_csv(buf_str) # expects a file path or a text file-like object as input.
+                    data_frames.append(df)
+            combined_df = pd.concat(data_frames)        
+            print("CSV converting successfully!")
+        except:
+            print("Error occurred when converting the csv files")
+            print(traceback.format_exc())
+        # Insert dataframe to sql
+        try:
+            sql_conn = sqlite3.connect(db_path)
+            combined_df.to_sql(
+                name='real_estate_crawler_real_estate_raw', # Table name
+                con = sql_conn,
+                if_exists = 'append',
+                index = False,
+                )
+            print("Writting dataframe to sql successfully! ")
+        except:
+            print("Error occurred when writting to sql")
+            print(traceback.format_exc())
+        finally:
+            sql_conn.close()
+            print("Close SQL connection successfully! ")
+except:
+    print("Error occurred when opening zip file")
+    print(traceback.format_exc())
+finally:
+    os.remove(zip_path)
+    print("Cleanup zip file successfully! ")
+
 ```
