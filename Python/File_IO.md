@@ -579,7 +579,7 @@ try:
 ```python
 # Input multiple csv files from zip to sql with buffering.
 import pandas as pd
-from zipfile 
+import zipfile 
 import sqlite3 
 import traceback
 import os
