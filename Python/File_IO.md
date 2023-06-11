@@ -475,9 +475,9 @@ tree.write(output_file_path, pretty_print=True)
   ```
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
-  ```bash
-  pip install mysqlclient
-  ```
+```bash
+pip install mysqlclient
+```
 ```python
 import MySQLdb
 import traceback
@@ -575,7 +575,7 @@ try:
 ```
 
 # Solutions
-## Input multiple csv files from zip to sql with buffering.
+## - Input multiple csv files from zip to sql with buffering.
 ```python
 # Input multiple csv files from zip to sql with buffering.
 import pandas as pd
