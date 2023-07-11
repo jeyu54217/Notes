@@ -134,6 +134,7 @@ except Exception as e:
     print("An error occurred: ", str(e))
     print(traceback.format_exc())
 ```
+
 ```python
 # Writing DataFrame to CSV file
 try:
@@ -151,7 +152,6 @@ try:
     print("CSV file created successfully!")
 except PermissionError:
     print("Permission denied. Unable to write the CSV file.")
-
 ```
 
 ## 2. Build-in [CSV parser](https://docs.python.org/3/library/csv.html) 
