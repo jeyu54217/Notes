@@ -28,14 +28,14 @@ class Employee:
 
 
 ## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
-- List comprehension
+- List comprehension \
     ```
-    [ <item_expression> for <item> in <iterable> ]
+    [<item_expression> for <item> in <iterable>]
     ```
 
 - Nested list comprehension
     ```
-    [[ <item_expression> for <item> in <iterable> ] for <item> in <iterable> ]
+    [[<item_expression> for <item> in <iterable>] for <item> in <iterable>]
     ```
 
 ```python
@@ -53,12 +53,44 @@ list_1 = [n for n in range(10)]
 
 ```
 ## 4. Dict comprehension [(PEP 274)](https://peps.python.org/pep-0274/)
+- Basic
     ``` 
-    { <new_key> : <new_value> for <item> in <iterable> }
+    {<new_key> : <new_value> for <item> in <iterable>}
     ```
     ```python
-    zip_dict= { k:v for (k,v) in zip(list1,list2)}
-
+    numbers = [1, 2, 3, 4, 5]
+    squared_dict = {x: x**2 for x in numbers}
+    print(squared_dict)
+    # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+    ```
+- Conditional
+    ```
+    {<new_key> : <new_value> for <item> in <iterable> if <expression_condition>}
+    ```
+    ```python
+    numbers = [1, 2, 3, 4, 5]
+    even_squares = {x: x**2 for x in numbers if x % 2 == 0}
+    print(even_squares)
+    # Output: {2: 4, 4: 16}
+    ```
+- Value Condition
+    ```
+    {<new_key> : <new_value> if <Value_condition> else <Value_condition> for <item> in <iterable>}
+    ```
+    ```python
+    numbers = [1, 2, 3, 4, 5]
+    even_odd = {x: 'even' if x % 2 == 0 else 'odd' for x in numbers}
+    print(even_odd)
+    # Output: {1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd'}
+    ```
+- Nested
+    ```
+    {<new_key> : <other_dict_comprehension> for <item> in <iterable>}
+    ```
+    ```python
+    nested_dict = {x: {y: x*y for y in range(1, 4)} for x in range(1, 4)}
+    print(nested_dict)
+    # Output: {1: {1: 1, 2: 2, 3: 3}, 2: {1: 2, 2: 4, 3: 6}, 3: {1: 3, 2: 6, 3: 9}}
     ```
 ## 5. Ternary
 
