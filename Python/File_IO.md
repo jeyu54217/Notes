@@ -6,6 +6,7 @@
   - [1. Pandas](#1-pandas)
   - [2. Build-in CSV parser](#2-build-in-csv-parser)
 - [XML](#xml)
+- [JSON](#json)
 - [SQL DB](#sql-db)
   - [Django ORM](#django-orm)
     - [Sqlite](#sqlite)
@@ -280,7 +281,7 @@ tree.write(output_file_path, pretty_print=True)
 
 
 ```
-
+# JSON
 # SQL DB
 ## Django ORM
 ### Sqlite
