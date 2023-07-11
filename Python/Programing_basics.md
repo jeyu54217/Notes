@@ -11,10 +11,11 @@
   - [Tuple](#tuple)
   - [Set](#set)
     - [Set Comprehension](#set-comprehension)
-- [What is the maximum length of a list in Python?](#what-is-the-maximum-length-of-a-list-in-python)
-- [Python Memory Management](#python-memory-management)
-- [Is Python call by reference or call by value](#is-python-call-by-reference-or-call-by-value)
-- [Dicts are now ordered](#dicts-are-now-ordered)
+- [Topics](#topics)
+  - [- What's the maximum length of a list in Python?](#--whats-the-maximum-length-of-a-list-in-python)
+  - [- Python Memory Management](#--python-memory-management)
+  - [- Is Python call by reference or call by value](#--is-python-call-by-reference-or-call-by-value)
+  - [- Dicts are now ordered](#--dicts-are-now-ordered)
 
 # Variables
 
@@ -99,7 +100,8 @@ tupl.index(3) # 2 - only the first matching index is returned
 def are_all_vowels_in_string(string):
     return len({char for char in string if char in 'aeiou'}) == 5
 ```
-# What is the maximum length of a list in Python?
+# Topics
+## - What's the maximum length of a list in Python?
 In Python, the maximum length of a list is determined by the maximum value that can be represented by the sys.maxsize constant. sys.maxsize represents the largest positive integer that can be used as an index for a list or any other sequence in Python.
 
 The value of sys.maxsize depends on the platform and the build of Python you are using. On most systems, sys.maxsize is equal to 2^31 - 1 or 2^63 - 1, depending on whether you're using a 32-bit or 64-bit version of Python.
@@ -107,10 +109,10 @@ The value of sys.maxsize depends on the platform and the build of Python you are
 In practical terms, this means that the maximum length of a list in Python can be approximately 2 billion elements (if using a 32-bit version of Python) or around 9 quintillion elements (if using a 64-bit version of Python). However, keep in mind that the actual limit may be lower due to memory constraints and other system limitations.
 
 It's important to note that creating a list with such a large number of elements can consume a significant amount of memory and may impact the performance of your program. If you need to work with very large datasets or sequences of elements, consider using alternative data structures or techniques that allow for more memory-efficient operations, such as generators or streaming data processing.
-# Python Memory Management
+## - Python Memory Management
 https://docs.python.org/3.10/c-api/memory.html#memory-management
 
-# Is Python call by reference or call by value
-#  Dicts are now ordered
+## - Is Python call by reference or call by value
+## - Dicts are now ordered
 - Changed in version 3.7: Dictionary order is guaranteed to be insertion order. This behavior was an implementation detail of CPython from 3.6.
 - https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/
