@@ -29,13 +29,13 @@ class Employee:
 
 ## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
 - List comprehension
-    ```python 
-    [<item_expression> for <item> in <iterable>]
+    ```
+    [ <item_expression> for <item> in <iterable>]
     ```
 
 - Nested list comprehension
-    ```python 
-    [[<item_expression> for <item> in <iterable>] for <item> in <iterable>]
+    ```
+    [[ <item_expression> for <item> in <iterable> ] for <item> in <iterable> ]
     ```
 
 ```python
@@ -53,14 +53,13 @@ list_1 = [n for n in range(10)]
 
 ```
 ## 4. Dict comprehension [(PEP 274)](https://peps.python.org/pep-0274/)
-```python 
-{<new_key>:<new_value> for <item> in <iterable>}
-```
-```python
-zip_dict= { k:v for (k,v) in zip(list1,list2)}
+    ``` 
+    { <new_key> : <new_value> for <item> in <iterable> }
+    ```
+    ```python
+    zip_dict= { k:v for (k,v) in zip(list1,list2)}
 
-
-```
+    ```
 ## 5. Ternary
 
 ```x = something if condition else otherthing```
