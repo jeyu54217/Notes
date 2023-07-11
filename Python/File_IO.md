@@ -15,7 +15,7 @@
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql-1)
 - [Solutions](#solutions)
-  - [- Input multiple csv files from zip to sql with buffering.](#--input-multiple-csv-files-from-zip-to-sql-with-buffering)
+  - [- Input multiple csv files from zip to sqlite with buffering.](#--input-multiple-csv-files-from-zip-to-sqlite-with-buffering)
 
 # General
 ## File Closing (with)
@@ -452,7 +452,7 @@ tree.write(output_file_path, pretty_print=True)
   ```python
     try:
         # Connect to the PostgreSQL database
-         conn = psycopg2.connect(
+        conn = psycopg2.connect(
             host = os.environ.get('DB_HOST', 'localhost'),
             port = os.environ.get('DB_PORT', '5432'),
             database = os.environ.get('DB_NAME', '<default_value>'),
@@ -512,198 +512,205 @@ tree.write(output_file_path, pretty_print=True)
           print("SQL Query:", e.statement)
   ```
   ```python
-     # READ operation
-      try:
-          select_query = "SELECT * FROM your_table"
-          cursor.execute(select_query)
-          records = cursor.fetchall()
-          for record in records:
-              print(record)
-      except psycopg2.Error as e:
-          print("PostgreSQL error occurred while READING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
-  ```
-  ```python
-      # UPDATE operation
-      try:
-          update_query = "UPDATE your_table SET age = %s WHERE name = %s"
-          data = (30, "John Doe")
-          cursor.execute(update_query, data)
-          print("Data Updated successfully")
-      except psycopg2.Error as e:
-          print("PostgreSQL error occurred while UPDATING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
-  ```
-  ```python
-      # DELETE operation
-      try:
-          delete_query = "DELETE FROM your_table WHERE name = %s"
-          data = ("John Doe",)
-          cursor.execute(delete_query, data)
-          print("Data Deleted successfully")
-      except psycopg2.Error as e:
-          print("PostgreSQL error occurred while DELETING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
-  ```
-
-### MySQL
-- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
-```bash
-pip install mysqlclient
-```
-```python
-import MySQLdb
-import traceback
-import os
-
-try:
-    # Connect to the MySQL database
-    connection = MySQLdb.connect(
-        host = os.environ.get('DB_HOST', 'localhost'),
-        user = os.environ.get('DB_USER', '<default_value>'),
-        password = os.environ.get('DB_PASSWORD', '<default_value>'),
-        database = os.environ.get('DB_NAME', '<default_value>'),
-    )
-    print("Connected to the MySQL database")
-      
-    # Create a cursor object
-    cursor = conn.cursor()
-
-    # CREATE Table
-    try:
-        create_table_query = """
-            CREATE TABLE IF NOT EXISTS my_table (
-                id INT AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(255),
-                age INT,
-              )
-           """
-        cursor.execute(create_table_query)
-        print("Table created successfully")
-    except MySQLdb.Error as e:
-        print("MySQL error occurred while CREATING table:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-
-    # INSERT operation
-    try:
-        insert_query = "INSERT INTO my_table (name, age) VALUES (%s, %s)"
-        data = ("John Doe", 25)
-        cursor.execute(insert_query, data)
-        print("Data inserted successfully")
-    except MySQLdb.Error as e:
-        print("MySQL error occurred while CREATING table:")
-        print(traceback.format_exc())
-        print("SQL Query:", e.statement)
-  
     # READ operation
     try:
-        select_query = "SELECT * FROM my_table"
+        select_query = "SELECT * FROM your_table"
         cursor.execute(select_query)
         records = cursor.fetchall()
         for record in records:
             print(record)
-    except MySQLdb.Error as e:
-        print("MySQL error occurred while READING data:")
+    except psycopg2.Error as e:
+        print("PostgreSQL error occurred while READING data:")
         print(traceback.format_exc())
         print("SQL Query:", e.statement)
-
+  ```
+  ```python
     # UPDATE operation
     try:
-        update_query = "UPDATE my_table SET age = %s WHERE id = %s"
-        data = (30, 1)
+        update_query = "UPDATE your_table SET age = %s WHERE name = %s"
+        data = (30, "John Doe")
         cursor.execute(update_query, data)
         print("Data Updated successfully")
-    except MySQLdb.Error as e:
-        print("MySQL error occurred while UPDATING data:")
+    except psycopg2.Error as e:
+        print("PostgreSQL error occurred while UPDATING data:")
         print(traceback.format_exc())
         print("SQL Query:", e.statement)
-
-    # DELETE operation
+  ```
+  ```python
+      # DELETE operation
     try:
-        delete_query = "DELETE FROM my_table WHERE id = %s"
-        data = (2,)
+        delete_query = "DELETE FROM your_table WHERE name = %s"
+        data = ("John Doe",)
         cursor.execute(delete_query, data)
         print("Data Deleted successfully")
-    except MySQLdb.Error as e:
-        print("MySQL error occurred while DELETING data:")
+    except psycopg2.Error as e:
+        print("PostgreSQL error occurred while DELETING data:")
         print(traceback.format_exc())
         print("SQL Query:", e.statement)
+  ```
 
-    # Commit the transaction (INSERT, UPDATE, DELETE)
-    conn.commit()
+### MySQL
+- Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
+    ```bash
+    pip install mysqlclient
+    ```
+    ```python
+    import MySQLdb
+    import traceback
+    import os
+    ```
+    ```python
+    try:
+        # Connect to the MySQL database
+        connection = MySQLdb.connect(
+            host = os.environ.get('DB_HOST', 'localhost'),
+            user = os.environ.get('DB_USER', '<default_value>'),
+            password = os.environ.get('DB_PASSWORD', '<default_value>'),
+            database = os.environ.get('DB_NAME', '<default_value>'),
+        )
+        print("Connected to the MySQL database")
+        
+        # Create a cursor object
+        cursor = conn.cursor()
 
-  except MySQLdb.Error:
-    print("MySQL error occurred while connecting to the database:")
-    print(traceback.format_exc()) 
+        # CRUD here
+        # ...
 
-  finally:
-    # Close the cursor and the connection
-    if cursor:
-        cursor.close()
-        print("Cursor closed.")
-    if conn:
-        conn.close()
-        print("MySQL connection closed.")
-```
+        # Commit the transaction (INSERT, UPDATE, DELETE)
+        conn.commit()
+
+    except MySQLdb.Error:
+        print("MySQL error occurred while connecting to the database:")
+        print(traceback.format_exc()) 
+    finally:
+        # Close the cursor and the connection
+        if cursor:
+            cursor.close()
+            print("Cursor closed.")
+        if conn:
+            conn.close()
+            print("MySQL connection closed.")
+    ```
+    ```python
+        # CREATE Table
+        try:
+            create_table_query = """
+                CREATE TABLE IF NOT EXISTS my_table (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    name VARCHAR(255),
+                    age INT,
+                )
+            """
+            cursor.execute(create_table_query)
+            print("Table created successfully")
+        except MySQLdb.Error as e:
+            print("MySQL error occurred while CREATING table:")
+            print(traceback.format_exc())
+            print("SQL Query:", e.statement)
+    ```
+    ```python
+        # INSERT operation
+        try:
+            insert_query = "INSERT INTO my_table (name, age) VALUES (%s, %s)"
+            data = ("John Doe", 25)
+            cursor.execute(insert_query, data)
+            print("Data inserted successfully")
+        except MySQLdb.Error as e:
+            print("MySQL error occurred while CREATING table:")
+            print(traceback.format_exc())
+            print("SQL Query:", e.statement)
+    ```
+    ```python
+        # READ operation
+        try:
+            select_query = "SELECT * FROM my_table"
+            cursor.execute(select_query)
+            records = cursor.fetchall()
+            for record in records:
+                print(record)
+        except MySQLdb.Error as e:
+            print("MySQL error occurred while READING data:")
+            print(traceback.format_exc())
+            print("SQL Query:", e.statement)
+    ```
+    ```python
+        # UPDATE operation
+        try:
+            update_query = "UPDATE my_table SET age = %s WHERE id = %s"
+            data = (30, 1)
+            cursor.execute(update_query, data)
+            print("Data Updated successfully")
+        except MySQLdb.Error as e:
+            print("MySQL error occurred while UPDATING data:")
+            print(traceback.format_exc())
+            print("SQL Query:", e.statement)
+    ```
+    ```python
+        # DELETE operation
+        try:
+            delete_query = "DELETE FROM my_table WHERE id = %s"
+            data = (2,)
+            cursor.execute(delete_query, data)
+            print("Data Deleted successfully")
+        except MySQLdb.Error as e:
+            print("MySQL error occurred while DELETING data:")
+            print(traceback.format_exc())
+            print("SQL Query:", e.statement)
+    ```
 
 # Solutions
-## - Input multiple csv files from zip to sql with buffering.
-```python
-# Input multiple csv files from zip to sql with buffering.
-import pandas as pd
-import zipfile 
-import sqlite3 
-import traceback
-import os
+## - Input multiple csv files from zip to sqlite with buffering.
+    ```python
+    # Input multiple csv files from zip to sql with buffering.
+    import pandas as pd
+    import zipfile 
+    import sqlite3 
+    import traceback
+    import os
 
-zip_path = "examples.zip"
-db_path = 'db.sqlite3'
+    zip_path = "examples.zip"
+    db_path = 'db.sqlite3'
 
-try:
-    with zipfile.ZipFile(zip_path, 'r') as zip_file: 
-        # get all csv names in zip
-        csv_name_list = [file for file in zip_file.namelist() if file.endswith('_lvr_land_a.csv')]
-        print("Open zip file successfully!")
-        # converting csv to dataframe with buffering
-        try:
-            data_frames = [] 
-            for csv_file in csv_name_list:
-                # open the csv file in binary mode as a binary file-like object on RAM (without extracting it to the disk.)
-                with zip_file.open(csv_file) as buf_file: 
-                    # converting a binary file-like object into a text file-like object
-                    buf_str = io.TextIOWrapper(buf_file) 
-                    df = pd.read_csv(buf_str) # expects a file path or a text file-like object as input.
-                    data_frames.append(df)
-            combined_df = pd.concat(data_frames)        
-            print("CSV converting successfully!")
-        except:
-            print("Error occurred when converting the csv files")
-            print(traceback.format_exc())
-        # Insert dataframe to sql
-        try:
-            sql_conn = sqlite3.connect(db_path)
-            combined_df.to_sql(
-                name='real_estate_crawler_real_estate_raw', # Table name
-                con = sql_conn,
-                if_exists = 'append',
-                index = False,
-                )
-            print("Writting dataframe to sql successfully! ")
-        except:
-            print("Error occurred when writting to sql")
-            print(traceback.format_exc())
-        finally:
-            sql_conn.close()
-            print("Close SQL connection successfully! ")
-except:
-    print("Error occurred when opening zip file")
-    print(traceback.format_exc())
-finally:
-    os.remove(zip_path)
-    print("Cleanup zip file successfully! ")
-
-```
+    try:
+        with zipfile.ZipFile(zip_path, 'r') as zip_file: 
+            # get all csv names in zip
+            csv_name_list = [file for file in zip_file.namelist() if file.endswith('_lvr_land_a.csv')]
+            print("Open zip file successfully!")
+            # converting csv to dataframe with buffering
+            try:
+                data_frames = [] 
+                for csv_file in csv_name_list:
+                    # open the csv file in binary mode as a binary file-like object on RAM (without extracting it to the disk.)
+                    with zip_file.open(csv_file) as buf_file: 
+                        # converting a binary file-like object into a text file-like object
+                        buf_str = io.TextIOWrapper(buf_file) 
+                        df = pd.read_csv(buf_str) # expects a file path or a text file-like object as input.
+                        data_frames.append(df)
+                combined_df = pd.concat(data_frames)        
+                print("CSV converting successfully!")
+            except:
+                print("Error occurred when converting the csv files")
+                print(traceback.format_exc())
+            # Insert dataframe to sql
+            try:
+                sql_conn = sqlite3.connect(db_path)
+                combined_df.to_sql(
+                    name='real_estate_crawler_real_estate_raw', # Table name
+                    con = sql_conn,
+                    if_exists = 'append',
+                    index = False,
+                    )
+                print("Writting dataframe to sql successfully! ")
+            except:
+                print("Error occurred when writting to sql")
+                print(traceback.format_exc())
+            finally:
+                sql_conn.close()
+                print("Close SQL connection successfully! ")
+    except:
+        print("Error occurred when opening zip file")
+        print(traceback.format_exc())
+    finally:
+        os.remove(zip_path)
+        print("Cleanup zip file successfully! ")
+    ```
