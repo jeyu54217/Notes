@@ -9,10 +9,11 @@
 - [SQL DB](#sql-db)
   - [Django ORM](#django-orm)
     - [Sqlite](#sqlite)
+    - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
   - [SQL I/O](#sql-io)
     - [Sqlite](#sqlite-1)
-    - [PostgreSQL](#postgresql)
+    - [PostgreSQL](#postgresql-1)
     - [MySQL](#mysql-1)
 - [Solutions](#solutions)
   - [- Input multiple csv files from zip to sqlite with buffering.](#--input-multiple-csv-files-from-zip-to-sqlite-with-buffering)
@@ -285,24 +286,24 @@ tree.write(output_file_path, pretty_print=True)
 ### Sqlite
 - DBMS as a single file (No adapter needed)
 - settings.py
-   ```python
+    ```python
     from pathlib import Path
     BASE_DIR = Path(__file__).resolve().parent.parent
 
     DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-          'NAME': BASE_DIR / 'db.sqlite3',
-          }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
     ```
 ### PostgreSQL
 - Adapter : [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) (optimized for Django usage)
-  ```bash
-  pip install psycopg2-binary
-  ```
+    ```bash
+    pip install psycopg2-binary
+    ```
 - settings.py (Using OS environment variable)
-  ```python
+    ```python
     import os
 
     DATABASES = {
@@ -315,14 +316,14 @@ tree.write(output_file_path, pretty_print=True)
             'PORT': os.environ.get('DB_PORT', '5432'),
         }
     }
-  ```
+    ```
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
-  ```bash
-  pip install mysqlclient
-  ```
+    ```bash
+    pip install mysqlclient
+    ```
 - settings.py (Using OS environment variable)
-  ```python
+    ```python
     import os
 
     DATABASES = {
@@ -335,7 +336,7 @@ tree.write(output_file_path, pretty_print=True)
             'PORT': os.environ.get('DB_PORT', '3306'),
         }
     }
-  ```
+    ```
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
@@ -374,10 +375,10 @@ tree.write(output_file_path, pretty_print=True)
     # Create a table
     try:
         create_table_query = """
-              CREATE TABLE IF NOT EXISTS my_table (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              name TEXT,
-              age INTEGER
+            CREATE TABLE IF NOT EXISTS my_table (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            age INTEGER
           )
           """
         cursor.execute(create_table_query)
@@ -388,57 +389,56 @@ tree.write(output_file_path, pretty_print=True)
         print("SQL Query:", e.statement)
     ```
     ```python
-      # Insert a record
-      try:
-          insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
-          data = ("John Doe", 25)
-          cursor.execute(insert_query, data)
-         # Execute the bulk insert
-          cursor.executemany(insert_query, data)
-          print("Data Inserted successfully")
-      except sqlite3.Error as e:
-          print("SQLite error occurred while INSERTING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
+    # Insert a record
+    try:
+        insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
+        data = ("John Doe", 25)
+        cursor.execute(insert_query, data)
+        # Execute the bulk insert
+        cursor.executemany(insert_query, data)
+        print("Data Inserted successfully")
+    except sqlite3.Error as e:
+        print("SQLite error occurred while INSERTING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
     ```
     ```python
-      # Update a record
-      try:
-          update_query = "UPDATE my_table SET age = ? WHERE name = ?"
-          data = (30, "John Doe")
-          cursor.execute(update_query, data)
-          print("Data Updated successfully")
-      except sqlite3.Error as e:
-          print("SQLite error occurred while UPDATING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
+    # Update a record
+    try:
+        update_query = "UPDATE my_table SET age = ? WHERE name = ?"
+        data = (30, "John Doe")
+        cursor.execute(update_query, data)
+        print("Data Updated successfully")
+    except sqlite3.Error as e:
+        print("SQLite error occurred while UPDATING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
     ```
     ```python
-      # Delete a record
-      try:
-          delete_query = "DELETE FROM my_table WHERE name = ?"
-          data = ("John Doe",)
-          cursor.execute(delete_query, data)
-          print("Data Deleted successfully")
-      except sqlite3.Error as e:
-          print("SQLite error occurred while DELETING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
+    # Delete a record
+    try:
+        delete_query = "DELETE FROM my_table WHERE name = ?"
+        data = ("John Doe",)
+        cursor.execute(delete_query, data)
+        print("Data Deleted successfully")
+    except sqlite3.Error as e:
+        print("SQLite error occurred while DELETING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
     ```
     ```python
-      # Read records
-      try:
-          select_query = "SELECT * FROM my_table"
-          cursor.execute(select_query)
-          records = cursor.fetchall()
-          for record in records:
-              print(record)
-      except sqlite3.Error as e:
-          print("SQLite error occurred while READING data:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
+    # Read records
+    try:
+        select_query = "SELECT * FROM my_table"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+        for record in records:
+            print(record)
+    except sqlite3.Error as e:
+        print("SQLite error occurred while READING data:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
     ```
-
 ### PostgreSQL
 - Adapter : [psycopg2](https://pypi.org/project/psycopg2)
   ```bash
@@ -549,7 +549,6 @@ tree.write(output_file_path, pretty_print=True)
         print(traceback.format_exc())
         print("SQL Query:", e.statement)
   ```
-
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
     ```bash
