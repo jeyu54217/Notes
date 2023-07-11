@@ -153,7 +153,8 @@ import csv
 file_path = "example.csv"
 csv_list = []
 csv_dict = {}
-
+```
+```python
 # Reading CSV file (Return List)
 try:
     with open(file_path, "r") as file:
@@ -176,7 +177,8 @@ except FileNotFoundError:
     print("File not found.")
 except Exception as e:
     print("An error occurred:", str(e))
-
+```
+```python
 # writing csv file
 try:
     with open(file_path, "w", newline="") as file:
@@ -185,7 +187,8 @@ try:
         print("CSV file created successfully!")
 except Exception as e:
     print("An error occurred:", str(e))
-
+```
+```python
 # appending csv file
 try:
     # Writing to a CSV file in append mode
