@@ -130,26 +130,27 @@ except pd.errors.EmptyDataError:
     print("The CSV file is empty.")
 except KeyboardInterrupt:
     print("Process interrupted by the user.")
-except PermissionError:
-    print("Permission denied. Unable to write the CSV file.")
 except Exception as e:
     print("An error occurred: ", str(e))
     print(traceback.format_exc())
 ```
 ```python
 # Writing DataFrame to CSV file
-df.to_csv(
-    path_or_buf = file_path, # If None, returns the resulting csv as a string.
-    index = True, #	Write row names
-    mode = 'w',
-    encoding = 'utf-8', # defaults 'utf-8'
-    chunksize = None, # Rows to write at a time (int)
-    compression = { 
-        'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
-        'compresslevel': None, # 1~9
-        },
-    )
-print("CSV file created successfully!")
+try:
+    df.to_csv(
+        path_or_buf = file_path, # If None, returns the resulting csv as a string.
+        index = True, #	Write row names
+        mode = 'w',
+        encoding = 'utf-8', # defaults 'utf-8'
+        chunksize = None, # Rows to write at a time (int)
+        compression = { 
+            'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
+            'compresslevel': None, # 1~9
+            },
+        )
+    print("CSV file created successfully!")
+except PermissionError:
+    print("Permission denied. Unable to write the CSV file.")
 
 ```
 
