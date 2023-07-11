@@ -339,34 +339,55 @@ tree.write(output_file_path, pretty_print=True)
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
-  ```python
-  import sqlite3
-  import traceback
-  
-  try:
-      # Connect or create the database in the current directory
-      conn = sqlite3.connect("db.sqlite3")
-      print("Database connection established.")
-  
-      # Create a cursor object
-      cursor = conn.cursor()
-  
-      # Create a table
-      try:
-          create_table_query = """
+    ```python
+      import sqlite3
+      import traceback
+    ```
+    ```python
+    # sqlite I/O 
+    try:
+        # Connect or create the database in the current directory
+        conn = sqlite3.connect("db.sqlite3")
+        print("Database connection established.")
+        # Create a cursor object
+        cursor = conn.cursor()
+
+        # CRUD here
+        # ...
+
+        # Commit the transaction (INSERT, UPDATE, DELETE)
+        conn.commit()
+
+    except sqlite3.Error:
+        print("SQLite error occurred while connecting to the database:")
+        print(traceback.format_exc()) 
+    finally:
+        # Close the cursor and the connection
+        if cursor:
+            cursor.close()
+            print("Cursor closed.")
+        if conn:
+            conn.close()
+            print("SQLite connection closed.")
+    ```
+    ```python
+    # Create a table
+    try:
+        create_table_query = """
               CREATE TABLE IF NOT EXISTS my_table (
               id INTEGER PRIMARY KEY AUTOINCREMENT,
               name TEXT,
               age INTEGER
           )
           """
-          cursor.execute(create_table_query)
-          print("Table created successfully")
-      except sqlite3.Error as e:
-          print("SQLite error occurred while CREATING table:")
-          print(traceback.format_exc())
-          print("SQL Query:", e.statement)
-  
+        cursor.execute(create_table_query)
+        print("Table created successfully")
+    except sqlite3.Error as e:
+        print("SQLite error occurred while CREATING table:")
+        print(traceback.format_exc())
+        print("SQL Query:", e.statement)
+    ```
+    ```python
       # Insert a record
       try:
           insert_query = "INSERT INTO my_table (name, age) VALUES (?, ?)"
@@ -379,7 +400,8 @@ tree.write(output_file_path, pretty_print=True)
           print("SQLite error occurred while INSERTING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-  
+    ```
+    ```python
       # Update a record
       try:
           update_query = "UPDATE my_table SET age = ? WHERE name = ?"
@@ -390,7 +412,8 @@ tree.write(output_file_path, pretty_print=True)
           print("SQLite error occurred while UPDATING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-  
+    ```
+    ```python
       # Delete a record
       try:
           delete_query = "DELETE FROM my_table WHERE name = ?"
@@ -401,7 +424,8 @@ tree.write(output_file_path, pretty_print=True)
           print("SQLite error occurred while DELETING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-  
+    ```
+    ```python
       # Read records
       try:
           select_query = "SELECT * FROM my_table"
@@ -413,23 +437,8 @@ tree.write(output_file_path, pretty_print=True)
           print("SQLite error occurred while READING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-  
-      # Commit the transaction (INSERT, UPDATE, DELETE)
-      conn.commit()
-  
-  except sqlite3.Error:
-      print("SQLite error occurred while connecting to the database:")
-      print(traceback.format_exc()) 
-  
-  finally:
-      # Close the cursor and the connection
-      if cursor:
-          cursor.close()
-          print("Cursor closed.")
-      if conn:
-          conn.close()
-          print("SQLite connection closed.")
-```
+    ```
+
 ### PostgreSQL
 - Adapter : [psycopg2](https://pypi.org/project/psycopg2)
   ```bash
@@ -439,21 +448,41 @@ tree.write(output_file_path, pretty_print=True)
   import psycopg2
   import traceback
   import os
+  ```
+  ```python
+    try:
+        # Connect to the PostgreSQL database
+         conn = psycopg2.connect(
+            host = os.environ.get('DB_HOST', 'localhost'),
+            port = os.environ.get('DB_PORT', '5432'),
+            database = os.environ.get('DB_NAME', '<default_value>'),
+            user = os.environ.get('DB_USER', '<default_value>'),
+            password = os.environ.get('DB_PASSWORD', '<default_value>'),
+        )
+        print("Database connection established.")
 
-  try:
-     # Connect to the PostgreSQL database
-     conn = psycopg2.connect(
-          host = os.environ.get('DB_HOST', 'localhost'),
-          port = os.environ.get('DB_PORT', '5432'),
-          database = os.environ.get('DB_NAME', '<default_value>'),
-          user = os.environ.get('DB_USER', '<default_value>'),
-          password = os.environ.get('DB_PASSWORD', '<default_value>'),
-      )
-      print("Database connection established.")
-      
-      # Create a cursor object
-      cursor = conn.cursor()
+        # Create a cursor object
+        cursor = conn.cursor()
 
+        # CRUD here
+        # ...
+
+        # Commit the transaction (INSERT, UPDATE, DELETE)
+        conn.commit()
+
+    except psycopg2.Error:
+        print("PostgreSQL error occurred while connecting to the database:")
+        print(traceback.format_exc()) 
+    finally:
+        # Close the cursor and the connection
+        if cursor:
+            cursor.close()
+            print("Cursor closed.")
+        if conn:
+            conn.close()
+            print("PostgreSQL connection closed.")
+  ```
+  ```python
       # CREATE Table
       try:
           create_table_query = """
@@ -469,7 +498,8 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL error occurred while CREATING table:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-
+  ```
+  ```python
       # INSERT operation
       try:
           insert_query = "INSERT INTO your_table (name, age) VALUES (%s, %s)"
@@ -480,7 +510,8 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL error occurred while CREATING table:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-  
+  ```
+  ```python
      # READ operation
       try:
           select_query = "SELECT * FROM your_table"
@@ -492,7 +523,8 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL error occurred while READING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-
+  ```
+  ```python
       # UPDATE operation
       try:
           update_query = "UPDATE your_table SET age = %s WHERE name = %s"
@@ -503,7 +535,8 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL error occurred while UPDATING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-
+  ```
+  ```python
       # DELETE operation
       try:
           delete_query = "DELETE FROM your_table WHERE name = %s"
@@ -514,23 +547,8 @@ tree.write(output_file_path, pretty_print=True)
           print("PostgreSQL error occurred while DELETING data:")
           print(traceback.format_exc())
           print("SQL Query:", e.statement)
-
-      # Commit the transaction (INSERT, UPDATE, DELETE)
-      conn.commit()
-
-  except psycopg2.Error:
-      print("PostgreSQL error occurred while connecting to the database:")
-      print(traceback.format_exc()) 
-
-  finally:
-      # Close the cursor and the connection
-      if cursor:
-          cursor.close()
-          print("Cursor closed.")
-      if conn:
-          conn.close()
-          print("PostgreSQL connection closed.")
   ```
+
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient)
 ```bash
