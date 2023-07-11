@@ -318,9 +318,9 @@ tree.write(output_file_path, pretty_print=True)
   ```
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
-```bash
+  ```bash
   pip install mysqlclient
-```
+  ```
 - settings.py (Using OS environment variable)
   ```python
     import os
