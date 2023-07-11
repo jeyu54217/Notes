@@ -75,6 +75,8 @@ with open(file_path, "r") as file:
 pip install pandas
 ```
 ```python
+# pandas 2.0
+
 import pandas as pd
 import traceback
 
