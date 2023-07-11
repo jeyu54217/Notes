@@ -76,13 +76,13 @@ pip install pandas
 ```
 ```python
 # pandas 2.0
-
 import pandas as pd
 import traceback
 
 input_csv_path = "data.csv"
 output_csv_path = "output.csv"
-
+```
+```python
 try:
     # Reading CSV to DataFrame
     df = pd.read_csv(
@@ -118,18 +118,9 @@ try:
         cache_dates = True, 
         )
 
-    # Writing DataFrame to CSV file
-    df.to_csv(
-        path_or_buf = file_path, # If None, returns the resulting csv as a string.
-        index = True, #	Write row names
-        mode = 'w',
-        encoding = 'utf-8', # defaults 'utf-8'
-        chunksize = None, # Rows to write at a time (int)
-        compression = { 
-            'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
-            'compresslevel': None, # 1~9
-            },
-        ) 
+    # Output DataFrame here
+    # ...
+
 except FileNotFoundError:
     print("File not found when reading CSV file.")
 except pd.errors.ParserError:
@@ -144,8 +135,24 @@ except PermissionError:
 except Exception as e:
     print("An error occurred: ", str(e))
     print(traceback.format_exc())
+```
+```python
+# Writing DataFrame to CSV file
+df.to_csv(
+    path_or_buf = file_path, # If None, returns the resulting csv as a string.
+    index = True, #	Write row names
+    mode = 'w',
+    encoding = 'utf-8', # defaults 'utf-8'
+    chunksize = None, # Rows to write at a time (int)
+    compression = { 
+        'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
+        'compresslevel': None, # 1~9
+        },
+    )
+print("CSV file created successfully!")
 
 ```
+
 ## 2. Build-in [CSV parser](https://docs.python.org/3/library/csv.html) 
 ```python
 import csv
