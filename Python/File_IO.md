@@ -166,7 +166,8 @@ except FileNotFoundError:
     print("File not found.")
 except Exception as e:
     print("An error occurred:", str(e))
-
+```
+```python
 # Reading CSV file (Return Dict)
 try:
     with open(file_path, "r") as file:
