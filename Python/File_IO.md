@@ -3,7 +3,7 @@
   - [File Closing (with)](#file-closing-with)
 - [TXT - open()](#txt---open)
 - [CSV](#csv)
-  - [1. Pandas (Recommend)](#1-pandas-recommend)
+  - [1. Pandas](#1-pandas)
   - [2. Build-in CSV parser](#2-build-in-csv-parser)
 - [XML](#xml)
 - [SQL DB](#sql-db)
@@ -70,7 +70,7 @@ with open(file_path, "r") as file:
 
 
 # CSV
-## 1. [Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html) (Recommend)
+## 1. [Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html)
 ```bash
 pip install pandas
 ```
