@@ -301,8 +301,8 @@ tree.write(output_file_path, pretty_print=True)
   ```bash
   pip install psycopg2-binary
   ```
-- settings.py (Usiing OS environment variable)
-    ```python
+- settings.py (Using OS environment variable)
+  ```python
     import os
 
     DATABASES = {
@@ -315,7 +315,7 @@ tree.write(output_file_path, pretty_print=True)
             'PORT': os.environ.get('DB_PORT', '5432'),
         }
     }
-     ```
+  ```
 ### MySQL
 - Adapter : [mysqlclient](https://pypi.org/project/mysqlclient/) (optimized for Django usage)
 ```bash
