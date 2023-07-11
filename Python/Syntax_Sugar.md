@@ -30,7 +30,7 @@ class Employee:
 ## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
 - List comprehension
     ```
-    [ <item_expression> for <item> in <iterable>]
+    [ <item_expression> for <item> in <iterable> ]
     ```
 
 - Nested list comprehension
