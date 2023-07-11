@@ -321,8 +321,8 @@ tree.write(output_file_path, pretty_print=True)
 ```bash
   pip install mysqlclient
 ```
-- settings.py (Usiing OS environment variable)
-    ```python
+- settings.py (Using OS environment variable)
+  ```python
     import os
 
     DATABASES = {
@@ -335,7 +335,7 @@ tree.write(output_file_path, pretty_print=True)
             'PORT': os.environ.get('DB_PORT', '3306'),
         }
     }
-     ```
+  ```
 ## SQL I/O
 ### Sqlite
   - Using Python Standard Library : [sqlite3](https://docs.python.org/3/library/sqlite3.html)
