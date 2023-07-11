@@ -6,7 +6,7 @@
 - [5. Ternary](#5-ternary)
 - [6. Underscores in Numeric Literals](#6-underscores-in-numeric-literals)
 - [7. assign](#7-assign)
-- [8. 1 < x < 10](#8-1--x--10)
+- [8. 1 \< x \< 10](#8-1--x--10)
 
 
 ## 1. [Magic Methods](https://www.tutorialsteacher.com/python/magic-methods-in-python)
@@ -29,9 +29,14 @@ class Employee:
 
 ## 3. [List comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
 - List comprehension
-    ```[<item_expression> for <item> in <iterable>]```
+    ```python 
+    [<item_expression> for <item> in <iterable>]
+    ```
+
 - Nested list comprehension
-    ```[[<item_expression> for <item> in <iterable>] for <item> in <iterable>]```
+    ```python 
+    [[<item_expression> for <item> in <iterable>] for <item> in <iterable>]
+    ```
 
 ```python
 # List comprehension
@@ -48,7 +53,9 @@ list_1 = [n for n in range(10)]
 
 ```
 ## 4. Dict comprehension [(PEP 274)](https://peps.python.org/pep-0274/)
-```{<new_key>:<new_value> for <item> in <iterable>}```
+```python 
+{<new_key>:<new_value> for <item> in <iterable>}
+```
 ```python
 zip_dict= { k:v for (k,v) in zip(list1,list2)}
 
