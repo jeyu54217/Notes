@@ -151,36 +151,63 @@ except Exception as e:
 import csv
 
 file_path = "example.csv"
+csv_list = []
+csv_dict = {}
 
-# Sample data
-sample_data = []
+# Reading CSV file (Return List)
+try:
+    with open(file_path, "r") as file:
+        reader = csv.reader(file)
+        next(reader)  # To skip the headers
+        for row in reader: # Each row is a list
+            csv_list.append(row)  
+except FileNotFoundError:
+    print("File not found.")
+except Exception as e:
+    print("An error occurred:", str(e))
 
-# Writing to a CSV file in write mode
-with open(file_path, "w", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerows(sample_data)
-    
-# Writing to a CSV file in append mode
-with open(file_path, "a", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerows(sample_data)
+# Reading CSV file (Return Dict)
+try:
+    with open(file_path, "r") as file:
+        reader = csv.DictReader(file)
+        for row in reader: # Each row is an OrderedDict
+            csv_dict.update(row)
+except FileNotFoundError:
+    print("File not found.")
+except Exception as e:
+    print("An error occurred:", str(e))
 
-# Reading from a CSV file in read mode
-# Return List
-with open(file_path, "r") as file:
-    reader = csv.reader(file)
-    next(reader).   # To skip the headers
-    for row in reader:
-        print(row)  # Each row is a list
-        
-# Return Dict
-with open(file_path, "r") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        # Each row is a an OrderedDict
-        # Use keys to access data
-        print(row['Name'])  # Each row is a an OrderedDict
+# writing csv file
+try:
+    with open(file_path, "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(csv_list)
+        print("CSV file created successfully!")
+except Exception as e:
+    print("An error occurred:", str(e))
 
+# appending csv file
+try:
+    # Writing to a CSV file in append mode
+    with open(file_path, "a", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(sample_data)
+        print("Data appended to CSV file successfully!")
+except FileNotFoundError:
+    print("File not found.")
+    # switch to writing mode
+    # print("File not found. Creating a new file...")
+    # try:
+    #     with open(file_path, 'w', newline='') as file:
+    #         writer = csv.writer(file)
+    #         writer.writerows(data_list)
+    #     print("New CSV file created and data written successfully!")
+    # except Exception as e:
+    #     print("An error occurred while creating the file:", str(e))
+except PermissionError:
+    print("Permission denied. Unable to write the CSV file.")
+except Exception as e:
+    print("An error occurred:", str(e))
 ```
 # XML
 - Python pandas does not have built-in support for directly reading and writing XML files.
