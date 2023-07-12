@@ -16,6 +16,7 @@
   - [- Python Memory Management](#--python-memory-management)
   - [- Is Python call by reference or call by value](#--is-python-call-by-reference-or-call-by-value)
   - [- Dicts are now ordered](#--dicts-are-now-ordered)
+  - [Unicode \& byte strings](#unicode--byte-strings)
 
 # Variables
 
@@ -116,3 +117,44 @@ https://docs.python.org/3.10/c-api/memory.html#memory-management
 ## - Dicts are now ordered
 - Changed in version 3.7: Dictionary order is guaranteed to be insertion order. This behavior was an implementation detail of CPython from 3.6.
 - https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/
+
+## Unicode & byte strings 
+Unicode and byte strings are two different concepts in Python that relate to handling character encodings and representing textual data.
+
+1. Unicode:
+Unicode is a universal character encoding standard that aims to represent every character from every writing system in the world. It assigns a unique code point (an integer value) to each character, including characters from different languages, symbols, punctuation marks, emojis, and more. The most commonly used encoding scheme for Unicode is UTF-8 (Unicode Transformation Format 8-bit).
+
+In Python, strings are represented as Unicode by default starting from Python 3.x. This means that you can directly work with and manipulate text in various languages without worrying about different character encodings. Unicode strings in Python are prefixed with the `u` character.
+
+Example:
+```python
+unicode_string = "Hello, 世界"
+print(unicode_string)
+# Output: Hello, 世界
+```
+
+2. Byte Strings:
+Byte strings (or simply "bytes") in Python represent a sequence of raw bytes. Unlike Unicode strings, byte strings do not assume any specific character encoding. They are used when working with binary data or when it's necessary to interface with systems or protocols that expect specific byte-level representations.
+
+In Python, byte strings are represented using the `bytes` type or by prefixing a string literal with `b`.
+
+Example:
+```python
+byte_string = b"Hello, world!"
+print(byte_string)
+# Output: b'Hello, world!'
+```
+
+Byte strings can also be created by encoding Unicode strings using a specific character encoding scheme, such as UTF-8.
+
+Example:
+```python
+unicode_string = "Hello, 世界"
+byte_string = unicode_string.encode('utf-8')
+print(byte_string)
+# Output: b'Hello, \xe4\xb8\x96\xe7\x95\x8c'
+```
+
+Note that when working with byte strings, you may need to perform encoding and decoding operations to convert between byte strings and Unicode strings, depending on the context and requirements of your application.
+
+It's important to understand the distinction between Unicode strings and byte strings in Python, as it affects how you handle and process textual data, especially when interacting with external systems or performing low-level operations on binary data.
