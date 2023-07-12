@@ -1,7 +1,5 @@
 **CONTENTS**
-- [General](#general)
-  - [File Closing (with)](#file-closing-with)
-- [TXT - open()](#txt---open)
+- [TXT](#txt)
 - [CSV](#csv)
   - [1. Pandas](#1-pandas)
   - [2. Build-in CSV parser](#2-build-in-csv-parser)
@@ -17,29 +15,10 @@
     - [PostgreSQL](#postgresql-1)
     - [MySQL](#mysql-1)
 - [Solutions](#solutions)
+  - [- The "with" context manager scheme](#--the-with-context-manager-scheme)
   - [- Input multiple csv files from zip to sqlite with buffering.](#--input-multiple-csv-files-from-zip-to-sqlite-with-buffering)
 
-# General
-## File Closing (with)
-- "with" statement close file automatically. (Recommended)
-- Once closed, a file can't be .read() again. (should be reopen)
-- Always .close() files - it frees up system resources!
-```python
-# Bad code
-file = open("<file.txt>")
-file.read()
-file.close()
-
-file.closed # True
-
-# ・Good code
-with open("<file.txt>",) as file:
-    data = file.read()
-
-file.closed # True
-```
-
-# TXT - open()
+# TXT
 - "r" mode by default
 - Cursor Movement : Python reads files by using a cursor
 - seek() : To move the cursor.
@@ -69,7 +48,6 @@ with open(file_path, "r") as file:
     print(content)
 
 ```
-
 
 # CSV
 ## 1. [Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html)
@@ -661,8 +639,23 @@ tree.write(output_file_path, pretty_print=True)
     ```
 
 # Solutions
-## - Input multiple csv files from zip to sqlite with buffering.
+## - The "with" context manager scheme
+- "with" statement close file automatically. 
+- Once closed, a file can't be .read() again. (should be reopen)
+- Always .close() files - it frees up system resources!
+```python
+# Bad code
+file = open("<file.txt>")
+file.read()
+file.close()
 
+file.closed # True
+
+# ・Good code
+with open("<file.txt>",) as file:
+    data = file.read()
+```
+## - Input multiple csv files from zip to sqlite with buffering.
 ```python
     # Input multiple csv files from zip to sql with buffering.
     import pandas as pd
@@ -716,4 +709,8 @@ tree.write(output_file_path, pretty_print=True)
     finally:
         os.remove(zip_path)
         print("Cleanup zip file successfully! ")
+```
+
+
+file.closed # True
 ```
