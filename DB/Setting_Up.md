@@ -2,8 +2,8 @@
 - [Setting Up](#setting-up)
   - [Postgresql](#postgresql)
     - [macOS](#macos)
-      - [1. Installing by GUI postgres.app](#1-installing-by-gui-postgresapp)
-      - [2. Installing by Homebrew](#2-installing-by-homebrew)
+      - [1. GUI Installation -  postgres.app](#1-gui-installation----postgresapp)
+      - [2. IOS package manager - Homebrew](#2-ios-package-manager---homebrew)
     - [Linux (ubuntu)](#linux-ubuntu)
     - [Windows](#windows)
   - [Mysql](#mysql)
@@ -38,7 +38,7 @@
       brew services --help
       ```
   - postgres = pg_ctl > psql
-#### 1. Installing by GUI [postgres.app](https://postgresapp.com/)
+#### 1. GUI Installation -  [postgres.app](https://postgresapp.com/)
 - **Installing**
    1. [Download](https://postgresapp.com/downloads.html)
    2. Click "Initialize" to create a new server
@@ -51,7 +51,7 @@
       export PGDATA=/Users/<user_name>/Library/Application\ Support/Postgres/<var-15>
       ```
        - You can also check the ```PGDATA``` path from GUI settings
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126667-b76b7017-b81e-4057-9716-207ba5ec5433.png">
+      <img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126667-b76b7017-b81e-4057-9716-207ba5ec5433.png">
 
 - **Unstalling**
    1. Quit Postgres.app & drag it to the Trash
@@ -63,7 +63,7 @@
       ```bash
       defaults delete com.postgresapp.Postgres2
       ```
-#### 2. Installing by [Homebrew](https://brew.sh/)
+#### 2. IOS package manager - [Homebrew](https://brew.sh/)
 - **Installing**
    1. Setting Up Homebrew
       ```bash 
