@@ -24,64 +24,65 @@
 ### macOS
 - General Commands
   - Version Check 
-    ```bash
-    postgres -V
-    ```
-    ```bash
-    brew search postgres
-    ```
+      ```bash
+      postgres -V
+      ```
+      ```bash
+      brew search postgres
+      ```
   - Getting help
-    ```bash
-    pg_ctl --help
-    ```
-    ```bash
-    brew services --help
-    ```
+      ```bash
+      pg_ctl --help
+      ```
+      ```bash
+      brew services --help
+      ```
   - postgres = pg_ctl > psql
 #### 1. Installing by GUI [postgres.app](https://postgresapp.com/)
 - **Installing**
    1. [Download](https://postgresapp.com/downloads.html)
    2. Click "Initialize" to create a new server
    3. Configure ```$PATH``` to use CLI
-    ```bash
-    sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
-    ```
+      ```bash
+      sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+      ```
    4. Configure ```PGDATA``` to use ```pg_ctl``` (PostgreSQL server controller)
-    ```bash
-    export PGDATA=/Users/<user_name>/Library/Application\ Support/Postgres/<var-15>
-    ```
-    - You can also check the ```PGDATA``` path from GUI settings \ <img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126667-b76b7017-b81e-4057-9716-207ba5ec5433.png">
+      ```bash
+      export PGDATA=/Users/<user_name>/Library/Application\ Support/Postgres/<var-15>
+      ```
+       - You can also check the ```PGDATA``` path from GUI settings
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/73396926/200126667-b76b7017-b81e-4057-9716-207ba5ec5433.png">
 
 - **Unstalling**
    1. Quit Postgres.app & drag it to the Trash
    2. Delete the directory
-    ```bash
-    rm -r ~/Library/Application\ Support/Postgres
-    ```
+      ```bash
+      rm -r ~/Library/Application\ Support/Postgres
+      ```
    3. Delete preferences for Postgres.app 
-    ```bash
-    defaults delete com.postgresapp.Postgres2
-    ```
+      ```bash
+      defaults delete com.postgresapp.Postgres2
+      ```
 #### 2. Installing by [Homebrew](https://brew.sh/)
 - **Installing**
    1. Setting Up Homebrew
-    ```bash 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-    ```bash 
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user_name>/.zprofile
-    ```
-    ```bash 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-       ```
+      ```bash 
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ```
+      ```bash 
+      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user_name>/.zprofile
+      ```
+      ```bash 
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+      ```
    2. Starting brew
-    ```bash 
-    brew install postgresql@<version>
-    ```
+      ```bash 
+      brew install postgresql@<version>
+      ```
 - **Unstalling**
-    ```bash 
-    brew remove postgresql
-    ```
+      ```bash 
+      brew remove postgresql
+      ```
 ### Linux (ubuntu)
 ### Windows
 ## Mysql
