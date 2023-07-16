@@ -71,6 +71,7 @@ python manage.py runserver 8000
 python3 manage.py createsuperuser --email <email> --username <name>
 ```
 - Django Shell
+  
     ```bash
     python3 manage.py shell
     ```
