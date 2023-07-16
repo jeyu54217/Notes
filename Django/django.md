@@ -1,41 +1,70 @@
-
-### General
-```bash
-python3 -m django help
-```
+**CONTENTS**
+- [Settting](#settting)
+- [Install](#install)
+- [Start](#start)
+- [Migrate](#migrate)
+- [Test](#test)
+  
+# Settting
 ```bash
 python3 -m django --version
 ```
 ```bash
+python3 -m django help
+```
+```bash
 export DJANGO_SETTINGS_MODULE=<proj_name>.settings
 ```
-
-
-### Start
+```bash
+python3 manage.py check --deploy --settings=<proj_name>.settings
+```
+# Install
 ```bash
 pip install Django
 ```
 ```bash
-django-admin startproject <proj_name_core>
+pip uninstall django
+``` 
+# Start
+```bash
+django-admin startproject <.../proj_name_core>
+```
+```bash
+cd <.../proj_name_core>
 ```
 ```bash
 python3 manage.py startapp <app_name>
 ```
-```bash
-python3 manage.py sqlmigrate <app_label> <migration_name 0001>
+```python
+INSTALLED_APPS = [
+    # other apps
+    '<app_name>',
+]
 ```
-https://docs.djangoproject.com/en/4.0/ref/django-admin/#sqlmigrate
-### Migrate
+
+# Migrate
 ```bash
 python3 manage.py makemigrations
 ```
 ```bash
 python3 manage.py migrate
 ```
-```bash
-python3 manage.py check --deploy --settings=<proj_name>.settings
-```
-### Test
+- Examining the real sql statements in a migrations file
+    ```bash
+    python3 manage.py sqlmigrate <myapp> <0001_initial>
+    ```
+    ```sql
+    BEGIN;
+    --
+    -- Create model MyModel
+    --
+    CREATE TABLE "myapp_mymodel" (
+        "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+        "name" varchar(100) NOT NULL
+    );
+    COMMIT;
+    ``` 
+# Test
 ```bash
 python manage.py runserver 8000
 ```
