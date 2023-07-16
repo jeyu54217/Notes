@@ -2,7 +2,7 @@
 - [Settting](#settting)
 - [Install](#install)
 - [Start](#start)
-- [Migrate](#migrate)
+- [ORM Migration](#orm-migration)
 - [Test](#test)
   
 # Settting
@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     '<app_name>',
 ]
 ```
-
-# Migrate
+# ORM Migration
 ```bash
 python3 manage.py makemigrations
 ```
@@ -71,3 +70,13 @@ python manage.py runserver 8000
 ```bash
 python3 manage.py createsuperuser --email <email> --username <name>
 ```
+- Django Shell
+    ```bash
+    python3 manage.py shell
+    ```
+    ```bash
+    from <app.models> import <Table>
+    ```
+    ```bash
+    exit()
+    ```
