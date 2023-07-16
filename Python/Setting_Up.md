@@ -21,16 +21,12 @@
 # Installation
 ## macOS
 ### Install
-    1. [Download](https://www.python.org/downloads/macos/)
-    2. Verify the installation
-       ```bash
-        python3 --version
-        ```
+  1. [**Download**](https://www.python.org/downloads/macos/)
+  2. ```bash
+      python3 --version
+     ```
 ### Uninstall
-1. Open the Finder and navigate to the "Applications" folder.
-2. Locate the Python application and drag it to the Trash.
-### Switching Version
-
+  ```Finder``` -> ```Applications``` -> ```Python``` -> Trash
 
 ## Windows
 ### Install
@@ -42,8 +38,6 @@
 ### Uninstall
    1. Locate Python in the list of installed programs.
    2. Select Python and click on the "Uninstall" or "Remove" button.
-### Switching Version
-
 
 ## Linux
 ### Install
@@ -58,10 +52,6 @@
    ```bash
     sudo apt-get remove python3
    ```
-### Switching Version
-
-
-
 
 # Enviroment
 
@@ -72,23 +62,18 @@
 
    - Create a virtual environment:
      ```
-     python3 -m venv myenv
+     python3 -m venv <your_proj/venv>
      ```
 
    - Activate the virtual environment:
      - macOS/Linux:
        ```
-       source myenv/bin/activate
+       source <your_proj/venv/bin/activate> 
        ```
      - Windows:
        ```
-       myenv\Scripts\activate
+       venv\Scripts\activate 
        ```
-
-   - Install packages using `pip`:
-     ```
-     pip install package_name
-     ```
 
    - Deactivate the virtual environment:
      ```
