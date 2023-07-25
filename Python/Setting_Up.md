@@ -23,8 +23,8 @@
   - Install
      1. [**Download**](https://www.python.org/downloads/macos/)
      2. ```bash
-          python3 --version
-         ```
+        python3 --version
+        ```
   - Uninstall
      1. Locate Python in the list of installed programs.
      2. Select Python and click on the "Uninstall" or "Remove" button.
