@@ -162,11 +162,11 @@
      This will create a new conda environment named `myenv` with Python 3.9.
 
    - Activate the conda environment:
-     - On macOS/Linux:
+     - On `macOS`/ `Linux`:
        ```bash
        conda activate myenv
        ```
-     - On Windows:
+     - On `Windows`:
        ```bash
        conda activate myenv
        ```
