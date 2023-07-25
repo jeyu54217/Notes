@@ -65,15 +65,15 @@ INSTALLED_APPS = [
         );
         COMMIT;
         ``` 
-# Test
-```bash
-python manage.py runserver 8000
-```
-```bash
-python3 manage.py createsuperuser --email <email> --username <name>
-```
+# Testing
+- Test Server
+    ```bash
+    python manage.py runserver 8000
+    ```
+    ```bash
+    python3 manage.py createsuperuser --email <email> --username <name>
+    ```
 - Django Shell
-  
     ```bash
     python3 manage.py shell
     ```
