@@ -111,11 +111,11 @@
      python3 -m venv venv
      ```
    - Activate the virtual environment:
-     - On macOS/Linux:
+     - On `macOS`/ `Linux`:
        ```bash
        source venv/bin/activate
        ```
-     - On Windows (Command Prompt):
+     - On `Windows` (Command Prompt):
        ```bash
        venv\Scripts\activate.bat
        ```
