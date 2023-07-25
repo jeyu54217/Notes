@@ -2,7 +2,7 @@
 - [Settting Up](#settting-up)
 - [Create New Project](#create-new-project)
 - [ORM Migration](#orm-migration)
-- [Test](#test)
+- [Testing](#testing)
   
 # Settting Up
 - **Check**
