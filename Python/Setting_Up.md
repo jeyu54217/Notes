@@ -9,7 +9,7 @@
   - [Linux](#linux)
     - [Install](#install-1)
     - [Uninstall](#uninstall-1)
-- [Dev-Enviroment](#dev-enviroment)
+- [Virtual Environment](#virtual-environment)
   - [**`venv` (Built-in in Python 3)**](#venv-built-in-in-python-3)
   - [**`virtualenv` (Third-party for Python2 \& 3)**](#virtualenv-third-party-for-python2--3)
   - [**`conda` (Anaconda/Miniconda)**](#conda-anacondaminiconda)
@@ -103,7 +103,7 @@
    sudo apt-get remove python3
    ```
 
-# Dev-Enviroment
+# Virtual Environment
 ## **`venv` (Built-in in Python 3)**
    - Create a new virtual environment in the current directory:
      ```bash
