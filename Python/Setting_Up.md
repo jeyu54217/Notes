@@ -2,7 +2,7 @@
 - [Installation](#installation)
   - [macOS](#macos)
     - [Website](#website)
-    - [Homebrew \& pyenv (Python version management)](#homebrew--pyenv-python-version-management)
+    - [`Homebrew` \& `pyenv` (Python version management)](#homebrew--pyenv-python-version-management)
   - [Windows](#windows)
     - [Install](#install)
     - [Uninstall](#uninstall)
@@ -26,15 +26,15 @@
   - Uninstall
      1. Locate Python in the list of installed programs.
      2. Select Python and click on the "Uninstall" or "Remove" button.
-### [Homebrew](https://brew.sh/) & [pyenv](https://github.com/pyenv/pyenv) (Python version management)
-1. Install [Homebrew](https://brew.sh/)
+### [`Homebrew`](https://brew.sh/) & [`pyenv`](https://github.com/pyenv/pyenv) (Python version management)
+1. Install [`Homebrew`](https://brew.sh/)
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
    ```
    ```bash
    brew --version
    ```
-2. install [pyenv](https://github.com/pyenv/pyenv) 
+2. install [`pyenv`](https://github.com/pyenv/pyenv) 
    ```bash
    pyenv --version
    ```
@@ -70,11 +70,11 @@
    pyenv versions
    ```
 
-- Uninstall pyenv
+- Uninstall `pyenv`
    ```bash
    brew uninstall pyenv
    ```
-- Uninstall Homebrew
+- Uninstall `Homebrew`
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
    ```
