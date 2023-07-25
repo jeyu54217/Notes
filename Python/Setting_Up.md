@@ -104,7 +104,6 @@
    ```
 
 # Dev-Enviroment
-
 ## **`venv` (Built-in in Python 3)**
    - Create a new virtual environment in the current directory:
      ```bash
