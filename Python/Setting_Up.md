@@ -21,13 +21,13 @@
 ## macOS
 ### Website
   - Install
-   1. [**Download**](https://www.python.org/downloads/macos/)
-   2. ```bash
-        python3 --version
-       ```
+     1. [**Download**](https://www.python.org/downloads/macos/)
+     2. ```bash
+          python3 --version
+         ```
   - Uninstall
-   1. Locate Python in the list of installed programs.
-   2. Select Python and click on the "Uninstall" or "Remove" button.
+     1. Locate Python in the list of installed programs.
+     2. Select Python and click on the "Uninstall" or "Remove" button.
 ### [Homebrew](https://brew.sh/) & [pyenv](https://github.com/pyenv/pyenv)
 1. Install [Homebrew](https://brew.sh/)
    ```bash
