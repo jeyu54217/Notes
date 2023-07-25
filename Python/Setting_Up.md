@@ -10,6 +10,9 @@
     - [Install](#install-1)
     - [Uninstall](#uninstall-1)
 - [Dev-Enviroment](#dev-enviroment)
+  - [**`venv` (Built-in in Python 3):**](#venv-built-in-in-python-3)
+  - [**`virtualenv`:**](#virtualenv)
+  - [**Using conda (Anaconda/Miniconda):**](#using-conda-anacondaminiconda)
   
 
 # Installation
@@ -102,7 +105,7 @@
 
 # Dev-Enviroment
 
-1. **`venv` (Built-in in Python 3):**
+## **`venv` (Built-in in Python 3):**
    - Create a new virtual environment in the current directory:
      ```bash
      python3 -m venv venv
@@ -124,7 +127,7 @@
      ```bash
      deactivate
      ```
-2. **Using `virtualenv`:**
+## **`virtualenv`:**
    - Install `virtualenv` using `pip` :
      ```bash
      pip install virtualenv
@@ -150,8 +153,7 @@
      ```bash
      deactivate
      ```
-
-3. **Using conda (Anaconda/Miniconda):**
+## **Using conda (Anaconda/Miniconda):**
    - Install Anaconda or Miniconda by downloading the installer from their respective websites.
    - Create a new conda environment:
      ```bash
