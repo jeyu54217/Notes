@@ -11,8 +11,8 @@
     - [Uninstall](#uninstall-1)
 - [Dev-Enviroment](#dev-enviroment)
   - [**`venv` (Built-in in Python 3):**](#venv-built-in-in-python-3)
-  - [**`virtualenv`:**](#virtualenv)
-  - [**Using conda (Anaconda/Miniconda):**](#using-conda-anacondaminiconda)
+  - [**`virtualenv`**](#virtualenv)
+  - [**`conda` (Anaconda/Miniconda)**](#conda-anacondaminiconda)
   
 
 # Installation
