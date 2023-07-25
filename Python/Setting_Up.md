@@ -127,7 +127,7 @@
      ```bash
      deactivate
      ```
-## **`virtualenv`:**
+## **`virtualenv`**
    - Install `virtualenv` using `pip` :
      ```bash
      pip install virtualenv
@@ -153,7 +153,7 @@
      ```bash
      deactivate
      ```
-## **Using conda (Anaconda/Miniconda):**
+## **`conda` (Anaconda/Miniconda)**
    - Install Anaconda or Miniconda by downloading the installer from their respective websites.
    - Create a new conda environment:
      ```bash
