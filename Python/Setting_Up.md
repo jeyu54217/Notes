@@ -1,18 +1,17 @@
 **CONTENTS**
 - [Installation](#installation)
   - [macOS](#macos)
+    - [Website](#website)
+    - [Homebrew \& pyenv](#homebrew--pyenv)
+  - [Windows](#windows)
     - [Install](#install)
     - [Uninstall](#uninstall)
-    - [Switching Version](#switching-version)
-  - [Windows](#windows)
+  - [Linux](#linux)
     - [Install](#install-1)
     - [Uninstall](#uninstall-1)
-    - [Switching Version](#switching-version-1)
-  - [Linux](#linux)
-    - [Install](#install-2)
-    - [Uninstall](#uninstall-2)
-    - [Switching Version](#switching-version-2)
-- [Enviroment](#enviroment)
+- [Dev-Enviroment](#dev-enviroment)
+  - [Os layer (Python version management)](#os-layer-python-version-management)
+  - [App layer](#app-layer)
 - [Directories](#directories)
 - [Process \& thread](#process--thread)
 - [Time](#time)
@@ -20,14 +19,67 @@
 
 # Installation
 ## macOS
-### Install
-  1. [**Download**](https://www.python.org/downloads/macos/)
-  2. ```bash
-      python3 --version
-     ```
-### Uninstall
-  ```Finder``` -> ```Applications``` -> ```Python``` -> Trash
+### Website
+  - Install
+   1. [**Download**](https://www.python.org/downloads/macos/)
+   2. ```bash
+        python3 --version
+       ```
+  - Uninstall
+   1. Locate Python in the list of installed programs.
+   2. Select Python and click on the "Uninstall" or "Remove" button.
+### [Homebrew](https://brew.sh/) & [pyenv](https://github.com/pyenv/pyenv)
+1. Install [Homebrew](https://brew.sh/)
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+   ```
+   ```bash
+   brew --version
+   ```
+2. install [pyenv](https://github.com/pyenv/pyenv) (Python version management)
+   ```bash
+   pyenv --version
+   ```
+   ```bash
+   brew install pyenv
+   ```
+   ```bash
+   pyenv --help
+   ```
+   ```bash
+   pyenv install --list
+   ```
+   ```bash
+   pyenv install 3.11.4
+   ```
+- choose versions
+  
+   ```bash
+   pyenv versions
+   ```
+   ```bash
+   pyenv global 3.11.4
+   ```
+   or
 
+   ```bash
+   cd ../project
+   ```
+   ```bash
+   pyenv local 3.9.6
+   ```
+   ```bash
+   pyenv versions
+   ```
+
+- Uninstall pyenv
+   ```bash
+   brew uninstall pyenv
+   ```
+- Uninstall Homebrew
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+   ```
 ## Windows
 ### Install
    1. [Download](https://www.python.org/downloads/windows/waddawdaw)
@@ -41,20 +93,41 @@
 
 ## Linux
 ### Install
-    1.  ```bash
-        sudo apt-get install python3
-        ```
-    2. Verify the installation
-        ```bash
-        python3 --version
-        ```
+   1. ```bash
+      sudo apt-get install python3
+      ```
+   2. Verify the installation
+      ```bash
+      python3 --version
+      ```
 ### Uninstall
    ```bash
-    sudo apt-get remove python3
+   sudo apt-get remove python3
    ```
 
-# Enviroment
-
+# Dev-Enviroment
+## Os layer (Python version management)
+- [pyenv](https://github.com/pyenv/pyenv)
+1. ```bash 
+   python3 --version
+   ```
+2. ```bash 
+   brew install pyenv
+   ```
+3. ```bash 
+   eval "$(pyenv init -)"
+   ```
+4. ```bash 
+   brew install pyenv
+   ```
+5. ```bash 
+   brew install pyenv
+   ```
+6. ```bash 
+   brew install pyenv
+   ```
+- [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+## App layer
 
 1. `venv` (Python 3):
 
