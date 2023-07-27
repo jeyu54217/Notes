@@ -1,13 +1,38 @@
-# Start
+**CONTENTS**
+- [Setting Up](#setting-up)
+- [API TEST](#api-test)
+- [Serializers](#serializers)
+  - [Serializer](#serializer)
+  - [ModelSerializer](#modelserializer)
+  - [ListSerializer\* (不會直接使用, 底層幫你實作～)](#listserializer-不會直接使用-底層幫你實作)
+  - [HyperlinkedModelSerializer\*](#hyperlinkedmodelserializer)
+  - [BaseSerializer\*](#baseserializer)
+  
+# Setting Up
+```bash
+pip list
+```
 ```bash
 pip install djangorestframework
 ```
-```bash
-INSTALLED_APPS = [
-    ...
-    'rest_framework',
-]
-```
+- **```settings.py```**
+    ```bash
+    INSTALLED_APPS = [
+        ...
+        'rest_framework',
+    ]
+    ```
+    ```bash
+    REST_FRAMEWORK = {
+
+    }
+    ```
+- **```serializers.py```**
+    ```bash
+    touch ../serializers.py
+    ```
+
+# API TEST
 
 
 # Serializers
