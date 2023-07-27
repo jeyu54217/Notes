@@ -4,7 +4,7 @@
 - [ORM Migration](#orm-migration)
 - [Testing](#testing)
   
-# Settting Up
+# Install
 - **Check**
     ```bash
     python3 -m django --version
