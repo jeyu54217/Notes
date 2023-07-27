@@ -1,5 +1,5 @@
 **CONTENTS**
-- [Settting Up](#settting-up)
+- [Install](#install)
 - [Create New Project](#create-new-project)
 - [ORM Migration](#orm-migration)
 - [Testing](#testing)
