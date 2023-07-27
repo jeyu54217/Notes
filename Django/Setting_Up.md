@@ -25,31 +25,34 @@ python3 manage.py check --deploy --settings=<proj_name>.settings
 ```
 
 # Create New Project
-```bash
-django-admin startproject <.../proj_name_core>
-```
-```bash
-cd <.../proj_name_core>
-```
-```bash
-python3 manage.py startapp <app_name>
-```
-```python
-INSTALLED_APPS = [
-    # other apps
-    '<app_name>',
-]
-```
+1. ```bash
+   django-admin startproject <.../proj_name_core>
+   ```
+
+2. ```bash
+   cd <.../proj_name_core>
+   ```
+
+3. ```bash
+   python3 manage.py startapp <app_name>
+   ```
+
+4. ```python
+   INSTALLED_APPS = [
+        # other apps
+        '<app_name>',
+   ]
+   ```
 # ORM Migration
-- Create new DB **```migrations```** files based on the changes of Django models
+1. Create new DB **```migrations```** files based on the changes of Django models
     ```bash
     python3 manage.py makemigrations
     ```
-- Apply database migrations to the **```actual DB```** 
+2. Apply database migrations to the **```actual DB```** 
     ```bash
     python3 manage.py migrate
     ```
-- Examining the real sql statements in a **```migrations```** file
+- (Optional) Examining the real sql statements in a **```migrations```** file
     ```bash
     python3 manage.py sqlmigrate <app_name> <0001_initial>
     ```
