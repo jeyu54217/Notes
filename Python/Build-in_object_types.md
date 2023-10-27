@@ -1,5 +1,5 @@
 - [Core Data Types (Core bvuilt-in objects)](#core-data-types-core-bvuilt-in-objects)
-s# Core Data Types (Core bvuilt-in objects)
+# Core Data Types (Core bvuilt-in objects)
 
 1. Numeric Types:
    - `int`: Represents integers, e.g., 5, -10, 1000.
