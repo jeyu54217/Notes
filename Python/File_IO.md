@@ -68,13 +68,13 @@ with open(file_path, "r") as file:
     try:
         # Reading CSV to DataFrame
         df = pd.read_csv(
-            # General
+            # I/O
             path_or_buf = input_csv_path, # expects file path or text file-like object as input.
-            memory_map = False, # map the file object onto memory and access the data directly (no longer any I/O overhead)
-            engine = None, # ‘c’, ‘python’, ‘pyarrow’
-            encoding = 'utf-8',
-            nrows = None, # Number of rows of file to read. For reading pieces of large files. (int)
-            compression = None, # Only handles a single file inside a ( 'infer','zip','gzip','bz2','zstd','tar')
+            memory_map = True, # map the file object onto memory and access the data directly (no longer any I/O overhead)
+            chunksize = 10000, # Number of lines to read from the file per chunk. (int, None)
+            compression = None,  # 'infer', 'gzip', 'bz2', 'zip', 'xz', None 
+            engine = None, # 'c', 'python'
+            encoding = 'utf-8', 
             # Column
             header = 'infer', # Row number(s) to use as the column names ('infer', int, [int,], None)
             index_col = None, # Column(s) to use as the row labels of the DataFrame (int, str, False) 
