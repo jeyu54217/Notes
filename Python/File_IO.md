@@ -70,7 +70,7 @@ with open(file_path, "r") as file:
         df = pd.read_csv(
             # General
             path_or_buf = input_csv_path, # expects file path or text file-like object as input.
-            memory_map = False, # Build-in in-memory buffer
+            memory_map = False, # map the file object onto memory and access the data directly (no longer any I/O overhead)
             engine = None, # ‘c’, ‘python’, ‘pyarrow’
             encoding = 'utf-8',
             nrows = None, # Number of rows of file to read. For reading pieces of large files. (int)
