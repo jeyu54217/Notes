@@ -34,7 +34,7 @@
    ```bash
    brew --version
    ```
-2. install [`pyenv`](https://github.com/pyenv/pyenv) 
+2. install [`pyenv`](https://github.com/pyenv/pyenv) (Python version management)
    ```bash
    pyenv --version
    ```
