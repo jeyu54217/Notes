@@ -78,12 +78,12 @@ with open(file_path, "r") as file:
             # Column
             header = 'infer', # Row number(s) to use as the column names ('infer', int, [int,], None)
             index_col = None, # Column(s) to use as the row labels of the DataFrame (int, str, False) 
-            names = []   # Used to rename the columns 
+            names = [],   # Used to rename the columns 
             usecols = None, # selected columns to be used (list)
             converters = None, # converting values in certain columns (dict)
             # Content
-            sep = ',' # Delimiter ex. "|" 
-            escapechar = None # "\\"
+            sep = ',', # Delimiter ex. "|" 
+            escapechar = None, # "\\"
             skiprows = None, 
             na_values = None, 
             keep_default_na = True, 
