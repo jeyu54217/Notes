@@ -83,7 +83,6 @@ with open(file_path, "r") as file:
             usecols = None, # selected columns to be used (list)
             converters = None, # converting values in certain columns (dict)
             # Content
-            sep = ',', # Delimiter ex. "|" 
             escapechar = None, # "\\"
             skiprows = None, 
             na_values = None, 
