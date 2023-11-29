@@ -83,21 +83,21 @@ with open(file_path, "r") as file:
             usecols = None, # selected columns to be used (list)
             converters = None, # converting values in certain columns (dict)
             # Content
-            escapechar = None, # "\\"
-            skiprows = None, 
-            na_values = None, 
-            keep_default_na = True, 
-            na_filter = True, 
-            verbose = False, 
-            skip_blank_lines = True, 
+            escapechar = None, # None: no escape character 
+            skiprows = None, # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            na_values = None, # ["", " ", "NA", "N/A", "na", "n/a", "NaN", "nan", "NULL", "null", "None", "none", "NAN", "nan"]
+            keep_default_na = True, # True: ["", " ", "NA", "N/A", "na", "n/a", "NaN", "nan", "NULL", "null", "None", "none", "NAN", "nan"]
+            na_filter = True, # True: ["", " ", "NA", "N/A", "na", "n/a", "NaN", "nan", "NULL", "null", "None", "none", "NAN", "nan"]
+            verbose = False, # True: print out the input file summary
+            skip_blank_lines = True, # True: skip blank lines rather than interpreting as NaN values
             # Date
-            parse_dates = None, 
-            infer_datetime_format = None, 
-            keep_date_col = False, 
-            date_parser = None, 
-            date_format = None, 
-            dayfirst = False, 
-            cache_dates = True, 
+            parse_dates = None, # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            infer_datetime_format = None, # True: faster but less accurate
+            keep_date_col = False, # True: keep the date column
+            date_parser = None, # function to use for converting a sequence of string columns to an array of datetime instances
+            date_format = None, # "%Y-%m-%d %H:%M:%S"
+            dayfirst = False, # True: DD/MM/YYYY
+            cache_dates = True, # True: cache dates parsed from strings
             )
     
         # Output DataFrame here
