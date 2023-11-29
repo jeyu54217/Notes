@@ -143,15 +143,15 @@
      virtualenv virtualenv
      ```
    - Activate the virtual environment (same as `venv`):
-     - On macOS/Linux:
+     - macOS/Linux:
        ```bash
        source virtualenv/bin/activate
        ```
-     - On Windows (Command Prompt):
+     - Windows (Command Prompt):
        ```bash
        virtualenv\Scripts\activate.bat
        ```
-       Or on Windows (PowerShell):
+       Or on (PowerShell):
        ```bash
        virtualenv\Scripts\Activate.ps1
        ```
