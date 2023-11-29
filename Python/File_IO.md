@@ -69,8 +69,8 @@ with open(file_path, "r") as file:
         # Reading CSV to DataFrame
         df = pd.read_csv(
             # I/O
-            path_or_buf = INPUT_CSV_PATH, # expects file path or text file-like object as input.
-            memory_map = True, # map the file object onto memory and access the data directly (no longer any I/O overhead)
+            path_or_buf = INPUT_CSV_PATH, 
+            memory_map = True, # map the extremely large file object onto memory (no longer any I/O overhead)(bool) 
             chunksize = CHUNKSIZE, # Number of lines to read from the file per chunk. (int, None)
             compression = None,  # 'infer', 'gzip', 'bz2', 'zip', 'xz', None 
             engine = None, # 'c', 'python'
