@@ -51,88 +51,90 @@ with open(file_path, "r") as file:
 
 # CSV
 ## 1. [Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html)
-```bash
-pip install pandas
-```
-```python
-# pandas 2.0
-import pandas as pd
-import traceback
-
-input_csv_path = "data.csv"
-output_csv_path = "output.csv"
-```
-```python
-try:
-    # Reading CSV to DataFrame
-    df = pd.read_csv(
-        # General
-        path_or_buf = input_csv_path, # expects file path or text file-like object as input.
-        memory_map = False, # Build-in in-memory buffer
-        engine = None, # 'c', 'python'
-        encoding = 'utf-8',
-        nrows = None, # Number of rows of file to read. For reading pieces of large files. (int)
-        compression = None, # Only handles a single file inside a ( 'infer','zip','gzip','bz2','zstd','tar')
-        # Column
-        header = 'infer', # Row number(s) to use as the column names ('infer', int, [int,], None)
-        index_col = None, # Column(s) to use as the row labels of the DataFrame (int, str, False) 
-        names = []   # Used to rename the columns 
-        usecols = None, # selected columns to be used (list)
-        converters = None, # converting values in certain columns (dict)
-        # Content
-        sep = ',' # Delimiter ex. "|" 
-        escapechar = None # "\\"
-        skiprows = None, 
-        na_values = None, 
-        keep_default_na = True, 
-        na_filter = True, 
-        verbose = False, 
-        skip_blank_lines = True, 
-        # Date
-        parse_dates = None, 
-        infer_datetime_format = None, 
-        keep_date_col = False, 
-        date_parser = None, 
-        date_format = None, 
-        dayfirst = False, 
-        cache_dates = True, 
-        )
-
-    # Output DataFrame here
-    # ...
-
-except FileNotFoundError:
-    print("File not found when reading CSV file.")
-except pd.errors.ParserError:
-    print("Error parsing the CSV file.")
-    print(traceback.format_exc())
-except pd.errors.EmptyDataError:
-    print("The CSV file is empty.")
-except KeyboardInterrupt:
-    print("Process interrupted by the user.")
-except Exception as e:
-    print("An error occurred: ", str(e))
-    print(traceback.format_exc())
-```
-
-```python
-# Writing DataFrame to CSV file
-try:
-    df.to_csv(
-        path_or_buf = file_path, # If None, returns the resulting csv as a string.
-        index = True, #	Write row names
-        mode = 'w',
-        encoding = 'utf-8', # defaults 'utf-8'
-        chunksize = None, # Rows to write at a time (int)
-        compression = { 
-            'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
-            'compresslevel': None, # 1~9
-            },
-        )
-    print("CSV file created successfully!")
-except PermissionError:
-    print("Permission denied. Unable to write the CSV file.")
-```
+- General
+    ```bash
+    pip install pandas
+    ```
+    ```python
+    # pandas 2.0
+    import pandas as pd
+    import traceback
+    
+    input_csv_path = "data.csv"
+    output_csv_path = "output.csv"
+    ```
+- Input
+    ```python
+    try:
+        # Reading CSV to DataFrame
+        df = pd.read_csv(
+            # General
+            path_or_buf = input_csv_path, # expects file path or text file-like object as input.
+            memory_map = False, # Build-in in-memory buffer
+            engine = None, # 'c', 'python'
+            encoding = 'utf-8',
+            nrows = None, # Number of rows of file to read. For reading pieces of large files. (int)
+            compression = None, # Only handles a single file inside a ( 'infer','zip','gzip','bz2','zstd','tar')
+            # Column
+            header = 'infer', # Row number(s) to use as the column names ('infer', int, [int,], None)
+            index_col = None, # Column(s) to use as the row labels of the DataFrame (int, str, False) 
+            names = []   # Used to rename the columns 
+            usecols = None, # selected columns to be used (list)
+            converters = None, # converting values in certain columns (dict)
+            # Content
+            sep = ',' # Delimiter ex. "|" 
+            escapechar = None # "\\"
+            skiprows = None, 
+            na_values = None, 
+            keep_default_na = True, 
+            na_filter = True, 
+            verbose = False, 
+            skip_blank_lines = True, 
+            # Date
+            parse_dates = None, 
+            infer_datetime_format = None, 
+            keep_date_col = False, 
+            date_parser = None, 
+            date_format = None, 
+            dayfirst = False, 
+            cache_dates = True, 
+            )
+    
+        # Output DataFrame here
+        # ...
+    
+    except FileNotFoundError:
+        print("File not found when reading CSV file.")
+    except pd.errors.ParserError:
+        print("Error parsing the CSV file.")
+        print(traceback.format_exc())
+    except pd.errors.EmptyDataError:
+        print("The CSV file is empty.")
+    except KeyboardInterrupt:
+        print("Process interrupted by the user.")
+    except Exception as e:
+        print("An error occurred: ", str(e))
+        print(traceback.format_exc())
+    ```
+- Output
+    ```python
+    # Writing DataFrame to CSV file
+    try:
+        df.to_csv(
+            path_or_buf = file_path, # If None, returns the resulting csv as a string.
+            index = True, #	Write row names
+            mode = 'w',
+            encoding = 'utf-8', # defaults 'utf-8'
+            chunksize = None, # Rows to write at a time (int)
+            compression = { 
+                'method': None, # 'infer', 'zip', 'gzip', 'bz2', 'zstd', 'tar'
+                'compresslevel': None, # 1~9
+                },
+            )
+        print("CSV file created successfully!")
+    except PermissionError:
+        print("Permission denied. Unable to write the CSV file.")
+    ```
 
 ## 2. Build-in [CSV parser](https://docs.python.org/3/library/csv.html) 
 ```python
