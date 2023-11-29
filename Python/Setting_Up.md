@@ -51,24 +51,23 @@
    pyenv install 3.11.4
    ```
 - choose versions
-  
-   ```bash
-   pyenv versions
-   ```
-   ```bash
-   pyenv global 3.11.4
-   ```
-   or
-
-   ```bash
-   cd ../project
-   ```
-   ```bash
-   pyenv local 3.9.6
-   ```
-   ```bash
-   pyenv versions
-   ```
+  - Globally
+    ```bash
+    pyenv versions
+    ```
+    ```bash
+    pyenv global 3.11.4
+    ```
+  - Locally
+    ```bash
+    cd ../project
+    ```
+    ```bash
+    pyenv local 3.9.6
+    ```
+    ```bash
+    pyenv versions
+    ```
 
 - Uninstall `pyenv`
    ```bash
