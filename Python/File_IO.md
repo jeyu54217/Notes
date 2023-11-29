@@ -71,7 +71,7 @@ with open(file_path, "r") as file:
             # General
             path_or_buf = input_csv_path, # expects file path or text file-like object as input.
             memory_map = False, # Build-in in-memory buffer
-            engine = None, # 'c', 'python'
+            engine = None, # ‘c’, ‘python’, ‘pyarrow’
             encoding = 'utf-8',
             nrows = None, # Number of rows of file to read. For reading pieces of large files. (int)
             compression = None, # Only handles a single file inside a ( 'infer','zip','gzip','bz2','zstd','tar')
