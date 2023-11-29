@@ -69,16 +69,17 @@ with open(file_path, "r") as file:
         # Reading CSV to DataFrame
         df = pd.read_csv(
             # I/O
-            path_or_buf = input_csv_path, # expects file path or text file-like object as input.
+            path_or_buf = INPUT_CSV_PATH, # expects file path or text file-like object as input.
             memory_map = True, # map the file object onto memory and access the data directly (no longer any I/O overhead)
-            chunksize = 10000, # Number of lines to read from the file per chunk. (int, None)
+            chunksize = CHUNKSIZE, # Number of lines to read from the file per chunk. (int, None)
             compression = None,  # 'infer', 'gzip', 'bz2', 'zip', 'xz', None 
             engine = None, # 'c', 'python'
             encoding = 'utf-8', 
-            # Column
+            # Columns
+            sep = None, # Delimiter to use "|"  "\t" ","(default) None(auto-detect in python engine) 
             header = 'infer', # Row number(s) to use as the column names ('infer', int, [int,], None)
-            index_col = None, # Column(s) to use as the row labels of the DataFrame (int, str, False) 
-            names = [],   # Used to rename the columns 
+            index_col = None, # Column(s) to be used as the row labels of the DataFrame (int, str, False) 
+            names = [], # Sequence of column names to apply. (can be used to rename columns)
             usecols = None, # selected columns to be used (list)
             converters = None, # converting values in certain columns (dict)
             # Content
