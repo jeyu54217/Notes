@@ -2,9 +2,9 @@
 ```
 > Markdown All in One Create Table of Contents
 ```
-## ChatGPT Prompts
+## genAI Prompts
 ```
-Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
+Adjust these sentences to be more precise and easily interpretable by AI " "  
 ```
 ```
 Rephrase these sentences to emulate casual British English " "  
