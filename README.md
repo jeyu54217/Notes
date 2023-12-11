@@ -4,11 +4,11 @@
 ```
 ## ChatGPT Prompts
 ```
-  Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
+Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
 ```
 ```
-  Rephrase these sentences to emulate casual British English " "  
+Rephrase these sentences to emulate casual British English " "  
 ```
 ```
-   Provide a summary and a detailed list of all the facts and perspectives presented in the following article " "  
+Provide a summary and a detailed list of all the facts and perspectives presented in the following article " "  
 ```
