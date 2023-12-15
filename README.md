@@ -4,6 +4,7 @@
 ```
 ## Python
 [Python_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Python/Setting_Up.md#venv-built-in-in-python-3)
+
 ## genAI Prompts
 ```
 Adjust these sentences to be more precise and easily interpretable by AI " "  
