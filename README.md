@@ -20,4 +20,7 @@
   ```
   Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
   ```
-
+- Outline Chapter in Book
+  ```
+  "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
+  ```
