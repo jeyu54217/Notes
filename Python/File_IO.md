@@ -56,17 +56,16 @@ with open(file_path, "r") as file:
     pip install pandas
     ```
     ```python
-    # pandas 2.0
     import pandas as pd
-    import traceback
-    
-    input_csv_path = "data.csv"
-    output_csv_path = "output.csv"
+    import glob
+
+    INPUT_CSV_PATH = "data.csv"
+    OUTPUT_CSV_PATH = "output.csv"
     ```
 - Input
     ```python
     try:
-        # Reading CSV to DataFrame
+        # Read CSV to DataFrame
         df = pd.read_csv(
             # I/O
             path_or_buf = INPUT_CSV_PATH, 
