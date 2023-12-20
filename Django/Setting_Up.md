@@ -26,11 +26,11 @@ python3 manage.py check --deploy --settings=<proj_name>.settings
 
 # Create Project
 - ```bash
-   django-admin startproject <.../<proj_name>/core>
+   django-admin startproject <.../proj_name/core>
    ```
 # Create App
 1. ```bash
-   cd <...<proj_name>/core>
+   cd <...proj_name/core>
    ```
 
 2. ```bash
