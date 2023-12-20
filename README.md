@@ -16,7 +16,7 @@
   ```
   Rephrase these sentences to emulate casual British English " "  
   ```
-- Make News Summerise
+- Make News Summary
   ```
   Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
   ```
