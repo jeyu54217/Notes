@@ -25,7 +25,7 @@ python3 manage.py check --deploy --settings=<proj_name>.settings
 ```
 
 # Create Project
-   ```bash
+- ```bash
    django-admin startproject <.../<proj_name>/core>
    ```
 # Create App
