@@ -24,20 +24,20 @@ export DJANGO_SETTINGS_MODULE=<proj_name>.settings
 python3 manage.py check --deploy --settings=<proj_name>.settings
 ```
 
-# Create New Project
+# Create Project
+   ```bash
+   django-admin startproject <.../<proj_name>/core>
+   ```
+# Create App
 1. ```bash
-   django-admin startproject <.../proj_name_core>
+   cd <...<proj_name>/core>
    ```
 
 2. ```bash
-   cd <.../proj_name_core>
-   ```
-
-3. ```bash
    python3 manage.py startapp <app_name>
    ```
 
-4. ```python
+3. ```python
    INSTALLED_APPS = [
         # other apps
         '<app_name>',
