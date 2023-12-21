@@ -12,7 +12,7 @@
   ```
   Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
   ```
-- English Speaking Tutor
+- English Speaking
   ```
   Rephrase these sentences to emulate casual British English " "  
   ```
