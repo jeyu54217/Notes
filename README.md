@@ -12,14 +12,15 @@
   ```
   Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
   ```
-- English 
-  ```
-  Rephrase these sentences to emulate casual British English " "  
-  ```
-  
-  ```
-  Let's have a brief chat. Please revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
-  ```
+- English
+  - Writing
+    ```
+    Rephrase these sentences to emulate casual British English " "  
+    ```
+  - Speaking
+    ```
+    Let's have a brief chat. Please revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
+    ```
 - Make News Summary
   ```
   Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
