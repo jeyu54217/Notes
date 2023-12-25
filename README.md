@@ -12,9 +12,13 @@
   ```
   Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
   ```
-- English Speaking
+- English 
   ```
   Rephrase these sentences to emulate casual British English " "  
+  ```
+  
+  ```
+  Let's have a brief chat. Please revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
   ```
 - Make News Summary
   ```
