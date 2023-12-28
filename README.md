@@ -19,7 +19,7 @@
     ```
   - Speaking
     ```
-    Let's have a brief chat. Please revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
+    Revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
     ```
 - Make News Summary
   ```
