@@ -123,7 +123,7 @@
        ```
    - Install pakages in `requirements.txt` using `pip`
      ```bash
-     pip install -r ../requirements.txt
+     pip install -r requirements.txt
      ```
    - Generate the `requirements.txt` File using `freeze`
      ```bash
