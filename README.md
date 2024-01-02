@@ -1,12 +1,12 @@
+## Setting Up
+- [Python_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Python/Setting_Up.md#venv-built-in-in-python-3)
+- [Django_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Django/Setting_Up.md#install)
+- [DB_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/DB/Setting_Up.md)
 ## VScode
 - Make Contents
   ```
   > Markdown All in One Create Table of Contents
   ```
-## Setting Up
-- [Python_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Python/Setting_Up.md#venv-built-in-in-python-3)
-- [Django_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Django/Setting_Up.md#install)
-- [DB_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/DB/Setting_Up.md)
 
 ## genAI Prompts
 - Make ChatGPT Prompt
