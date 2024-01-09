@@ -23,10 +23,15 @@
     ```
     Revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
     ```
-- Make News Summary
-  ```
-  Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
-  ```
+- Article
+  - Summarize
+    ```
+    Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
+    ```
+  - Asking Questions
+    ```
+    Create a list of questions related to the article's content that will help the reader gain a better understanding. Then, provide answers to each of these questions.
+    ```
 - Outline Chapters in a Book
   ```
   "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
