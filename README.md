@@ -39,5 +39,5 @@
   
 - Instagram Post
     ```
-  Please create a 50-word introduction for these pictures suitable for an Instagram post, written from the perspective of a Taiwanese visitor using a humorous tone. The location is " "
+  Please create a 50-word introduction for these pictures suitable for an Instagram post, written from the perspective of a visitor using a humorous tone. The location is " "
     ```
