@@ -11,7 +11,7 @@
 ## genAI Prompts
 - Make ChatGPT Prompt
   ```
-  Adjust these sentences to be more precise and easily interpretable by ChatGPT " "  
+  Adjust these sentences to be more precise, short, and easily interpretable by ChatGPT " "  
   ```
   
 - English
