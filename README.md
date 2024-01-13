@@ -36,8 +36,12 @@
   ```
   "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
   ```
-  
 - Instagram Post
     ```
   Please create a 50-word introduction for these pictures suitable for an Instagram post, written from the perspective of a visitor using a humorous tone. The location is " "
     ```
+
+- Comparison X, Y
+  ```
+  Please provide a detailed comparison of 'X' and 'Y', including a list of differences, as well as the pros and cons of each. X,Y= "  "
+  ```
