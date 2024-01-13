@@ -38,7 +38,10 @@
   ```
 - Instagram Post
     ```
-  Please create a 50-word introduction for these pictures suitable for an Instagram post, written from the perspective of a visitor using a humorous tone. The location is " "
+    L= " "
+    1. Create a 50-word introduction for these pictures suitable for an Instagram post
+    2. written from the perspective of a visitor using a humorous popular young British writer tone.
+    3. The location in the picture is "L"
     ```
 
 - Comparison X, Y
