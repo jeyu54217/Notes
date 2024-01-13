@@ -39,10 +39,11 @@
 - Instagram Post
     ```
     L= " "
-    T= " 5 "
-    1. Compose "T" 50-word introduction suitable for an Instagram post, showcasing the images provided.
+    T= "5"
+    1. Compose 50-word introduction suitable for an Instagram post, showcasing the images provided.
     2. Write this introduction from the viewpoint of a visitor, adopting a humorous and contemporary tone similar to that of a young, popular British writer.
     3. The description should reflect that the location of the images is "L"
+    Repeat "T" times
     ```
 
 - Comparison X, Y
