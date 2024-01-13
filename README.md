@@ -40,7 +40,7 @@
     ```
     L= " "
     C= "nikonz5"
-    1. Create 5 distinct introductions, each containing a minimum of 50 words, suitable for a social media post. These introductions should highlight the attached images."
+    1. Create 3 distinct introductions, each containing a minimum of 50 words, suitable for a social media post. These introductions should highlight the attached images."
     2. Each introduction should be written from the perspective of a visitor. Adopt a humorous and contemporary tone, emulating the style of a young, popular British writer."
     3. Ensure that the descriptions in each introduction indicate that the location depicted in the images is "L"
     4. Incorporate relevant hashtags at the end of each English introduction. These should include the country, city, specific location, and the term 'nikonz5,' all in lowercase and prefixed with a hashtag (#)."
