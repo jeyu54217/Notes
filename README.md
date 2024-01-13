@@ -40,10 +40,12 @@
     ```
     L= " "
     C= "nikonz5"
-    1. Compose 5 50-word introductions suitable for a social media post, showcasing the images provided.
-    2. Write this introduction from the viewpoint of a visitor, adopting a humorous and contemporary tone similar to that of a young, popular British writer.
-    3. The description should reflect that the location of the images is "L"
-    4. Add country, city, location, and "C" in lowercase with # at the end.
+    1. Create 5 distinct introductions, each containing a minimum of 50 words, suitable for a social media post. These introductions should highlight the attached images."
+    2. Each introduction should be written from the perspective of a visitor. Adopt a humorous and contemporary tone, emulating the style of a young, popular British writer."
+    3. Ensure that the descriptions in each introduction indicate that the location depicted in the images is "L"
+    4. Incorporate relevant hashtags at the end of each English introduction. These should include the country, city, specific location, and the term 'nikonz5,' all in lowercase and prefixed with a hashtag (#)."
+    5. Provide a Chinese translation for each of the introductions immediately following the English version."
+    6. Below each English introduction, include a version formatted in Markdown code."
     ```
 
 - Comparison X, Y
