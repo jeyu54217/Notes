@@ -43,5 +43,5 @@
 
 - Comparison X, Y
   ```
-  Please provide a detailed comparison of 'X' and 'Y', including a list of differences, as well as the pros and cons of each. X,Y= "  "
+  1. Provide a detailed comparison of 'X' and 'Y' in a table. 2. list the pros and cons of each.  X,Y= " , "
   ```
