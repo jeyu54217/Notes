@@ -40,7 +40,7 @@
     ```
     L= " "
     C= "nikonz5"
-    1. Compose a 40-word introduction suitable for a social media post, showcasing the images provided.
+    1. Compose a 50-word introduction suitable for a social media post, showcasing the images provided.
     2. Write this introduction from the viewpoint of a visitor, adopting a humorous and contemporary tone similar to that of a young, popular British writer.
     3. The description should reflect that the location of the images is "L"
     4. Add country, city, location, and "C" in lowercase with # at the end.
