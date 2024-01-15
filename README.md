@@ -47,6 +47,13 @@
     5. Provide a Chinese translation for each of the introductions immediately following the English version."
     6. Below each English introduction, include a version formatted in Markdown code."
     ```
+- Travel
+  ```
+  L="  "
+  1. Suggest a visit duration in days for "L"
+  2. Display only the duration in days.
+  3. Increase the duration by 1 day.
+  ```
 
 - Comparison X, Y
   ```
