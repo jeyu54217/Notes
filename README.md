@@ -51,6 +51,7 @@
   ```
   L="  "
   Suggest a visit duration in days for "L" for traveling, increase the duration number by 1, and only show me the number.
+  
   ```
 
 - Comparison X, Y
