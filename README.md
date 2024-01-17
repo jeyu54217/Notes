@@ -28,6 +28,9 @@
     ```
     Provide a summary and a detailed list of all the  points of each topic in the following article [ ]
     ```
+    ```
+    Provide a detailed list of all the points of each topic in the following article [ ]
+    ```
   - News Summarize
     ```
     Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
