@@ -24,7 +24,11 @@
     Revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
     ```
 - Article
-  - Summarize
+  - Article Summarize
+    ```
+    Provide a summary and a detailed list of all the  points of each topic in the following article [ ]
+    ```
+  - News Summarize
     ```
     Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
     ```
