@@ -21,7 +21,7 @@
     ```
   - Speaking
     ```
-    Revise each of my sentences to improve grammar and vocabulary, making them sound like casual British English.
+    Let's chat. Correct my English to sound casually British.
     ```
 - Article
   - Article Summarize
