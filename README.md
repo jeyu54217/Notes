@@ -36,6 +36,7 @@
     Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
     ```
     - Most news is more narrative than logically coherent, so give up manual summarization after reading and use AI summarization before doing QA.
+      
   - Asking Questions
     ```
     Create a list of questions related to the article's content that will help the reader gain a better understanding. Then, provide answers to each of these questions.
