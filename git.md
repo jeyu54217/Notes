@@ -1,32 +1,46 @@
 
 
-- [**Remote repo**](#remote-repo)
-- [**Staging**](#staging)
-- [**Local repo**](#local-repo)
+- [**REMOTE**](#remote)
+  - [clone](#clone)
+  - [push](#push)
+  - [pull](#pull)
+- [**STAGING**](#staging)
+  - [add](#add)
+- [**LOCAL**](#local)
   - [Branching and Merging](#branching-and-merging)
 - [Stash](#stash)
 - [Checking Status and Logs](#checking-status-and-logs)
 
-## **Remote repo**
+## **REMOTE**
+### clone
   ```bash
   git clone 
   ```
+### push
   ```bash
-  git push <remote> <branch>
+  git push
   ```
   ```bash
-  git pull <remote> <branch>
+  git push origin <branch>
   ```
-## **Staging**
-```bash
+  ```bash
+  git push --set-upstream origin <branch>
+  ```
+### pull
+  ```bash
+  git pull origin <branch>
+  ```
+## **STAGING**
+### add
+  ```bash
   git add .
   ```
-
   ```bash
   git add <file>
   ```
 
-## **Local repo**
+## **LOCAL**
+
   ```bash
   git commit -m "msg"
   ```
