@@ -1,7 +1,7 @@
 ## Setting Up
-- [Python_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Python/Setting_Up.md#venv-built-in-in-python-3)
-- [Django_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/Django/Setting_Up.md#install)
-- [DB_Setting_Up](https://github.com/jeyu54217/Notes/blob/main/DB/Setting_Up.md)
+- [Python](https://github.com/jeyu54217/Notes/blob/main/Python/Setting_Up.md#venv-built-in-in-python-3)
+- [Django](https://github.com/jeyu54217/Notes/blob/main/Django/Setting_Up.md#install)
+- [DB](https://github.com/jeyu54217/Notes/blob/main/DB/Setting_Up.md)
 - [Git](https://github.com/jeyu54217/Notes/blob/main/git.md)
 ## VScode
 - Make Contents
