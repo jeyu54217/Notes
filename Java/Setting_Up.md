@@ -27,24 +27,24 @@
 ```bash
 sudo apt update
 ```
-2. Download & Install
+2. **Download & Install**
 - For most Linux distributions, you can install Java directly from the package manager.
 ```bash
 sudo apt install default-jdk
 ```
-3. Verify Installation
+3. **Verify Installation**
 ```bash
 java -version
 ```
 
 ## Windows
 
-1. Download & Install
+1. **Download & Install**
 - Download the Java JDK: [Oracle Downloads](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
 - Choose the Windows version and download the `.exe` installer file.
 - Run the downloaded installer.
 
-2. Set Environment Variables (Optional but Recommended)
+2. **Set Environment Variables** (Optional but Recommended)
 
 - Right-click on ‘My Computer’ and select ‘Properties’.
 - Click on ‘Advanced system settings’.
@@ -53,7 +53,7 @@ java -version
 - Add the path to the `bin` directory of the Java installation to the Path variable. Typically, this will be something like `C:\Program Files\Java\jdk-15\bin`.
 - Click OK to close each dialog.
 
-1. Verify 
-
-- Open Command Prompt (cmd).
-- Type `java -version` and press Enter.
+1. **Verify** 
+```bash
+java -version
+``` 
