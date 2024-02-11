@@ -67,6 +67,6 @@
 - Comparison X, Y
   ```
   X,Y= " , "
-  1. Create a table comparing 'X' and 'Y'. For each category, provide a clear and detailed comparison.
+  1. Create a table comparing 'X' and 'Y'. For each category, provide a clear and "detailed" comparison.
   2. List the advantages and disadvantages of 'X' and 'Y'. For each item, provide a concise but comprehensive list of pros and cons.
   ```
