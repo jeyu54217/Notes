@@ -7,8 +7,7 @@
     - [Boolean:](#boolean)
     - [None:](#none)
     - [File](#file)
-  - [Operand Compatibility](#operand-compatibility)
-  - [Type Conversion](#type-conversion)
+  - [Operand Compatibility \& Type Conversion](#operand-compatibility--type-conversion)
 - [Operators](#operators)
   - [Type](#type)
     - [1. Arithmetic](#1-arithmetic)
@@ -28,6 +27,9 @@
 # Operands
 ## Any Object
 ### Numeric
+- `int`
+- `float`
+- `complex`
 ### String
 ### List,Tuple,Set,Dict
 ### Boolean:
@@ -36,8 +38,8 @@
    - `None`: Represents the absence of a value or a null value.
 
 ### File
-## Operand Compatibility
-## Type Conversion
+## Operand Compatibility & Type Conversion
+- int(), str(), float().
 
 
 # Operators
