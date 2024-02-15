@@ -17,10 +17,9 @@
     - [5. Membership](#5-membership)
     - [6. Identity](#6-identity)
     - [7. Bitwise](#7-bitwise)
-  - [Expression](#expression)
-    - [Unary](#unary)
-    - [Binary](#binary)
-    - [Ternary operators (or conditional operators)](#ternary-operators-or-conditional-operators)
+    - [8. Unary](#8-unary)
+    - [9. Binary](#9-binary)
+    - [10. Ternary operators (or conditional operators)](#10-ternary-operators-or-conditional-operators)
 
 # Operation
 - Python follows a precedence rule to determine the order of operations.
@@ -102,10 +101,10 @@ Operate on bits and perform bit-by-bit operations.
 - `<<` Bitwise left shift
 - `>>` Bitwise right shift
 
-## Expression
-### Unary  
-- require a single operand (e.g.,  -x).
-### Binary  
-- require two operands (e.g.,  x + y).
-### Ternary operators (or conditional operators) 
-- require three operands (e.g., x if condition else y ).
+
+### 8. Unary  
+  - require a single operand (e.g.,  -x).
+### 9. Binary  
+  - require two operands (e.g.,  x + y).
+### 10. Ternary operators (or conditional operators) 
+  - require three operands (e.g., x if condition else y ).
