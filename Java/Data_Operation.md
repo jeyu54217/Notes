@@ -8,8 +8,6 @@
   - [Operand Evaluation](#operand-evaluation)
   - [Implicit Type Conversion](#implicit-type-conversion)
 - [Operators](#operators)
-  - [Type](#type)
-- [Java Operators Overview](#java-operators-overview)
   - [1. Arithmetic Operators](#1-arithmetic-operators)
   - [2. Relational Operators](#2-relational-operators)
   - [3. Logical Operators](#3-logical-operators)
@@ -77,11 +75,6 @@ double result = integer + floatingPoint; // integer is promoted to double
 
 
 # Operators
-## Type
-
-# Java Operators Overview
-
-Operators in Java are special symbols that perform operations on variables and values. They are used to manipulate data and variables in different ways. Java operators can be classified into several categories:
 
 ## 1. Arithmetic Operators
 - `+` (Addition): Adds two values.
