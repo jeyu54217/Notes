@@ -58,12 +58,17 @@
     6. Below each English introduction, include a version formatted in Markdown code."
     ```
 ### Travel
+- Travel Days Estimation
   ```
-  L="  "
+  L=[   ]  
   Suggest a visit duration in days for "L" for traveling, increase the duration number by 1, and only show me the number.
-  
   ```
-
+- Travel Planning
+  ```
+  D=[   ]
+  L=[   ]  
+  Plan a [D] day trip for [L] for traveling.
+  ```
 ### Learning
 - Explain
   ```
