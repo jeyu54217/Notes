@@ -1,7 +1,7 @@
 
 
 - [Interprete \& Compile Execution](#interprete--compile-execution)
-- [Dynami \& Static Type](#dynami--static-type)
+- [Dynamic \& Static Type](#dynamic--static-type)
 - [Programming Paradigms](#programming-paradigms)
   - [1. Imperative Programming](#1-imperative-programming)
     - [**Procedural Programming:**](#procedural-programming)
@@ -18,8 +18,12 @@
   - [8. Reflective Programming](#8-reflective-programming)
   - [9. Symbolic Programming](#9-symbolic-programming)
   - [10. Metaprogramming](#10-metaprogramming)
+- [Text \& Bytes](#text--bytes)
+
+
+
 # Interprete & Compile Execution
-# Dynami & Static Type
+# Dynamic & Static Type
 # Programming Paradigms
 ## 1. Imperative Programming
 - Imperative programming is characterized by a series of commands for the computer to perform. It's one of the oldest programming paradigms and forms the basis of many other paradigms.
@@ -63,3 +67,4 @@ Declarative programming expresses the logic of a computation without describing 
 ## 10. Metaprogramming
 - Involves writing programs that can treat programs as their data. It means that a program could be designed to read, generate, analyze, or transform other programs, and even modify itself while running. Languages that support metaprogramming include Ruby and Lisp.
 
+# Text & Bytes
