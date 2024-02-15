@@ -15,7 +15,7 @@
   Adjust these sentences to be more precise, short, and easily interpretable by ChatGPT " "  
   ```
   
-- English
+### English
   - Writing
     ```
     Rephrase these sentences to emulate casual British English " "  
@@ -24,7 +24,7 @@
     ```
     Let's chat. Correct my English to sound casually British.
     ```
-- Article
+### Article
   - Article Summarize
     ```
     Provide a summary and a detailed list of all the  points of each topic in the following article [ ]
@@ -42,11 +42,11 @@
     ```
     Create a list of questions related to the article's content that will help the reader gain a better understanding. Then, provide answers to each of these questions.
     ```
-- Outline Chapters in a Book
+### Outline Chapters in a Book
   ```
   "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
   ```
-- Instagram Post
+### Instagram Post
     ```
     L= " "
     C= "nikonz5"
@@ -57,13 +57,18 @@
     5. Provide a Chinese translation for each of the introductions immediately following the English version."
     6. Below each English introduction, include a version formatted in Markdown code."
     ```
-- Travel
+### Travel
   ```
   L="  "
   Suggest a visit duration in days for "L" for traveling, increase the duration number by 1, and only show me the number.
   
   ```
 
+### Learning
+- Explain
+  ```
+  create a Markdown table to explain [   ]
+  ```
 - Comparison X, Y
   ```
   X,Y= " , "
