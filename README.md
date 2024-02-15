@@ -72,7 +72,7 @@
 - Perceptions Info
   ```
   L=[   ]
-  What are the common perceptions (pros and cons) of [L] among visitors and local residents?
+  What are the common perceptions (pros and cons) of [L] among "visitors" and "local residents"?
   ```
 ### Learning
 - Explain
