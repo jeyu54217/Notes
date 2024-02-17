@@ -1,9 +1,9 @@
 
 
 - [Code Execution](#code-execution)
-  - [Interprete](#interprete)
-  - [Compile](#compile)
-  - [Just In Time (JIT)](#just-in-time-jit)
+  - [1.Interprete](#1interprete)
+  - [2.Compile](#2compile)
+  - [3.Just In Time (JIT)](#3just-in-time-jit)
 - [Dynamic \& Static Type](#dynamic--static-type)
 - [Programming Paradigms](#programming-paradigms)
   - [1. Imperative Programming](#1-imperative-programming)
@@ -26,9 +26,6 @@
 
 
 # Code Execution
-## Interprete 
-## Compile
-## Just In Time (JIT)
 | Feature             | Interpreter                                        | Compiler                                                                 | JIT Compiler                                                                |
 |---------------------|----------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | **Execution**       | Executes source code directly, line by line.       | Translates entire source code to machine code before execution.          | Compiles bytecode to machine code at runtime.                               |
@@ -38,6 +35,10 @@
 | **Optimization**    | Minimal, as code is executed directly.              | Extensive, performed during the compilation process.                      | Dynamic, optimizations are made at runtime based on actual program usage.  |
 | **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, performance-critical applications.| Environments where performance and portability are both concerns.           |
 | **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                              | Java Virtual Machine (JVM), .NET Framework Common Language Runtime (CLR)   |
+
+## 1.Interprete 
+## 2.Compile
+## 3.Just In Time (JIT)
 
 
 # Dynamic & Static Type
