@@ -31,7 +31,7 @@
 | **Execution**       | Executes source code directly, line by line.       | Translates entire source code to machine code before execution.          | Compiles bytecode to machine code at runtime.                               |
 | **Speed**           | **Slow**, due to **on-the-fly interpretation**. | **Faste**, as code is run by the CPU directly.  | Can be faster than interpretation, optimizes at runtime.                    |
 | **Development**     | **Easier** to **debug** and **test** due to **immediate feedback**.| Requires **compilation step**, making testing/debugging a **slower** process.    | Offers a balance, with some optimization possible at runtime.               |
-| **Portability**     | **High**, code can run anywhere the interpreter exists.| **Low**, compiled code is often **platform-specific**. (Different OS have their own Compiler.)                            | **High**, **bytecode** is **portable** and compiled on-the-fly to native machine code.  |
+| **Portability**     | **High**, code can run anywhere the interpreter exists.| **Low**, compiled code is often **platform-specific**. (Different OS have their own Compiler.)                            | **High**, **bytecode** is **portable** and compiled on-the-fly to native machine code.  
 
 | **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, **performance-critical** applications.| Environments where **performance** and **portability** are both concerns.           |
 | **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                              | Java (JVM), .NET (CLR)   |
