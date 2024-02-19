@@ -116,10 +116,10 @@
 ## 1. Imperative Programming
 - Imperative programming is characterized by a series of commands for the computer to perform. It's one of the oldest programming paradigms and forms the basis of many other paradigms.
 
-### **Procedural:** 
+### a. **Procedural:** 
 - A subtype of imperative programming, it structures code into procedures or functions, facilitating code reuse and modularization. Languages like C and Pascal are well-known examples.
 - 
-### **Object-Oriented Programming (OOP):** 
+### b. **Object-Oriented Programming (OOP):** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
 - example: python
   ```python
@@ -148,7 +148,7 @@
 ## 2. Declarative 
 Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
 
-### **Functional Programming (FP):** 
+### a. **Functional Programming (FP):** 
 - Emphasizes pure functions and immutable data. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
 - example: python
   ```python
@@ -171,14 +171,14 @@ Declarative programming expresses the logic of a computation without describing 
   print(result)  # Output: 55
 
   ```
-### **Database Query Languages:** 
+### b. **Database Query Languages:** 
 - SQL (Structured Query Language) is a prime example, enabling the definition, manipulation, and query of data in relational databases.
 - example: sql
   ```sql
   SELECT * FROM users WHERE age > 18;
 
   ```
-### **Logic Programming:** 
+### c. **Logic Programming:** 
 - Uses formal logic to express computations. Prolog is a notable example, where programs are written as a set of facts and rules within a logical framework.
 - [In Detail](https://chat.openai.com/share/f1c5386d-6dd2-4a2a-b7a1-fe0da4774bb8)
   
