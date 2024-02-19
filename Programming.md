@@ -55,7 +55,7 @@
 
 # Data Typing
 
-- **Languages' Comparision**
+## **Language Comparison**
 
 | Language   | Typing System              | Type Strength     | Notes                                                                                      |
 |------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
