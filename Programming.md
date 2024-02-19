@@ -57,7 +57,7 @@
 
 # Data Typing
 
-## **Language Comparison**
+- **Language Comparison**
 
 | Language   | Typing System              | Type Strength     | Notes                                                                                      |
 |------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
@@ -95,7 +95,7 @@
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
 | **Examples** | Python, Java           | JavaScript, PHP|
 
-### **Strong**
+- **Strong**
   
 | Advantages                            | Disadvantages                                                      |
 |---------------------------------------|--------------------------------------------------------------------|
@@ -103,7 +103,7 @@
 | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
 | **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
 
-### **Weak**
+- **Weak**
   
 | Advantages                            | Disadvantages                                                         |
 |---------------------------------------|-----------------------------------------------------------------------|
@@ -202,7 +202,8 @@ Declarative programming expresses the logic of a computation without describing 
   ```
   
 ## 4. Event-Driven 
-- Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as user actions, sensor outputs, or message passing from other programs or threads. JavaScript, used in web development, is a well-known example.
+- Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as **'user actions'**, **'sensor outputs'**, or **' messages passing'** from other programs or threads. JavaScript, used in web development, is a well-known example.
+  
 - Supported language
 
 | Language       | Application Domain               | Notes                                                |
