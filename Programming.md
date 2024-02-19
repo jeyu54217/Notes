@@ -5,19 +5,16 @@
   - [2. Compile](#2-compile)
   - [3. Just In Time (JIT)](#3-just-in-time-jit)
 - [Data Typing](#data-typing)
-  - [**Language Comparison**](#language-comparison)
   - [1. Dynamic \& Static Typing](#1-dynamic--static-typing)
   - [2. Strong \& Weak Typing](#2-strong--weak-typing)
-    - [**Strong**](#strong)
-    - [**Weak**](#weak)
 - [Programming Paradigms](#programming-paradigms)
   - [1. Imperative Programming](#1-imperative-programming)
-    - [**Procedural:**](#procedural)
-    - [**Object-Oriented Programming (OOP):**](#object-oriented-programming-oop)
+    - [a. **Procedural:**](#a-procedural)
+    - [b. **Object-Oriented Programming (OOP):**](#b-object-oriented-programming-oop)
   - [2. Declarative](#2-declarative)
-    - [**Functional Programming (FP):**](#functional-programming-fp)
-    - [**Database Query Languages:**](#database-query-languages)
-    - [**Logic Programming:**](#logic-programming)
+    - [a. **Functional Programming (FP):**](#a-functional-programming-fp)
+    - [b. **Database Query Languages:**](#b-database-query-languages)
+    - [c. **Logic Programming:**](#c-logic-programming)
   - [3. Structured](#3-structured)
   - [4. Event-Driven](#4-event-driven)
   - [5. Concurrent](#5-concurrent)
@@ -30,14 +27,15 @@
 
 
 # Code Execution
-|              | Interpreter                                        | Compiler                                                                   | JIT Compiler                                                                |
-|---------------------|----------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| **Execution**       | Executes source code directly, line by line.       | Translates entire source code to machine code before execution.            | Compiles bytecode to machine code at runtime.                               |
-| **Speed**           | **Slow**, due to **on-the-fly interpretation**.    | **Fast**, as code is run by the CPU directly.                              | Can be faster than interpretation, optimizes at runtime.                    |
-| **Development**     | **Easier** to **debug** and **test** due to **immediate feedback**. | Requires **compilation step**, making testing/debugging a **slower** process. | Offers a balance, with some optimization possible at runtime.               |
-| **Portability**     | **High**, code can run anywhere the interpreter exists. | **Low**, compiled code is often **platform-specific**. (Different OS have their own Compiler.) | **High**, **bytecode** is **portable** and compiled on-the-fly to native machine code. |
-| **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, **performance-critical** applications. | Environments where **performance** and **portability** are both concerns. |
-| **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                               | Java (JVM), .NET (CLR)                                                      |
+  
+  |              | Interpreter                                        | Compiler                                                                   | JIT Compiler                                                                |
+  |---------------------|----------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+  | **Execution**       | Executes source code directly, line by line.       | Translates entire source code to machine code before execution.            | Compiles bytecode to machine code at runtime.                               |
+  | **Speed**           | **Slow**, due to **on-the-fly interpretation**.    | **Fast**, as code is run by the CPU directly.                              | Can be faster than interpretation, optimizes at runtime.                    |
+  | **Development**     | **Easier** to **debug** and **test** due to **immediate feedback**. | Requires **compilation step**, making testing/debugging a **slower** process. | Offers a balance, with some optimization possible at runtime.               |
+  | **Portability**     | **High**, code can run anywhere the interpreter exists. | **Low**, compiled code is often **platform-specific**. (Different OS have their own Compiler.) | **High**, **bytecode** is **portable** and compiled on-the-fly to native machine code. |
+  | **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, **performance-critical** applications. | Environments where **performance** and **portability** are both concerns. |
+  | **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                               | Java (JVM), .NET (CLR)                                                      |
 
 
 ## 1. Interprete 
@@ -72,44 +70,44 @@
 | Go         | Static Typing              | Strong Typing     | Go is statically typed with a strong emphasis on type safety and minimal conversion.  
 
 ## 1. Dynamic & Static Typing
-
-|               | Dynamic Typing                                                                                                                                                                                                                        | Static Typing                                                                                                                                                                                                                           |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Type Checking**     | Type checks are performed at runtime, allowing variable types to change over execution. Offers flexibility in variable use.                                                                                                           | Type checks are performed at compile-time, ensuring types are correct before the program runs. Catches type-related errors early.                                                                                                        |
-| **Flexibility**       | High, with easy reassignment of variables to different types. Beneficial for rapid development and evolving requirements.                                                                                                              | Lower, as variables are bound to a specific type once declared. Makes code more predictable but requires more upfront design.                                                                                                           |
-| **Performance**       | May have performance overhead due to runtime type checking and interpretation.                                                                                                                                                         | Typically results in faster execution times due to compile-time optimizations.                                                                                                                                                          |
-| **Error Detection**   | Errors related to type found at runtime, leading to potential runtime errors and increased debugging time.                                                                                                                             | Caught at compile-time, reducing runtime errors and saving debugging time.                                                                                                                                                               |
-| **Code Verbosity**    | Less verbose, as types do not need to be explicitly declared.                                                                                                                                                                          | More verbose due to explicit type declarations, which can make code more explicit and potentially increase readability.                                                                                                                 |
-| **Use Cases**         | Suited for scripting, rapid prototyping, and applications where flexibility is key.                                                                                                                                                    | Ideal for large-scale applications, systems programming, where performance and type safety are critical.                                                                                                                                |
-| **Language Examples** | Python, Ruby, JavaScript | C, C++, Java |
+  
+  |               | Dynamic Typing                                                                                                                                                                                                                        | Static Typing                                                                                                                                                                                                                           |
+  |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | **Type Checking**     | Type checks are performed at runtime, allowing variable types to change over execution. Offers flexibility in variable use.                                                                                                           | Type checks are performed at compile-time, ensuring types are correct before the program runs. Catches type-related errors early.                                                                                                        |
+  | **Flexibility**       | High, with easy reassignment of variables to different types. Beneficial for rapid development and evolving requirements.                                                                                                              | Lower, as variables are bound to a specific type once declared. Makes code more predictable but requires more upfront design.                                                                                                           |
+  | **Performance**       | May have performance overhead due to runtime type checking and interpretation.                                                                                                                                                         | Typically results in faster execution times due to compile-time optimizations.                                                                                                                                                          |
+  | **Error Detection**   | Errors related to type found at runtime, leading to potential runtime errors and increased debugging time.                                                                                                                             | Caught at compile-time, reducing runtime errors and saving debugging time.                                                                                                                                                               |
+  | **Code Verbosity**    | Less verbose, as types do not need to be explicitly declared.                                                                                                                                                                          | More verbose due to explicit type declarations, which can make code more explicit and potentially increase readability.                                                                                                                 |
+  | **Use Cases**         | Suited for scripting, rapid prototyping, and applications where flexibility is key.                                                                                                                                                    | Ideal for large-scale applications, systems programming, where performance and type safety are critical.                                                                                                                                |
+  | **Language Examples** | Python, Ruby, JavaScript | C, C++, Java |
 
 ## 2. Strong & Weak Typing
-
-|               | Strong Typing                                                                                                                                                      | Weak Typing                                                                                                                                                    |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Type Coercion**     | Minimal to no implicit type coercion. Operations between incompatible types require explicit conversion, enhancing type safety and predictability.                     | Implicit type coercion is common, allowing operations between different types without explicit conversion, which can lead to flexibility but also unpredictability. |
-| **Type Safety**       | High. The language enforces strict type rules, reducing the chances of runtime errors due to type mismatches.                                                         | Lower. The flexibility in types can increase the risk of type-related runtime errors.                                                                             |
-| **Error Detection**   | Errors related to type mismatches are more likely to be caught early, either at compile-time (for statically typed languages) or at runtime before they cause issues. | Type-related errors might only become apparent at runtime, potentially leading to bugs that are harder to trace and fix.                                          |
-| **Runtime Behavior**  | Predictable. The strict type system ensures that operations behave as expected, without implicit changes in type.                                                     | Less predictable. Implicit type conversions can lead to unexpected behavior, making the code harder to understand and debug.                                      |
-| **Flexibility**       | Lower. The need for explicit type conversions can make the code more verbose and potentially slow down rapid development.                                             | Higher. Allows for quicker prototyping and development due to the ease of mixing types, but at the cost of potential runtime issues.                               |
-| **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
-| **Examples** | Python, Java           | JavaScript, PHP|
+  
+  |               | Strong Typing                                                                                                                                                      | Weak Typing                                                                                                                                                    |
+  |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | **Type Coercion**     | Minimal to no implicit type coercion. Operations between incompatible types require explicit conversion, enhancing type safety and predictability.                     | Implicit type coercion is common, allowing operations between different types without explicit conversion, which can lead to flexibility but also unpredictability. |
+  | **Type Safety**       | High. The language enforces strict type rules, reducing the chances of runtime errors due to type mismatches.                                                         | Lower. The flexibility in types can increase the risk of type-related runtime errors.                                                                             |
+  | **Error Detection**   | Errors related to type mismatches are more likely to be caught early, either at compile-time (for statically typed languages) or at runtime before they cause issues. | Type-related errors might only become apparent at runtime, potentially leading to bugs that are harder to trace and fix.                                          |
+  | **Runtime Behavior**  | Predictable. The strict type system ensures that operations behave as expected, without implicit changes in type.                                                     | Less predictable. Implicit type conversions can lead to unexpected behavior, making the code harder to understand and debug.                                      |
+  | **Flexibility**       | Lower. The need for explicit type conversions can make the code more verbose and potentially slow down rapid development.                                             | Higher. Allows for quicker prototyping and development due to the ease of mixing types, but at the cost of potential runtime issues.                               |
+  | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
+  | **Examples** | Python, Java           | JavaScript, PHP|
 
 - **Strong**
-  
-| Advantages                            | Disadvantages                                                      |
-|---------------------------------------|--------------------------------------------------------------------|
-| **Type Safety:** Reduces the likelihood of type-related runtime errors, increasing the reliability of the code. | **Less Flexibility:** Can limit rapid development due to the need for explicit conversions and declarations. |
-| **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
-| **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
+    
+  | Advantages                            | Disadvantages                                                      |
+  |---------------------------------------|--------------------------------------------------------------------|
+  | **Type Safety:** Reduces the likelihood of type-related runtime errors, increasing the reliability of the code. | **Less Flexibility:** Can limit rapid development due to the need for explicit conversions and declarations. |
+  | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
+  | **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
 
 - **Weak**
-  
-| Advantages                            | Disadvantages                                                         |
-|---------------------------------------|-----------------------------------------------------------------------|
-| **Flexibility:** Allows for easy mixing of types, facilitating rapid development and prototyping. | **Type Safety:** Increased risk of type-related errors at runtime, which can affect the reliability of the code. |
-| **Ease of Development:** Can speed up development by reducing the need for explicit type conversions. | **Unpredictability:** Implicit type conversions can lead to unexpected behavior and make the code harder to debug. |
-| **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
+    
+  | Advantages                            | Disadvantages                                                         |
+  |---------------------------------------|-----------------------------------------------------------------------|
+  | **Flexibility:** Allows for easy mixing of types, facilitating rapid development and prototyping. | **Type Safety:** Increased risk of type-related errors at runtime, which can affect the reliability of the code. |
+  | **Ease of Development:** Can speed up development by reducing the need for explicit type conversions. | **Unpredictability:** Implicit type conversions can lead to unexpected behavior and make the code harder to debug. |
+  | **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
 
 
 # Programming Paradigms
@@ -118,7 +116,7 @@
 
 ### a. **Procedural:** 
 - A subtype of imperative programming, it structures code into procedures or functions, facilitating code reuse and modularization. Languages like C and Pascal are well-known examples.
-- 
+  
 ### b. **Object-Oriented Programming (OOP):** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
 - example: python
