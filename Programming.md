@@ -78,7 +78,7 @@
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
 - Strong Typing
   
-  | Advantages                            | Disadvantages                                                      |
+| Advantages                            | Disadvantages                                                      |
 |---------------------------------------|--------------------------------------------------------------------|
 | **Type Safety:** Reduces the likelihood of type-related runtime errors, increasing the reliability of the code. | **Less Flexibility:** Can limit rapid development due to the need for explicit conversions and declarations. |
 | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
