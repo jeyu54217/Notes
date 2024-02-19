@@ -350,7 +350,17 @@ Declarative programming expresses the logic of a computation without describing 
   ```
 
 ## 8. Symbolic 
-- Used predominantly in AI, it emphasizes the manipulation of symbols and symbolic expressions. Lisp, one of the oldest programming languages, is known for its capacity for symbolic computation.
+- Symbolic programming is a paradigm primarily associated with AI, focusing on the manipulation of symbols and symbolic expressions, allowing for the manipulation of these symbols mathematically rather than just performing numeric computations.
+
+  | Language    | Support                | Notes                                                        |
+  |-------------|------------------------|--------------------------------------------------------------|
+  | Lisp        | Native                 | Historically significant for symbolic AI.                    |
+  | Prolog      | Native                 | Logic programming with symbolic reasoning.                    |
+  | Julia       | Through Libraries      | High-performance, with symbolic packages like SymPy.jl.      |
+  | Python      | Through Libraries      | Popular libraries like SymPy for symbolic math.              |
+  | MATLAB      | Through Symbolic Toolbox | Used for mathematical computations including symbolic.     |
+  | R           | Through Libraries      | Symbolic computing via Ryacas and other packages.            |
+
 - example: lisp
   ```lisp
   (define (square x) (* x x))
