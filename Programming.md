@@ -209,7 +209,7 @@ Declarative programming expresses the logic of a computation without describing 
   | Language       | Application Domain               | Notes                                                |
   |----------------|----------------------------------|------------------------------------------------------|
   | JavaScript     | Web development                  | Widely used for client-side and server-side events   |
-  | Python         | General-purpose, Web development | Supports event-driven programming via frameworks ([Django](https://chat.openai.com/share/d2eee468-87a0-4774-8a7f-07c85eb15e1e))     |
+  | Python         | General-purpose, Web development | Supports event-driven programming via frameworks ( [Django](https://chat.openai.com/share/d2eee468-87a0-4774-8a7f-07c85eb15e1e) )     |
   | Java           | Enterprise, Android apps         | Utilizes event listeners in GUI and web applications |
   | C#             | .NET applications                | Used in desktop, web, and game development           |
   | Go             | Concurrent systems               | Goroutines facilitate event-driven concurrency       |
@@ -218,7 +218,7 @@ Declarative programming expresses the logic of a computation without describing 
   | Swift          | iOS and macOS apps               | Supports event-driven programming in Apple ecosystem |
   | TypeScript     | Web development                  | Superset of JavaScript, enhancing its capabilities   |
 
-- example: javascript
+- example: javascript DOM
   ```javascript
   // HTML markup for the button
   <button id="clickMeButton">Click Me!</button>
@@ -232,43 +232,121 @@ Declarative programming expresses the logic of a computation without describing 
   ```
 
 
-  
-  
 ## 5. Concurrent 
-- Involves writing programs that can execute operations simultaneously, either through multiple threads or processes. This paradigm is essential for exploiting multi-core processors and for developing applications that require concurrent operations, such as web servers. Languages that support concurrency include Java (via threads) and Go (with goroutines).
-- example: java
-  ```java
+- Involves writing programs that can execute operations simultaneously, either through multiple threads or processes. This paradigm is essential for exploiting multi-core processors and for developing applications that require concurrent operations, such as web servers.
+  
+  | Language       | Concurrency Support                        |
+  |----------------|--------------------------------------------|
+  | Java           | Threads, Executor Framework, Fork/Join     |
+  | C#             | async/await, Task Parallel Library (TPL)   |
+  | Python         | threading, asyncio, multiprocessing        |
+  | Go             | Goroutines, Channels                       |
+  | JavaScript     | Callbacks, Promises, async/await           |
+  | Rust           | Ownership, Borrowing, Threads, async/await |
+  | C++            | Threads, async/await (with C++20)          |
+  | Kotlin         | Coroutines, async/await                    |
+  | Swift          | Grand Central Dispatch (GCD), async/await  |
 
-  import java.lang.reflect.Method;
-
-  class Main {
-      public static void main(String[] args) {
-          try
-  ```
   
 ## 6. Generic 
-- Focuses on algorithms that can be written in a way that allows types to be specified later. The main benefit is the ability to write code that is agnostic to particular data types, enhancing reusability. C++ templates and Java generics are implementations of this paradigm.
-- example: java
-  ```java
+- Focuses on algorithms that can be written in a way that allows types to be specified later.
+- The main benefit is the ability to write code that is agnostic to particular data types, enhancing reusability.
+  
+  | Language    | Support for Generic Programming           |
+  |-------------|-------------------------------------------|
+  | C++         | Templates                                 |
+  | Java        | Generics                                  |
+  | C#          | Generics                                  |
+  | Swift       | Generics                                  |
+  | TypeScript  | Generics                                  |
+  | Kotlin      | Generics                                  |
+  | Rust        | Generics, Traits                          |
+  | Go          | Generics (introduced in Go 1.18)          |
+  | Python      | Duck typing, Type Hints (PEP 484)         |
 
-  import java.lang.reflect.Method;
+- example: python
+  ```python
+  from typing import TypeVar, Generic, List
+  
+  T = TypeVar('T')  # Declare type variable
+  
+  class Stack(Generic[T]):
+      def __init__(self) -> None:
+          self.items: List[T] = []
+  
+      def push(self, item: T) -> None:
+          self.items.append(item)
+  
+      def pop(self) -> T:
+          return self.items.pop()
+  
+      def peek(self) -> T:
+          return self.items[-1]
+  
+  # Using the generic Stack class
+  stack_int = Stack[int]()
+  stack_int.push(1)
+  print(stack_int.pop())  # Output: 1
+  
+  stack_str = Stack[str]()
+  stack_str.push("hello")
+  print(stack_str.pop())  # Output: "hello"
 
-  class Main {
-      public static void main(String[] args) {
-          try
+
+  # In this example, Stack is a generic class that can be parameterized with different types (int, str, etc.). This allows the Stack class to be used in a type-safe manner, with type checking tools like Mypy able to detect type mismatches at static analysis time.
   ```
 
   
 ## 7. Reflective 
-- Enables a program to inspect and modify its structure and behavior at runtime. This paradigm is powerful for developing frameworks and libraries that need to perform complex manipulations of their components. Java and .NET languages support reflection.
-- example: java
-  ```java
+- Enables a program to inspect and modify its structure and behavior at **runtime**.
+- The inspect module for getting more detailed information about objects, such as the source code, the list of arguments a function takes, etc.
 
-  import java.lang.reflect.Method;
+  | Language         | Reflection Support Level                                        |
+  |------------------|------------------------------------------------------------------|
+  | Java             | Full (via the `java.lang.reflect` package)                       |
+  | C#               | Full (through Reflection namespace)                              |
+  | Python           | Full (using types and functions in the `reflect` and `inspect` modules) |
+  | JavaScript       | Partial (via prototype inspection and property enumeration)      |
+  | Ruby             | Full (with methods like `send`, `method`, and introspection capabilities) |
+  | PHP              | Full (through its Reflection classes)                            |
+  | Swift            | Limited (runtime type information and dynamic features)          |
+  | Go               | Limited (via the `reflect` package, though not as dynamic as in other languages) |
 
-  class Main {
-      public static void main(String[] args) {
-          try
+- example: python
+  
+  ```python
+  '''
+  Python offers various built-in functions and modules for reflective operations, such as:
+    1. The type() and isinstance() functions for inspecting object types.
+    2. The getattr(), setattr(), hasattr(), and delattr() functions for interacting with object attributes dynamically.
+    3. The dir() function for listing the attributes and methods of an object.
+  '''
+  
+  class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def show(self):
+        print(f"Value: {self.value}")
+
+  obj = MyClass(10)
+  
+  # Inspect the object's attributes
+  print(dir(obj))
+  
+  # Dynamically get an attribute value
+  print(getattr(obj, "value"))
+  
+  # Dynamically set an attribute value
+  setattr(obj, "value", 20)
+  obj.show()
+  
+  # Check if the object has a specific attribute
+  print(hasattr(obj, "show"))
+  
+  # Dynamically call a method
+  method = getattr(obj, "show")
+  method()
   ```
 
 ## 8. Symbolic 
