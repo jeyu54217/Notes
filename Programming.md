@@ -205,18 +205,18 @@ Declarative programming expresses the logic of a computation without describing 
 - Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as **'user actions'**, **'sensor outputs'**, or **' messages passing'** from other programs or threads. JavaScript, used in web development, is a well-known example.
   
 - Supported language
-
-| Language       | Application Domain               | Notes                                                |
-|----------------|----------------------------------|------------------------------------------------------|
-| JavaScript     | Web development                  | Widely used for client-side and server-side events   |
-| Python         | General-purpose, Web development | Supports event-driven programming via frameworks (Django)     |
-| Java           | Enterprise, Android apps         | Utilizes event listeners in GUI and web applications |
-| C#             | .NET applications                | Used in desktop, web, and game development           |
-| Go             | Concurrent systems               | Goroutines facilitate event-driven concurrency       |
-| PHP            | Web development                  | Commonly used with AJAX for dynamic web content      |
-| Ruby           | Web development                  | Ruby on Rails supports event-driven web applications |
-| Swift          | iOS and macOS apps               | Supports event-driven programming in Apple ecosystem |
-| TypeScript     | Web development                  | Superset of JavaScript, enhancing its capabilities   |
+  
+  | Language       | Application Domain               | Notes                                                |
+  |----------------|----------------------------------|------------------------------------------------------|
+  | JavaScript     | Web development                  | Widely used for client-side and server-side events   |
+  | Python         | General-purpose, Web development | Supports event-driven programming via frameworks (Django)     |
+  | Java           | Enterprise, Android apps         | Utilizes event listeners in GUI and web applications |
+  | C#             | .NET applications                | Used in desktop, web, and game development           |
+  | Go             | Concurrent systems               | Goroutines facilitate event-driven concurrency       |
+  | PHP            | Web development                  | Commonly used with AJAX for dynamic web content      |
+  | Ruby           | Web development                  | Ruby on Rails supports event-driven web applications |
+  | Swift          | iOS and macOS apps               | Supports event-driven programming in Apple ecosystem |
+  | TypeScript     | Web development                  | Superset of JavaScript, enhancing its capabilities   |
 
 - example: javascript
   ```javascript
