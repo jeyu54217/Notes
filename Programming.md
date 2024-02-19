@@ -41,13 +41,13 @@
 <img width="389" alt="Screenshot 2024-02-19 at 01 06 05" src="https://github.com/jeyu54217/Notes/assets/73396926/f74326e3-7a4d-40da-898c-3727e174f8df">
 
 ## 2. Compile
-- **Source Code → Compiler →  Machine Code → Execution **
+- **Source Code → Compiler →  Machine Code → Execution**
 <img width="389" alt="Screenshot 2024-02-19 at 01 05 56" src="https://github.com/jeyu54217/Notes/assets/73396926/bb19c5bb-7108-4a95-aa09-837ea147ac48">
 
 ## 3. Just In Time (JIT)
 - **Java**
- ** - Source Code → Compiler → a Byte Code file →**
-    Byte Code Line/Chunk → JIT Interpreter → Machine Code → Execution → Byte Code Line/Chunk...
+ - **Source Code → Compiler → a Byte Code file →**
+    **Byte Code Line/Chunk → JIT Interpreter → Machine Code → Execution → Byte Code Line/Chunk...**
   
   <img width="1028" alt="Screenshot 2024-02-19 at 00 57 31" src="https://github.com/jeyu54217/Notes/assets/73396926/64d6495b-8375-4bc6-a013-d06115e95d15">
 
