@@ -55,6 +55,20 @@
 
 # Data Typing
 
+- **Languages' Comparision**
+
+| Language   | Typing System              | Type Strength     | Notes                                                                                      |
+|------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
+| Python     | Dynamic Typing             | Strong Typing     | Python enforces type rules at runtime but does not allow implicit type conversion.         |
+| JavaScript | Dynamic Typing             | Weak Typing       | JavaScript allows considerable flexibility with types, including implicit type conversion. |
+| PHP        | Dynamic Typing             | Weak Typing       | PHP features implicit type conversion, fitting both dynamic and weak typing.               |
+| Ruby       | Dynamic Typing             | Strong Typing     | Similar to Python, Ruby is dynamically and strongly typed without implicit conversions.    |
+| Java       | Static Typing              | Strong Typing     | Java requires explicit type declaration and does not allow implicit type conversion.       |
+| C          | Static Typing              | Weak Typing       | C allows for implicit type conversion, fitting the criteria for static but weak typing.    |
+| C++        | Static Typing              | Strong Typing     | C++ is statically typed and generally considered strongly typed but allows type casting.   |
+| C#         | Static Typing              | Strong Typing     | C# enforces type rules at compile time with minimal implicit type conversion.              |
+| Go         | Static Typing              | Strong Typing     | Go is statically typed with a strong emphasis on type safety and minimal conversion.  
+
 ## 1. Dynamic & Static Typing
 
 |               | Dynamic Typing                                                                                                                                                                                                                        | Static Typing                                                                                                                                                                                                                           |
@@ -79,7 +93,7 @@
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
 | **Examples** | Python, Java           | JavaScript, PHP|
 
-- **Strong Typing**
+### **Strong**
   
 | Advantages                            | Disadvantages                                                      |
 |---------------------------------------|--------------------------------------------------------------------|
@@ -87,7 +101,7 @@
 | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
 | **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
 
-- **Weak Typing**
+### **Weak**
   
 | Advantages                            | Disadvantages                                                         |
 |---------------------------------------|-----------------------------------------------------------------------|
@@ -96,19 +110,7 @@
 | **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
 
 
-- **Languages' Comparision**
-
-| Language   | Typing System              | Type Strength     | Notes                                                                                      |
-|------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
-| Python     | Dynamic Typing             | Strong Typing     | Python enforces type rules at runtime but does not allow implicit type conversion.         |
-| JavaScript | Dynamic Typing             | Weak Typing       | JavaScript allows considerable flexibility with types, including implicit type conversion. |
-| PHP        | Dynamic Typing             | Weak Typing       | PHP features implicit type conversion, fitting both dynamic and weak typing.               |
-| Ruby       | Dynamic Typing             | Strong Typing     | Similar to Python, Ruby is dynamically and strongly typed without implicit conversions.    |
-| Java       | Static Typing              | Strong Typing     | Java requires explicit type declaration and does not allow implicit type conversion.       |
-| C          | Static Typing              | Weak Typing       | C allows for implicit type conversion, fitting the criteria for static but weak typing.    |
-| C++        | Static Typing              | Strong Typing     | C++ is statically typed and generally considered strongly typed but allows type casting.   |
-| C#         | Static Typing              | Strong Typing     | C# enforces type rules at compile time with minimal implicit type conversion.              |
-| Go         | Static Typing              | Strong Typing     | Go is statically typed with a strong emphasis on type safety and minimal conversion.       |
+     |
 
 
 # Programming Paradigms
