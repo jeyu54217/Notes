@@ -65,7 +65,7 @@
 | **Error Detection**   | Errors related to type found at runtime, leading to potential runtime errors and increased debugging time.                                                                                                                             | Caught at compile-time, reducing runtime errors and saving debugging time.                                                                                                                                                               |
 | **Code Verbosity**    | Less verbose, as types do not need to be explicitly declared.                                                                                                                                                                          | More verbose due to explicit type declarations, which can make code more explicit and potentially increase readability.                                                                                                                 |
 | **Use Cases**         | Suited for scripting, rapid prototyping, and applications where flexibility is key.                                                                                                                                                    | Ideal for large-scale applications, systems programming, where performance and type safety are critical.                                                                                                                                |
-| **Language Examples** | Python, Ruby, JavaScript | C, C++, Java, Rust |
+| **Language Examples** | Python, Ruby, JavaScript | C, C++, Java |
 
 ## 2. Strong & Weak Typing
 
@@ -77,7 +77,7 @@
 | **Runtime Behavior**  | Predictable. The strict type system ensures that operations behave as expected, without implicit changes in type.                                                     | Less predictable. Implicit type conversions can lead to unexpected behavior, making the code harder to understand and debug.                                      |
 | **Flexibility**       | Lower. The need for explicit type conversions can make the code more verbose and potentially slow down rapid development.                                             | Higher. Allows for quicker prototyping and development due to the ease of mixing types, but at the cost of potential runtime issues.                               |
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
-| **Examples** | Python, Haskell, Java           | JavaScript, PHP|
+| **Examples** | Python, Java           | JavaScript, PHP|
 - Strong Typing
   
 | Advantages                            | Disadvantages                                                      |
@@ -93,6 +93,21 @@
 | **Flexibility:** Allows for easy mixing of types, facilitating rapid development and prototyping. | **Type Safety:** Increased risk of type-related errors at runtime, which can affect the reliability of the code. |
 | **Ease of Development:** Can speed up development by reducing the need for explicit type conversions. | **Unpredictability:** Implicit type conversions can lead to unexpected behavior and make the code harder to debug. |
 | **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
+
+
+- Languages' Comparision
+| Language   | Typing System              | Type Strength     | Notes                                                                                      |
+|------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
+| Python     | Dynamic Typing             | Strong Typing     | Python enforces type rules at runtime but does not allow implicit type conversion.         |
+| JavaScript | Dynamic Typing             | Weak Typing       | JavaScript allows considerable flexibility with types, including implicit type conversion. |
+| PHP        | Dynamic Typing             | Weak Typing       | PHP features implicit type conversion, fitting both dynamic and weak typing.               |
+| Ruby       | Dynamic Typing             | Strong Typing     | Similar to Python, Ruby is dynamically and strongly typed without implicit conversions.    |
+| Java       | Static Typing              | Strong Typing     | Java requires explicit type declaration and does not allow implicit type conversion.       |
+| C          | Static Typing              | Weak Typing       | C allows for implicit type conversion, fitting the criteria for static but weak typing.    |
+| C++        | Static Typing              | Strong Typing     | C++ is statically typed and generally considered strongly typed but allows type casting.   |
+| C#         | Static Typing              | Strong Typing     | C# enforces type rules at compile time with minimal implicit type conversion.              |
+| Go         | Static Typing              | Strong Typing     | Go is statically typed with a strong emphasis on type safety and minimal conversion.       |
+
 
 # Programming Paradigms
 ## 1. Imperative Programming
