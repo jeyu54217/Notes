@@ -78,7 +78,8 @@
 | **Flexibility**       | Lower. The need for explicit type conversions can make the code more verbose and potentially slow down rapid development.                                             | Higher. Allows for quicker prototyping and development due to the ease of mixing types, but at the cost of potential runtime issues.                               |
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
 | **Examples** | Python, Java           | JavaScript, PHP|
-- Strong Typing
+
+- **Strong Typing**
   
 | Advantages                            | Disadvantages                                                      |
 |---------------------------------------|--------------------------------------------------------------------|
@@ -86,7 +87,7 @@
 | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
 | **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
 
-- Weak Typing
+- **Weak Typing**
   
 | Advantages                            | Disadvantages                                                         |
 |---------------------------------------|-----------------------------------------------------------------------|
@@ -95,7 +96,8 @@
 | **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
 
 
-- Languages' Comparision
+- **Languages' Comparision**
+
 | Language   | Typing System              | Type Strength     | Notes                                                                                      |
 |------------|----------------------------|-------------------|--------------------------------------------------------------------------------------------|
 | Python     | Dynamic Typing             | Strong Typing     | Python enforces type rules at runtime but does not allow implicit type conversion.         |
