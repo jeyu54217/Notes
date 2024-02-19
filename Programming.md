@@ -29,12 +29,12 @@
 | Feature             | Interpreter                                        | Compiler                                                                 | JIT Compiler                                                                |
 |---------------------|----------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | **Execution**       | Executes source code directly, line by line.       | Translates entire source code to machine code before execution.          | Compiles bytecode to machine code at runtime.                               |
-| **Speed**           | Generally slower due to on-the-fly interpretation. | Faster execution after compilation, as code is directly run by the CPU.  | Can be faster than interpretation, optimizes at runtime.                    |
-| **Development**     | Easier to debug and test due to immediate feedback.| Requires compilation step, making testing/debugging a slower process.    | Offers a balance, with some optimization possible at runtime.               |
-| **Portability**     | High, code can run anywhere the interpreter exists.| Low, compiled code is often platform-specific.                            | High, bytecode is portable and compiled on-the-fly to native machine code.  |
-| **Optimization**    | Minimal, as code is executed directly.              | Extensive, performed during the compilation process.                      | Dynamic, optimizations are made at runtime based on actual program usage.  |
-| **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, performance-critical applications.| Environments where performance and portability are both concerns.           |
-| **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                              | Java Virtual Machine (JVM), .NET Framework Common Language Runtime (CLR)   |
+| **Speed**           | **Slow**, due to **on-the-fly interpretation**. | **Faste**, as code is run by the CPU directly.  | Can be faster than interpretation, optimizes at runtime.                    |
+| **Development**     | **Easier** to **debug** and **test** due to **immediate feedback**.| Requires **compilation step**, making testing/debugging a **slower** process.    | Offers a balance, with some optimization possible at runtime.               |
+| **Portability**     | **High**, code can run anywhere the interpreter exists.| **Low**, compiled code is often **platform-specific**. (Different OS have their own Compiler.)                            | **High**, **bytecode** is **portable** and compiled on-the-fly to native machine code.  |
+
+| **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, **performance-critical** applications.| Environments where **performance** and **portability** are both concerns.           |
+| **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                              | Java (JVM), .NET (CLR)   |
 
 ## 1. Interprete 
 - **Source Code (Line/Chunk) → Interpreter → Machine Code → Execution → Source Code (Line/Chunk)...**
