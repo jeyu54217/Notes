@@ -9,12 +9,12 @@
   - [2. Strong \& Weak Typing](#2-strong--weak-typing)
 - [Programming Paradigms](#programming-paradigms)
   - [1. Imperative Programming](#1-imperative-programming)
-    - [a. **Procedural:**](#a-procedural)
-    - [b. **Object-Oriented Programming (OOP):**](#b-object-oriented-programming-oop)
+    - [a. **Procedural**](#a-procedural)
+    - [b. **Object-Oriented Programming (OOP)**](#b-object-oriented-programming-oop)
   - [2. Declarative](#2-declarative)
-    - [a. **Functional Programming (FP):**](#a-functional-programming-fp)
-    - [b. **Database Query Languages:**](#b-database-query-languages)
-    - [c. **Logic Programming:**](#c-logic-programming)
+    - [a. **Functional Programming (FP)**](#a-functional-programming-fp)
+    - [b. **Database Query Languages**](#b-database-query-languages)
+    - [c. **Logic Programming**](#c-logic-programming)
   - [3. Structured](#3-structured)
   - [4. Event-Driven](#4-event-driven)
   - [5. Concurrent](#5-concurrent)
@@ -114,10 +114,10 @@
 ## 1. Imperative Programming
 - Imperative programming is characterized by a series of commands for the computer to perform. It's one of the oldest programming paradigms and forms the basis of many other paradigms.
 
-### a. **Procedural:** 
+### a. **Procedural** 
 - A subtype of imperative programming, it structures code into procedures or functions, facilitating code reuse and modularization. Languages like C and Pascal are well-known examples.
   
-### b. **Object-Oriented Programming (OOP):** 
+### b. **Object-Oriented Programming (OOP)** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
 - example: python
   ```python
@@ -146,7 +146,7 @@
 ## 2. Declarative 
 Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
 
-### a. **Functional Programming (FP):** 
+### a. **Functional Programming (FP)** 
 - Emphasizes pure functions and immutable data. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
 - example: python
   ```python
@@ -169,14 +169,14 @@ Declarative programming expresses the logic of a computation without describing 
   print(result)  # Output: 55
 
   ```
-### b. **Database Query Languages:** 
+### b. **Database Query Languages** 
 - SQL (Structured Query Language) is a prime example, enabling the definition, manipulation, and query of data in relational databases.
 - example: sql
   ```sql
   SELECT * FROM users WHERE age > 18;
 
   ```
-### c. **Logic Programming:** 
+### c. **Logic Programming** 
 - Uses formal logic to express computations. Prolog is a notable example, where programs are written as a set of facts and rules within a logical framework.
 - [In Detail](https://chat.openai.com/share/f1c5386d-6dd2-4a2a-b7a1-fe0da4774bb8)
   
