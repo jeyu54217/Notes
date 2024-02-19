@@ -82,8 +82,8 @@
 |---------------------------------------|--------------------------------------------------------------------|
 | **Type Safety:** Reduces the likelihood of type-related runtime errors, increasing the reliability of the code. | **Less Flexibility:** Can limit rapid development due to the need for explicit conversions and declarations. |
 | **Error Detection:** Type mismatches are often caught early, improving code quality and maintainability.       | **Verbosity:** Code might be more verbose due to explicit type conversions and declarations.                   |
-| **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping.
-             |
+| **Predictability:** Operations behave as expected without implicit type changes, making the code easier to understand and debug. | **Slower Prototyping:** The strict type system can slow down initial development and prototyping. |
+
 - Weak Typing
   
 | Advantages                            | Disadvantages                                                         |
