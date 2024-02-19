@@ -209,7 +209,7 @@ Declarative programming expresses the logic of a computation without describing 
   | Language       | Application Domain               | Notes                                                |
   |----------------|----------------------------------|------------------------------------------------------|
   | JavaScript     | Web development                  | Widely used for client-side and server-side events   |
-  | Python         | General-purpose, Web development | Supports event-driven programming via frameworks (Django)     |
+  | Python         | General-purpose, Web development | Supports event-driven programming via frameworks ([Django](https://chat.openai.com/share/d2eee468-87a0-4774-8a7f-07c85eb15e1e))     |
   | Java           | Enterprise, Android apps         | Utilizes event listeners in GUI and web applications |
   | C#             | .NET applications                | Used in desktop, web, and game development           |
   | Go             | Concurrent systems               | Goroutines facilitate event-driven concurrency       |
@@ -230,6 +230,9 @@ Declarative programming expresses the logic of a computation without describing 
 
   // In this example, the addEventListener method is used to listen for the "click" event on the button with the id clickMeButton. When the button is clicked, the anonymous function passed as the second argument to addEventListener is executed, causing the alert box to appear with the message "The button was clicked!". This illustrates the essence of event-driven programming in JavaScript: reacting to events by executing specified code blocks.
   ```
+
+
+  
   
 ## 5. Concurrent 
 - Involves writing programs that can execute operations simultaneously, either through multiple threads or processes. This paradigm is essential for exploiting multi-core processors and for developing applications that require concurrent operations, such as web servers. Languages that support concurrency include Java (via threads) and Go (with goroutines).
