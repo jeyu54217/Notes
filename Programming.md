@@ -65,6 +65,7 @@
 | **Error Detection**   | Errors related to type found at runtime, leading to potential runtime errors and increased debugging time.                                                                                                                             | Caught at compile-time, reducing runtime errors and saving debugging time.                                                                                                                                                               |
 | **Code Verbosity**    | Less verbose, as types do not need to be explicitly declared.                                                                                                                                                                          | More verbose due to explicit type declarations, which can make code more explicit and potentially increase readability.                                                                                                                 |
 | **Use Cases**         | Suited for scripting, rapid prototyping, and applications where flexibility is key.                                                                                                                                                    | Ideal for large-scale applications, systems programming, where performance and type safety are critical.                                                                                                                                |
+| **Language Examples** | Python, Ruby, JavaScript | C, C++, Java, Rust |
 
 ## 2. Strong & Weak Typing
 
@@ -76,6 +77,7 @@
 | **Runtime Behavior**  | Predictable. The strict type system ensures that operations behave as expected, without implicit changes in type.                                                     | Less predictable. Implicit type conversions can lead to unexpected behavior, making the code harder to understand and debug.                                      |
 | **Flexibility**       | Lower. The need for explicit type conversions can make the code more verbose and potentially slow down rapid development.                                             | Higher. Allows for quicker prototyping and development due to the ease of mixing types, but at the cost of potential runtime issues.                               |
 | **Use Cases**         | Preferred in applications where reliability and maintainability are critical, such as large-scale or complex systems.                                                  | Suited for scripting, rapid prototyping, or environments where the ease of development is prioritized over strict type safety.                                    |
+| **Examples** | Python, Haskell, Java           | JavaScript, PHP|
 - Strong Typing
   
 | Advantages                            | Disadvantages                                                      |
