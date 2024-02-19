@@ -119,6 +119,21 @@
   
 ### b. **Object-Oriented Programming (OOP)** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
+- Supported Languages
+  
+  | Language | OOP Support | Notes |
+  |----------|-------------|-------|
+  | Go       | Partial     | Go does not support OOP in the traditional sense (e.g., no inheritance), but it allows methods on struct types and interfaces for polymorphism. |
+  | Java     | Full        | Java is a purely object-oriented language, supporting inheritance, encapsulation, and polymorphism. |
+  | C#       | Full        | C# is a modern, object-oriented, and type-safe programming language, providing full support for OOP concepts. |
+  | Python   | Full        | Python is a dynamically typed language that supports OOP fully, including multiple inheritance and polymorphism. |
+  | C++      | Full        | C++ supports OOP and allows for low-level memory manipulation, combining both high-level OOP features and low-level capabilities. |
+  | Ruby     | Full        | Ruby is a purely object-oriented language, where everything is an object, fully supporting OOP paradigms. |
+  | Swift    | Full        | Swift supports OOP and is designed to work with Apple's Cocoa and Cocoa Touch frameworks, offering a modern approach to OOP. |
+  | Kotlin   | Full        | Kotlin is a statically typed programming language that runs on the JVM and fully supports OOP, designed to interoperate fully with Java. |
+
+
+
 - example: python
   ```python
   class Dog:
@@ -202,7 +217,7 @@
 ## 4. Event-Driven 
 - Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as **'user actions'**, **'sensor outputs'**, or **' messages passing'** from other programs or threads. JavaScript, used in web development, is a well-known example.
   
-- Supported language
+- Supported Languages
   
   | Language       | Application Domain               | Notes                                                |
   |----------------|----------------------------------|------------------------------------------------------|
@@ -232,8 +247,9 @@
 
 ## 5. Concurrent 
 - Involves writing programs that can execute operations simultaneously, either through multiple threads or processes. This paradigm is essential for exploiting multi-core processors and for developing applications that require concurrent operations, such as web servers.
+- Supported Languages
   
-  | Language       | Concurrency Support                        |
+  | Language       |  Support                        |
   |----------------|--------------------------------------------|
   | Java           | Threads, Executor Framework, Fork/Join     |
   | C#             | async/await, Task Parallel Library (TPL)   |
@@ -249,8 +265,9 @@
 ## 6. Generic 
 - Focuses on algorithms that can be written in a way that allows types to be specified later.
 - The main benefit is the ability to write code that is agnostic to particular data types, enhancing reusability.
+- Supported Languages
   
-  | Language    | Support for Generic Programming           |
+  | Language    | Support           |
   |-------------|-------------------------------------------|
   | C++         | Templates                                 |
   | Java        | Generics                                  |
@@ -298,8 +315,9 @@
 ## 7. Reflective 
 - Enables a program to inspect and modify its structure and behavior at **runtime**.
 - The inspect module for getting more detailed information about objects, such as the source code, the list of arguments a function takes, etc.
-
-  | Language         | Reflection Support Level                                        |
+- Supported Languages
+  
+  | Language         | Support                                        |
   |------------------|------------------------------------------------------------------|
   | Java             | Full (via the `java.lang.reflect` package)                       |
   | C#               | Full (through Reflection namespace)                              |
@@ -349,7 +367,8 @@
 
 ## 8. Symbolic 
 - Symbolic programming is a paradigm primarily associated with AI, focusing on the manipulation of symbols and symbolic expressions, allowing for the manipulation of these symbols mathematically rather than just performing numeric computations.
-
+- Supported Languages
+  
   | Language    | Support                | Notes                                                        |
   |-------------|------------------------|--------------------------------------------------------------|
   | Lisp        | Native                 | Historically significant for symbolic AI.                    |
@@ -370,15 +389,17 @@
 - Allows programs to treat other programs as their data 
 - This means a program can be designed to read, generate, analyze, or transform other programs, and even modify itself while running.
 - Supported Languages
-  | Language    | Metaprogramming Support | Supports Metaprogramming |
-  |-------------|-------------------------|--------------------------|
-  | Ruby        | Dynamic metaprogramming through open classes, reflection, and the ability to evaluate strings as code. | Extensive |
-  | Lisp        | Macros and symbolic computation, allowing programs to manipulate and generate code. | Extensive |
-  | Python      | Reflection, decorators, and metaclasses for runtime and compile-time metaprogramming. | Yes |
-  | C++         | Templates for compile-time metaprogramming, and RTTI (Run-Time Type Information) for runtime type identification. | Yes |
-  | Java        | Reflection API for inspecting and modifying code at runtime, annotation processors for compile-time metaprogramming. | Yes |
-  | Go          | Limited support through interfaces and reflection, but lacks generics in its traditional form (generics added in Go 1.18). | Limited |
-  | C#          | Attributes, reflection, expression trees, and source generators for runtime and compile-time metaprogramming. | Yes |
+  
+  | Language | Support | Notes |
+  |----------|-----------|------|
+  | Ruby     | Extensive | Dynamic metaprogramming through open classes, reflection, and the ability to evaluate strings as code. |
+  | Lisp     | Extensive | Macros and symbolic computation, allowing programs to manipulate and generate code. |
+  | Python   | Yes       | Reflection, decorators, and metaclasses for runtime and compile-time metaprogramming. |
+  | C++      | Yes       | Templates for compile-time metaprogramming, and RTTI (Run-Time Type Information) for runtime type identification. |
+  | Java     | Yes       | Reflection API for inspecting and modifying code at runtime, annotation processors for compile-time metaprogramming. |
+  | Go       | Limited   | Limited support through interfaces and reflection, but lacks generics in its traditional form (generics added in Go 1.18). |
+  | C#       | Yes       | Attributes, reflection, expression trees, and source generators for runtime and compile-time metaprogramming. |
+
 
 
 - example: python
