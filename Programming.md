@@ -144,7 +144,7 @@
   ```
   
 ## 2. Declarative 
-Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
+- Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
 
 ### a. **Functional Programming (FP)** 
 - Emphasizes pure functions and immutable data. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
@@ -367,7 +367,20 @@ Declarative programming expresses the logic of a computation without describing 
   ; Evaluates to 25, demonstrating a simple symbolic manipulation of squaring a number.
   ```
 ## 9. Metaprogramming 
-- Involves writing programs that can treat programs as their data. It means that a program could be designed to read, generate, analyze, or transform other programs, and even modify itself while running. Languages that support metaprogramming include Ruby and Lisp.
+- Allows programs to treat other programs as their data 
+- This means a program can be designed to read, generate, analyze, or transform other programs, and even modify itself while running.
+- Supported Languages
+  | Language    | Metaprogramming Support | Supports Metaprogramming |
+  |-------------|-------------------------|--------------------------|
+  | Ruby        | Dynamic metaprogramming through open classes, reflection, and the ability to evaluate strings as code. | Extensive |
+  | Lisp        | Macros and symbolic computation, allowing programs to manipulate and generate code. | Extensive |
+  | Python      | Reflection, decorators, and metaclasses for runtime and compile-time metaprogramming. | Yes |
+  | C++         | Templates for compile-time metaprogramming, and RTTI (Run-Time Type Information) for runtime type identification. | Yes |
+  | Java        | Reflection API for inspecting and modifying code at runtime, annotation processors for compile-time metaprogramming. | Yes |
+  | Go          | Limited support through interfaces and reflection, but lacks generics in its traditional form (generics added in Go 1.18). | Limited |
+  | C#          | Attributes, reflection, expression trees, and source generators for runtime and compile-time metaprogramming. | Yes |
+
+
 - example: python
   ```python
   def log_function_call(func):
