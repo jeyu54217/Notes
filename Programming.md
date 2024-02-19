@@ -46,8 +46,8 @@
 
 ## 3. Just In Time (JIT)
 - **Java**
-  - Source Code → Compiler → a Byte Code file
-     → Byte Code Line/Chunk → JIT Compiler → Machine Code → Execution → Possible Optimization → Byte Code Line/Chunk → … Machine Code → Execution 
+  - Source Code → Compiler → a Byte Code file →
+    Byte Code Line/Chunk → JIT Interpreter → Machine Code → Execution → Byte Code Line/Chunk...
   
   <img width="1028" alt="Screenshot 2024-02-19 at 00 57 31" src="https://github.com/jeyu54217/Notes/assets/73396926/64d6495b-8375-4bc6-a013-d06115e95d15">
 
