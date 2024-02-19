@@ -50,10 +50,11 @@
     **Byte Code Line/Chunk → JIT Interpreter → Machine Code → Execution → Byte Code Line/Chunk...**
   
   <img width="1028" alt="Screenshot 2024-02-19 at 00 57 31" src="https://github.com/jeyu54217/Notes/assets/73396926/64d6495b-8375-4bc6-a013-d06115e95d15">
-# Data Type
-## Dynamic & Static Typing
 
-| Category              | Dynamic Typing (X)                                                                                                                                                                                                                         | Static Typing (Y)                                                                                                                                                                                                                          |
+# Data Typing
+
+## Dynamic & Static Typing
+|               | Dynamic Typing (X)                                                                                                                                                                                                                         | Static Typing (Y)                                                                                                                                                                                                                          |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Type Checking**     | Type checks are performed at runtime, allowing variable types to change over execution. Offers flexibility in variable use.                                                                                                               | Type checks are performed at compile-time, ensuring types are correct before program runs. Catches type-related errors early.                                                                                                                |
 | **Flexibility**       | High, with easy reassignment of variables to different types. Beneficial for rapid development and evolving requirements.                                                                                                                  | Lower, as variables are bound to a specific type once declared. Makes code more predictable but requires more upfront design.                                                                                                               |
