@@ -112,32 +112,44 @@
 | **Rapid Prototyping:** Ideal for scenarios where speed of development is prioritized over strict type safety. | **Error Detection:** Type-related errors may only become apparent at runtime, potentially leading to more complex debugging. |
 
 
-     |
-
-
 # Programming Paradigms
 ## 1. Imperative Programming
 - Imperative programming is characterized by a series of commands for the computer to perform. It's one of the oldest programming paradigms and forms the basis of many other paradigms.
 
 ### **Procedural:** 
 - A subtype of imperative programming, it structures code into procedures or functions, facilitating code reuse and modularization. Languages like C and Pascal are well-known examples.
+- 
 ### **Object-Oriented Programming (OOP):** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
-- example: java
-  ```java
+- example: python
+  ```python
+  class Dog:
+      def __init__(self, name, age):
+          self.name = name  # instance variable for the dog's name
+          self.age = age  # instance variable for the dog's age
+  
+      def bark(self):
+          print(f"{self.name} says woof!")
+  
+      def birthday(self):
+          self.age += 1
+          print(f"Happy Birthday {self.name}! You are now {self.age} years old.")
+  
+  # Creating instances of the Dog class
+  dog1 = Dog("Buddy", 5)
+  dog2 = Dog("Lucy", 3)
+  
+  # Calling methods on those instances
+  dog1.bark()  # Output: Buddy says woof!
+  dog2.birthday()  # Output: Happy Birthday Lucy! You are now 4 years old.
 
-  import java.lang.reflect.Method;
-
-  class Main {
-      public static void main(String[] args) {
-          try
   ```
   
 ## 2. Declarative 
 Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
 
 ### **Functional Programming (FP):** 
-- Emphasizes pure functions and immutable data. Haskell and Clojure are prominent examples. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
+- Emphasizes pure functions and immutable data. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
 - example: python
   ```python
   from functools import reduce
@@ -172,27 +184,49 @@ Declarative programming expresses the logic of a computation without describing 
   
   
 ## 3. Structured 
-- Aimed at improving the clarity, quality, and development time of a computer program by making extensive use of subroutines, block structures, for and while loops. It's a step away from the GOTO statement, promoting more logical and manageable code flow.
-- example: java
-  ```java
+- It's a fundamental concept that virtually **all modern programming languages** supported
+- The paradigm's emphasis on straightforward control flow (e.g., using loops and conditionals) without the use of GOTO statements makes it a foundational concept in software development.
+- example: python
+  ```python
+  def sum_even_numbers(limit):
+      sum = 0
+      for number in range(1, limit + 1):
+          if number % 2 == 0:
+              sum += number
+      return sum
+  
+  # Calculate the sum of even numbers up to 10
+  result = sum_even_numbers(10)
+  print("Sum of even numbers from 1 to 10 is:", result)
 
-  import java.lang.reflect.Method;
-
-  class Main {
-      public static void main(String[] args) {
-          try
   ```
   
 ## 4. Event-Driven 
 - Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as user actions, sensor outputs, or message passing from other programs or threads. JavaScript, used in web development, is a well-known example.
-- example: java
-  ```java
+- Supported language
+| Language       | Application Domain               | Notes                                                |
+|----------------|----------------------------------|------------------------------------------------------|
+| JavaScript     | Web development                  | Widely used for client-side and server-side events   |
+| Python         | General-purpose, Web development | Supports event-driven programming via frameworks (Django)     |
+| Java           | Enterprise, Android apps         | Utilizes event listeners in GUI and web applications |
+| C#             | .NET applications                | Used in desktop, web, and game development           |
+| Go             | Concurrent systems               | Goroutines facilitate event-driven concurrency       |
+| PHP            | Web development                  | Commonly used with AJAX for dynamic web content      |
+| Ruby           | Web development                  | Ruby on Rails supports event-driven web applications |
+| Swift          | iOS and macOS apps               | Supports event-driven programming in Apple ecosystem |
+| TypeScript     | Web development                  | Superset of JavaScript, enhancing its capabilities   |
 
-  import java.lang.reflect.Method;
+- example: javascript
+  ```javascript
+  // HTML markup for the button
+  <button id="clickMeButton">Click Me!</button>
+  
+  // JavaScript code to add an event listener to the button
+  document.getElementById("clickMeButton").addEventListener("click", function() {
+      alert("The button was clicked!");
+  });
 
-  class Main {
-      public static void main(String[] args) {
-          try
+  // In this example, the addEventListener method is used to listen for the "click" event on the button with the id clickMeButton. When the button is clicked, the anonymous function passed as the second argument to addEventListener is executed, causing the alert box to appear with the message "The button was clicked!". This illustrates the essence of event-driven programming in JavaScript: reacting to events by executing specified code blocks.
   ```
   
 ## 5. Concurrent 
