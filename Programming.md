@@ -119,32 +119,93 @@
 - A subtype of imperative programming, it structures code into procedures or functions, facilitating code reuse and modularization. Languages like C and Pascal are well-known examples.
 ### **Object-Oriented Programming (OOP):** 
 - Focuses on defining data structures as objects and the operations that can be performed on them, promoting data encapsulation, inheritance, and polymorphism. Java, C++, and Python are languages that support OOP.
+- example: java
+  ```java
 
+  import java.lang.reflect.Method;
+
+  class Main {
+      public static void main(String[] args) {
+          try
+  ```
+  
 ## 2. Declarative 
 Declarative programming expresses the logic of a computation without describing its control flow. It abstracts the flow control process, letting developers focus on "what" a program should accomplish rather than "how."
 
 ### **Functional Programming (FP):** 
 - Emphasizes pure functions and immutable data. Haskell and Clojure are prominent examples. FP supports higher-order functions, function composition, and recursion, aiming for side-effect-free code.
-### **Logic Programming:** 
-- Uses formal logic to express computations. Prolog is a notable example, where programs are written as a set of facts and rules within a logical framework.
+- example: python
+  ```python
+  from functools import reduce
+  
+  # Pure function to square a number
+  def square(x):
+      return x * x
+  
+  # Pure function to sum two numbers
+  def add(x, y):
+      return x + y
+  
+  # Function to compute the sum of squares of a list of numbers
+  def sum_of_squares(lst):
+      return reduce(add, map(square, lst))
+  
+  numbers = [1, 2, 3, 4, 5]
+  result = sum_of_squares(numbers)
+  print(result)  # Output: 55
+
+  ```
 ### **Database Query Languages:** 
 - SQL (Structured Query Language) is a prime example, enabling the definition, manipulation, and query of data in relational databases.
+- example: sql
+  ```sql
+  SELECT * FROM users WHERE age > 18;
 
+  ```
+### **Logic Programming:** 
+- Uses formal logic to express computations. Prolog is a notable example, where programs are written as a set of facts and rules within a logical framework.
+- [In Detail](https://chat.openai.com/share/f1c5386d-6dd2-4a2a-b7a1-fe0da4774bb8)
+  
+  
 ## 3. Structured 
 - Aimed at improving the clarity, quality, and development time of a computer program by making extensive use of subroutines, block structures, for and while loops. It's a step away from the GOTO statement, promoting more logical and manageable code flow.
+- example: java
+  ```java
 
+  import java.lang.reflect.Method;
+
+  class Main {
+      public static void main(String[] args) {
+          try
+  ```
+  
 ## 4. Event-Driven 
 - Centers around the generation and handling of events. In this paradigm, the flow of the program is determined by events such as user actions, sensor outputs, or message passing from other programs or threads. JavaScript, used in web development, is a well-known example.
+- example: java
+  ```java
 
+  import java.lang.reflect.Method;
+
+  class Main {
+      public static void main(String[] args) {
+          try
+  ```
+  
 ## 5. Concurrent 
 - Involves writing programs that can execute operations simultaneously, either through multiple threads or processes. This paradigm is essential for exploiting multi-core processors and for developing applications that require concurrent operations, such as web servers. Languages that support concurrency include Java (via threads) and Go (with goroutines).
+- example: java
+  ```java
 
+  import java.lang.reflect.Method;
+
+  class Main {
+      public static void main(String[] args) {
+          try
+  ```
+  
 ## 6. Generic 
 - Focuses on algorithms that can be written in a way that allows types to be specified later. The main benefit is the ability to write code that is agnostic to particular data types, enhancing reusability. C++ templates and Java generics are implementations of this paradigm.
-
-## 7. Reflective 
-- Enables a program to inspect and modify its structure and behavior at runtime. This paradigm is powerful for developing frameworks and libraries that need to perform complex manipulations of their components. Java and .NET languages support reflection.
-- example
+- example: java
   ```java
 
   import java.lang.reflect.Method;
@@ -154,11 +215,46 @@ Declarative programming expresses the logic of a computation without describing 
           try
   ```
 
+  
+## 7. Reflective 
+- Enables a program to inspect and modify its structure and behavior at runtime. This paradigm is powerful for developing frameworks and libraries that need to perform complex manipulations of their components. Java and .NET languages support reflection.
+- example: java
+  ```java
+
+  import java.lang.reflect.Method;
+
+  class Main {
+      public static void main(String[] args) {
+          try
+  ```
 
 ## 8. Symbolic 
-- Used predominantly in artificial intelligence, it emphasizes the manipulation of symbols and symbolic expressions. Lisp, one of the oldest programming languages, is known for its capacity for symbolic computation.
-
-## 9. Metaprogramming
+- Used predominantly in AI, it emphasizes the manipulation of symbols and symbolic expressions. Lisp, one of the oldest programming languages, is known for its capacity for symbolic computation.
+- example: lisp
+  ```lisp
+  (define (square x) (* x x))
+  
+  (square 5)
+  ; Evaluates to 25, demonstrating a simple symbolic manipulation of squaring a number.
+  ```
+## 9. Metaprogramming 
 - Involves writing programs that can treat programs as their data. It means that a program could be designed to read, generate, analyze, or transform other programs, and even modify itself while running. Languages that support metaprogramming include Ruby and Lisp.
+- example: python
+  ```python
+  def log_function_call(func):
+      def wrapper(*args, **kwargs):
+          print(f"Calling function '{func.__name__}' with arguments {args} and keyword arguments {kwargs}")
+          result = func(*args, **kwargs)
+          print(f"'{func.__name__}' returned {result}")
+          return result
+      return wrapper
+  
+  @log_function_call
+  def add(a, b):
+      return a + b
+  
+  # When you call add, it's now wrapped by log_function_call, which logs its execution.
+  add(10, 5)
 
+  ```
 # Text & Bytes
