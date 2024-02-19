@@ -1,9 +1,9 @@
 
 
 - [Code Execution](#code-execution)
-  - [1.Interprete](#1interprete)
-  - [2.Compile](#2compile)
-  - [3.Just In Time (JIT)](#3just-in-time-jit)
+  - [1. Interprete](#1-interprete)
+  - [2. Compile](#2-compile)
+  - [3. Just In Time (JIT)](#3-just-in-time-jit)
 - [Dynamic \& Static Type](#dynamic--static-type)
 - [Programming Paradigms](#programming-paradigms)
   - [1. Imperative Programming](#1-imperative-programming)
@@ -36,9 +36,9 @@
 | **Use Case**        | Scripting, small programs, rapid development.       | Large applications, systems programming, performance-critical applications.| Environments where performance and portability are both concerns.           |
 | **Examples**        | Python, Ruby, JavaScript                           | C, C++, Rust                                                              | Java Virtual Machine (JVM), .NET Framework Common Language Runtime (CLR)   |
 
-## 1.Interprete 
-## 2.Compile
-## 3.Just In Time (JIT)
+## 1. Interprete 
+## 2. Compile
+## 3. Just In Time (JIT)
 
 
 # Dynamic & Static Type
