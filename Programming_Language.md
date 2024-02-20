@@ -436,12 +436,12 @@
 - Text
   | Advantages                                                                                         | Disadvantages                                                                                       |
   |----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-  | Easily readable and writable by humans without needing decoding.                                   | May require more storage space for non-ASCII characters due to the nature of encoding standards.    |
+  | Human-readable, without needing decoding.                                   | More storage space for non-ASCII characters due to the nature of encoding standards.    |
   | Widely supported across programming languages with extensive functions for manipulation (e.g., search, replace). | Potential for confusion and errors due to multiple encoding standards (e.g., UTF-8 vs. ISO 8859-1). |
   | Can represent a vast range of characters from various languages using encoding standards like UTF-8. |                                                                                                     |
 - Bites
   | Advantages                                                                                                         | Disadvantages                                                                                                |
   |--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-  | More storage-efficient for binary data and can be more efficient for ASCII characters.                             | Not directly readable without decoding, which can add a layer of complexity for text manipulation.           |
+  | More storage-efficient for binary data, can be more efficient for ASCII characters.                             | Not directly readable without decoding, which can add a layer of complexity for text manipulation.           |
   | Can handle any binary data, including images, audio, and video files, making it versatile for different applications. | Primarily useful for binary data manipulation, which can be limiting for applications that primarily deal with text. |
   | Suitable for operations that require direct manipulation of memory contents.                                       | Requires explicit encoding and decoding for text representation, introducing potential for errors if not handled correctly. |
