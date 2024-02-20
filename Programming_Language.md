@@ -421,7 +421,8 @@
 
   ```
 # Text & Bytes
-  | Category         | Text                                          | Bytes                                         |
+
+  |          | Text                                          | Bytes                                         |
   |------------------|--------------------------------------------------|--------------------------------------------------|
   | Definition       | A sequence of characters representing linguistic expressions. | A sequence of bytes representing binary data.    |
   | Data Type        | Character data (e.g., Unicode in Python).        | Binary data (e.g., byte literals in Python).     |
