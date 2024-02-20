@@ -421,3 +421,13 @@
 
   ```
 # Text & Bytes
+  | Category         | Text                                          | Bytes                                         |
+  |------------------|--------------------------------------------------|--------------------------------------------------|
+  | Definition       | A sequence of characters representing linguistic expressions. | A sequence of bytes representing binary data.    |
+  | Data Type        | Character data (e.g., Unicode in Python).        | Binary data (e.g., byte literals in Python).     |
+  | Encoding         | Requires an encoding standard (e.g., UTF-8) to be converted into bytes. | Raw format that can be interpreted into text or other data types using specific encoding. |
+  | Usage            | Used for text processing, manipulation, and storage in a readable format for humans. | Used for low-level data manipulation and storage, including binary files, images, and serialized objects. |
+  | Mutability       | Immutable in some languages (e.g., Python strings). | Immutable if defined as a bytes literal in some languages (e.g., Python). |
+  | Storage Efficiency | Less efficient compared to bytes for non-ASCII characters due to encoding (e.g., UTF-8 uses more bytes for characters outside the ASCII range). | More efficient for storing binary data and ASCII characters. |
+  | Operations       | Supports operations like concatenation, slicing, and case conversion. | Supports operations like concatenation, slicing, but not text-specific operations like case conversion. |
+  | Compatibility    | Directly readable and manipulable by humans and text-processing tools. | Requires decoding to be human-readable. Compatible with binary data processing tools. |
