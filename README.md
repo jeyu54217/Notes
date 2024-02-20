@@ -81,7 +81,7 @@
   ```
 - Comparison X, Y
   ```
-  X,Y=[    ,    ]
-  1. Create a Markdown table comparing 'X' and 'Y'. For each category, provide a clear and "detailed" comparison.
+  X,Y=[ , ]
+  1. Create a Markdown table(in code) comparing 'X' and 'Y'. For each category, provide a clear and "detailed" comparison.
   2. List the advantages and disadvantages of 'X' and 'Y'. For each item, provide a concise but comprehensive list of pros and cons.
   ```
