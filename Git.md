@@ -48,8 +48,6 @@
   git init
   ```
 
-
-
 ### Branching and Merging
 
 - **List all branches**
