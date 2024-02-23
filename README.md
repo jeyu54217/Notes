@@ -71,8 +71,8 @@
   ```
 - Perceptions Info
   ```
-  L=[   ]
-  What are the common perceptions (pros and cons) of [L] among "visitors" and "residents"?
+  L=[   ],
+  List common views (advantages and disadvantages) of [L] from both [visitors] and [locals].
   ```
 ### Learning
 - Explain
