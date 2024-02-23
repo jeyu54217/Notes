@@ -73,6 +73,7 @@
   ```
   L=[   ],
   List common views (advantages and disadvantages) of [L] from both [visitors] and [locals].
+  Each one should have at least 5 points.
   ```
 ### Learning
 - Explain
