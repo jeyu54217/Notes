@@ -72,12 +72,12 @@
 - Perceptions Info
   ```
   L=[   ]
-  What are the common perceptions (pros and cons) of [L] among "visitors" and "local residents"?
+  What are the common perceptions (pros and cons) of [L] among "visitors" and "residents"?
   ```
 ### Learning
 - Explain
   ```
-  create a Markdown table to explain [   ]
+  create a Markdown table(in code) to explain [   ]
   ```
 - Comparison X, Y
   ```
