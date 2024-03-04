@@ -3,7 +3,7 @@
 - [Django](https://github.com/jeyu54217/Notes/blob/main/Django/Setting_Up.md#install)
 - [DB](https://github.com/jeyu54217/Notes/blob/main/DB/Setting_Up.md)
 - [Git](https://github.com/jeyu54217/Notes/blob/main/git.md)
-- 
+  
 ## VScode
 - Make Contents
   ```
