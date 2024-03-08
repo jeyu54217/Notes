@@ -64,6 +64,10 @@
   ```bash
   git checkout [branch-name]
   ```
+- **push branch to remote repo**
+  ```bash
+  git push --set-upstream origin [branch-name]
+  ```
 
 - **Merge a branch into the active branch**
   ```bash
