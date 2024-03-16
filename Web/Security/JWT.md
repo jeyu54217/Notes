@@ -1,4 +1,68 @@
 **CONTENTS**
+- [Introduction to JWT](#introduction-to-jwt)
+- [Structure of JWT](#structure-of-jwt)
+  - [Header](#header)
+  - [Payload](#payload)
+  - [Signature](#signature)
+- [How JWT Works](#how-jwt-works)
+- [Uses of JWT](#uses-of-jwt)
+  - [Authentication](#authentication)
+  - [Information Exchange](#information-exchange)
+- [Advantages and Disadvantages](#advantages-and-disadvantages)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+- [Security Considerations](#security-considerations)
+
+# Introduction to JWT
+- JSON Web Tokens (JWT) are an open standard (RFC 7519) that define a compact and self-contained way for securely transmitting information between parties as a JSON object.
+
+- This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+# Structure of JWT
+JWTs consist of three parts, separated by dots (.), which are: Header, Payload, and Signature. Therefore, a JWT typically looks like `xxxxx.yyyyy.zzzzz`.
+
+## Header
+The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+
+## Payload
+The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims: registered, public, and private claims.
+
+## Signature
+To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+
+# How JWT Works
+- When a user logs in using their credentials, a JWT is returned.
+- Whenever the user wants to access a protected route or resource, the user agent should send the JWT, typically in the Authorization header using the Bearer schema.
+- The server's protected routes will check for a valid JWT in the Authorization header, and if it's present, the user will be allowed to access protected resources.
+
+# Uses of JWT
+## Authentication
+JWTs are often used to implement authentication. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+
+## Information Exchange
+JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are.
+
+# Advantages and Disadvantages
+## Advantages
+- Compact: Because of their smaller size, JWTs can be sent through URL, POST parameters, or inside HTTP headers. Additionally, JWT's compact size makes it more feasible for SSO scenarios.
+- Self-contained: The payload contains all the required information about the user, avoiding the need to query the database more than once.
+
+## Disadvantages
+- Security concerns: If the token is intercepted, it can be used by an unauthorized party. Also, because the information in a JWT is encoded and not encrypted, sensitive information should not be stored in a JWT.
+- No state management: JWTs do not allow for invalidation or updating without replacing the token on the client side.
+
+# Security Considerations
+- Always ensure HTTPS is used to prevent MITM (Man in the Middle) attacks.
+- Implement token expiration (exp claim) to reduce the risk of token replay attacks.
+- Consider using a public/private key pair (RSA) for signing if you want to avoid sharing a secret key.
+
+
+
+
+
+
+
+
 - [JWT (JSON Web Token)](#jwt-json-web-token)
   - [Token Composition](#token-composition)
     - [1. HEADER](#1-header)
