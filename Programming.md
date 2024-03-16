@@ -444,3 +444,6 @@
   | More storage-efficient for binary data, can be more efficient for ASCII characters.                             | Not directly readable without decoding, which can add a layer of complexity for text manipulation.           |
   | Can handle any binary data, including images, audio, and video files, making it versatile for different applications. | Primarily useful for binary data manipulation, which can be limiting for applications that primarily deal with text. |
   | Suitable for operations that require direct manipulation of memory contents.                                       | Requires explicit encoding and decoding for text representation, introducing potential for errors if not handled correctly. |
+
+
+# Library & Framework

@@ -18,3 +18,5 @@
 | Gensim                      | Document similarity, topic modeling                                            | Handling large text corpora, unsupervised topic modeling                                    | Moderate          | Unsupervised NLP, topic modeling  |
 | Stanford NLP                | Linguistic annotation (POS tagging, NER, parsing)                              | Robust linguistic analysis, support for multiple languages                                  | Moderate to Hard  | Academic research, linguistic analysis|
 | AllenNLP                    | Text understanding, generation                                                 | Modular architecture, designed for research, easy experimentation with deep learning models| Moderate          | Academic research, NLP experiments|
+
+

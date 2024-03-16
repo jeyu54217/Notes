@@ -131,7 +131,6 @@
 ## Data Structures and Algorithms
 ### 1. Explain the difference between a list and a tuple. Why would you choose one over the other?
 ### 2. How do you implement a stack and a queue in Python?
-### 3. What is a dictionary in Python and how does it differ from a list?
 ### 4. How can you handle collisions in a hash table?
 ### 5. Describe the process of tree traversal (pre-order, in-order, post-order).
 ### 6. Explain how quicksort works. What is its time complexity?
@@ -151,7 +150,7 @@
 ### 20. What is a trie, and how do you use it for efficient string searches?
 
 ## Object-Oriented Programming (OOP)
-### 1. Explain the concept of classes and instances in Python.
+
 ### 2. What are the principles of object-oriented programming in Python?
 ### 3. How does Python support polymorphism?
 ### 4. Explain the use and purpose of the `self` keyword in classes.
@@ -259,3 +258,7 @@
 ### 18. What are the best practices for error handling in Python?
 ### 19. How do you use logging effectively in Python applications?
 ### 20. Discuss the advancements in Python package management.
+
+
+
+
