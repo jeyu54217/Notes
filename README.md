@@ -79,40 +79,29 @@
 - Explain
   ```
   explain [   ] in detail using md including Table of contents
+  
   ex.
-  - [Document and Element Manipulation](#document-and-element-manipulation)
-    - [**DOM (Document Object Model) API**](#dom-document-object-model-api)
-    - [**CSSOM (CSS Object Model)**: Manipulate CSS stylesheets and rules programmatically.](#cssom-css-object-model-manipulate-css-stylesheets-and-rules-programmatically)
-  - [Network Requests and Communication](#network-requests-and-communication)
-    - [**Fetch API**](#fetch-api)
-    - [**XMLHttpRequest**](#xmlhttprequest)
-    - [**WebSockets**](#websockets)
-    - [**Server-Sent Events (SSE)**](#server-sent-events-sse)
+  - [Title A](#title-a)
+    - [Subtitle A](#subtitle-a)
+    - [Subtitle B](#subtitle-b)
+  - [Title B](#title-b)
+    - [Subtitle A](#subtitle-a-1)
+    - [Subtitle B](#subtitle-b-1)
   
-  # Document and Element Manipulation
-  ## **DOM (Document Object Model) API**
-  - Manipulate HTML and CSS, dynamically changing content, structure, and style.
-  - Structure
-    - **Nodes**
-    - **Tree Structure**
-  - Manipulating
-    - **CRUD HTML elements**
-    - **Change CSS styles**
-    - **React to user interactions**
-      - clicks, keyboard presses, mouse movements, etc.
-    
-  ## **CSSOM (CSS Object Model)**: Manipulate CSS stylesheets and rules programmatically.
+  # Title A
+  ## Subtitle A
+  - content A
+    - content a
+    - content b
+  - content B
+  ## Subtitle B
   
-  # Network Requests and Communication
-  ## **Fetch API** 
-  - Perform network requests to retrieve or send data over the network asynchronously.
-  ## **XMLHttpRequest**
-  - An older way of performing network requests; largely superseded by the Fetch API.
-  ## **WebSockets**
-  - Facilitate real-time, bidirectional communication between web clients and servers.
-  ## **Server-Sent Events (SSE)**
-  - Allow servers to push updates to clients over HTTP or HTTPS.
-
+  # Title B
+  ## Subtitle A
+  - content a
+  ## Subtitle B
+  - content a
+  
   ```
 - Comparison X, Y
   ```
