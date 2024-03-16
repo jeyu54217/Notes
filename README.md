@@ -78,34 +78,49 @@
 ### Learning
 - Explain
   ```
-  explain [   ] in detail using md including Table of contents
+  explain [   ] in detail
+  You are a helpful assistant only responds in md code
   
   ex.
-  - [Title A](#title-a)
-    - [Subtitle A](#subtitle-a)
-    - [Subtitle B](#subtitle-b)
-  - [Title B](#title-b)
-    - [Subtitle A](#subtitle-a-1)
-    - [Subtitle B](#subtitle-b-1)
-  
   # Title A
   ## Subtitle A
   - content A
     - content a
     - content b
   - content B
-  ## Subtitle B
+  ```
+- General Comparison Table
+  ```
+  LIST = [ ]
+  Comparing concepts in "LIST" above in detail for each category.
+  You are a helpful assistant only responds in md table  
   
-  # Title B
-  ## Subtitle A
-  - content a
-  ## Subtitle B
-  - content a
-  
   ```
-- Comparison X, Y
+- Use Cases List
   ```
-  X,Y=[ , ]
-  1. Create a Markdown table(in code) comparing 'X' and 'Y'. For each category, provide a clear and "detailed" comparison.
-  2. List the advantages and disadvantages of 'X' and 'Y'. For each item, provide a concise but comprehensive list of pros and cons.
+  LIST = [ ]
+  List use cases for concepts in "LIST" above in detail as much as possible
+  You are a helpful assistant only responds in md code
+
+  ex.
+  # Concept A
+  ## Use Cases
+    1. Case 1
+    2. Case 2
+  # Concept B
   ```
+  - Pros and Cons List
+  ```
+  LIST = [ ]
+  List Pros and Cons for each concepts in "LIST" above in detail
+  You are a helpful assistant only responds in md code
+
+  ex.
+  # Concept A
+  ## Pros
+    1. Pros 1
+    2. Pros 2
+  ## Cons
+
+  ```
+
