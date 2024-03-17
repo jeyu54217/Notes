@@ -65,7 +65,13 @@
   List 20 best Destination to travel to during [MONTH] in [AREA] above with brief reasons,
   only respond to the list.
   ```
-
+- Hidden Gem
+  ```
+  AREA=[  ]
+  MONTH=[   ]
+  List 20 best Hidden Gems to travel to during [MONTH] in [AREA] above with brief reasons,
+  only respond to the list.
+  ```
 - Days Estimation
   ```
   PLACE=[  ]  
