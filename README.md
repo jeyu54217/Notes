@@ -70,7 +70,7 @@
   PLACE=[   ]  
   Plan a [DAYS] days trip for [PLACE] above.
   first-time visitors,
-  only response in a MD table.
+  only response in code of MD table.
 
   ex.
   |Timing | Day 1 | Day 2 | Day3 |
@@ -118,7 +118,7 @@
   ```
   LIST = [ ]
   Comparing concepts in "LIST" above in detail.
-  only responds in md table  
+  only response in code of MD table.
   
   ```
 - Use Cases List
