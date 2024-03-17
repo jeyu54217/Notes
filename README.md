@@ -62,7 +62,7 @@
   ```
   AREA=[  ]
   MONTH=[   ]
-  List the best Destination to travel to during [MONTH] in [AREA] above with brief reasons,
+  List 20 best Destination to travel to during [MONTH] in [AREA] above with brief reasons,
   only respond to the list.
   ```
 
@@ -72,6 +72,7 @@
   Days to visit [PLACE] above,
   only response in the number of days
   ```
+  
 - Travel Schedule
   ```
   DAYS=[   ]
