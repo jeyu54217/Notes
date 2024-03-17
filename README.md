@@ -58,6 +58,14 @@
     6. Below each English introduction, include a version formatted in Markdown code."
     ```
 ### Travel
+- Destination
+  ```
+  AREA=[  ]
+  MONTH=[   ]
+  List the best Destination to travel to during [MONTH] in [AREA] above with brief reasons,
+  only respond to the list.
+  ```
+
 - Days Estimation
   ```
   PLACE=[  ]  
