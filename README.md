@@ -135,17 +135,17 @@
   # Concept B
   ```
 - Pros and Cons List
-```
-LIST = [ ]
-List Pros and Cons for each concepts in "LIST" above in detail
-only responds in md code
+  ```
+  LIST = [ ]
+  List Pros and Cons for each concepts in "LIST" above in detail
+  only responds in md code
+  
+  ex.
+  # Concept A
+  ## Pros
+    1. Pros 1
+    2. Pros 2
+  ## Cons
 
-ex.
-# Concept A
-## Pros
-  1. Pros 1
-  2. Pros 2
-## Cons
-
-```
+  ```
 
