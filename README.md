@@ -60,10 +60,9 @@
 ### Travel
 - Days Estimation
   ```
-  PLACE=[   ]  
+  PLACE=[  ]  
   Days to visit [PLACE] above,
-  first-time visitors,
-  return only number of days
+  only response in the number of days
   ```
 - Travel Schedule
   ```
@@ -71,7 +70,7 @@
   PLACE=[   ]  
   Plan a [DAYS] days trip for [PLACE] above.
   first-time visitors,
-  return only md table.
+  only response in a MD table.
 
   ex.
   |Timing | Day 1 | Day 2 | Day3 |
@@ -80,13 +79,13 @@
   | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   ```
-- Brief History
+- Public Transportation
   ```
   PLACE=[  ]  
   Public transportation for [PLACE] above,
   List by points.
   ```
-- Brief History
+- History
   ```
   PLACE=[  ]  
   Modern History for [PLACE] above,
@@ -135,18 +134,18 @@
     2. Case 2
   # Concept B
   ```
-  - Pros and Cons List
-  ```
-  LIST = [ ]
-  List Pros and Cons for each concepts in "LIST" above in detail
-  only responds in md code
+- Pros and Cons List
+```
+LIST = [ ]
+List Pros and Cons for each concepts in "LIST" above in detail
+only responds in md code
 
-  ex.
-  # Concept A
-  ## Pros
-    1. Pros 1
-    2. Pros 2
-  ## Cons
+ex.
+# Concept A
+## Pros
+  1. Pros 1
+  2. Pros 2
+## Cons
 
-  ```
+```
 
