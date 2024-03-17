@@ -60,14 +60,25 @@
 ### Travel
 - Travel Days Estimation
   ```
-  L=[   ]  
-  Suggest a visit duration in days for "L" for traveling, increase the duration number by 1, and only show me the number.
+  PLACE=[   ]  
+  Days to visit [PLACE] above,
+  first-time visitors,
+  return only number of days
   ```
 - Travel Planning
   ```
-  D=[   ]
-  L=[   ]  
-  Plan a [D] day trip for [L] for traveling.
+  DAYS=[   ]
+  PLACE=[   ]  
+  Plan a [DAYS] days trip for [PLACE] above.
+  first-time visitors,
+  return only md table.
+
+  ex.
+  |Timing | Day 1 | Day 2 | Day3 |
+  |-----|----------|-------------|
+  | Morning   | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
+  | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
+  | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   ```
 - Perceptions Info
   ```
@@ -79,7 +90,7 @@
 - Explain
   ```
   explain [   ] in detail
-  You are a helpful assistant only responds in md code
+  only responds in md code
   
   ex.
   # Title A
@@ -92,15 +103,15 @@
 - General Comparison Table
   ```
   LIST = [ ]
-  Comparing concepts in "LIST" above in detail for each category.
-  You are a helpful assistant only responds in md table  
+  Comparing concepts in "LIST" above in detail.
+  only responds in md table  
   
   ```
 - Use Cases List
   ```
   LIST = [ ]
   List use cases for concepts in "LIST" above in detail as much as possible
-  You are a helpful assistant only responds in md code
+  only responds in md code
 
   ex.
   # Concept A
@@ -113,7 +124,7 @@
   ```
   LIST = [ ]
   List Pros and Cons for each concepts in "LIST" above in detail
-  You are a helpful assistant only responds in md code
+  only responds in md code
 
   ex.
   # Concept A
