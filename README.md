@@ -58,14 +58,14 @@
     6. Below each English introduction, include a version formatted in Markdown code."
     ```
 ### Travel
-- Travel Days Estimation
+- Days Estimation
   ```
   PLACE=[   ]  
   Days to visit [PLACE] above,
   first-time visitors,
   return only number of days
   ```
-- Travel Planning
+- Travel Schedule
   ```
   DAYS=[   ]
   PLACE=[   ]  
@@ -80,12 +80,27 @@
   | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   ```
+- Brief History
+  ```
+  PLACE=[  ]  
+  Public transportation for [PLACE] above,
+  List by points.
+  ```
+- Brief History
+  ```
+  PLACE=[  ]  
+  Modern History for [PLACE] above,
+  List by points.
+  ```
+
+  
 - Perceptions Info
   ```
   L=[   ],
   List common views (advantages and disadvantages) of [L] from both [visitors] and [locals].
   Each one should have at least 5 points.
   ```
+  
 ### Learning
 - Explain
   ```
@@ -100,7 +115,7 @@
     - content b
   - content B
   ```
-- General Comparison Table
+- Comparison Table
   ```
   LIST = [ ]
   Comparing concepts in "LIST" above in detail.
