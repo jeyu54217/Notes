@@ -136,6 +136,12 @@
   only response in code of MD table.
   
   ```
+- Similar Tools List
+  ```
+  TARGET=[   ]
+  List similar commonly used Tools/Concepts in the industry with a brief intro for [TARGET]
+  only responds in md code
+  ```
 - Use Cases List
   ```
   LIST = [ ]
