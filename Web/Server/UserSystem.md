@@ -59,5 +59,5 @@
    - Mechanisms for users to request data deletion or export.
 
 ## 10. **Integration and Extensibility**
-    - APIs or hooks to integrate with other systems and services.
-    - Extensible frameworks for adding custom functionalities or integrating third-party services.
+  - APIs or hooks to integrate with other systems and services.
+  - Extensible frameworks for adding custom functionalities or integrating third-party services.
