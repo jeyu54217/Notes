@@ -102,6 +102,8 @@
   | Morning   | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
+
+  also return how it would render as a table
   ```
 - Public Transportation
   ```
@@ -143,6 +145,7 @@
   LIST = [ ]
   Comparing concepts in "LIST" above in detail.
   only response in code of MD table.
+  also return how it would render as a table
   
   ```
 - Similar Tools List
