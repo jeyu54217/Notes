@@ -5,7 +5,7 @@
 - [Git](https://github.com/jeyu54217/Notes/blob/main/Git.md)
   
 ## VScode
-- Make Contents
+- Make Table of Contents
   ```
   > Markdown All in One Create Table of Contents
   ```
