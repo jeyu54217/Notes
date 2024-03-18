@@ -20,7 +20,7 @@
   FUNCTIONS=[ ],
   TOOL=[ ],
 
-  How to make [FEATTURE] including [FUNCTIONS] above in [TOOL]?
+  How to make [FEATTURE] including [FUNCTIONS] above using [TOOL]?
   Professional advice.
 
   ```
