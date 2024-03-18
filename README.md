@@ -103,7 +103,8 @@
   | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
   | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
 
-  also return how it would render as a table
+  also, return how it would render as a table,
+  also, return csv file,
   ```
 - Public Transportation
   ```
