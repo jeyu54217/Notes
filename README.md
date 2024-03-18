@@ -10,10 +10,7 @@
   > Markdown All in One Create Table of Contents
   ```
 ## genAI Prompts
-- Make ChatGPT Prompt
-  ```
-  Adjust these sentences to be more precise, short, and easily interpretable by ChatGPT " "  
-  ```
+
 ### Software Dev
   ```
   FEATTURE=[ ],
@@ -24,7 +21,7 @@
   How to make [FEATTURE] including [FUNCTIONS] above using [TOOL]?
 
   ```
-### English
+### Language
   - Writing
     ```
     Rephrase these sentences to emulate casual British English " "  
