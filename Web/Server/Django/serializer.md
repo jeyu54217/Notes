@@ -13,8 +13,8 @@
 
 ## Definition
 - A serializer is a software mechanism used for transforming data structures or object states into a format that can be stored, transmitted, and reconstructed later.
-  - The process of converting an object into a storable format is known as **serialization**.
-  - Conversely, **deserialization** is the process of converting the serialized data back into a usable object or data structure.
+  - **serialization** : The process of converting an object into a storable format.
+  - **deserialization**: is the process of converting the serialized data back into a usable object or data structure.
 
 ## Purpose
 - The primary purpose of serialization is to enable the persistence of objects or data structures, typically to a file or database.
