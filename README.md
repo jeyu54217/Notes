@@ -15,15 +15,15 @@
   Adjust these sentences to be more precise, short, and easily interpretable by ChatGPT " "  
   ```
 ### Software Dev
-    ```
-    FEATTURE=[ ],
-    FUNCTIONS=[ ],
-    TOOL=[ ],
+  ```
+  FEATTURE=[ ],
+  FUNCTIONS=[ ],
+  TOOL=[ ],
 
-    How to make [FEATTURE] including [FUNCTIONS] above in [TOOL]?
-    Professional advice.
+  How to make [FEATTURE] including [FUNCTIONS] above in [TOOL]?
+  Professional advice.
 
-    ```
+  ```
 ### English
   - Writing
     ```
