@@ -13,23 +13,16 @@
       - [Examples](#examples)
   - [3.Signature](#3signature)
 - [How JWT Works](#how-jwt-works)
-- [Uses of JWT](#uses-of-jwt)
+- [Use Cases](#use-cases)
   - [Authentication](#authentication)
   - [Information Exchange](#information-exchange)
 - [Advantages and Disadvantages](#advantages-and-disadvantages)
   - [Advantages](#advantages)
   - [Disadvantages](#disadvantages)
 - [Security Considerations](#security-considerations)
-    - [3. SIGNATURE](#3-signature)
   - [Creating \& Validating](#creating--validating)
     - [Creating](#creating)
     - [Validating](#validating)
-  - [When to use ?](#when-to-use-)
-    - [Authorization](#authorization)
-    - [Information Exchange (securely transmitting)](#information-exchange-securely-transmitting)
-  - [Pros \& Cons](#pros--cons)
-    - [Pros](#pros)
-    - [Cons](#cons)
   - [References](#references)
 
 # Intro 
@@ -44,7 +37,8 @@
   - **Payload**
   - **Signatur**
 - JWTs are **Encoded** but **Not Encrypted** : Secret data should not be stored in the ```HEADER``` and ```PAYLOAD```.
-    - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
+  - <img width="664" alt="Screenshot 2024-03-19 at 00 18 57" src="https://github.com/jeyu54217/Notes/assets/73396926/6cd5122c-6464-4368-a9d7-135648efbd31">
+
   
 ## 1.Header
 - contains 2 parts:
@@ -111,19 +105,24 @@
 - When a user logs in using their credentials, a JWT is returned.
 - Whenever the user wants to access a protected route or resource, the user agent should send the JWT, typically in the Authorization header using the Bearer schema.
 - The server's protected routes will check for a valid JWT in the Authorization header, and if it's present, the user will be allowed to access protected resources.
+- <img width="664" alt="Screenshot 2024-03-19 at 00 19 06" src="https://github.com/jeyu54217/Notes/assets/73396926/128d07bb-a626-4340-874e-b048eeac79c9">
 
-# Uses of JWT
+# Use Cases
 ## Authentication
-JWTs are often used to implement authentication. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+- Single Sign On (SSO) : It's easily used across different domains.
 
 ## Information Exchange
-JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are.
-
+- JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are.
+- public/private key pairs 
+- signature : It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
+  
 # Advantages and Disadvantages
 ## Advantages
 - Compact: Because of their smaller size, JWTs can be sent through URL, POST parameters, or inside HTTP headers. Additionally, JWT's compact size makes it more feasible for SSO scenarios.
 - Self-contained: The payload contains all the required information about the user, avoiding the need to query the database more than once.
-
+- Security: public/private key supported
+- JSON parsers: cross-platform supported
+  
 ## Disadvantages
 - Security concerns: If the token is intercepted, it can be used by an unauthorized party. Also, because the information in a JWT is encoded and not encrypted, sensitive information should not be stored in a JWT.
 - No state management: JWTs do not allow for invalidation or updating without replacing the token on the client side.
@@ -137,11 +136,6 @@ JWTs are a good way of securely transmitting information between parties because
 
 
 
-### 3. SIGNATURE
-- Encryption Algorithm
-- HEADER(base64Url encoded) : For integrality, to make sure the HEADER is not changed.
-- PAYLOAD(base64Url encoded) : For integrality, to make sure the PAYLOAD is not changed.
-- server-side Private Key : The decryption key is only stored on the server side.
 
 ## Creating & Validating
 ### Creating
@@ -221,20 +215,9 @@ If any of the listed steps fail, then the JWT MUST be rejected
         representation of a completely valid JSON object conforming to
         RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.
 
-## When to use ?
-### Authorization
-   - Single Sign On (SSO) : It's easily used across different domains.
-### Information Exchange (securely transmitting)
-   - public/private key pairs 
-   - signature : It is calculated using the header and the payload  =  Could verify that the content hasn't been tampered with.
-## Pros & Cons
-### Pros
-  - JSON : simplicity Compact, less verbose, smaller size
-  - Self-contained : payload 裡面包含了使用者的資訊，也就是說解析後就可以看到，不需要再去 query 你的 database。
-  - Security : public/private key supportred
-  - JSON parsers - cross-platform supported
-### Cons
-  - Security Considerations
+
+
+
 ## References
 - [Introduction to JSON Web Tokens - JWT](https://jwt.io/introduction)
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
