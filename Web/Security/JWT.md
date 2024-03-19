@@ -1,12 +1,17 @@
 **CONTENTS**
 - [Intro](#intro)
 - [Structure](#structure)
-  - [Header](#header)
-  - [Payload](#payload)
-    - [Registered claims (Optional)](#registered-claims-optional)
-    - [Public claims](#public-claims)
-    - [Private claims](#private-claims)
-  - [Signature](#signature)
+  - [1.Header](#1header)
+  - [2.Payload](#2payload)
+    - [1.Registered claims (Optional)](#1registered-claims-optional)
+    - [2.Public claims](#2public-claims)
+      - [Characteristics](#characteristics)
+      - [Usage Guidelines](#usage-guidelines)
+    - [3.Private claims](#3private-claims)
+      - [Characteristics](#characteristics-1)
+      - [Usage Guidelines](#usage-guidelines-1)
+      - [Examples](#examples)
+  - [3.Signature](#3signature)
 - [How JWT Works](#how-jwt-works)
 - [Uses of JWT](#uses-of-jwt)
   - [Authentication](#authentication)
@@ -15,14 +20,6 @@
   - [Advantages](#advantages)
   - [Disadvantages](#disadvantages)
 - [Security Considerations](#security-considerations)
-- [JWT (JSON Web Token)](#jwt-json-web-token)
-  - [Token Composition](#token-composition)
-    - [2. PAYLOAD Claims](#2-payload-claims)
-      - [Claim](#claim)
-      - [i. Registered Claim](#i-registered-claim)
-        - [NumericDate](#numericdate)
-      - [ii. Public Claim](#ii-public-claim)
-      - [iii. Private Claim](#iii-private-claim)
     - [3. SIGNATURE](#3-signature)
   - [Creating \& Validating](#creating--validating)
     - [Creating](#creating)
@@ -49,19 +46,66 @@
 - JWTs are **Encoded** but **Not Encrypted** : Secret data should not be stored in the ```HEADER``` and ```PAYLOAD```.
     - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
   
-## Header
+## 1.Header
 - contains 2 parts:
   1. "typ" (type of the token) : JWT
   2. ["alg" (Signature Encryption Algorithm)](https://pyjwt.readthedocs.io/en/stable/algorithms.html#digital-signature-algorithms) : **HS256**, HMAC, SHA256, RSA
 
-## Payload
-- The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are 3 types of claims: registered, public, and private claims.
-### Registered claims (Optional)
-### Public claims
-### Private claims
+## 2.Payload
+- The payload contains the claims. 
+- JWT claims are statements about an entity (typically, the user) and additional data. 
+- 3 types of claims: 
+  - registered claims
+  - public claims
+  - private claims
+  
+### 1.Registered claims (Optional)
+- Commom used claims:
+  | Claim | Description |
+  |-------|-------------|
+  | iss (Issuer) | Identifies the principal that issued the JWT. |
+  | sub (Subject) | Identifies the principal that is the subject of the JWT. |
+  | aud (Audience) | Identifies the recipients that the JWT is intended for. |
+  | exp (Expiration Time) | Identifies the expiration time on or after which the JWT must not be accepted for processing. |
+  | nbf (Not Before) | Identifies the time before which the JWT must not be accepted for processing. |
+  | iat (Issued At) | Identifies the time at which the JWT was issued. |
+  | jti (JWT ID) | Provides a unique identifier for the JWT. |
+- See also : [JSON Web Token Claims](https://www.iana.org/assignments/jwt/jwt.xhtml)
 
-## Signature
-To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+### 2.Public claims
+- Public claims are those that have been predefined and are not directly related to the basic structure of a JWT but provide a means of sharing information between parties. 
+- These claims are not registered in the IANA JSON Web Token Claims registry but are designed to be collision-resistant.
+  
+#### Characteristics
+- **Universally Unique**: To ensure they are collision-resistant, public claims should either be defined in the IANA JSON Web Token Claims registry or be a URI that contains a collision-resistant namespace.
+- **Customizable**: Unlike registered claims, public claims allow the parties involved to convey specific information relevant to their context that is not covered by the standard registered claims.
+
+#### Usage Guidelines
+- **Avoiding Collisions**: When defining public claims, it's crucial to ensure they are unique to prevent conflicts with other claims. Using a URI as a claim name is a common practice to achieve this.
+- **Interoperability**: Even though public claims offer flexibility, it's important to use them in a way that does not hinder interoperability between different systems that might use the JWT.
+
+### 3.Private claims
+- Private claims are custom claims created to convey information between parties that agree on using them. 
+- These claims offer the most flexibility as they are tailored to the specific requirements of the application or context in which the JWT is used.
+#### Characteristics
+- **Flexibility**: Private claims can be anything agreed upon by the parties using them, making them extremely versatile for conveying application-specific information.
+- **Agreement Required**: Unlike public and registered claims, private claims require that all parties involved in the JWT exchange understand the meaning of these claims.
+
+#### Usage Guidelines
+- **Clear Definitions**: Since private claims are specific to the context in which they are used, it's essential for all parties involved to have a clear understanding of what each claim represents.
+- **Security Considerations**: When using private claims to convey sensitive information, ensure that the JWT is encrypted (JWE) to prevent unauthorized access to the data.
+
+#### Examples
+- **User Roles**: A private claim could be used to indicate the roles of the user within an application, allowing for role-based access control.
+- **Custom Identifiers**: Applications could use private claims to include custom identifiers relevant to the application domain, such as an internal user ID or transaction ID.
+
+
+## 3.Signature
+- To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+  - Encryption Algorithm
+  - HEADER(base64Url encoded) : For integrality, to make sure the HEADER is not changed.
+  - PAYLOAD(base64Url encoded) : For integrality, to make sure the PAYLOAD is not changed.
+  - server-side Private Key : The decryption key is only stored on the server side.
 
 # How JWT Works
 - When a user logs in using their credentials, a JWT is returned.
@@ -92,68 +136,6 @@ JWTs are a good way of securely transmitting information between parties because
 
 
 
-
-
-
-# JWT (JSON Web Token)
-   - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and separated by period ```.``` characters.
-
-## Token Composition
-  - Token consist of 3 parts separated by dots ```.``` and encode with ```base64Url```
-  - **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
-    - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
-
-### 2. PAYLOAD Claims 
-#### Claim
-   - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
-   - The ```Claim Names``` MUST be unique; JWT parsers MUST either reject JWTs with duplicate Claim Names.
-#### i. Registered Claim 
-  - All OPTIONAL & application specific
-  - See also : [JSON Web Token Claims](https://www.iana.org/assignments/jwt/jwt.xhtml)
-  1. ```"sub"```(Subject) Claim 
-      - The subject value MUST either be scoped to be locally unique in the context of the issuer or be globally unique.
-  3. ```"iss"``` (Issuer) Claim
-  4. ```"iat"``` (Issued At) Claim 
-      -  the time at which the JWT was issued.  
-      -  Can be used to determine the age of the JWT.  
-      -  Its value MUST be a ```Number``` containing a``` NumericDate``` value.
-  5. ```"exp"``` (Expiration Time) Claim
-      -  The expiration time on or after which the JWT MUST NOT be accepted for processing. 
-      -  requires that the current date/time MUST be before the expiration date/time listed in the "exp" claim.   
-      -  Implementers MAY provide for some small leeway, usually no more than a few minutes
-      -  Its value MUST be a number containing a NumericDate value.
-  6. ```"nbf"``` (Not Before) Claim
-      - like **"exp"** (Expiration Time) Claim
-      - The time before which the JWT MUST NOT be accepted for processing.  
-      - The processing of the "nbf" claim requires that the current date/time MUST be after or equal to the not-before date/time listed in the "nbf" claim.
-  7. ```"aud"``` (Audience) Claim
-      - The recipients that the JWT is intended for.  
-      - Each principal intended to process the JWT MUST identify itself with a value in the audience claim.  
-      - In the general case, the "aud" value is an ```array``` of case-sensitive ```strings```, each containing a StringOrURI value.  
-      - In the special case when the JWT has one audience, the "aud" value MAY be a ```single case-sensitive string``` containing a StringOrURI value.
-  8. ```"jti"``` (JWT ID) Claim
-      - A unique identifier for the JWT.
-      - The identifier value MUST be assigned in a manner that ensures that there is a negligible probability that the same value will be accidentally assigned to a different data object
-      - if the application uses multiple issuers, collisions MUST be prevented among values produced by different issuers as well.
-      - The "jti" claim can be used to prevent the JWT from being replayed.
-##### NumericDate
-  - A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds. 
-  - each day is accounted for by exactly 86400 seconds
-#### ii. Public Claim 
-Claim Names can be defined at will by those using JWTs.  However, in
-   order to prevent collisions, any new Claim Name should either be
-   registered in the IANA "JSON Web Token Claims" registry established
-   by Section 10.1 or be a Public Name: a value that contains a
-   Collision-Resistant Name.  In each case, the definer of the name or
-   value needs to take reasonable precautions to make sure they are in
-   control of the part of the namespace they use to define the Claim
-   Name.
-#### iii. Private Claim 
-  A producer and consumer of a JWT MAY agree to use Claim Names that
-   are Private Names: names that are not Registered Claim Names
-   (Section 4.1) or Public Claim Names (Section 4.2).  Unlike Public
-      Claim Names, Private Claim Names are subject to collision and should
-   be used with caution.
 
 ### 3. SIGNATURE
 - Encryption Algorithm
