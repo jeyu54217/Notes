@@ -37,7 +37,8 @@
   - **Payload**
   - **Signatur**
 - JWTs are **Encoded** but **Not Encrypted** : Secret data should not be stored in the ```HEADER``` and ```PAYLOAD```.
-  - <img width="664" alt="Screenshot 2024-03-19 at 00 18 57" src="https://github.com/jeyu54217/Notes/assets/73396926/6cd5122c-6464-4368-a9d7-135648efbd31">
+  - <img width="1110" alt="Screenshot 2024-03-19 at 00 33 14" src="https://github.com/jeyu54217/Notes/assets/73396926/f60bdff0-9786-4348-a94c-eb17aa7a72a0">
+  (source: [securitum](https://research.securitum.com/jwt-json-web-token-security/))
 
   
 ## 1.Header
@@ -105,7 +106,7 @@
 - When a user logs in using their credentials, a JWT is returned.
 - Whenever the user wants to access a protected route or resource, the user agent should send the JWT, typically in the Authorization header using the Bearer schema.
 - The server's protected routes will check for a valid JWT in the Authorization header, and if it's present, the user will be allowed to access protected resources.
-- <img width="664" alt="Screenshot 2024-03-19 at 00 19 06" src="https://github.com/jeyu54217/Notes/assets/73396926/128d07bb-a626-4340-874e-b048eeac79c9">
+- <img width="664" alt="Screenshot 2024-03-19 at 00 19 06" src="https://github.com/jeyu54217/Notes/assets/73396926/128d07bb-a626-4340-874e-b048eeac79c9"> (source: [ByteByteGo](https://blog.bytebytego.com/p/ep69-explaining-json-web-token-jwt))
 
 # Use Cases
 ## Authentication
