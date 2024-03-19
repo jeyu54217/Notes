@@ -23,9 +23,10 @@
    1. Password complexity requirements
    2. Sign-up with verification processes (e.g., email verification).
    3. Verification token timeouts
-   4. 3-Patty Sign up ([Google Developer Console](https://console.cloud.google.com/apis/dashboard))
+   4. 3-Patty Sign up 
    5. Captcha to prevent automated sign-ups.
   ```
+   - [Google Developer Console](https://console.cloud.google.com/apis/dashboard)
 ## 3. **Authentication**
   ```bash
    1. Login & Logout
