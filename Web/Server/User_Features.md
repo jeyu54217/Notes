@@ -26,7 +26,7 @@
    4. 3-Patty Sign up 
    5. Captcha to prevent automated sign-ups.
   ```
-   - [Google Developer Console](https://console.cloud.google.com/apis/dashboard)
+   - 3-patty sign up: [Google Developer Console](https://console.cloud.google.com/apis/dashboard)
 ## 3. **Authentication**
   ```bash
    1. Login & Logout
