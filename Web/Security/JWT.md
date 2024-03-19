@@ -23,7 +23,9 @@
   - [Creating \& Validating](#creating--validating)
     - [Creating](#creating)
     - [Validating](#validating)
-  - [References](#references)
+- [Implimentation](#implimentation)
+  - [Python](#python)
+- [References](#references)
 
 # Intro 
 - **Open standard** (RFC 7519)
@@ -217,9 +219,20 @@ If any of the listed steps fail, then the JWT MUST be rejected
         RFC 7159 [RFC7159]; let the JWT Claims Set be this JSON object.
 
 
+# Implimentation
+## Python 
+  | Feature/Tool | PyJWT | DRF JWT | DRF SimpleJWT |
+  |--------------|-------|---------|---------------|
+  | **Primary Use** | JWT encoding/decoding for Python applications | JWT Authentication for Django REST Framework applications | JWT Authentication extension for Django REST Framework with additional features |
+  | **Library Type** | Generic JWT handling library | DRF-specific extension for JWT authentication | DRF-specific extension offering more modern approach to JWT authentication |
+  | **Main Features** | - Encode/decode JWT tokens<br>- Support for various algorithms | - Token authentication mechanism<br>- Token refresh capability | - Sliding token refresh mechanism<br>- Customizable token lifetimes<br>- Blacklisting tokens |
+  | **Ease of Use** | Requires manual integration into projects | Integrated with DRF's authentication system | Offers more features with similar integration ease as DRF JWT |
+  | **Token Refresh** | Not specifically handled, requires custom implementation | Supports token refresh through a specific endpoint | Advanced refresh mechanisms, including sliding tokens |
+  | **Customization** | High, but requires more setup | Limited to settings provided by the extension | Extensive customization options for token handling |
+  | **Community and Support** | Widely used in the Python community | Legacy support, as it's no longer actively developed | Actively developed and supported with a focus on modern security practices |
 
 
-## References
+# References
 - [Introduction to JSON Web Tokens - JWT](https://jwt.io/introduction)
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
 - [JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
