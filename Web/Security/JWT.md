@@ -1,8 +1,11 @@
 **CONTENTS**
-- [Introduction to JWT](#introduction-to-jwt)
-- [Structure of JWT](#structure-of-jwt)
+- [Intro](#intro)
+- [Structure](#structure)
   - [Header](#header)
   - [Payload](#payload)
+    - [Registered claims (Optional)](#registered-claims-optional)
+    - [Public claims](#public-claims)
+    - [Private claims](#private-claims)
   - [Signature](#signature)
 - [How JWT Works](#how-jwt-works)
 - [Uses of JWT](#uses-of-jwt)
@@ -12,20 +15,50 @@
   - [Advantages](#advantages)
   - [Disadvantages](#disadvantages)
 - [Security Considerations](#security-considerations)
+- [JWT (JSON Web Token)](#jwt-json-web-token)
+  - [Token Composition](#token-composition)
+    - [2. PAYLOAD Claims](#2-payload-claims)
+      - [Claim](#claim)
+      - [i. Registered Claim](#i-registered-claim)
+        - [NumericDate](#numericdate)
+      - [ii. Public Claim](#ii-public-claim)
+      - [iii. Private Claim](#iii-private-claim)
+    - [3. SIGNATURE](#3-signature)
+  - [Creating \& Validating](#creating--validating)
+    - [Creating](#creating)
+    - [Validating](#validating)
+  - [When to use ?](#when-to-use-)
+    - [Authorization](#authorization)
+    - [Information Exchange (securely transmitting)](#information-exchange-securely-transmitting)
+  - [Pros \& Cons](#pros--cons)
+    - [Pros](#pros)
+    - [Cons](#cons)
+  - [References](#references)
 
-# Introduction to JWT
-- JSON Web Tokens (JWT) are an open standard (RFC 7519) that define a compact and self-contained way for securely transmitting information between parties as a JSON object.
+# Intro 
+- **Open standard** (RFC 7519)
+- Define a **compact** and **self-contained** way for securely transmitting information as a **JSON object**.
+- **Verified and Trusted** (is digitally signe)
+  - JWTs can be signed using a **secret** ( HMAC algorithm) or a **public/private key pair** using RSA or ECDSA.
 
-- This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-
-# Structure of JWT
-JWTs consist of three parts, separated by dots (.), which are: Header, Payload, and Signature. Therefore, a JWT typically looks like `xxxxx.yyyyy.zzzzz`.
-
+# Structure 
+- JWTs consist of 3 parts, separated by dots (.), and the whole JSON obj is encode with ```base64Url``` , typically looks like **`xxxxx.yyyyy.zzzzz`**
+  - **Header**
+  - **Payload**
+  - **Signatur**
+- JWTs are **Encoded** but **Not Encrypted** : Secret data should not be stored in the ```HEADER``` and ```PAYLOAD```.
+    - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
+  
 ## Header
-The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+- contains 2 parts:
+  1. "typ" (type of the token) : JWT
+  2. ["alg" (Signature Encryption Algorithm)](https://pyjwt.readthedocs.io/en/stable/algorithms.html#digital-signature-algorithms) : **HS256**, HMAC, SHA256, RSA
 
 ## Payload
-The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims: registered, public, and private claims.
+- The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are 3 types of claims: registered, public, and private claims.
+### Registered claims (Optional)
+### Public claims
+### Private claims
 
 ## Signature
 To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
@@ -62,28 +95,6 @@ JWTs are a good way of securely transmitting information between parties because
 
 
 
-
-- [JWT (JSON Web Token)](#jwt-json-web-token)
-  - [Token Composition](#token-composition)
-    - [1. HEADER](#1-header)
-    - [2. PAYLOAD Claims](#2-payload-claims)
-      - [Claim](#claim)
-      - [i. Registered Claim](#i-registered-claim)
-        - [NumericDate](#numericdate)
-      - [ii. Public Claim](#ii-public-claim)
-      - [iii. Private Claim](#iii-private-claim)
-    - [3. SIGNATURE](#3-signature)
-  - [Creating & Validating](#creating--validating)
-    - [Creating](#creating)
-    - [Validating](#validating)
-  - [When to use ?](#when-to-use-)
-    - [Authorization](#authorization)
-    - [Information Exchange (securely transmitting)](#information-exchange-securely-transmitting)
-  - [Pros & Cons](#pros--cons)
-    - [Pros](#pros)
-    - [Cons](#cons)
-  - [References](#references)
-
 # JWT (JSON Web Token)
    - A ```string``` representing a set of ```claims``` as a ```JSON``` object that is encoded in ```base64url```, enabling the ```claims``` to be digitally signed and/or encrypted, and separated by period ```.``` characters.
 
@@ -92,10 +103,6 @@ JWTs are a good way of securely transmitting information between parties because
   - **Encode** but **Not Encrypted** : Secret data should not be in the ```HEADER``` and ```PAYLOAD```
     - <img width="530" alt="image" src="https://user-images.githubusercontent.com/73396926/200079344-e5b3062e-3534-45e3-be20-1a5fd1e2755e.png">
 
-### 1. HEADER 
-  - Typically consists of 2 parts:
-     1. "typ" (Token type) : JWT
-     2. ["alg" (Signature Encryption Algorithm)](https://pyjwt.readthedocs.io/en/stable/algorithms.html#digital-signature-algorithms) : HS256
 ### 2. PAYLOAD Claims 
 #### Claim
    - The ```JWT Claims``` represents a ```JSON``` object whose members are the claims conveyed by the JWT.  
