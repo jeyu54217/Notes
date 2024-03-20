@@ -58,36 +58,47 @@
   AREA=[  ]
   MONTH=[   ]
   List 20 best Destination to travel to during [MONTH] in [AREA] above with brief reasons,
-  only respond to the list.
+  add link (google map search) to each name,
+  only respond to list.
+
+  ex.
+  1.[Place Name](https://www.google.com/maps/search/Place+Name): brief Intro...
   ```
 - Hidden Gem
   ```
   AREA=[  ]
   MONTH=[   ]
   List 20 best Hidden Gems to travel to during [MONTH] in [AREA] above with brief reasons,
-  only respond to the list.
+  add link (google map search) to each name,
+  only respond to list.
+
+  ex.
+  1.[Place Name](https://www.google.com/maps/search/Place+Name): brief Intro...
   ```
 - Days Estimation
   ```
   PLACE=[  ]  
   Days to visit [PLACE] above,
   only response in the number of days
+
+  ex.
+  3 days
   ```
   
 - Travel Schedule
   ```
   DAYS=[   ]
   PLACE=[   ]  
-  Plan a [DAYS] days trip for [PLACE] above.
-  first-time visitors,
+  Plan a [DAYS] days trip for [PLACE] above,
+  add link (google map search) to each name,
   only response in code of MD table.
 
   ex.
   |Timing | Day 1 | Day 2 | Day3 |
   |-----|----------|-------------|
-  | Morning   | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
-  | Afternoon  | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
-  | Night | 1.Place A 2.Place B | 1.Place A 2.Place B  | 1.Place A 2.Place B 3.Place C |
+  | Morning   | 1.[Place Name](https://www.google.com/maps/search/Place+Name) 2.[Place Name](https://www.google.com/maps/search/Place+Name)| 1.Place A 2.Place B  | 1.Place A 2.[Place Name](https://www.google.com/maps/search/Place+Name) 3.[Place Name](https://www.google.com/maps/search/Place+Name) |
+  | Afternoon  | 1.[Place Name](https://www.google.com/maps/search/Place+Name) 2.[Place Name](https://www.google.com/maps/search/Place+Name) | 1.[Place Name](https://www.google.com/maps/search/Place+Name) 2.[Place Name](https://www.google.com/maps/search/Place+Name)  | 1.[Place Name](https://www.google.com/maps/search/Place+Name)  |
+  | Night | 1.[Place Name](https://www.google.com/maps/search/Place+Name) | 1.[Place Name](https://www.google.com/maps/search/Place+Name) 2.[Place Name](https://www.google.com/maps/search/Place+Name)  | 1.[Place Name](https://www.google.com/maps/search/Place+Name) |
 
   also, return how it would render as a table,
   also, return csv file,
