@@ -221,6 +221,7 @@ If any of the listed steps fail, then the JWT MUST be rejected
 
 # Implimentation
 ## Python 
+### PyJWT, DRF JWT, DRF SimpleJWT
   | Feature/Tool | PyJWT | DRF JWT | DRF SimpleJWT |
   |--------------|-------|---------|---------------|
   | **Primary Use** | JWT encoding/decoding for Python applications | JWT Authentication for Django REST Framework applications | JWT Authentication extension for Django REST Framework with additional features |
@@ -230,6 +231,16 @@ If any of the listed steps fail, then the JWT MUST be rejected
   | **Token Refresh** | Not specifically handled, requires custom implementation | Supports token refresh through a specific endpoint | Advanced refresh mechanisms, including sliding tokens |
   | **Customization** | High, but requires more setup | Limited to settings provided by the extension | Extensive customization options for token handling |
   | **Community and Support** | Widely used in the Python community | Legacy support, as it's no longer actively developed | Actively developed and supported with a focus on modern security practices |
+
+### TOKEN in DRF SimpleJWT
+| Feature | ACCESS_TOKEN | REFRESH_TOKEN |
+|---------|--------------|---------------|
+| Purpose | Used to authenticate API requests. It's short-lived to minimize the risk if it's compromised. | Used to obtain a new ACCESS_TOKEN once it expires without needing the user to log in again. It's longer-lived than the ACCESS_TOKEN. |
+| Expiry | Typically expires in minutes (configurable in SIMPLE_JWT settings). | Typically expires in days or weeks (configurable in SIMPLE_JWT settings). |
+| Security | High-security level but shorter lifespan. If compromised, it only grants short-term access. | Lower security relative to ACCESS_TOKEN due to its longer lifespan. Its compromise poses a higher risk. |
+| Usage | Sent in the Authorization header to access protected resources. | Sent to a token refresh endpoint to obtain a new ACCESS_TOKEN. |
+| Renewability | Cannot be renewed. Once expired, a new ACCESS_TOKEN must be obtained using a REFRESH_TOKEN. | Can be renewed depending on the configuration in SIMPLE_JWT settings (ROTATE_REFRESH_TOKENS setting). |
+
 
 
 # References
