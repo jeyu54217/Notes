@@ -241,6 +241,7 @@ If any of the listed steps fail, then the JWT MUST be rejected
 | Usage | Sent in the Authorization header to access protected resources. | Sent to a token refresh endpoint to obtain a new ACCESS_TOKEN. |
 | Renewability | Cannot be renewed. Once expired, a new ACCESS_TOKEN must be obtained using a REFRESH_TOKEN. | Can be renewed depending on the configuration in SIMPLE_JWT settings (ROTATE_REFRESH_TOKENS setting). |
 
+ See also : [simplejwt settings](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html) 
 
 
 # References
