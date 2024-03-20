@@ -87,8 +87,8 @@
   
 - Travel Schedule
   ```
-  DAYS=[   ]
   PLACE=[   ]  
+  DAYS=[   ]
   Plan a [DAYS] days trip for [PLACE] above,
   add link (google map search) to each name,
   only response in code of MD table.
