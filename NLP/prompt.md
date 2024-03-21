@@ -1,6 +1,21 @@
-## genAI Prompts
+- [genAI Prompts](#genai-prompts)
+  - [Software Dev](#software-dev)
+  - [Learning](#learning)
+    - [Explain](#explain)
+    - [Compare (table)](#compare-table)
+    - [Find Similar Tools (list)](#find-similar-tools-list)
+    - [Find Use Cases (list)](#find-use-cases-list)
+    - [Pros and Cons (list)](#pros-and-cons-list)
+  - [Travel](#travel)
+  - [Language](#language)
+  - [Article](#article)
+  - [Outline Chapters in a Book](#outline-chapters-in-a-book)
+  - [Instagram Post](#instagram-post)
 
-### Software Dev
+
+# genAI Prompts
+
+## Software Dev
   ```
   FEATTURE=[ ],
   FUNCTIONS=[ ],
@@ -10,49 +25,62 @@
   How to make [FEATTURE] including [FUNCTIONS] above using [TOOL]?
 
   ```
-### Language
-  - Writing
-    ```
-    Rephrase these sentences to emulate casual British English " "  
-    ```
-  - Speaking
-    ```
-    Let's chat. Correct my English to sound casually British.
-    ```
-### Article
-  - Article Summarize
-    ```
-    Provide a summary and a detailed list of all the  points of each topic in the following article [ ]
-    ```
-    ```
-    Provide a detailed list of all the points of each topic in the following article [ ]
-    ```
-  - News Summarize (Recommend)
-    ```
-    Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
-    ```
-    - Most news is more narrative than logically coherent, so give up manual summarization after reading and use AI summarization before doing QA.
-      
-  - Asking Questions
-    ```
-    Create a list of questions related to the article's content that will help the reader gain a better understanding. Then, provide answers to each of these questions.
-    ```
-### Outline Chapters in a Book
+## Learning
+### Explain
   ```
-  "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
+  explain [   ] in detail
+  only responds in md code
+  
+  ex.
+  # Title A
+  ## Subtitle A
+  - content A
+    - content a
+    - content b
+  - content B
   ```
-### Instagram Post
-    ```
-    L= " "
-    C= " "
-    1. Create 3 distinct introductions, each containing a minimum of 50 words, suitable for a social media post. These introductions should highlight the attached images."
-    2. Each introduction should be written from the perspective of a visitor. Adopt a humorous and contemporary tone, emulating the style of a young, popular British writer."
-    3. Ensure that the descriptions in each introduction indicate that the location depicted in the images is "L"
-    4. Incorporate relevant hashtags at the end of each English introduction. These should include the country, city, specific location, and the term 'nikonz5,' all in lowercase and prefixed with a hashtag (#)."
-    5. Provide a Chinese translation for each of the introductions immediately following the English version."
-    6. Below each English introduction, include a version formatted in Markdown code."
-    ```
-### Travel
+### Compare (table)
+  ```
+  LIST = [ ]
+  Comparing concepts in "LIST" above in detail.
+  only response in code of MD table.
+  also, return how it would render as a table
+  
+  ```
+### Find Similar Tools (list)
+  ```
+  TARGET=[   ]
+  List similar commonly used Tools/Concepts in the industry with a brief intro for [TARGET]
+  only responds in md code
+  ```
+### Find Use Cases (list)
+  ```
+  LIST = [ ]
+  List use cases for concepts in "LIST" above in detail as much as possible
+  only responds in md code
+
+  ex.
+  # Concept A
+  ## Use Cases
+    1. Case 1
+    2. Case 2
+  # Concept B
+  ```
+### Pros and Cons (list)
+  ```
+  LIST = [ ]
+  List Pros and Cons for each concepts in "LIST" above in detail
+  only responds in md code
+  
+  ex.
+  # Concept A
+  ## Pros
+    1. Pros 1
+    2. Pros 2
+  ## Cons
+
+  ```
+## Travel
 - Destination
   ```
   AREA=[  ]
@@ -122,62 +150,50 @@
   List common views (advantages and disadvantages) of [L] from both [visitors] and [locals].
   Each one should have at least 5 points.
   ```
-  
-### Learning
-- Explain
+## Language
+  - Writing
+    ```
+    Rephrase these sentences to emulate casual British English " "  
+    ```
+  - Speaking
+    ```
+    Let's chat. Correct my English to sound casually British.
+    ```
+## Article
+  - Article Summarize
+    ```
+    Provide a summary and a detailed list of all the  points of each topic in the following article [ ]
+    ```
+    ```
+    Provide a detailed list of all the points of each topic in the following article [ ]
+    ```
+  - News Summarize (Recommend)
+    ```
+    Make Date and Title as the Title, Provide a summary and a detailed list of all the facts and perspectives presented in the following article [ ] 
+    ```
+    - Most news is more narrative than logically coherent, so give up manual summarization after reading and use AI summarization before doing QA.
+      
+  - Asking Questions
+    ```
+    Create a list of questions related to the article's content that will help the reader gain a better understanding. Then, provide answers to each of these questions.
+    ```
+## Outline Chapters in a Book
   ```
-  explain [   ] in detail
-  only responds in md code
-  
-  ex.
-  # Title A
-  ## Subtitle A
-  - content A
-    - content a
-    - content b
-  - content B
+  "Create a table that outlines <Chapter 2> . The table should include: 1) a sequential list of all key concepts presented in the chapter, 2) a detailed summary of the facts discussed, and 3) a clear presentation of the various points of view expressed. Each item in the table should be indexed for easy reference."
   ```
-- Comparison Table
-  ```
-  LIST = [ ]
-  Comparing concepts in "LIST" above in detail.
-  only response in code of MD table.
-  also, return how it would render as a table
-  
-  ```
-- Similar Tools List
-  ```
-  TARGET=[   ]
-  List similar commonly used Tools/Concepts in the industry with a brief intro for [TARGET]
-  only responds in md code
-  ```
-- Use Cases List
-  ```
-  LIST = [ ]
-  List use cases for concepts in "LIST" above in detail as much as possible
-  only responds in md code
+## Instagram Post
+    ```
+    L= " "
+    C= " "
+    1. Create 3 distinct introductions, each containing a minimum of 50 words, suitable for a social media post. These introductions should highlight the attached images."
+    2. Each introduction should be written from the perspective of a visitor. Adopt a humorous and contemporary tone, emulating the style of a young, popular British writer."
+    3. Ensure that the descriptions in each introduction indicate that the location depicted in the images is "L"
+    4. Incorporate relevant hashtags at the end of each English introduction. These should include the country, city, specific location, and the term 'nikonz5,' all in lowercase and prefixed with a hashtag (#)."
+    5. Provide a Chinese translation for each of the introductions immediately following the English version."
+    6. Below each English introduction, include a version formatted in Markdown code."
+    ```
 
-  ex.
-  # Concept A
-  ## Use Cases
-    1. Case 1
-    2. Case 2
-  # Concept B
-  ```
-- Pros and Cons List
-  ```
-  LIST = [ ]
-  List Pros and Cons for each concepts in "LIST" above in detail
-  only responds in md code
   
-  ex.
-  # Concept A
-  ## Pros
-    1. Pros 1
-    2. Pros 2
-  ## Cons
-
-  ```
 
 
 
