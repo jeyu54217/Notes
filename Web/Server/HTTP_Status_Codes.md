@@ -1,9 +1,11 @@
-- [Informational - 1xx](#informational---1xx)
-- [Successful - 2xx](#successful---2xx)
-- [Redirection - 3xx](#redirection---3xx)
-- [Client Error - 4xx](#client-error---4xx)
-- [Server Error - 5xx](#server-error---5xx)
-- [References](#references)
+
+HTTP Status Codes
+  - [Informational - 1xx](#informational---1xx)
+  - [Successful - 2xx](#successful---2xx)
+  - [Redirection - 3xx](#redirection---3xx)
+  - [Client Error - 4xx](#client-error---4xx)
+  - [Server Error - 5xx](#server-error---5xx)
+  - [References](#references)
 
 # Informational - 1xx
   ```
