@@ -68,15 +68,51 @@ class <Table>Serializer(serializers.ModelSerializer):
 ### 3. **Permission Handling:** Supports integration with DRF's permissions system, allowing for easy configuration of access controls for each view.
 
 ## Commonly Used Generic Views
-### **ListAPIView:** For listing a queryset or all objects.
-### **RetrieveAPIView:** For reading a single model instance.
-### **CreateAPIView:** For creating new model instances.
-### **DestroyAPIView:** For deleting model instances.
-### **UpdateAPIView:** For updating model instances.
-### **ListCreateAPIView:** A combination that allows listing objects or creating a new object.
-### **RetrieveUpdateAPIView:** Allows reading or updating a model instance.
-### **RetrieveDestroyAPIView:** Allows reading or deleting a model instance.
-### **RetrieveUpdateDestroyAPIView:** Combines reading, updating, and deleting a model instance into a single endpoint.
+### **CreateAPIView**
+- **Purpose:** Exclusive for endpoints intended to create new model instances.
+- **Functionality:** Comes equipped with a POST method handler.
+- **Inheritance:** Extends from `GenericAPIView` and incorporates `CreateModelMixin`.
+
+### **ListAPIView**
+- **Purpose:** Designed for read-only endpoints that display a collection of model instances.
+- **Functionality:** Features a GET method handler.
+- **Inheritance:** Builds upon `GenericAPIView` and utilizes `ListModelMixin`.
+
+### **RetrieveAPIView**
+- **Purpose:** Serves read-only endpoints focused on presenting a single model instance.
+- **Functionality:** Provides a GET method handler.
+- **Inheritance:** Derived from `GenericAPIView` and includes `RetrieveModelMixin`.
+
+### **DestroyAPIView**
+- **Purpose:** Dedicated to delete-only endpoints for removing a single model instance.
+- **Functionality:** Offers a DELETE method handler.
+- **Inheritance:** A subclass of `GenericAPIView` that extends `DestroyModelMixin`.
+
+### **UpdateAPIView**
+- **Purpose:** Reserved for update-only endpoints to modify a single model instance.
+- **Functionality:** Supports PUT and PATCH method handlers.
+- **Inheritance:** An extension of `GenericAPIView` with `UpdateModelMixin`.
+
+### **ListCreateAPIView**
+- **Purpose:** Handles read-write endpoints to list collections of model instances or create new ones.
+- **Functionality:** Equipped with GET and POST method handlers.
+- **Inheritance:** Extends `GenericAPIView`, `ListModelMixin`, and `CreateModelMixin`.
+
+### **RetrieveUpdateAPIView**
+- **Purpose:** Suitable for endpoints that either read or update a single model instance.
+- **Functionality:** Provides GET, PUT, and PATCH method handlers.
+- **Inheritance:** A combination of `GenericAPIView`, `RetrieveModelMixin`, and `UpdateModelMixin`.
+
+### **RetrieveDestroyAPIView**
+- **Purpose:** Ideal for endpoints that allow reading or deleting a single model instance.
+- **Functionality:** Comes with GET and DELETE method handlers.
+- **Inheritance:** Merges `GenericAPIView`, `RetrieveModelMixin`, and `DestroyModelMixin`.
+
+### **RetrieveUpdateDestroyAPIView**
+- **Purpose:** For endpoints that enable reading, updating, or deleting a single model instance.
+- **Functionality:** Features GET, PUT, PATCH, and DELETE method handlers.
+- **Inheritance:** Integrates `GenericAPIView`, `RetrieveModelMixin`, `UpdateModelMixin`, and `DestroyModelMixin`.
+
 
 ## Advantages
 - **Efficiency:** Significantly reduces the amount of boilerplate code required for API development.
