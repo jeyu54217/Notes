@@ -1,43 +1,33 @@
-**CONTENTS**
-- [Setting Up](#setting-up)
-- [API TEST](#api-test)
 - [Serializers](#serializers)
-  - [Serializer](#serializer)
-  - [ModelSerializer](#modelserializer)
-  - [ListSerializer\* (不會直接使用, 底層幫你實作～)](#listserializer-不會直接使用-底層幫你實作)
-  - [HyperlinkedModelSerializer\*](#hyperlinkedmodelserializer)
-  - [BaseSerializer\*](#baseserializer)
-  
-# Setting Up
-```bash
-pip list
-```
-```bash
-pip install djangorestframework
-```
-- **```settings.py```**
-    ```bash
-    INSTALLED_APPS = [
-        ...
-        'rest_framework',
-    ]
-    ```
-    ```bash
-    REST_FRAMEWORK = {
+  - [Core Features](#core-features)
+  - [Types](#types)
+    - [Serializer](#serializer)
+    - [BaseSerializer](#baseserializer)
+    - [ModelSerializer](#modelserializer)
+    - [ListSerializer](#listserializer)
+    - [HyperlinkedModelSerializer](#hyperlinkedmodelserializer)
+  - [Usage Scenarios](#usage-scenarios)
+  - [Implementing a Serializer](#implementing-a-serializer)
+  - [Advanced Features](#advanced-features)
+- [Generic Views](#generic-views)
+  - [Core Features](#core-features-1)
+  - [Commonly Used Generic Views](#commonly-used-generic-views)
+    - [**CreateAPIView**](#createapiview)
+    - [**ListAPIView**](#listapiview)
+    - [**RetrieveAPIView**](#retrieveapiview)
+    - [**DestroyAPIView**](#destroyapiview)
+    - [**UpdateAPIView**](#updateapiview)
+    - [**ListCreateAPIView**](#listcreateapiview)
+    - [**RetrieveUpdateAPIView**](#retrieveupdateapiview)
+    - [**RetrieveDestroyAPIView**](#retrievedestroyapiview)
+    - [**RetrieveUpdateDestroyAPIView**](#retrieveupdatedestroyapiview)
+  - [Advantages](#advantages)
+  - [Customization](#customization)
 
-    }
-    ```
-- **```serializers.py```**
-    ```bash
-    touch ../serializers.py
-    ```
 
-# API TEST
 
-# Serializers in Django Rest Framework (DRF)
-
-## Overview
-- Serializers in DRF are components that handle conversion between complex data types like querysets and model instances, and Python datatypes that can then be easily rendered into JSON, XML, or other content types. They also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+# Serializers
+  - Handle conversion between complex data types like querysets and model instances, and Python datatypes that can then be easily rendered into JSON, XML, or other content types. 
 
 ## Core Features
 - **Data Conversion:** Convert complex data types to Python datatypes that can be easily rendered into JSON or other content types.
@@ -47,7 +37,7 @@ pip install djangorestframework
 - **Deserialization:** Convert incoming data back into complex types, after validating it.
   - Useful for creating or updating model instances.
 
-# Types
+## Types
 
 ### Serializer
 - The base class for all serializers in DRF, providing the core functionality for field declaration, data serialization, deserialization, and validation.
@@ -113,16 +103,18 @@ pip install djangorestframework
 
 
 
-# Generic Views in Django Rest Framework (DRF)
+# Generic Views
 
-## Introduction
 - Built-in DRF views that provide ready-to-use implementations for common API patterns, designed to simplify the process of building API endpoints, reducing the amount of code developers need to write.
 
   
 ## Core Features
-### 1. **CRUD Operations:** Generic views offer straightforward implementations for creating, retrieving, updating, and deleting objects in RESTful APIs.
-### 2. **Serialization:** Automatically handles serialization and deserialization of data using the specified serializer class. (don't have to manually convert data to JSON or parse JSON data.)
-### 3. **Permission Handling:** Supports integration with DRF's permissions system, allowing for easy configuration of access controls for each view.
+- **CRUD Operations:** 
+- Generic views offer straightforward implementations for creating, retrieving, updating, and deleting objects in RESTful APIs.
+- **Serialization:** 
+- Automatically handles serialization and deserialization of data using the specified serializer class. (don't have to manually convert data to JSON or parse JSON data.)
+- **Permission Handling:** 
+- Supports integration with DRF's permissions system, allowing for easy configuration of access controls for each view.
 
 ## Commonly Used Generic Views
 ### **CreateAPIView**
