@@ -107,6 +107,18 @@
 
 - Built-in DRF views that provide ready-to-use implementations for common API patterns, designed to simplify the process of building API endpoints, reducing the amount of code developers need to write.
 
+- | Feature                | APIView                                              | Generic Views                                         |
+|------------------------|------------------------------------------------------|-------------------------------------------------------|
+| **Foundation**         | Subclass of Django's View class, providing a way to handle HTTP methods explicitly. | Build upon the APIView, offering a higher level of abstraction with pre-built methods for CRUD operations. |
+| **Use Case**           | Best suited for endpoints requiring custom business logic or when you need full control over the request handling. | Ideal for standard CRUD operations on a model with minimal additional code. |
+| **Flexibility**        | Highly flexible, allowing for granular control over request parsing, response rendering, and exception handling. | Less flexibility than APIView but simplifies implementation by using mixins and generic classes. |
+| **Code Verbosity**     | More verbose, requiring explicit definition of request handling for each HTTP method. | Less verbose, as common patterns are encapsulated within mixins and generic classes. |
+| **Boilerplate Code**   | Requires more boilerplate code for standard CRUD operations. | Reduces boilerplate code significantly by using pre-defined mixins and methods. |
+| **Method Handling**    | You need to explicitly define methods for GET, POST, etc., and handle the request and response flow within each method. | Pre-defined methods for handling GET, POST, PUT, DELETE, etc., are automatically provided based on the generic view or mixin used. |
+| **Customization**      | High degree of customization possible, making it suitable for complex API logic. | Customizable to an extent through overriding pre-defined methods and attributes but generally follows a prescribed pattern. |
+| **Direct Model Mapping** | No direct model mapping, offering the freedom to handle data in any form. | Directly maps to a Django model, assuming that each request operates on a specific model or a queryset. |
+| **Learning Curve**     | Steeper learning curve due to the need for more detailed understanding of request/response lifecycle. | Easier to use for beginners, especially for standard database operations, due to abstraction and pre-built methods. |
+
   
 ## Core Features
 - **CRUD Operations:** 
