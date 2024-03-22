@@ -107,7 +107,7 @@
 
 - Built-in DRF views that provide ready-to-use implementations for common API patterns, designed to simplify the process of building API endpoints, reducing the amount of code developers need to write.
 
-- | Feature                | APIView                                              | Generic Views                                         |
+| Feature                | APIView                                              | Generic Views                                         |
 |------------------------|------------------------------------------------------|-------------------------------------------------------|
 | **Foundation**         | Subclass of Django's View class, providing a way to handle HTTP methods explicitly. | Build upon the APIView, offering a higher level of abstraction with pre-built methods for CRUD operations. |
 | **Use Case**           | Best suited for endpoints requiring custom business logic or when you need full control over the request handling. | Ideal for standard CRUD operations on a model with minimal additional code. |
