@@ -1,4 +1,17 @@
 
+
+| Scenario | Common Django ORM  | Using `[Q]` Objects |
+|----------|-----------------------------|---------------------|
+| Simple Filtering | `Person.objects.filter(name='John')` | `Person.objects.filter(Q(name='John'))` |
+| Combining Conditions with AND | `Person.objects.filter(name='John', age=22)` | `Person.objects.filter(Q(name='John') & Q(age=22))` |
+| Combining Conditions with OR | Not directly possible with basic filter | `Person.objects.filter(Q(name='John') \| Q(name='Jane'))` |
+| Excluding Records | `Person.objects.exclude(age=22)` | `Person.objects.exclude(Q(age=22))` |
+| Complex Conditions (AND, OR, NOT) | Difficult or impossible without `[Q]` | `Person.objects.filter(Q(name='John') & (Q(age=22) \| ~Q(city='New York'))) `|
+| Dynamic Query Building | Not straightforward without `[Q]` | `query = Q()`<br>`if user_input_name:`<br>`    query &= Q(name=user_input_name)`<br>`if user_input_age:`<br>`    query &= Q(age=user_input_age)`<br>`Person.objects.filter(query)` |
+
+
+
+
 ### Django Shell
 ```bash
 python3 manage.py shell
