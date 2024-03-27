@@ -22,7 +22,8 @@
   TOOL=[ ],
 
   Professional expert senior advice,
-  How to make [FEATTURE] including [FUNCTIONS] above using [TOOL]?
+  How make [FEATTURE] including [FUNCTIONS] above using [TOOL]?
+  based on [] [] [] [].
 
   ```
 ## Learning
